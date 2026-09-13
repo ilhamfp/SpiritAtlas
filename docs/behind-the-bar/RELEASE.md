@@ -24,3 +24,7 @@ The release owner will fast-forward shared main without staging or altering the 
 ## Clean-history integration
 
 Main history was recreated by the separately authorized cleanup task and force-pushed as `e13da8e8b3c91fa257a2f25f68356668a2bb28ff`. The feature was ported as a content-only binary diff into a new worktree `/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb-release`, branch `codex/behind-the-bar-release`, based on that exact clean main. No old ancestor was merged. Historical hashes above describe earlier evidence/deployments, not release ancestry. The source port matched the tested studio code; the final held-key blur fix and incoming landing refinement will receive focused checks before release.
+
+## Ready to publish
+
+The clean integration includes feature `74882a6`, the authorized PRD, autoplay refinement `84a6f93`, and final landing evidence `37a1759`. The landing task explicitly released its final audit hold; this task again owns the production window. A later unified-player request is being developed separately in shared main; its uncommitted edits are preserved and are not overwritten by this release. Production will be pushed from `codex/behind-the-bar-release` to remote main without mutating that shared working tree. The final feature test glob is scoped to filenames, avoiding accidental discovery caused by the worktree name.
