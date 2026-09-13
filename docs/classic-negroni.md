@@ -7,6 +7,12 @@ Bar Bon Funk recipe or linked to its detail page.
 
 ## Rendering and motion
 
+- Cinematic starts muted and inline as soon as its first frame is ready, then
+  continues into the separated-ingredient circulation loop. It needs no click.
+  Reduced-motion visitors start with a still; browsers that block autoplay keep
+  the poster/decoded frame and offer an explicit Play control.
+- Playback and the JavaScript frame loop suspend when the stage is offscreen or
+  the page is hidden. Pause and Reset stop the loop until the visitor resumes.
 - Cinematic uses the original Cycles movies without transcoding: 720 × 720,
   60 fps, 433 transition frames over 7.2 seconds, with a 144-frame, 2.4-second
   circulation loop. Reassembly uses the separately encoded reverse movie.
@@ -98,3 +104,21 @@ The poster correction passes the production build and 11 asset/playback tests.
 Its updated browser regressions were typechecked; the full browser suite was
 not rerun. Visual verification used the in-app browser and local production
 preview, including explosion, reassembly, scrubbing and a 3D round trip.
+
+### Autoplay and visual coherence
+
+The next refinement keeps the original cinematic pixels and live 3D scene while
+giving the player a single charcoal frame. Captions sit on its solid surface
+instead of the film's changing lighting. Text and controls have 16–20px internal
+padding, and the title/action layout responds to the player's available width.
+On phones the action has its own row and the decorative marble is hidden behind
+a plain charcoal page. Desktop keeps a restrained marble accent. Hidden mobile
+artwork does not fetch a texture.
+
+Landing headings scale to fit narrow screens, metadata uses sentence case,
+supporting text has a consistent readable size, and section/paragraph spacing
+follows the shared grid. The cinematic stylesheet now loads after the brand
+foundation, removing the previous competing heading rules.
+
+Current screenshots, checks, and their verification scope are recorded in
+`docs/brand-evidence/autoplay-polish-final/README.md`.

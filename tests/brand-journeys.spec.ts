@@ -119,8 +119,7 @@ test('headline, CTA and original Negroni poster remain usable while cinematic fi
     await expect.poll(() => poster.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
     expect(heavyRequests).toEqual([]);
     await expect(classic(page).locator('canvas')).toHaveCount(0);
-    // A user can ask to expand before decoding completes without losing the poster.
-    await classic(page).getByRole('button', { name: 'Look inside', exact: true }).click();
+    // Default playback waits for decoded frames without losing the poster.
     await expect(poster).toBeVisible();
     await expect(poster).toHaveCSS('opacity', '1');
     await expect(classic(page)).toHaveAttribute('data-playing', 'false');
@@ -149,6 +148,9 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 768, height: 102
     await expect(headline(page)).toBeVisible();
     await page.evaluate(() => document.fonts.ready);
     await waitFilm(page);
+    await classic(page).getByRole('button', { name: 'Reset Negroni', exact: true }).click();
+    await page.evaluate(() => window.scrollTo({top: 0, behavior: 'instant'}));
+    await page.mouse.move(0, 0);
     await expectNoPageOverflow(page);
     const stage = await classic(page).locator('.cn-stage').boundingBox();
     expect(stage!.width).toBeGreaterThan(230);
@@ -235,6 +237,8 @@ test('the composed cinematic image visibly changes from assembled to exploded an
   await waitFilm(page);
   const hero = classic(page);
   const stage = hero.locator('.cn-stage');
+  await hero.getByRole('button', { name: 'Reset Negroni', exact: true }).click();
+  await expect.poll(() => film(page).evaluate((video: HTMLVideoElement) => video.seeking)).toBe(false);
   await expect(hero).toHaveAttribute('data-playing', 'false');
   await expect(hero).toHaveAttribute('data-progress', '0.00000');
   const assembled = await stage.screenshot();
@@ -268,6 +272,7 @@ test('original cinematic frames advance, pause, reverse at the same pose, and sc
   await page.goto('/');
   await waitFilm(page);
   const hero = classic(page);
+  await hero.getByRole('button', { name: 'Reset Negroni', exact: true }).click();
   await hero.getByRole('button', { name: 'Look inside', exact: true }).click();
   await expect(hero).toHaveAttribute('data-playing', 'true');
   await expect.poll(() => filmTime(page)).toBeGreaterThan(.8);
@@ -307,7 +312,7 @@ test('expanded film circulates continuously, pauses its actual frame and reassem
   await page.goto('/');
   await waitFilm(page);
   const hero = classic(page);
-  await hero.getByRole('button', { name: 'Look inside', exact: true }).click();
+  // The initial unfold and circulation must run without a user gesture.
   await expect(hero).toHaveAttribute('data-looping', 'true');
   await waitFilm(page, 'idle');
   await expect.poll(() => filmTime(page, 'idle')).toBeGreaterThan(.25);

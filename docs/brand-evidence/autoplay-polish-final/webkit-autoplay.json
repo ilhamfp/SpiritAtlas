@@ -1,0 +1,27 @@
+[
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "composedImageChanged": true,
+    "pausedStable": true
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "autoplay": true,
+    "loop": true,
+    "muted": true,
+    "composedImageChanged": true,
+    "pausedStable": true
+  },
+  {
+    "reducedMotionStartsStill": true
+  }
+]

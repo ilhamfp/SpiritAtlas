@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from 'react';
 import type {CSSProperties} from 'react';
 import {ArrowUpRight, ChevronLeft, ChevronRight, Pause, Play, RotateCcw} from 'lucide-react';
-import {advancePlayback, clampProgress, deconstruct, DEFAULT_IDLE_TIMELINE, idleSampleProgress, INITIAL_PLAYBACK, movieTime, nextDirection, togglePlayback} from './playback';
+import {advancePlayback, clampProgress, deconstruct, DEFAULT_IDLE_TIMELINE, idleSampleProgress, initialPlayback, INITIAL_PLAYBACK, movieTime, nextDirection, togglePlayback} from './playback';
 import type {IdleTimeline, PlaybackState} from './playback';
 import type {NegroniRenderer} from './renderer';
 
@@ -33,15 +33,28 @@ export default function ClassicNegroni() {
     const controller = new AbortController();
     let rendererController: AbortController | null = null;
     let disposed = false, reducedMotion = mediaQuery.matches, inView = true;
-    let state: PlaybackState = {...INITIAL_PLAYBACK};
+    let state: PlaybackState = initialPlayback(reducedMotion);
     let manifest = DEFAULT_MANIFEST, mode: Mode = 'cinematic', current = videos[0];
     let renderer: NegroniRenderer | null = null, loading3D = false, status = '', ready = false;
     let suspended = document.hidden, pendingSeek = true, playRequest = 0, lastUI = 0, previous = performance.now();
     let frame = 0, shownVideo: HTMLVideoElement | null = null, lastPublished = '';
     const unbind: (() => void)[] = [];
 
+    function syncFrameLoop() {
+      const active = !disposed && !suspended && state.playing &&
+        (mode === 'cinematic' ? !current.paused && current.readyState >= 2 && !pendingSeek : !!renderer);
+      if (active && !frame) {
+        previous = performance.now();
+        frame = requestAnimationFrame(animate);
+      } else if (!active && frame) {
+        cancelAnimationFrame(frame);
+        frame = 0;
+      }
+    }
+
     function publish() {
       if (disposed) return;
+      syncFrameLoop();
       const actuallyPlaying = state.playing && !suspended && (mode === 'cinematic' ? !current.paused : !!renderer);
       const signature = JSON.stringify([state, mode, suspended, ready, loading3D, status, actuallyPlaying]);
       if (signature === lastPublished) return;
@@ -79,7 +92,9 @@ export default function ClassicNegroni() {
     function startFilm() {
       if (mode !== 'cinematic' || !state.playing || suspended || pendingSeek || current.readyState < 2 || current.error) return;
       const request = ++playRequest;
-      current.play().catch(error => {
+      current.play().then(() => {
+        if (!disposed && request === playRequest) publish();
+      }).catch(error => {
         if (disposed || request !== playRequest || error?.name === 'AbortError') return;
         state.playing = false;
         status = 'Press play to continue the animation.';
@@ -239,7 +254,7 @@ export default function ClassicNegroni() {
       publish();
     }
     const observer = new IntersectionObserver(entries => {inView = entries[0]?.isIntersecting ?? true; visibility();}, {threshold: .01});
-    observer.observe(root);
+    observer.observe(stage);
     document.addEventListener('visibilitychange', visibility);
     const motionChanged = () => {
       reducedMotion = mediaQuery.matches;
@@ -261,7 +276,8 @@ export default function ClassicNegroni() {
         if (mode === 'cinematic') readFilm();
         else if (renderer) {state = advancePlayback(state, delta, reducedMotion, manifest.duration, manifest.idleTimeline); pose();}
       }
-      if (now - lastUI > 50) {lastUI = now; publish();}
+      if (now - lastUI > 50 || !state.playing) {lastUI = now; publish();}
+      syncFrameLoop();
     }
 
     async function loadFilms() {
@@ -280,7 +296,6 @@ export default function ClassicNegroni() {
       syncMedia(true);
     }
     void loadFilms();
-    frame = requestAnimationFrame(animate);
     publish();
 
     return () => {
@@ -322,11 +337,12 @@ export default function ClassicNegroni() {
         <video {...videoProps} ref={idleRef} data-sequence="idle" data-active="false" loop />
         <div className="cn-renderer" ref={liveRef} hidden />
         {((!ui.ready && ui.mode === 'cinematic' && !ui.status) || ui.loading3D) && <div className="cn-loading" role="status">{ui.loading3D ? 'Preparing your 3D view…' : 'Preparing your drink…'}</div>}
-        <div className="cn-scene-caption" aria-hidden="true"><span className="cn-scene-state">{sceneState}</span><span>{ui.progress > .5 ? '02 / 02' : '01 / 02'}</span></div>
       </div>
     </div>
+    <div className="cn-details">
+    <div className="cn-scene-caption" aria-hidden="true"><span>{sceneState}</span><span className="cn-ratio">1 : 1 : 1</span></div>
     <div className="cn-header">
-      <div><span className="cn-eyebrow">THE ORIGINAL / 1 : 1 : 1</span><h2 className="cn-title">Classic Negroni</h2><p className="cn-intro">Gin · Campari · sweet vermouth</p></div>
+      <div><h2 className="cn-title">Classic Negroni</h2><p className="cn-intro">Gin · Campari · sweet vermouth</p></div>
       <button type="button" className="cn-primary-action" aria-expanded={ui.progress > .5} onClick={() => commands.current.action()}>{comingTogether ? 'Bring it together' : 'Look inside'}{comingTogether ? <RotateCcw size={16} aria-hidden="true"/> : <ArrowUpRight size={17} aria-hidden="true"/>}</button>
     </div>
     <div className="cn-controls">
@@ -341,5 +357,6 @@ export default function ClassicNegroni() {
     </div>
     <ul className="cn-ingredients" aria-label="Classic Negroni ingredients" aria-hidden={ui.progress <= .65}><li>Gin</li><li>Campari</li><li>Sweet vermouth</li><li>Ice</li><li>Orange</li></ul>
     <p className="cn-status" role="status" aria-live="polite">{ui.status}</p>
+    </div>
   </section>;
 }

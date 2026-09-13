@@ -3,7 +3,6 @@ import {ArrowRight, ArrowUpRight} from 'lucide-react';
 import {barById, drinkById} from './data/drinks';
 import Marble from './components/Marble';
 import ClassicNegroni from './negroni/ClassicNegroni';
-import './negroni/classic-negroni.css';
 const drinkIds = ['bbf-negroni', 'ichigo-negroni', 'negroni-express'];
 const atlasUrl = '/?bar=bar-bon-funk';
 const compareUrl = '/?compare=bbf-negroni,ichigo-negroni,negroni-express&expand=1';
@@ -23,7 +22,7 @@ export default function Landing(){
     <Marble/>
     <div className="sa-hero-copy"><h1 id="hero-title">Singapore’s<br/>cocktails.<br/><span>Inside out.</span></h1><p>Explore the bars. Unfold the ingredients.<br className="desktop-break"/> Discover a different side of every drink.</p><a className="sa-action" href={atlasUrl}>Explore the atlas <ArrowUpRight size={20}/></a></div>
     <ClassicNegroni/>
-    <div className="sa-hero-foot"><span className="sa-index">SINGAPORE, THROUGH A DIFFERENT GLASS</span><a href="#the-bars">Meet the three bars <ArrowRight size={15}/></a></div>
+    <div className="sa-hero-foot"><span className="sa-index">Singapore, through a different glass</span><a href="#the-bars">Meet the three bars <ArrowRight size={15}/></a></div>
    </section>
    <section className="sa-bars sa-section" id="the-bars" aria-labelledby="bars-title">
     <div className="sa-section-heading sa-reveal"><h2 id="bars-title">Three bars.<br/><span>Distinctly their own.</span></h2><p>One city. Three interpretations of the Negroni.<br/>{' '}Start with a familiar drink. See where it takes you.</p></div>
@@ -31,9 +30,9 @@ export default function Landing(){
    </section>
    <section className="sa-inside sa-section" id="inside" aria-labelledby="inside-title">
     <div className="sa-inside-copy sa-reveal"><h2 id="inside-title">There’s more<br/>in the glass.</h2><p>A garnish. A spirit. An unexpected detail.<br/>Open up a cocktail and explore the ingredients that make it its own.</p><a className="sa-action" href="/?drink=ichigo-negroni&expand=1">Explore ingredients <ArrowUpRight size={20}/></a><span className="sa-method-note">Ingredients shown separately to help you explore.<br/>Estimates are marked; shapes don’t indicate amounts.</span></div>
-    <div className="sa-ingredient-story sa-reveal"><span className="sa-index">A CLOSER LOOK / ICHIGO NEGRONI</span><div className="sa-ingredient-row"><span>01</span><div><h3>The finishing touch</h3><p>A yellow flower, a red garnish. The first details you see.</p></div></div><div className="sa-ingredient-row"><span>02</span><div><h3>A different clarity</h3><p>Strawberry and milk clarification shape MOGA’s interpretation.</p></div></div><div className="sa-ingredient-row"><span>03</span><div><h3>The foundation</h3><p>Explore the spirit, bitter and vermouth categories behind the drink.</p></div></div><a href="/?drink=ichigo-negroni&expand=1" className="sa-text-link">Look inside the Ichigo Negroni <ArrowRight size={17}/></a></div>
+    <div className="sa-ingredient-story sa-reveal"><span className="sa-index">A closer look / Ichigo Negroni</span><div className="sa-ingredient-row"><span>01</span><div><h3>The finishing touch</h3><p>A yellow flower, a red garnish. The first details you see.</p></div></div><div className="sa-ingredient-row"><span>02</span><div><h3>A different clarity</h3><p>Strawberry and milk clarification shape MOGA’s interpretation.</p></div></div><div className="sa-ingredient-row"><span>03</span><div><h3>The foundation</h3><p>Explore the spirit, bitter and vermouth categories behind the drink.</p></div></div><a href="/?drink=ichigo-negroni&expand=1" className="sa-text-link">Look inside the Ichigo Negroni <ArrowRight size={17}/></a></div>
    </section>
-   <section className="sa-comparison sa-section" aria-labelledby="comparison-title"><div className="sa-comparison-inner sa-reveal"><span className="sa-index">BAR BON FUNK / MOGA / BAR SOMMA</span><h2 id="comparison-title">Same starting point.<br/>A different point of view.</h2><p>Put the three Negronis side by side.<br/>Rotate together. Open them up. Notice what changes.</p><a className="sa-action sa-action-dark" href={compareUrl}>Compare the three <ArrowUpRight size={20}/></a></div><div className="sa-comparison-mark" aria-hidden="true"><span/><span/><span/></div></section>
+   <section className="sa-comparison sa-section" aria-labelledby="comparison-title"><div className="sa-comparison-inner sa-reveal"><span className="sa-index">Bar Bon Funk / MOGA / Bar Somma</span><h2 id="comparison-title">Same starting point.<br/>A different point of view.</h2><p>Put the three Negronis side by side.<br/>Rotate together. Open them up. Notice what changes.</p><a className="sa-action sa-action-dark" href={compareUrl}>Compare the three <ArrowUpRight size={20}/></a></div><div className="sa-comparison-mark" aria-hidden="true"><span/><span/><span/></div></section>
   </main>
   <footer className="sa-footer"><a className="sa-wordmark" href="/">SpiritAtlas.</a><p>Singapore’s cocktails. Inside out.</p><a href={atlasUrl}>Back to Singapore <ArrowUpRight size={17}/></a></footer>
  </div>

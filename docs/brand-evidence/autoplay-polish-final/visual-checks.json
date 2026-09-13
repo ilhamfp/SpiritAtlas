@@ -1,0 +1,46 @@
+[
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "titleInset": 21,
+    "overflow": false,
+    "clipped": [],
+    "marbleDisplay": "block",
+    "captionColor": "rgb(185, 179, 176)"
+  },
+  {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "titleInset": 21,
+    "overflow": false,
+    "clipped": [],
+    "marbleDisplay": "block",
+    "captionColor": "rgb(185, 179, 176)"
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "titleInset": 21,
+    "overflow": false,
+    "clipped": [],
+    "marbleDisplay": "none",
+    "captionColor": "rgb(185, 179, 176)"
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 740
+    },
+    "titleInset": 17,
+    "overflow": false,
+    "clipped": [],
+    "marbleDisplay": "none",
+    "captionColor": "rgb(185, 179, 176)"
+  }
+]

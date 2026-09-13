@@ -27,6 +27,7 @@ export default function Marble(){
    ctx.fill();ctx.globalCompositeOperation='source-over';
   }
   const observer=new ResizeObserver(()=>{
+   if (!canvas.clientWidth || !canvas.clientHeight) return;
    const src=canvas.clientWidth<650?'/textures/spiritatlas-marble-base-mobile-v1.webp':'/textures/spiritatlas-marble-base-desktop-v1.webp';
    if(src!==loadedSrc){loadedSrc=src;const img=new Image();img.onload=()=>{if(!disposed){texture=img;draw()}};img.src=src}else draw();
   });observer.observe(canvas);
