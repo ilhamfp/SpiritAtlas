@@ -11,7 +11,7 @@ export const definition = {
     ancho: {name:'Ancho Verde', color:'#ae8a36', initial:.4, provenance:'Named in supplied film, 01:27–01:54. Quantity is studio-authored.'},
     rice: {name:'Rice syrup', color:'#f3d5aa', initial:.3, provenance:'Named in supplied film, 01:27–01:54. Quantity is studio-authored.'},
   },
-  baseline: {core:.65,ancho:.18,rice:.1}, capacity: {mix:1.15,serve:1.0}, minimum: .015,
+  baseline: {core:.65,ancho:.18,rice:.1}, capacity: {mix:1.15,serve:1.0}, minimum: .015, equalPart: .3,
 } as const;
 export const total = (q: Quantities) => q.core+q.ancho+q.rice;
 export const empty = (): Quantities => ({core:0,ancho:0,rice:0});
@@ -19,8 +19,10 @@ export const clamp = (n:number,lo:number,hi:number) => Number.isFinite(n)?Math.m
 export type Garnish = {x:number;z:number;angle:number;placed:boolean};
 export type Serving = {components:Quantities;volume:number;garnish:Garnish;oil:boolean;origin:'demo'|'user';stirSeconds:number};
 export type Parcel = {q:Quantities;remaining:number;destination:'mix'|'serve'};
+const PART_EPSILON=1e-9;
 export class Preparation {
   preset:Preset='start-empty';origin:'user'|'demo'='user'; stage:Stage='prepare';selected:Component='core';
+  equalParts=false;
   sources:Quantities=empty();mix:Quantities=empty();serving:Quantities=empty();transit:Parcel[]=[];
   ice=0;servingIce=false;oil=false;oilTime=0;garnish:Garnish={x:0,z:0,angle:0,placed:false};result:Serving|null=null;
   pourTilt=0;stirInput=0;stirPulse=0;spoonAngle=0;effectiveStir=0;vesselX=0;vesselZ=0;impulseX=0;impulseZ=0;motionPulse=0;
@@ -32,17 +34,33 @@ export class Preparation {
   notify=()=>{this.revision++;this.listeners.forEach(fn=>fn());};
   disarm(){this.latestNative=null;this.armed=null;this.pourTilt=0;this.stirInput=0;this.stirPulse=0;this.vesselX=0;this.vesselZ=0;this.impulseX=0;this.impulseZ=0;this.motionPulse=0;this.onDisarm();}
   takeover(){this.disarm();this.owner='local';this.lastLocal=performance.now();}
-  reset(preset:Preset=this.preset){this.disarm();this.preset=preset;this.origin=preset==='stir-demo'?'demo':'user';this.stage=preset==='stir-demo'?'stir':'prepare';
+  reset(preset:Preset=this.preset){this.disarm();this.equalParts=false;this.preset=preset;this.origin=preset==='stir-demo'?'demo':'user';this.stage=preset==='stir-demo'?'stir':'prepare';
     this.sources={core:1,ancho:.4,rice:.3};this.mix=empty();this.serving=empty();this.transit=[];this.ice=preset==='stir-demo'?3:0;this.servingIce=false;this.oil=false;this.oilTime=0;this.garnish={x:0,z:0,angle:0,placed:false};this.result=null;this.effectiveStir=0;this.spoonAngle=0;this.selected='core';this.owner='local';
     if(preset==='stir-demo')for(const c of COMPONENTS){this.mix[c]=definition.baseline[c];this.sources[c]-=this.mix[c];}
     this.message=preset==='stir-demo'?'Drag a circle around the glass.':'Add ice to begin.';this.resetId++;this.notify();
   }
-  addIce(){if(this.stage!=='prepare')return;this.ice=3;this.stage='mix';this.message='Pick a vessel. Pour a little, or a little more.';this.notify();}
-  select(c:Component){if(!COMPONENTS.includes(c))return;this.takeover();this.selected=c;this.notify();}
-  pour(value:number){if(!['mix','strain'].includes(this.stage))return;this.pourTilt=clamp(value,0,1);}
+  partProgress(c:Component){return this.mix[c]+this.transit.filter(p=>p.destination==='mix').reduce((n,p)=>n+p.q[c],0);}
+  partComplete(c:Component){return this.partProgress(c)>=definition.equalPart-PART_EPSILON;}
+  get equalPartsReady(){return !this.transit.some(p=>p.destination==='mix')&&COMPONENTS.every(c=>this.mix[c]>=definition.equalPart-PART_EPSILON);}
+  private mixingGuideMessage(){
+    const next=COMPONENTS.find(c=>!this.partComplete(c));
+    if(!next)return this.equalPartsReady?'Three equal parts are ready. Stir, then pour into the serving glass.':'Three equal parts measured. Let the last drops land, then stir.';
+    return this.partComplete(this.selected)?`${definition.ingredients[this.selected].name}: one equal part complete. Next: ${definition.ingredients[next].name}.`:`Pour one equal part of ${definition.ingredients[this.selected].name}.`;
+  }
+  setEqualParts(enabled:boolean){
+    this.disarm();
+    if(enabled&&COMPONENTS.some(c=>this.partProgress(c)>definition.equalPart+PART_EPSILON)){this.message='This mix already exceeds one equal part. Keep mixing freely or start over.';this.notify();return false;}
+    this.equalParts=enabled;
+    if(this.stage==='prepare')this.message=enabled?'Add ice, then pour three equal parts.':'Add ice to begin.';
+    if(this.stage==='mix')this.message=enabled?this.mixingGuideMessage():'Pick a vessel. Pour a little, or a little more.';
+    this.notify();return true;
+  }
+  addIce(){if(this.stage!=='prepare')return;this.ice=3;this.stage='mix';this.message=this.equalParts?this.mixingGuideMessage():'Pick a vessel. Pour a little, or a little more.';this.notify();}
+  select(c:Component){if(!COMPONENTS.includes(c))return;this.takeover();this.selected=c;if(this.equalParts&&this.stage==='mix')this.message=this.mixingGuideMessage();this.notify();}
+  pour(value:number){if(!['mix','strain'].includes(this.stage))return;if(this.equalParts&&this.stage==='mix'&&this.partComplete(this.selected)){this.disarm();this.message=this.mixingGuideMessage();this.notify();return;}this.pourTilt=clamp(value,0,1);}
   stir(speed:number,angle?:number){if(this.stage!=='stir')return;this.stirInput=clamp(speed,-9,9);this.stirPulse=angle===undefined?0:.10;if(angle!==undefined)this.spoonAngle=angle;}
   move(x:number,z:number,ax=0,az=0){this.vesselX=clamp(x,-.25,.25);this.vesselZ=clamp(z,-.25,.25);this.impulseX=clamp(ax,-3,3);this.impulseZ=clamp(az,-3,3);this.motionPulse=.10;}
-  canAdvance(){if(this.transit.length||this.pourTilt>.01)return false;return this.stage==='mix'?this.mix.core>=definition.minimum:this.stage==='stir'?total(this.mix)>=definition.minimum:this.stage==='strain'?total(this.serving)>=definition.minimum:this.stage==='garnish'?this.garnish.placed:['express'].includes(this.stage);}
+  canAdvance(){if(this.transit.length||this.pourTilt>.01)return false;return this.stage==='mix'?(this.equalParts?this.equalPartsReady:this.mix.core>=definition.minimum):this.stage==='stir'?total(this.mix)>=definition.minimum:this.stage==='strain'?total(this.serving)>=definition.minimum:this.stage==='garnish'?this.garnish.placed:['express'].includes(this.stage);}
   advance(){if(!this.canAdvance())return false;this.disarm();const next:Partial<Record<Stage,Stage>>={mix:'stir',stir:'strain',strain:'express',express:'garnish',garnish:'serve'};this.stage=next[this.stage]??this.stage;if(this.stage==='strain')this.servingIce=true;if(this.stage==='serve')this.result={components:{...this.serving},volume:total(this.serving),garnish:{...this.garnish},oil:this.oil,origin:this.origin,stirSeconds:this.effectiveStir};this.message={prepare:'',mix:'Choose your amounts.',stir:'Drag a circle. Change direction. Let it settle.',strain:'Tilt to pour. Stop whenever you like.',express:'A little orange oil over the surface.',garnish:'Make the shishito your finishing touch.',serve:'Made your way.'}[this.stage];this.notify();return true;}
   back(){if(this.transit.length||this.pourTilt>.01)return;const previous:Partial<Record<Stage,Stage>>={stir:'mix',strain:'stir',express:'strain',garnish:'express'};if(previous[this.stage]){this.disarm();this.stage=previous[this.stage]!;this.notify();}}
   express(){if(this.stage!=='express')return;this.oil=true;this.oilTime=1;this.message='Orange oil expressed.';this.notify();}
@@ -50,8 +68,10 @@ export class Preparation {
   tick(dt:number){dt=clamp(dt,0,1/60);this.oilTime=Math.max(0,this.oilTime-dt);
     if(this.motionPulse>0){this.motionPulse=Math.max(0,this.motionPulse-dt);if(this.motionPulse===0)this.impulseX=this.impulseZ=0;}
     for(const p of this.transit)p.remaining-=dt;
-    for(const p of this.transit.filter(p=>p.remaining<=0)){const dest=p.destination==='mix'?this.mix:this.serving;for(const c of COMPONENTS)dest[c]+=p.q[c];}
+    const arrived=this.transit.filter(p=>p.remaining<=0);
+    for(const p of arrived){const dest=p.destination==='mix'?this.mix:this.serving;for(const c of COMPONENTS)dest[c]+=p.q[c];}
     this.transit=this.transit.filter(p=>p.remaining>0);
+    if(this.equalParts&&this.stage==='mix'&&arrived.some(p=>p.destination==='mix')&&this.equalPartsReady){this.message=this.mixingGuideMessage();this.notify();}
     if(this.stirPulse>0){this.stirPulse=Math.max(0,this.stirPulse-dt);if(this.stirPulse===0)this.stirInput=0;}
     if(this.stage==='stir'){if(Math.abs(this.stirInput)>.25&&Math.abs(this.stirInput)<8.5)this.effectiveStir+=dt;this.spoonAngle+=this.stirInput*dt;}
     if(this.pourTilt>.2&&['mix','strain'].includes(this.stage)){
@@ -59,11 +79,16 @@ export class Preparation {
       const available=this.stage==='mix'?source[this.selected]:total(source);
       const inFlight=this.transit.filter(p=>p.destination===dest).reduce((n,p)=>n+total(p.q),0);
       const space=definition.capacity[dest]-total(dest==='mix'?this.mix:this.serving)-inFlight;
-      const amount=Math.min(available,space,(this.pourTilt-.2)*.24*dt);
-      if(amount>1e-8){const q=empty();for(const c of COMPONENTS){q[c]=this.stage==='mix'?(c===this.selected?amount:0):amount*source[c]/available;source[c]=Math.max(0,source[c]-q[c]);}this.transit.push({q,remaining:.1,destination:dest});}
+      const guided=this.equalParts&&this.stage==='mix';
+      const remaining=guided?Math.max(0,definition.equalPart-this.partProgress(this.selected)):Infinity;
+      const amount=Math.min(available,space,remaining,(this.pourTilt-.2)*.24*dt);
+      if(amount>1e-8||(guided&&remaining<=1e-8&&amount>0)){const q=empty();for(const c of COMPONENTS){q[c]=this.stage==='mix'?(c===this.selected?amount:0):amount*source[c]/available;source[c]=Math.max(0,source[c]-q[c]);}this.transit.push({q,remaining:.1,destination:dest});
+        if(guided&&this.partComplete(this.selected)){this.disarm();this.message=this.mixingGuideMessage();this.notify();}
+      }
+      else if(guided&&this.partComplete(this.selected)){this.disarm();this.message=this.mixingGuideMessage();this.notify();}
       else {this.pourTilt=0;this.armed=null;this.message=space<1e-6?'Glass full. Pause here or move on.':'This vessel is empty.';this.notify();}
     }
   }
   conservation(){return Object.fromEntries(COMPONENTS.map(c=>[c,this.sources[c]+this.mix[c]+this.serving[c]+this.transit.reduce((n,p)=>n+p.q[c],0)-definition.ingredients[c].initial]));}
-  snapshot(){return {stage:this.stage,preset:this.preset,origin:this.origin,sources:{...this.sources},mix:{...this.mix},serving:{...this.serving},transit:structuredClone(this.transit),ice:this.ice,servingIce:this.servingIce,garnish:{...this.garnish},oil:this.oil,result:structuredClone(this.result),effectiveStir:this.effectiveStir,armed:this.armed,owner:this.owner,pourTilt:this.pourTilt,conservation:this.conservation(),resetId:this.resetId};}
+  snapshot(){return {stage:this.stage,preset:this.preset,origin:this.origin,equalParts:this.equalParts,sources:{...this.sources},mix:{...this.mix},serving:{...this.serving},transit:structuredClone(this.transit),ice:this.ice,servingIce:this.servingIce,garnish:{...this.garnish},oil:this.oil,result:structuredClone(this.result),effectiveStir:this.effectiveStir,armed:this.armed,owner:this.owner,pourTilt:this.pourTilt,conservation:this.conservation(),resetId:this.resetId};}
 }

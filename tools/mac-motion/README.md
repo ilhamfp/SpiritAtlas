@@ -7,14 +7,14 @@ The public game needs no installation. This helper adds physical laptop movement
 node tools/mac-motion/bridge.mjs
 ```
 
-Open [local pairing](http://127.0.0.1:19876/pair) on the same machine, then choose **Pair with SpiritAtlas**. It opens the production diagnostic preview with a temporary credential in the URL fragment; the app immediately removes the fragment. Keep the local pairing page private. If the normal browser asks for local network access, allow the SpiritAtlas site. No TLS certificate or browser security override is needed on the verified Chrome 153 connection.
+Open [local pairing](http://127.0.0.1:19876/pair) on the same machine, then choose **Pair with SpiritAtlas**. It opens the production diagnostic preview with a temporary credential in the URL fragment; the app immediately removes the fragment. After receiving a valid sensor sample, it remembers this pairing in session storage for the same tab until the helper’s original expiry. A refresh reconnects disarmed and needs calibration again; Disconnect forgets the pairing. Keep the local pairing page private. If the normal browser asks for local network access, allow the SpiritAtlas site. No TLS certificate or browser security override is needed on the verified Chrome 153 connection.
 
 1. Set the laptop down. Wait for real samples, choose **Recenter at rest**.
 2. During Stir, choose **Arm stirring**. Gently rock or turn the laptop: the spoon stirs and the glass stays upright. Reverse the gesture to reverse the stirring; hold still to let the liquid settle. Choose **Arm movement** separately to tilt the glass and slosh the liquid.
 3. Choose **Disarm motion** or **Use local controls**. For ingredient or strain stages select **Arm pour** deliberately; neutral does not pour. Stage/source changes disarm.
 4. Stop the helper with Ctrl-C. After 250 ms without new samples motion disarms. Restart and pair again; fresh data never silently rearms.
 
-The helper automatically expires after 20 minutes. Only one browser may subscribe. All networking binds to 127.0.0.1:19876; browser authorization uses a 256-bit token, exact allowed Origin and Host checks. Requests never execute commands. The native reader's stdout is bounded, validated and forwarded by an unprivileged Node process. Only new real inertial reports refresh the stream. Credentials live in ignored `.mac-motion/pair.json` with owner-only directory/file permissions. Do not copy that file into evidence.
+The helper automatically expires after 20 minutes. Only one browser may subscribe. If another browser owns the session, use that paired window or choose Disconnect there before pairing this one. No connection silently takes over another window. All networking binds to 127.0.0.1:19876; browser authorization uses a 256-bit token, exact allowed Origin and Host checks. Requests never execute commands. The native reader's stdout is bounded, validated and forwarded by an unprivileged Node process. Only new real inertial reports refresh the stream. Credentials live in ignored `.mac-motion/pair.json` with owner-only directory/file permissions. Do not copy that file into evidence.
 
 For local development only:
 
