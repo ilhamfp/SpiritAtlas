@@ -1,0 +1,56 @@
+[
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "autoplay": true,
+    "composedFramesChanged": true,
+    "fullCycle": true,
+    "pause": true,
+    "reducedMotion": true,
+    "layout": {
+      "viewport": 390,
+      "documentWidth": 390,
+      "padding": "20px",
+      "titleInset": 21,
+      "background": "rgba(0, 0, 0, 0)",
+      "frameBackground": "rgb(44, 42, 45)",
+      "marble": "none",
+      "edge": "none",
+      "buttons": [
+        {
+          "label": "Look inside",
+          "width": 300,
+          "height": 44
+        },
+        {
+          "label": "Play animation",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Playback speed: 1 times. Change speed",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Reset Negroni",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Rotate Negroni left",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Rotate Negroni right",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    "errors": []
+  }
+]

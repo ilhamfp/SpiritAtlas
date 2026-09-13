@@ -1,0 +1,32 @@
+{
+  "revision": "ebc0579a680bb07a84fc0248ac8ea62b268d7541",
+  "deployment": {
+    "id": "dpl_bgDMz7FxWa4NeMizZzvrkDeqn35v",
+    "url": "spiritatlas-3gi4aba6y-ilham-firdausi-putras-projects.vercel.app",
+    "readyState": "READY",
+    "target": "production",
+    "aliases": [
+      "spiritatlas-one.vercel.app",
+      "spiritatlas-ilham-firdausi-putras-projects.vercel.app"
+    ],
+    "createdAt": 1789282348242
+  },
+  "publicUrl": "https://spiritatlas-one.vercel.app",
+  "entry": "/assets/index-CFuTJmu9.js",
+  "assetChecks": [
+    {
+      "path": "/assets/index-CFuTJmu9.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "129d270013dcc625f6d3e0ba3bc7a354751b799e641a3ea812718bcd722a3946",
+      "localSha256": "129d270013dcc625f6d3e0ba3bc7a354751b799e641a3ea812718bcd722a3946"
+    },
+    {
+      "path": "/assets/Studio-CUvwA8mu.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "sha256": "2c1d0210a5d6d3c943dd63687b889ecc21c06d7d7e3e9617481ad4787ce65405",
+      "localSha256": "2c1d0210a5d6d3c943dd63687b889ecc21c06d7d7e3e9617481ad4787ce65405"
+    }
+  ]
+}

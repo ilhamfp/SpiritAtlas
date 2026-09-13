@@ -66,3 +66,16 @@ The companion native-motion setup correction `e8bee8f` is integrated as
 pairing, and unpaired guidance remains usable on desktop and phone. Its source
 and tests are supplied by the native-motion task; actual physical tilt remains
 a separately recorded acceptance activity. The combined build passes.
+
+## Continuous-player production update
+
+Revision `ebc0579a680bb07a84fc0248ac8ea62b268d7541` is READY as
+`dpl_bgDMz7FxWa4NeMizZzvrkDeqn35v`, publicly aliased at
+https://spiritatlas-one.vercel.app . The entry is `/assets/index-CFuTJmu9.js`.
+The public app passes five landing checks, three studio/setup checks and the
+mobile WebKit full-cycle/layout probe. The entry and studio bundle bytes match
+the verified local build. Exact metadata and evidence are in
+`../brand-evidence/continuous-release/`. Physical-motion gates remain separate.
+Pre-deployment and READY coordination notices were requested through the app
+connector but acknowledgments timed out; ongoing physical observations must
+check their actual loaded entry/revision before attribution.
