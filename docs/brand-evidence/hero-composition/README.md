@@ -10,4 +10,4 @@ After the final edge adjustment, the production build passed again. `verify.mjs`
 
 Controls finish at y858.5 on desktop, y771.2 on tablet and y812.6 on the 844px-tall phone. The short 320×568 viewport scrolls vertically to the controls, preserving readable type and 44px targets. No playback code, catalogue content or studio source changed. The existing lazy-loaded Three.js bundle size warning remains.
 
-Production integration is delegated to the animation task, preserving its combined studio/playback release. Public verification will be recorded separately after deployment.
+Production integration preserves the animation task's completed combined studio/playback release and acceptance evidence. After app coordination notices did not return and the previous release task was confirmed idle, the landing task resumed this bounded publication in an isolated release worktree. See the release ledger. Public verification is recorded separately after deployment.

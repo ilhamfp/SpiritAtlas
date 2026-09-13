@@ -79,3 +79,10 @@ the verified local build. Exact metadata and evidence are in
 Pre-deployment and READY coordination notices were requested through the app
 connector but acknowledgments timed out; ongoing physical observations must
 check their actual loaded entry/revision before attribution.
+# Full-width hero follow-up
+
+The landing task resumed publication for the user's subsequent visual refinement after confirming the animation task had completed its release and was idle, with no further production push in that acceptance record. App coordination notices did not return; the landing task verified the actual remote refs and completed task status before proceeding in a new isolated `codex/hero-composition-release` worktree.
+
+The base includes the accepted continuous-player application `ebc0579` and its public verification `dcc6b04`. Source `5683aa7` is applied as `476e891`. Only the landing wrapper, decorative canvas and scoped hero/player styles change. The studio/native source, continuous playback and concise copy are preserved. The landing task is the sole writer for this bounded publication; stale requests to integrate `5683aa7` should be treated as already handled once this release reaches main.
+
+Local verification is recorded in `../brand-evidence/hero-composition/`; public verification follows in `../brand-evidence/hero-composition-public/`. This visual update does not clear any outstanding physical-motion acceptance gate.
