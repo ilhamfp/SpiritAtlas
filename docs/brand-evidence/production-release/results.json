@@ -1,0 +1,839 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/brand.config.ts"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-release/test-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "brand-journeys.spec.ts",
+          "classic-negroni-integration.spec.ts"
+        ],
+        "timeout": 100000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/brand-evidence/production-release/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "brand-journeys.spec.ts",
+      "file": "brand-journeys.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "headline, CTA and original Negroni poster remain usable while cinematic files are delayed, without requesting 3D assets",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4904,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:44:17.343Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "initial-classic-loading",
+                      "contentType": "application/json",
+                      "body": "eyJtb3ZpZXMiOlsiL2NsYXNzaWMtbmVncm9uaS9jaW5lbWF0aWMvbmVncm9uaS1mb3J3YXJkLm1wNCIsIi9jbGFzc2ljLW5lZ3JvbmkvY2luZW1hdGljL25lZ3JvbmktcmV2ZXJzZS5tcDQiLCIvY2xhc3NpYy1uZWdyb25pL2NpbmVtYXRpYy9uZWdyb25pLWlkbGUubXA0Il0sImhlYXZ5UmVxdWVzdHMiOltdLCJwb3N0ZXJEZWNvZGVkIjp0cnVlfQ=="
+                    },
+                    {
+                      "name": "initial-font-loading",
+                      "contentType": "application/json",
+                      "body": "eyJwYWludCI6W3sibmFtZSI6ImZpcnN0LXBhaW50IiwibXMiOjE2NzZ9LHsibmFtZSI6ImZpcnN0LWNvbnRlbnRmdWwtcGFpbnQiLCJtcyI6MTcyNH1dLCJmb250cyI6WyJodHRwczovL3NwaXJpdGF0bGFzLW9uZS52ZXJjZWwuYXBwL2Fzc2V0cy9pbnN0cnVtZW50LXNhbnMtbGF0aW4td2dodC1ub3JtYWwtQmJ6RkxaVGcud29mZjIiLCJodHRwczovL3NwaXJpdGF0bGFzLW9uZS52ZXJjZWwuYXBwL2Fzc2V0cy9pYm0tcGxleC1tb25vLWxhdGluLTQwMC1ub3JtYWwtRE1KOFZHOHkud29mZjIiXSwibG9hZGVkRm9udHMiOlsiSW5zdHJ1bWVudCBTYW5zIFZhcmlhYmxlIiwiSUJNIFBsZXggTW9ubyJdfQ=="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-68a4e479abf44dde7fa1",
+          "file": "brand-journeys.spec.ts",
+          "line": 60,
+          "column": 1
+        },
+        {
+          "title": "landing composition and links at 1440x1000",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5344,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:44:22.823Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwLCJkb2N1bWVudFdpZHRoIjoxNDQwLCJmb250cyI6WyJJbnN0cnVtZW50IFNhbnMgVmFyaWFibGUiLCJJQk0gUGxleCBNb25vIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-24c0d5844e898f2d14ab",
+          "file": "brand-journeys.spec.ts",
+          "line": 105,
+          "column": 3
+        },
+        {
+          "title": "landing composition and links at 768x1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4984,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:44:28.211Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6NzY4LCJoZWlnaHQiOjEwMjQsImRvY3VtZW50V2lkdGgiOjc2OCwiZm9udHMiOlsiSW5zdHJ1bWVudCBTYW5zIFZhcmlhYmxlIiwiSUJNIFBsZXggTW9ubyJdfQ=="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-1d8d6c307d0b99e658cf",
+          "file": "brand-journeys.spec.ts",
+          "line": 105,
+          "column": 3
+        },
+        {
+          "title": "landing composition and links at 390x844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3609,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:44:33.213Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjg0NCwiZG9jdW1lbnRXaWR0aCI6MzkwLCJmb250cyI6WyJJbnN0cnVtZW50IFNhbnMgVmFyaWFibGUiLCJJQk0gUGxleCBNb25vIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-de4873abb30f62004d28",
+          "file": "brand-journeys.spec.ts",
+          "line": 105,
+          "column": 3
+        },
+        {
+          "title": "keyboard CTA enters atlas and each featured bar opens the correct working experience with return home",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29356,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:44:36.837Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-9b095981d1cdda698f77",
+          "file": "brand-journeys.spec.ts",
+          "line": 167,
+          "column": 1
+        },
+        {
+          "title": "original cinematic frames advance, pause, reverse at the same pose, and scrub with visible controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4518,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:45:06.203Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "cinematic-playback",
+                      "contentType": "application/json",
+                      "body": "eyJwYXVzZWQiOjAuOTE0NzE1LCJiZWZvcmVSZXZlcnNlIjowLjE3NTIzLCJzY3J1YmJlZCI6MC41MDA2M30="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-7f34b58055e1bcf5272f",
+          "file": "brand-journeys.spec.ts",
+          "line": 192,
+          "column": 1
+        },
+        {
+          "title": "expanded film circulates continuously, pauses its actual frame and reassembles from the visible idle pose",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16654,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:45:10.730Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "idle-to-reverse-continuity",
+                      "contentType": "application/json",
+                      "body": "eyJpZGxlVGltZSI6MC4yOTcyNzQsInZpc2libGVQb3NlIjowLjk4NDAxLCJyZWFzc2VtYmxlZCI6MH0="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-3900b43a3136b99c3a62",
+          "file": "brand-journeys.spec.ts",
+          "line": 230,
+          "column": 1
+        },
+        {
+          "title": "Explore 3D loads the original fluid scene on demand and preserves the selected pose when switching modes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5745,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:45:27.395Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "classic-live-scene",
+                      "contentType": "application/json",
+                      "body": "eyJzZWxlY3RlZFBvc2UiOjAuNSwiZmluYWxQb3NlIjowLjU1NTU3LCJoZWF2eVJlcXVlc3RzIjpbIi9hc3NldHMvcmVuZGVyZXItQ2dQVkFPMnguanMiLCIvYXNzZXRzL3RocmVlLXZJWUR6ekVfLmpzIiwiL2NsYXNzaWMtbmVncm9uaS9zaW11bGF0aW9uL25lZ3JvbmkuanNvbiIsIi9jbGFzc2ljLW5lZ3Jvbmkvc2ltdWxhdGlvbi9uZWdyb25pLmJpbiIsIi9jbGFzc2ljLW5lZ3Jvbmkvc3R1ZGlvX3NtYWxsXzA5XzFrLmhkciIsIi9jbGFzc2ljLW5lZ3JvbmkvdGV4dHVyZXMvb3JhbmdlLWNyb3NzLXNlY3Rpb24tdjIucG5nIiwiL2NsYXNzaWMtbmVncm9uaS90ZXh0dXJlcy9vcmFuZ2UtbWljcm9oZWlnaHQtdjIucG5nIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-98fe05685a99610c6c0d",
+          "file": "brand-journeys.spec.ts",
+          "line": 256,
+          "column": 1
+        },
+        {
+          "title": "ingredient entry restores expansion and the comparison entry preserves synchronized and independent rotation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 55152,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('viewer-bbf-negroni')\nExpected: \u001b[32m\"true\"\u001b[39m\nTimeout: 45000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('viewer-bbf-negroni') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('viewer-bbf-negroni')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('viewer-bbf-negroni')\nExpected: \u001b[32m\"true\"\u001b[39m\nTimeout: 45000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('viewer-bbf-negroni') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('viewer-bbf-negroni')\u001b[22m\n\n    at waitLive (/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts:26:36)\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:321:9",
+                    "location": {
+                      "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts",
+                      "column": 36,
+                      "line": 26
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers.ts:26\n\n  24 | export async function waitLive(page: Page, ids: readonly DrinkId[]) {\n  25 |   for (const id of ids) {\n> 26 |     await expect(viewer(page, id)).toHaveAttribute('data-live', 'true', { timeout: 45_000 });\n     |                                    ^\n  27 |     await expect.poll(() => page.evaluate((drinkId) => Boolean((window as unknown as { __atlasViewers?: Record<string, ViewerSnapshot> }).__atlasViewers?.[drinkId]?.ready), id)).toBe(true);\n  28 |     await expect(viewer(page, id).locator('canvas')).toBeVisible();\n  29 |   }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts",
+                        "column": 36,
+                        "line": 26
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('viewer-bbf-negroni')\nExpected: \u001b[32m\"true\"\u001b[39m\nTimeout: 45000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('viewer-bbf-negroni') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('viewer-bbf-negroni')\u001b[22m\n\n\n   at helpers.ts:26\n\n  24 | export async function waitLive(page: Page, ids: readonly DrinkId[]) {\n  25 |   for (const id of ids) {\n> 26 |     await expect(viewer(page, id)).toHaveAttribute('data-live', 'true', { timeout: 45_000 });\n     |                                    ^\n  27 |     await expect.poll(() => page.evaluate((drinkId) => Boolean((window as unknown as { __atlasViewers?: Record<string, ViewerSnapshot> }).__atlasViewers?.[drinkId]?.ready), id)).toBe(true);\n  28 |     await expect(viewer(page, id).locator('canvas')).toBeVisible();\n  29 |   }\n    at waitLive (/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts:26:36)\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:321:9"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                        "column": 196,
+                        "line": 57
+                      },
+                      "message": "Error: No unexpected first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 5\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"404 https://spiritatlas-one.vercel.app/assets/index-crkEXD8-.js\",\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 () [https://spiritatlas-one.vercel.app/assets/index-crkEXD8-.js]\",\u001b[39m\n\u001b[31m+   \"Refused to apply style from 'https://spiritatlas-one.vercel.app/assets/index-BeujEBp8.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled. [https://spiritatlas-one.vercel.app/?compare=bbf-negroni%2Cichigo-negroni%2Cnegroni-express&sync=0&expand=0]\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  55 | test.afterEach(async ({ page }, testInfo) => {\n  56 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 57 |   expect(failures.get(page)?.filter(message => !expectedFailures.get(page)?.some(pattern => pattern.test(message))), 'No unexpected first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                                                                                                                    ^\n  58 | });\n  59 |\n  60 | test('headline, CTA and original Negroni poster remain usable while cinematic files are delayed, without requesting 3D assets', async ({ page }, testInfo) => {\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:57:196"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:45:33.150Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-release/test-output/brand-journeys-ingredient--4e736-ed-and-independent-rotation/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "WyI0MDQgaHR0cHM6Ly9zcGlyaXRhdGxhcy1vbmUudmVyY2VsLmFwcC9hc3NldHMvaW5kZXgtY3JrRVhEOC0uanMiLCJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA0MDQgKCkgW2h0dHBzOi8vc3Bpcml0YXRsYXMtb25lLnZlcmNlbC5hcHAvYXNzZXRzL2luZGV4LWNya0VYRDgtLmpzXSIsIlJlZnVzZWQgdG8gYXBwbHkgc3R5bGUgZnJvbSAnaHR0cHM6Ly9zcGlyaXRhdGxhcy1vbmUudmVyY2VsLmFwcC9hc3NldHMvaW5kZXgtQmV1akVCcDguY3NzJyBiZWNhdXNlIGl0cyBNSU1FIHR5cGUgKCd0ZXh0L3BsYWluJykgaXMgbm90IGEgc3VwcG9ydGVkIHN0eWxlc2hlZXQgTUlNRSB0eXBlLCBhbmQgc3RyaWN0IE1JTUUgY2hlY2tpbmcgaXMgZW5hYmxlZC4gW2h0dHBzOi8vc3Bpcml0YXRsYXMtb25lLnZlcmNlbC5hcHAvP2NvbXBhcmU9YmJmLW5lZ3JvbmklMkNpY2hpZ28tbmVncm9uaSUyQ25lZ3JvbmktZXhwcmVzcyZzeW5jPTAmZXhwYW5kPTBdIl0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-release/test-output/brand-journeys-ingredient--4e736-ed-and-independent-rotation/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-release/test-output/brand-journeys-ingredient--4e736-ed-and-independent-rotation/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts",
+                    "column": 36,
+                    "line": 26
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-d2ece6791ae757a4df68",
+          "file": "brand-journeys.spec.ts",
+          "line": 292,
+          "column": 1
+        },
+        {
+          "title": "direct atlas and all Negroni routes resolve and survive refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13824,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:46:30.199Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-c18e56a6ff78564382ea",
+          "file": "brand-journeys.spec.ts",
+          "line": 334,
+          "column": 1
+        },
+        {
+          "title": "WebGL unavailable restores the cinematic film without blocking the landing or ingredient entry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5523,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:46:44.561Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "WyJUSFJFRS5XZWJHTFJlbmRlcmVyOiBUSFJFRS5XZWJHTFJlbmRlcmVyOiBFcnJvciBjcmVhdGluZyBXZWJHTCBjb250ZXh0LiBbaHR0cHM6Ly9zcGlyaXRhdGxhcy1vbmUudmVyY2VsLmFwcC9hc3NldHMvdGhyZWUtdklZRHp6RV8uanNdIl0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-08b24349e4daf313b0d0",
+          "file": "brand-journeys.spec.ts",
+          "line": 344,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "phone touch and reduced motion",
+          "file": "brand-journeys.spec.ts",
+          "line": 374,
+          "column": 6,
+          "specs": [
+            {
+              "title": "touch controls choose stable cinematic endpoints and explicit playback does not start an idle loop",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 100000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11123,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-13T05:46:50.094Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "touch-reduced-motion",
+                          "contentType": "application/json",
+                          "body": "eyJlbmRwb2ludFNlY29uZHMiOjcuMiwiZXhwbGljaXRQbGF5YmFja0NvbXBsZXRlZCI6dHJ1ZX0="
+                        },
+                        {
+                          "name": "runtime-errors",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "835d211cf8ffd964d224-86e2c920c47d9aff2934",
+              "file": "brand-journeys.spec.ts",
+              "line": 376,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "classic-negroni-integration.spec.ts",
+      "file": "classic-negroni-integration.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "desktop framing keeps playback controls in view and ingredient reveals preserve the layout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1614,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:47:01.239Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b0e4b813b9da7a2fb0-b9ad3b2123b4091e4178",
+          "file": "classic-negroni-integration.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "returning to cinematic cancels a pending 3D load and lets the visitor try again",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3601,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:47:02.863Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b0e4b813b9da7a2fb0-ebcfdb50ba322f31a722",
+          "file": "classic-negroni-integration.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "cinematic playback pauses offscreen and resumes at the same point",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1772,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:47:06.473Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b0e4b813b9da7a2fb0-0c81f83a61081686f98e",
+          "file": "classic-negroni-integration.spec.ts",
+          "line": 55,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "live scene on touch screens",
+          "file": "classic-negroni-integration.spec.ts",
+          "line": 71,
+          "column": 6,
+          "specs": [
+            {
+              "title": "reduced motion settles the camera immediately and vertical swipes scroll over the 3D scene",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 100000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3580,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-13T05:47:08.253Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "62b0e4b813b9da7a2fb0-faab87236e4b42813ad5",
+              "file": "classic-negroni-integration.spec.ts",
+              "line": 74,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T05:44:16.876Z",
+    "duration": 175296.373,
+    "expected": 15,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

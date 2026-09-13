@@ -1,0 +1,157 @@
+{
+  "url": "https://spiritatlas-one.vercel.app",
+  "startedAt": "2026-09-13T05:38:37.389Z",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "checks": [
+    {
+      "name": "Stage keyboard focus, Enter expansion and R reset",
+      "status": "passed",
+      "details": {
+        "focus": {
+          "focused": true,
+          "focusVisible": true,
+          "outline": "rgb(153, 200, 255) auto 1px",
+          "outlineStyle": "auto",
+          "outlineColor": "rgb(153, 200, 255)",
+          "outlineWidth": "1px",
+          "outlineOffset": "0px",
+          "boxShadow": "none",
+          "background": "rgb(26, 25, 22)",
+          "parentBackground": "rgba(0, 0, 0, 0)",
+          "contrastAgainstOuterCharcoal": 8.169892537874508,
+          "contrastAgainstStageBase": 10.095909451835134,
+          "visualInspection": "Native pale-blue outline is visibly continuous around the full stage against the surrounding charcoal."
+        },
+        "expanded": {
+          "progress": 1,
+          "videoSeconds": 7.2
+        },
+        "reset": {
+          "progress": 0,
+          "videoSeconds": 0
+        },
+        "screenshot": "stage-keyboard-focus-1440.png"
+      }
+    },
+    {
+      "name": "Keyboard range changes actual film pose",
+      "status": "passed",
+      "details": {
+        "end": {
+          "value": "1000",
+          "progress": 1,
+          "seconds": 7.2
+        },
+        "home": {
+          "progress": 0,
+          "sequence": "reverse",
+          "seconds": 7.2
+        },
+        "focus": {
+          "focused": true,
+          "focusVisible": true,
+          "outline": "rgb(255, 255, 227) solid 2px",
+          "outlineStyle": "solid",
+          "outlineColor": "rgb(255, 255, 227)",
+          "outlineWidth": "2px",
+          "outlineOffset": "3px",
+          "boxShadow": "none",
+          "background": "rgb(59, 59, 59)",
+          "parentBackground": "rgba(0, 0, 0, 0)"
+        }
+      }
+    },
+    {
+      "name": "Playback speed cycles through every value and updates film rate",
+      "status": "passed",
+      "details": [
+        {
+          "labelRate": 0.5,
+          "sequence": "reverse",
+          "actualRate": 0.5
+        },
+        {
+          "labelRate": 0.25,
+          "sequence": "reverse",
+          "actualRate": 0.25
+        },
+        {
+          "labelRate": 1,
+          "sequence": "reverse",
+          "actualRate": 1
+        }
+      ]
+    },
+    {
+      "name": "Left orbit changes rendered scene and Reset restores identical settled pixels",
+      "status": "passed",
+      "details": {
+        "before": "82eb22f79649fc17c8b752097851b2c0cda08e740a557dc04b4b81e28f8b0bcd",
+        "left": "c01037eddae395e4d51362397378523819998809c5a69cb4670758c7485fedf1",
+        "reset": "82eb22f79649fc17c8b752097851b2c0cda08e740a557dc04b4b81e28f8b0bcd",
+        "pixelsRestored": true,
+        "progress": 0
+      }
+    },
+    {
+      "name": "Header anchors scroll to the corresponding sections",
+      "status": "passed",
+      "details": [
+        {
+          "label": "The bars",
+          "url": "https://spiritatlas-one.vercel.app/#the-bars",
+          "heading": "Three bars.\nDistinctly their own.",
+          "scrollY": 1215
+        },
+        {
+          "label": "Inside the drink",
+          "url": "https://spiritatlas-one.vercel.app/#inside",
+          "heading": "There’s more\nin the glass.",
+          "scrollY": 2178
+        }
+      ]
+    },
+    {
+      "name": "Footer Back to Singapore enters atlas and wordmark returns home",
+      "status": "passed",
+      "details": {
+        "atlasURL": "https://spiritatlas-one.vercel.app/?bar=bar-bon-funk",
+        "homeURL": "https://spiritatlas-one.vercel.app/",
+        "scrollY": 0
+      }
+    }
+  ],
+  "errors": [],
+  "harnessCorrection": "An initial diagnostic sampled the hidden forward film after keyboard seeking selected reverse. The final range and speed checks below inspect the actual visible film.",
+  "document": {
+    "status": 200,
+    "sha256": "cf7c30d62cf5d700e15e8ba4eed8e28522807a75c909259d8dff3b5d892cc49e"
+  },
+  "stageFocus": {
+    "focused": true,
+    "focusVisible": true,
+    "outline": "rgb(153, 200, 255) auto 1px",
+    "outlineStyle": "auto",
+    "outlineColor": "rgb(153, 200, 255)",
+    "outlineWidth": "1px",
+    "outlineOffset": "0px",
+    "boxShadow": "none",
+    "background": "rgb(26, 25, 22)",
+    "parentBackground": "rgba(0, 0, 0, 0)",
+    "contrastAgainstOuterCharcoal": 8.169892537874508,
+    "contrastAgainstStageBase": 10.095909451835134,
+    "visualInspection": "Native pale-blue outline is visibly continuous around the full stage against the surrounding charcoal."
+  },
+  "orbit": {
+    "before": "82eb22f79649fc17c8b752097851b2c0cda08e740a557dc04b4b81e28f8b0bcd",
+    "left": "c01037eddae395e4d51362397378523819998809c5a69cb4670758c7485fedf1",
+    "reset": "82eb22f79649fc17c8b752097851b2c0cda08e740a557dc04b4b81e28f8b0bcd",
+    "pixelsRestored": true,
+    "progress": 0
+  },
+  "finishedAt": "2026-09-13T05:38:46.949Z",
+  "status": "passed"
+}

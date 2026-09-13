@@ -1,0 +1,136 @@
+{
+  "applicationCommit": "bc4f0173d494a8b2a97c01664ad69576aa524dc0",
+  "publicUrl": "https://spiritatlas-one.vercel.app",
+  "deploymentId": "dpl_2wmqnZPCcrmew1UUL8tN3jKFXhHk",
+  "deploymentUrl": "https://spiritatlas-7f4u5qeu7-ilham-firdausi-putras-projects.vercel.app",
+  "checkedAt": "2026-09-13T05:34:27.064Z",
+  "checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 1479,
+      "sha256": "cf7c30d62cf5d700e15e8ba4eed8e28522807a75c909259d8dff3b5d892cc49e",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/App-C6czc-3z.css",
+      "status": 200,
+      "bytes": 64651,
+      "sha256": "2a126571595df75730cbb3074d1823490f50e5125c6fff75cdb06779b57b091b",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/App-a2TolNPR.js",
+      "status": 200,
+      "bytes": 48237,
+      "sha256": "ac989a60d68f75d9ed2ddea3dfe27687e21ae28d5215fa6cea73551767195000",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/Viewer-Crv5LJwa.js",
+      "status": 200,
+      "bytes": 35486,
+      "sha256": "80b348cb348471568a16a48984bb34fad475e1822b6c3b1138c9da8f9a9080fd",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/Viewer-VJZSSb2X.css",
+      "status": 200,
+      "bytes": 4356,
+      "sha256": "1e9ee07a3bce652bbc9f2d14760a4a43740313214908880f79a15ee9e531a182",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff",
+      "status": 200,
+      "bytes": 13144,
+      "sha256": "328d50b6ece9ca25c46eea3e885ba497f6237f2fb84ef7b92f88e14a1a25e381",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+      "status": 200,
+      "bytes": 14708,
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/index-BopGeigB.css",
+      "status": 200,
+      "bytes": 24548,
+      "sha256": "bc70f745ea9205484693241b55a1c0afe21f458d460b1899d263836f40d89324",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/index-DxZKHYyA.js",
+      "status": 200,
+      "bytes": 65378,
+      "sha256": "4cad46722a6443e180ecedbb998ea4727ee0f929f4384f6c79cc16cdeac52281",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/instrument-sans-latin-ext-wght-normal-B5bTHO_g.woff2",
+      "status": 200,
+      "bytes": 11144,
+      "sha256": "c4fcfea41f2c1cfeea9211fa43679845454a1d0e0d7e95e069c7e73c4ae302d2",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/instrument-sans-latin-wght-normal-BbzFLZTg.woff2",
+      "status": 200,
+      "bytes": 30092,
+      "sha256": "2ee17598a98d8a59e4df8152d015bec9ab8e4d5672cc0ab42bef806b568e3971",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/map--FHYeYtF.js",
+      "status": 200,
+      "bytes": 1057883,
+      "sha256": "f4f839677e9ad7ab5d99525ff62118af02a8e362b81f4d021bc1935378cb7084",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/map-CKRTiAqP.css",
+      "status": 200,
+      "bytes": 82869,
+      "sha256": "a44e9c8519685a73587bcb465401eade1c3491d382c22243373c1c42b766f186",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/maplibre-gl-worker-DsvDs_fr.js",
+      "status": 200,
+      "bytes": 506723,
+      "sha256": "291cdeadf73d0eec1467427d6c43267ae3b440d7b9dd6c60312358253d5fb93d",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/react-CtYP0wlk.js",
+      "status": 200,
+      "bytes": 189604,
+      "sha256": "242d1dd4bcb0a094d3bdf21b7f66c22774c9d66ff781893a4287be7f83c82347",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/renderer-CkgTmhvo.js",
+      "status": 200,
+      "bytes": 46677,
+      "sha256": "3bfcac9c0ffa0289d1e987f24fd5f793a4702fe432974c626198a1ae7b3aa71d",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/rolldown-runtime-hePW80VL.js",
+      "status": 200,
+      "bytes": 716,
+      "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/three-vIYDzzE_.js",
+      "status": 200,
+      "bytes": 1304468,
+      "sha256": "7fb24f54830d2fbbcace202b59f28443239dcd1c6e49c470e549a5bcb44abef2",
+      "matchesLocalBuild": true
+    }
+  ],
+  "publicBuildMatchesLocal": true
+}

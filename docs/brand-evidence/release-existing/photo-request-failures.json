@@ -1,0 +1,60 @@
+{
+  "deployment": "dpl_2wmqnZPCcrmew1UUL8tN3jKFXhHk",
+  "checks": [
+    {
+      "path": "/references/bbf-negroni.png",
+      "status": 404,
+      "bytes": 79
+    },
+    {
+      "path": "/references/ichigo-negroni.png",
+      "status": 404,
+      "bytes": 79
+    },
+    {
+      "path": "/references/negroni-express.png",
+      "status": 404,
+      "bytes": 79
+    },
+    {
+      "path": "/references/atlas-espresso-martini.jpg",
+      "status": 404,
+      "bytes": 79
+    },
+    {
+      "path": "/references/jigger-espresso-martini.jpg",
+      "status": 404,
+      "bytes": 79
+    },
+    {
+      "path": "/references/nighthawks.jpg",
+      "status": 404,
+      "bytes": 79
+    },
+    {
+      "path": "/references/atlas-martini.jpg",
+      "status": 404,
+      "bytes": 79
+    },
+    {
+      "path": "/references/moga-dirty-sake-tini.jpg",
+      "status": 404,
+      "bytes": 79
+    },
+    {
+      "path": "/references/somma-mirkos-martini.jpg",
+      "status": 404,
+      "bytes": 79
+    },
+    {
+      "path": "/references/moga-salted-yuzu-highball.jpg",
+      "status": 404,
+      "bytes": 79
+    },
+    {
+      "path": "/references/jigger-wasabi-highball.jpg",
+      "status": 404,
+      "bytes": 79
+    }
+  ]
+}

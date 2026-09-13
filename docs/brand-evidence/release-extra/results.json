@@ -1,0 +1,164 @@
+[
+  {
+    "width": 1440,
+    "controls": [
+      {
+        "name": "Cinematic",
+        "width": 84.703125,
+        "height": 36,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgba(255, 255, 227, 0.05)"
+      },
+      {
+        "name": "Explore 3D",
+        "width": 88.46875,
+        "height": 36,
+        "color": "rgb(185, 179, 176)",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "name": "Look inside",
+        "width": 120.203125,
+        "height": 44,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgb(44, 42, 45)"
+      },
+      {
+        "name": "Play animation",
+        "width": 36,
+        "height": 40,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "name": "Deconstruction progress",
+        "width": 482.359375,
+        "height": 32,
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(59, 59, 59)"
+      },
+      {
+        "name": "Playback speed: 1 times. Change speed",
+        "width": 44,
+        "height": 40,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "name": "Reset Negroni",
+        "width": 36,
+        "height": 40,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    ],
+    "focus": {
+      "style": "solid",
+      "width": "2px",
+      "color": "rgb(255, 255, 227)"
+    },
+    "loading": {
+      "bounds": {
+        "x": 715.25,
+        "y": 788.75,
+        "width": 636.75,
+        "height": 36
+      },
+      "foreground": "rgb(255, 255, 227)",
+      "background": "rgba(26, 25, 22, 0.85)"
+    },
+    "actual3D": {
+      "before": "3f5fc3a2f16153e8fe81a5c03205507663f24370928d88ca9a1b286d6ab88746",
+      "afterKey": "89c40959123067475ae2a7742f0a94b4a04d72d943bc071056a708e8a89e142a",
+      "afterReset": "3f5fc3a2f16153e8fe81a5c03205507663f24370928d88ca9a1b286d6ab88746",
+      "afterGesture": "c174b29b2282456a1e1430baa55b92d59491738a3203790020e78b74d95d7222",
+      "expanded": "9a8f82dbc12f86dde778a16253b135563508dd1e6e57d05408778b53faaf0888",
+      "reassembled": "abdf2e85ceed04897d3722fe7c28f5d0d4747a5f993b6aea63b85b2f0f05c3ae",
+      "framesBefore": 3,
+      "framesSettled": 195,
+      "framesLater": 195
+    },
+    "errors": []
+  },
+  {
+    "width": 390,
+    "controls": [
+      {
+        "name": "Cinematic",
+        "width": 84.703125,
+        "height": 44,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgba(255, 255, 227, 0.05)"
+      },
+      {
+        "name": "Explore 3D",
+        "width": 88.46875,
+        "height": 44,
+        "color": "rgb(185, 179, 176)",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "name": "Look inside",
+        "width": 111.03125,
+        "height": 44,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgb(44, 42, 45)"
+      },
+      {
+        "name": "Play animation",
+        "width": 44,
+        "height": 44,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "name": "Deconstruction progress",
+        "width": 159.609375,
+        "height": 32,
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(59, 59, 59)"
+      },
+      {
+        "name": "Playback speed: 1 times. Change speed",
+        "width": 44,
+        "height": 44,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "name": "Reset Negroni",
+        "width": 44,
+        "height": 44,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    ],
+    "focus": {
+      "style": "solid",
+      "width": "2px",
+      "color": "rgb(255, 255, 227)"
+    },
+    "loading": {
+      "bounds": {
+        "x": 40,
+        "y": 790.21875,
+        "width": 310,
+        "height": 36
+      },
+      "foreground": "rgb(255, 255, 227)",
+      "background": "rgba(26, 25, 22, 0.85)"
+    },
+    "actual3D": {
+      "before": "5dd3e7c354d9f1343d121da87896441b6c719f323534a261278ef43e9cafc50c",
+      "afterKey": "60eea901d24cf17d6e52c3486d74d1b60af51b722450ef4a9b6e9b6b607d0585",
+      "afterReset": "2c9822490f2bfa0aa4e1cd6e4e45f735b041ddfcae2dc6e3dc4b2c465c1a7c32",
+      "afterGesture": "d9539e0e4c7bb381cec11316d9b7a2a9b758584aed9c695e774c3fd8483a1899",
+      "expanded": "5aa53246f4a13be751facb76b0b17f181cbd4e544e8c6be88e1e054eb5b0701b",
+      "reassembled": "d9539e0e4c7bb381cec11316d9b7a2a9b758584aed9c695e774c3fd8483a1899",
+      "framesBefore": 3,
+      "framesSettled": 127,
+      "framesLater": 127
+    },
+    "errors": []
+  }
+]

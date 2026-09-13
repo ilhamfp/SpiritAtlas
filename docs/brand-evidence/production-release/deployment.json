@@ -1,0 +1,282 @@
+{
+  "applicationCommit": "5c9bcbe5f2ceec479c7a21bf5d1e148340a1e12b",
+  "publicUrl": "https://spiritatlas-one.vercel.app",
+  "deploymentId": "dpl_4b6vTZvnn2JMtSN37yrnxvdSqyAE",
+  "deploymentUrl": "https://spiritatlas-ltzvk1tlu-ilham-firdausi-putras-projects.vercel.app",
+  "checkedAt": "2026-09-13T05:44:30.998Z",
+  "checks": [
+    {
+      "path": "index.html",
+      "kind": "build",
+      "status": 200,
+      "bytes": 1479,
+      "sha256": "0ad83624b6fbac92a2f56174ac59c81a9e69403d0d13753cf30f80351b4be24c",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/App-C6czc-3z.css",
+      "kind": "build",
+      "status": 200,
+      "bytes": 64651,
+      "sha256": "2a126571595df75730cbb3074d1823490f50e5125c6fff75cdb06779b57b091b",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/App-C8anEpqt.js",
+      "kind": "build",
+      "status": 200,
+      "bytes": 48237,
+      "sha256": "5a31f44d3a196f5f61a6290e81cd3db7756b9ca06475ee194e41afaeaea181be",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/Viewer-BISggqvf.js",
+      "kind": "build",
+      "status": 200,
+      "bytes": 35486,
+      "sha256": "add1cef76fdf22274ba0ec146d7550d29e20eca7b1f9bee97d32d975a6a6a6ba",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/Viewer-VJZSSb2X.css",
+      "kind": "build",
+      "status": 200,
+      "bytes": 4356,
+      "sha256": "1e9ee07a3bce652bbc9f2d14760a4a43740313214908880f79a15ee9e531a182",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff",
+      "kind": "build",
+      "status": 200,
+      "bytes": 13144,
+      "sha256": "328d50b6ece9ca25c46eea3e885ba497f6237f2fb84ef7b92f88e14a1a25e381",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+      "kind": "build",
+      "status": 200,
+      "bytes": 14708,
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/index-BeujEBp8.css",
+      "kind": "build",
+      "status": 200,
+      "bytes": 24346,
+      "sha256": "ce0de68f11b1b0e1671c23e6ba6a041ba562c2b88919b540dd029de2c4ab003b",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/index-crkEXD8-.js",
+      "kind": "build",
+      "status": 200,
+      "bytes": 65506,
+      "sha256": "f193f1609f691f784d8cb81704ac231e1b1bd396843a074d701c4db06e39ae90",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/instrument-sans-latin-ext-wght-normal-B5bTHO_g.woff2",
+      "kind": "build",
+      "status": 200,
+      "bytes": 11144,
+      "sha256": "c4fcfea41f2c1cfeea9211fa43679845454a1d0e0d7e95e069c7e73c4ae302d2",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/instrument-sans-latin-wght-normal-BbzFLZTg.woff2",
+      "kind": "build",
+      "status": 200,
+      "bytes": 30092,
+      "sha256": "2ee17598a98d8a59e4df8152d015bec9ab8e4d5672cc0ab42bef806b568e3971",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/map--FHYeYtF.js",
+      "kind": "build",
+      "status": 200,
+      "bytes": 1057883,
+      "sha256": "f4f839677e9ad7ab5d99525ff62118af02a8e362b81f4d021bc1935378cb7084",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/map-CKRTiAqP.css",
+      "kind": "build",
+      "status": 200,
+      "bytes": 82869,
+      "sha256": "a44e9c8519685a73587bcb465401eade1c3491d382c22243373c1c42b766f186",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/maplibre-gl-worker-DsvDs_fr.js",
+      "kind": "build",
+      "status": 200,
+      "bytes": 506723,
+      "sha256": "291cdeadf73d0eec1467427d6c43267ae3b440d7b9dd6c60312358253d5fb93d",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/react-CtYP0wlk.js",
+      "kind": "build",
+      "status": 200,
+      "bytes": 189604,
+      "sha256": "242d1dd4bcb0a094d3bdf21b7f66c22774c9d66ff781893a4287be7f83c82347",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/renderer-CgPVAO2x.js",
+      "kind": "build",
+      "status": 200,
+      "bytes": 46798,
+      "sha256": "90045b1e54e1a8788e547cb2c2650fc7fa408935ee5ab80fef3fdf32faae4906",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/rolldown-runtime-hePW80VL.js",
+      "kind": "build",
+      "status": 200,
+      "bytes": 716,
+      "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "assets/three-vIYDzzE_.js",
+      "kind": "build",
+      "status": 200,
+      "bytes": 1304468,
+      "sha256": "7fb24f54830d2fbbcace202b59f28443239dcd1c6e49c470e549a5bcb44abef2",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "references/bbf-negroni.png",
+      "kind": "reference-photo",
+      "status": 200,
+      "bytes": 77940,
+      "sha256": "f4aac93b7c6b425f8312b9b6fc885ff45659c2259306a078fc8a60b9c907a580",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "references/ichigo-negroni.png",
+      "kind": "reference-photo",
+      "status": 200,
+      "bytes": 128573,
+      "sha256": "b38e7ebe7d54bafd822e7a73bbbf0e20344efd7c94fe7dfb440d62f3466e4b12",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "references/negroni-express.png",
+      "kind": "reference-photo",
+      "status": 200,
+      "bytes": 204734,
+      "sha256": "bc3e5155d8d5bc1bda2b4edbff12ea216b3d6e3402098a552a882d6c6624a5ec",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "references/atlas-espresso-martini.jpg",
+      "kind": "reference-photo",
+      "status": 200,
+      "bytes": 55995,
+      "sha256": "1418c2ca5994c0bdf75a8fdeac0836df3e6dc32e2b5fce0e6747177b28304314",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "references/jigger-espresso-martini.jpg",
+      "kind": "reference-photo",
+      "status": 200,
+      "bytes": 59304,
+      "sha256": "af3014ac20f381843c03167b2d8e996c8e693572737a0f178d2b47b6e7648c8c",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "references/nighthawks.jpg",
+      "kind": "reference-photo",
+      "status": 200,
+      "bytes": 42574,
+      "sha256": "411cef48b81e86e864b95a578dee9cfdb4d11dd4cd61cd2569bd4918a7377d0d",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "references/atlas-martini.jpg",
+      "kind": "reference-photo",
+      "status": 200,
+      "bytes": 979648,
+      "sha256": "7bd8cbb34174ab24efe04681b4da77ececc6a218b6e4b55f825dd79874a51291",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "references/moga-dirty-sake-tini.jpg",
+      "kind": "reference-photo",
+      "status": 200,
+      "bytes": 94848,
+      "sha256": "7add9c2e7794402fbb787e13df6f78cbe3a728d50f442739cf2f5e94bdadeb68",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "references/somma-mirkos-martini.jpg",
+      "kind": "reference-photo",
+      "status": 200,
+      "bytes": 511603,
+      "sha256": "d95cd6d3d6c4e8a5705e189e3efab274446b99f8fee710b93d54748dbbd9f852",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "references/moga-salted-yuzu-highball.jpg",
+      "kind": "reference-photo",
+      "status": 200,
+      "bytes": 285721,
+      "sha256": "a7e649bc41bd2567f6a043aee1f6cae54886a5a95051aeb4884c163dfdafc9b0",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "references/jigger-wasabi-highball.jpg",
+      "kind": "reference-photo",
+      "status": 200,
+      "bytes": 224730,
+      "sha256": "d1c351e139ed63d3d875919e4f7e97aca2b642d9a43154151f8cca4ecd28aaf1",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "textures/spiritatlas-marble-base-desktop-v1.webp",
+      "kind": "texture",
+      "status": 200,
+      "bytes": 98316,
+      "sha256": "1fca22436a120af5280efe8f81b4c40caabd0b50eba88302a474d31c112d4da9",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "textures/spiritatlas-marble-base-mobile-v1.webp",
+      "kind": "texture",
+      "status": 200,
+      "bytes": 99782,
+      "sha256": "4e03de371f6bb609ab81de287cf268a638bd1ec8ac3f0c243f92ebe9640c7b0d",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "posters/bbf-negroni-hero.png",
+      "kind": "poster",
+      "status": 200,
+      "bytes": 406333,
+      "sha256": "9395fc130cecb39e3baf65d93e59953490c83d352c467dc71442dc3a4a05277b",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "posters/ichigo-negroni-hero.png",
+      "kind": "poster",
+      "status": 200,
+      "bytes": 477254,
+      "sha256": "ddbcf454251a1f2af58d627e42fa52e205230ece243af54513354123b6c248d1",
+      "matchesLocalFile": true
+    },
+    {
+      "path": "posters/negroni-express-hero.png",
+      "kind": "poster",
+      "status": 200,
+      "bytes": 378467,
+      "sha256": "05beb7374e3ed9c83b21319423d9a9699b02495bb0338283d27218bbf3abe9a8",
+      "matchesLocalFile": true
+    }
+  ],
+  "publicMatchesLocal": true
+}
