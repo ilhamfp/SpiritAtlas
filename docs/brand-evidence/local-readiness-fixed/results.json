@@ -1,0 +1,194 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/brand.config.ts",
+      "-g",
+      "headline, CTA|touch orbit"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/local-readiness-fixed/test-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "brand-journeys.spec.ts"
+        ],
+        "timeout": 100000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/brand-evidence/local-readiness-fixed/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "brand-journeys.spec.ts",
+      "file": "brand-journeys.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "headline, CTA and faithful poster appear while 3D code and models are held; only the hero model is requested initially",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3264,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:04:33.553Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "blocked-3d-code",
+                      "contentType": "application/json",
+                      "body": "eyJjb2RlUmVxdWVzdHMiOlsiL2Fzc2V0cy90aHJlZS1Cb1dsYnY5My5qcyJdLCJtb2RlbHMiOltdLCJoZWFkbGluZVZpc2libGUiOnRydWUsImN0YVZpc2libGUiOnRydWUsInBvc3RlckRlY29kZWQiOnRydWV9"
+                    },
+                    {
+                      "name": "initial-loading",
+                      "contentType": "application/json",
+                      "body": "ewogICJtb2RlbHMiOiBbCiAgICAiL21vZGVscy9iYmYtbmVncm9uaS5nbGIiCiAgXSwKICAicGFpbnQiOiBbCiAgICB7CiAgICAgICJuYW1lIjogImZpcnN0LXBhaW50IiwKICAgICAgIm1zIjogNjQKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogImZpcnN0LWNvbnRlbnRmdWwtcGFpbnQiLAogICAgICAibXMiOiA5NgogICAgfQogIF0sCiAgImZvbnRzIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Ni9hc3NldHMvaW5zdHJ1bWVudC1zYW5zLWxhdGluLXdnaHQtbm9ybWFsLUJiekZMWlRnLndvZmYyIiwKICAgICJodHRwOi8vMTI3LjAuMC4xOjQxODYvYXNzZXRzL2libS1wbGV4LW1vbm8tbGF0aW4tNDAwLW5vcm1hbC1ETUo4Vkc4eS53b2ZmMiIKICBdLAogICJsb2FkZWRGb250cyI6IFsKICAgICJJbnN0cnVtZW50IFNhbnMgVmFyaWFibGUiLAogICAgIklCTSBQbGV4IE1vbm8iCiAgXQp9"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-0ac2864a8568953f6acb",
+          "file": "brand-journeys.spec.ts",
+          "line": 37,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "phone touch and reduced motion",
+          "file": "brand-journeys.spec.ts",
+          "line": 264,
+          "column": 6,
+          "specs": [
+            {
+              "title": "touch orbit, visible ingredient controls and stable reduced-motion presentation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 100000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6929,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-13T05:04:37.611Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "touch-reduced-motion",
+                          "contentType": "application/json",
+                          "body": "eyJiZWZvcmUiOnsiZSI6MCwicGFydHMiOlt7ImlkIjoiZ2FybmlzaF9vcmFuZ2UiLCJwb3NpdGlvbiI6WzAsMCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImljZV9pbmNsdXNpb25zIiwicG9zaXRpb24iOlstMC4wNjU4OTY1OTMwMzQyNjc0MywwLjU3MDkzMzU4MDM5ODU1OTYsMC4zNjUzMTIwNjk2NTQ0NjQ3XSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX2JpdHRlciIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJiaXR0ZXIiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6InVzZXItY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX21vZGlmaWVycyIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJtb2RpZmllcnMiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6ImluZmVycmVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX3NwaXJpdCIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJzcGlyaXQiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6InZpZGVvLWNvbmZpcm1lZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV92ZXJtb3V0aCIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJ2ZXJtb3V0aCIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidmlkZW8tY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiaWNlIiwicG9zaXRpb24iOlswLDAuOTQ0OTk5OTkyODQ3NDQyNiwtMC4wMzUwMDAwMDAxNDkwMTE2MV0sInJvdGF0aW9uIjpbMC4wMDc3MzYzMTUyNzgzODI0MjQsMC4wNjAwNDUyMDMxODY2NjA3NSwwLjAxMjA1NzE2ODYwNTk5NTE3OCwwLjk5ODA5Mjg1NTI0MjI3MzRdLCJzY2FsZSI6WzEuMDAwMDAwMDAxNDA0NTE2NSwxLjAwMDAwMDAwMDA3Njg0ODMsMS4wMDAwMDAwMDEzNzI0OTFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImxpcXVpZCIsInBvc2l0aW9uIjpbMCwwLDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6Im1peHR1cmUiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImdsYXNzIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH1dLCJjYW1lcmEiOnsiYXppbXV0aCI6LTAuMDgsImVsZXZhdGlvbiI6MC4xNiwiem9vbSI6MS4wNCwidGFyZ2V0IjpbMCwxLjA3LDBdLCJwb3NpdGlvbiI6Wy0wLjUxOTYzODE0Mjk1MDQ5OTUsMi41NTM5NDUwMTE3ODIxMTksNi40ODE2MTM4NTM4MDI1NjldLCJmb3YiOjM1fSwiZnJhbWVUaW1lcyI6WzQ3Mi45MDAwMDAwMDAzNzI1MywyMTIuODk5OTk5OTk5NDQxMiwxNS41XSwicmVuZGVyZWRGcmFtZXMiOjMsInJlbmRlcmVkQXQiOjEzMTQuMTAwMDAwMDAwNTU4OCwicmVhZHkiOnRydWUsInN0YWdlIjp7ImJhY2tncm91bmRCbHVycmluZXNzIjowLjA1LCJiYWNrZ3JvdW5kSW50ZW5zaXR5IjowLjE0LCJlbnZpcm9ubWVudEludGVuc2l0eSI6MC41LCJzdG9uZVN0cmVuZ3RoIjowLjAzNSwic3RvbmVNaXBCaWFzIjoyfX0sImFmdGVyIjp7ImUiOjAsInBhcnRzIjpbeyJpZCI6Imdhcm5pc2hfb3JhbmdlIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6Imdhcm5pc2giLCJub3JtYWxNYXAiOnsid2lkdGgiOjIwNDgsImhlaWdodCI6MjA0OH0sImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJpY2VfaW5jbHVzaW9ucyIsInBvc2l0aW9uIjpbLTAuMDY1ODk2NTkzMDM0MjY3NDMsMC41NzA5MzM1ODAzOTg1NTk2LDAuMzY1MzEyMDY5NjU0NDY0N10sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV9iaXR0ZXIiLCJwb3NpdGlvbiI6WzAsMS4xMDAwMDAwMjM4NDE4NTgsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMC4wMDEsMC4wMDEsMC4wMDFdLCJ2aXNpYmxlIjpmYWxzZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5IjoiYml0dGVyIiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJ1c2VyLWNvbmZpcm1lZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV9tb2RpZmllcnMiLCJwb3NpdGlvbiI6WzAsMS4xMDAwMDAwMjM4NDE4NTgsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMC4wMDEsMC4wMDEsMC4wMDFdLCJ2aXNpYmxlIjpmYWxzZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5IjoibW9kaWZpZXJzIiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJpbmZlcnJlZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV9zcGlyaXQiLCJwb3NpdGlvbiI6WzAsMS4xMDAwMDAwMjM4NDE4NTgsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMC4wMDEsMC4wMDEsMC4wMDFdLCJ2aXNpYmxlIjpmYWxzZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5Ijoic3Bpcml0IiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJ2aWRlby1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfdmVybW91dGgiLCJwb3NpdGlvbiI6WzAsMS4xMDAwMDAwMjM4NDE4NTgsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMC4wMDEsMC4wMDEsMC4wMDFdLCJ2aXNpYmxlIjpmYWxzZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5IjoidmVybW91dGgiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6InZpZGVvLWNvbmZpcm1lZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImljZSIsInBvc2l0aW9uIjpbMCwwLjk0NDk5OTk5Mjg0NzQ0MjYsLTAuMDM1MDAwMDAwMTQ5MDExNjFdLCJyb3RhdGlvbiI6WzAuMDA3NzM2MzE1Mjc4MzgyNDI0LDAuMDYwMDQ1MjAzMTg2NjYwNzUsMC4wMTIwNTcxNjg2MDU5OTUxNzgsMC45OTgwOTI4NTUyNDIyNzM0XSwic2NhbGUiOlsxLjAwMDAwMDAwMTQwNDUxNjUsMS4wMDAwMDAwMDAwNzY4NDgzLDEuMDAwMDAwMDAxMzcyNDkxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJzdHJ1Y3R1cmUiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJsaXF1aWQiLCJwb3NpdGlvbiI6WzAsMCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJtaXh0dXJlIiwiY2F0ZWdvcnkiOiJzdHJ1Y3R1cmUiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJnbGFzcyIsInBvc2l0aW9uIjpbMCwwLDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJzdHJ1Y3R1cmUiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9XSwiY2FtZXJhIjp7ImF6aW11dGgiOjAuNzgzOTk5OTk5OTk5OTk5OSwiZWxldmF0aW9uIjowLjE2LCJ6b29tIjoxLjA0LCJ0YXJnZXQiOlswLDEuMDcsMF0sInBvc2l0aW9uIjpbNC41OTE0NjU0MzM1MDE3MjUsMi41NTM5NDUwMTE3ODIxMTksNC42MDQzMjI2NTYxOTc0NjJdLCJmb3YiOjM1fSwiZnJhbWVUaW1lcyI6WzQ3Mi45MDAwMDAwMDAzNzI1MywyMTIuODk5OTk5OTk5NDQxMiwxNS41LDMxNS4yOTk5OTk5OTk4MTM3NCwzMy42MDAwMDAwMDA1NTg3OSwzMy4yOTk5OTk5OTk4MTM3MzUsMTYuNzk5OTk5OTk5ODEzNzM1LDE2LjUsMTYuNzAwMDAwMDAwMTg2MjY1LDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjIwMDAwMDAwMDE4NjI2NSwxNy4yOTk5OTk5OTk4MTM3MzUsMTYuNjAwMDAwMDAwNTU4Nzk0LDE2LjI5OTk5OTk5OTgxMzczNSwxNi45MDAwMDAwMDAzNzI1MywxNi4xOTk5OTk5OTkyNTQ5NDIsMzMuODAwMDAwMDAwNzQ1MDYsMTQ5LjE5OTk5OTk5OTI1NDk0XSwicmVuZGVyZWRGcmFtZXMiOjE4LCJyZW5kZXJlZEF0IjoyMDQ1LjUsInJlYWR5Ijp0cnVlLCJzdGFnZSI6eyJiYWNrZ3JvdW5kQmx1cnJpbmVzcyI6MC4wNSwiYmFja2dyb3VuZEludGVuc2l0eSI6MC4xNCwiZW52aXJvbm1lbnRJbnRlbnNpdHkiOjAuNSwic3RvbmVTdHJlbmd0aCI6MC4wMzUsInN0b25lTWlwQmlhcyI6Mn19fQ=="
+                        },
+                        {
+                          "name": "runtime-errors",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "835d211cf8ffd964d224-6c2cb53cfaffa09dd8e1",
+              "file": "brand-journeys.spec.ts",
+              "line": 266,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T05:04:33.058Z",
+    "duration": 11688.295,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

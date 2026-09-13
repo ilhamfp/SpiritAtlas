@@ -39,7 +39,7 @@ export default function Landing(){
     <div className="sa-hero-foot"><span className="sa-index">SINGAPORE, THROUGH A DIFFERENT GLASS</span><a href="#the-bars">Meet the three bars <ArrowRight size={15}/></a></div>
    </section>
    <section className="sa-bars sa-section" id="the-bars" aria-labelledby="bars-title">
-    <div className="sa-section-heading sa-reveal"><h2 id="bars-title">Three bars.<br/><span>Distinctly their own.</span></h2><p>One city. Three interpretations of the Negroni.<br/>Start with a familiar drink. See where it takes you.</p></div>
+    <div className="sa-section-heading sa-reveal"><h2 id="bars-title">Three bars.<br/><span>Distinctly their own.</span></h2><p>One city. Three interpretations of the Negroni.<br/>{' '}Start with a familiar drink. See where it takes you.</p></div>
     <div className="sa-bar-grid">{drinkIds.map((id,i)=>{const drink=drinkById[id],bar=barById[drink.barId];return <article className="sa-bar sa-reveal" key={id}><a className="sa-bar-link" href={`/?drink=${id}`} aria-label={`Explore ${bar.name}: ${drink.name}`}><div className="sa-bar-top"><span className="sa-index">0{i+1}</span><span className="sa-index">{bar.area}</span><ArrowUpRight size={20}/></div><div className="sa-bar-image"><img src={`/posters/${id}-hero.png`} alt={drink.appearance.join('. ')} loading="lazy" decoding="async"/></div><h3>{bar.name}</h3><span className="sa-bar-drink">{drink.name}</span></a><p>{descriptions[i]}</p><a className="sa-text-link" href={`/?drink=${id}`}>Explore the drink <ArrowRight size={16}/></a></article>})}</div>
    </section>
    <section className="sa-inside sa-section" id="inside" aria-labelledby="inside-title">

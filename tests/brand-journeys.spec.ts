@@ -57,7 +57,7 @@ test('headline, CTA and faithful poster appear while 3D code and models are held
     await expect(page.getByRole('link', { name: 'Explore the atlas', exact: true })).toBeVisible();
     await expect.poll(() => codeRequests.length).toBeGreaterThan(0);
     await expect(page.locator('.hero-poster img')).toBeVisible();
-    expect(await page.locator('.hero-poster img').evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
+    await expect.poll(() => page.locator('.hero-poster img').evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0), { timeout: 10_000 }).toBe(true);
     expect(models).toEqual([]);
     await page.screenshot({ path: `${evidenceDir}/loading-before-3d-code-1440x1000.png` });
     await testInfo.attach('blocked-3d-code', { body: JSON.stringify({ codeRequests, models, headlineVisible: true, ctaVisible: true, posterDecoded: true }), contentType: 'application/json' });
@@ -65,7 +65,7 @@ test('headline, CTA and faithful poster appear while 3D code and models are held
     await expect.poll(() => models.length).toBeGreaterThan(0);
     const poster = page.locator('.sa-hero-viewer img').first();
     await expect(poster).toBeVisible();
-    expect(await poster.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
+    await expect.poll(() => poster.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0), { timeout: 10_000 }).toBe(true);
     await page.waitForTimeout(800);
     expect(models.length).toBe(1);
     expect(models[0]).toContain('bbf-negroni');
@@ -113,6 +113,7 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 768, height: 102
       const link = page.getByRole('link', { name: `Explore ${entry.bar}: ${entry.name}`, exact: true });
       await expect(link).toHaveAttribute('href', `/?drink=${entry.id}`);
     }
+    await expect(page.locator('.sa-section-heading p')).toHaveText('One city. Three interpretations of the Negroni. Start with a familiar drink. See where it takes you.');
     await page.screenshot({ path: `${evidenceDir}/homepage-${viewport.width}x${viewport.height}.png` });
     // Visit each section before the full-page capture so native lazy images are
     // decoded and reveal transitions reflect an actual completed scroll journey.
@@ -288,6 +289,8 @@ test.describe('phone touch and reduced motion', () => {
     expect(positionError(after, await snapshot(page, 'bbf-negroni'))).toBeLessThan(.002);
     await page.getByRole('link', { name: 'Explore the atlas', exact: true }).tap();
     await expect(page.getByRole('region', { name: 'Featured bars' })).toBeVisible();
+    await expect(page.locator('.atlas-intro h1')).toHaveText('Three bars. Three takes on the Negroni.');
+    await expect(page.locator('.map-loading')).toHaveCount(0, { timeout: 20_000 });
     await expectNoPageOverflow(page);
     await page.screenshot({ path: `${evidenceDir}/atlas-mobile-390x844.png` });
     await testInfo.attach('touch-reduced-motion', { body: JSON.stringify({ before, after }), contentType: 'application/json' });

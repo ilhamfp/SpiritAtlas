@@ -1,0 +1,80 @@
+[
+  {
+    "scenario": "public-network",
+    "url": "https://spiritatlas-one.vercel.app/",
+    "threeCodeHeld": true,
+    "posterHeldUntilVisible": false,
+    "before": {
+      "complete": false,
+      "naturalWidth": 975,
+      "ms": 1716.5
+    },
+    "after": {
+      "complete": true,
+      "naturalWidth": 975,
+      "ms": 1832.2999999998137
+    },
+    "codeRequests": [
+      "https://spiritatlas-one.vercel.app/assets/three-BoWlbv93.js"
+    ],
+    "models": [],
+    "errors": [],
+    "paint": [
+      {
+        "name": "first-paint",
+        "ms": 1012
+      },
+      {
+        "name": "first-contentful-paint",
+        "ms": 1340
+      }
+    ],
+    "poster": [
+      {
+        "name": "https://spiritatlas-one.vercel.app/posters/bbf-negroni-loading.png",
+        "start": 1301.5999999996275,
+        "end": 1730.5999999996275,
+        "duration": 429
+      }
+    ]
+  },
+  {
+    "scenario": "controlled-poster-delay",
+    "url": "https://spiritatlas-one.vercel.app/",
+    "threeCodeHeld": true,
+    "posterHeldUntilVisible": true,
+    "before": {
+      "complete": false,
+      "naturalWidth": 0,
+      "ms": 631.8000000007451
+    },
+    "after": {
+      "complete": true,
+      "naturalWidth": 975,
+      "ms": 744.4000000003725
+    },
+    "codeRequests": [
+      "https://spiritatlas-one.vercel.app/assets/three-BoWlbv93.js"
+    ],
+    "models": [],
+    "errors": [],
+    "paint": [
+      {
+        "name": "first-paint",
+        "ms": 192
+      },
+      {
+        "name": "first-contentful-paint",
+        "ms": 264
+      }
+    ],
+    "poster": [
+      {
+        "name": "https://spiritatlas-one.vercel.app/posters/bbf-negroni-loading.png",
+        "start": 237.80000000074506,
+        "end": 724.8000000007451,
+        "duration": 487
+      }
+    ]
+  }
+]
