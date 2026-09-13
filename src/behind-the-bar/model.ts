@@ -24,7 +24,7 @@ export class Preparation {
   sources:Quantities=empty();mix:Quantities=empty();serving:Quantities=empty();transit:Parcel[]=[];
   ice=0;servingIce=false;oil=false;oilTime=0;garnish:Garnish={x:0,z:0,angle:0,placed:false};result:Serving|null=null;
   pourTilt=0;stirInput=0;stirPulse=0;spoonAngle=0;effectiveStir=0;vesselX=0;vesselZ=0;impulseX=0;impulseZ=0;motionPulse=0;
-  armed:'move'|'pour'|null=null;owner:'local'|'native'='local';lastLocal=0;revision=0;resetId=0;message='Add ice to begin.';
+  armed:'move'|'stir'|'pour'|null=null;owner:'local'|'native'='local';lastLocal=0;revision=0;resetId=0;message='Add ice to begin.';
   latestNative:{seq:number;receivedAt:number;sampleEpoch:number}|null=null;
   listeners=new Set<()=>void>();onDisarm:()=>void=()=>{};
   constructor(preset:Preset='start-empty'){this.reset(preset);}

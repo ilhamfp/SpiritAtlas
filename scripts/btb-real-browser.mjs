@@ -4,7 +4,7 @@ export async function realBrowser(){
  const privateDir=path.resolve('.mac-motion');await fs.mkdir(privateDir,{recursive:true,mode:0o700});const pointer=path.join(privateDir,'browser-profile-path');let profile;
  try{profile=(await fs.readFile(pointer,'utf8')).trim();await fs.access(profile);}catch{profile=await fs.mkdtemp(path.join(os.tmpdir(),'spiritatlas-browser-'));await fs.writeFile(pointer,profile,{mode:0o600});}
  const port=9228,args=[`--user-data-dir=${profile}`,`--remote-debugging-port=${port}`,'--no-first-run','--no-default-browser-check','--window-size=1440,1080','about:blank'];
- const chromeProcess=spawn('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',args,{stdio:'ignore'});let endpoint;
+ const chromeProcess=spawn('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',args,{stdio:'ignore',detached:true});let endpoint;
  for(let i=0;i<100;i++){try{endpoint=await(await fetch(`http://127.0.0.1:${port}/json/version`)).json();break;}catch{await new Promise(r=>setTimeout(r,100));}}
  if(!endpoint){chromeProcess.kill();throw new Error('Normal Chrome debugging endpoint did not start');}
  const browser=await chromium.connectOverCDP(`http://127.0.0.1:${port}`,{noDefaults:true});const context=browser.contexts()[0],page=context.pages()[0]||await context.newPage();await page.bringToFront();

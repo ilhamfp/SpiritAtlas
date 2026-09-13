@@ -2,6 +2,7 @@ import {Preparation,clamp} from './model';
 export type NativePacket={v:1;session:string;seq:number;expires:number;accel:number[];gyro:number[];t:number;sampleEpoch?:number;unit:'g-deg/s';kind:'native-spu'};
 export class NativeMotion {
  status='Not connected';connected=false;calibrated=false;received=0;rejected=0;lastArrival=-Infinity;lastSeq=-1;lastT=-1;expires=0;session='';
+ stirRate=0;stirAxis=1;
  pitch=0;roll=0;neutral=[0,0];gravity=[0,0,-1];gyroBias=[0,0,0];linear=[0,0,0];sample:NativePacket|null=null;history:NativePacket[]=[];
  controller:AbortController|null=null;timer:ReturnType<typeof setInterval>;hidden:()=>void;receiptToApply:number[]=[];connectionRevision=0;clockOffset=Infinity;
  constructor(public model:Preparation){this.timer=setInterval(()=>{if(this.connected&&(performance.now()-this.lastArrival>250||Date.now()>=this.expires)){this.calibrated=Date.now()<this.expires&&this.calibrated;this.model.disarm();this.status=Date.now()>=this.expires?'Session expired. Pair again.':'Sensor stream stale. Motion disarmed.';if(Date.now()>=this.expires){this.connected=false;this.controller?.abort();}this.model.notify();}},50);this.hidden=()=>{this.model.disarm();this.model.notify();};window.addEventListener('blur',this.hidden);document.addEventListener('visibilitychange',this.hidden);}
@@ -20,17 +21,31 @@ export class NativeMotion {
   if(this.model.armed&&this.calibrated&&!document.hidden&&document.hasFocus()){
    const x=clamp(this.pitch-this.neutral[0],-.25,.25),z=clamp(this.roll-this.neutral[1],-.25,.25);
    if(this.model.armed==='move')this.model.move(x,z,this.linear[0],this.linear[1]);
-   else if(['mix','strain'].includes(this.model.stage)){this.model.pour(clamp((Math.max(Math.abs(x),Math.abs(z))-.04)*4.8,0,1));}
+   else if(this.model.armed==='stir'){
+    if(this.model.stage!=='stir'){this.model.disarm();this.stirRate=0;return true;}
+    // Rate, not held tilt, drives the spoon. Hysteresis keeps diagonal gestures
+    // from chattering between axes; each axis retains its direction on reversal.
+    const rates=p.gyro.map((v,i)=>(v-this.gyroBias[i])*(i===0?1:-1));
+    const strongest=rates.reduce((best,v,i)=>Math.abs(v)>Math.abs(rates[best])?i:best,0);
+    if(Math.abs(rates[strongest])>Math.max(2,Math.abs(rates[this.stirAxis])*1.8))this.stirAxis=strongest;
+    const rate=rates[this.stirAxis];
+    const target=Math.sign(rate)*clamp((Math.abs(rate)-2)*.12,0,6);
+    this.stirRate+=(target-this.stirRate)*(1-Math.exp(-dt/.045));
+    if(Math.abs(this.stirRate)<.03)this.stirRate=0;
+    // A short pulse also releases the spoon if fresh reports stop between ticks.
+    this.model.stir(this.stirRate,this.model.spoonAngle);
+   }
+   else if(this.model.armed==='pour'&&['mix','strain'].includes(this.model.stage)){this.model.pour(clamp((Math.max(Math.abs(x),Math.abs(z))-.04)*4.8,0,1));}
    if(p.sampleEpoch!==undefined)this.model.latestNative={seq:p.seq,receivedAt:now,sampleEpoch:p.sampleEpoch};
    this.receiptToApply.push(performance.now()-now);if(this.receiptToApply.length>1000)this.receiptToApply.shift();
-  }return true;
+  }else this.stirRate=0;return true;
  }
  calibrate(){this.model.disarm();const values=this.history.slice(-60);if(values.length<40||performance.now()-this.lastArrival>250){this.status='Wait for a continuous live stream, then recenter.';return false;}
   const mean=[0,1,2].map(i=>values.reduce((n,p)=>n+p.accel[i],0)/values.length);const variance=values.reduce((n,p)=>n+p.accel.reduce((a,x,i)=>a+(x-mean[i])**2,0),0)/values.length;
   if(variance>.0025){this.status='Set the laptop down and let it settle before recentering.';return false;}
   this.gravity=mean;this.gyroBias=[0,1,2].map(i=>values.reduce((n,p)=>n+p.gyro[i],0)/values.length);this.pitch=Math.atan2(mean[1],-mean[2]);this.roll=-Math.atan2(mean[0],Math.hypot(mean[1],mean[2]));this.neutral=[this.pitch,this.roll];this.linear=[0,0,0];this.calibrated=true;this.status='Calibrated at rest · motion disarmed';this.model.notify();return true;
  }
- arm(mode:'move'|'pour'){if(!this.calibrated||!this.connected||Date.now()>=this.expires||performance.now()-this.lastArrival>250)return false;if(mode==='pour'&&!['mix','strain'].includes(this.model.stage))return false;this.model.disarm();this.model.armed=mode;this.model.owner='native';this.model.notify();return true;}
+ arm(mode:'move'|'stir'|'pour'){if(!this.calibrated||!this.connected||Date.now()>=this.expires||performance.now()-this.lastArrival>250)return false;if(mode==='pour'&&!['mix','strain'].includes(this.model.stage)||mode==='stir'&&this.model.stage!=='stir')return false;this.model.disarm();this.stirRate=0;this.stirAxis=1;this.model.armed=mode;this.model.owner='native';this.model.notify();return true;}
  async connect(token:string){this.disconnect();if(!/^[A-Za-z0-9_-]{43}$/.test(token)){this.status='Use the temporary pairing link from the local helper.';this.model.notify();return;}
   const revision=++this.connectionRevision;this.controller=new AbortController();this.status='Connecting to the local helper…';this.lastSeq=-1;this.lastT=-1;this.session='';this.history=[];this.received=0;this.clockOffset=Infinity;this.model.notify();
   try{const response=await fetch('http://127.0.0.1:19876/motion',{headers:{Authorization:`Bearer ${token}`},signal:this.controller.signal});if(!response.ok||!response.body)throw new Error(response.status===409?'Another browser owns this session. Disconnect it first.':response.status===401?'Pairing expired or not authorized. Open the helper’s pairing page.':`Connection failed (${response.status}).`);
@@ -44,5 +59,5 @@ export class NativeMotion {
  }
  disconnect(){this.connectionRevision++;this.controller?.abort();this.controller=null;this.model.disarm();this.connected=false;this.calibrated=false;this.session='';this.status='Disconnected';this.model.notify();}
  dispose(){this.disconnect();clearInterval(this.timer);window.removeEventListener('blur',this.hidden);document.removeEventListener('visibilitychange',this.hidden);}
- snapshot(){return {status:this.status,connected:this.connected,calibrated:this.calibrated,received:this.received,rejected:this.rejected,age:performance.now()-this.lastArrival,pitch:this.pitch,roll:this.roll,neutral:this.neutral,linear:this.linear,gravity:this.gravity,gyroBias:this.gyroBias,armed:this.model.armed,receiptToApply:this.receiptToApply};}
+ snapshot(){return {status:this.status,connected:this.connected,calibrated:this.calibrated,received:this.received,rejected:this.rejected,age:performance.now()-this.lastArrival,pitch:this.pitch,roll:this.roll,neutral:this.neutral,linear:this.linear,gravity:this.gravity,gyroBias:this.gyroBias,armed:this.model.armed,stirRate:this.stirRate,stirAxis:this.stirAxis,receiptToApply:this.receiptToApply};}
 }

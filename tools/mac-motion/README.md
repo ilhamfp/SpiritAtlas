@@ -10,7 +10,7 @@ node tools/mac-motion/bridge.mjs
 Open [local pairing](http://127.0.0.1:19876/pair) on the same machine, then choose **Pair with SpiritAtlas**. It opens the production diagnostic preview with a temporary credential in the URL fragment; the app immediately removes the fragment. Keep the local pairing page private. If the normal browser asks for local network access, allow the SpiritAtlas site. No TLS certificate or browser security override is needed on the verified Chrome 153 connection.
 
 1. Set the laptop down. Wait for real samples, choose **Recenter at rest**.
-2. Choose **Arm glass movement**. Gently tilt or briefly move the laptop; then stop and watch the liquid settle.
+2. During Stir, choose **Arm stirring**. Gently rock or turn the laptop: the spoon stirs and the glass stays upright. Reverse the gesture to reverse the stirring; hold still to let the liquid settle. Choose **Arm movement** separately to tilt the glass and slosh the liquid.
 3. Choose **Disarm motion** or **Use local controls**. For ingredient or strain stages select **Arm pour** deliberately; neutral does not pour. Stage/source changes disarm.
 4. Stop the helper with Ctrl-C. After 250 ms without new samples motion disarms. Restart and pair again; fresh data never silently rearms.
 
