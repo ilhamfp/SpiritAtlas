@@ -21,4 +21,12 @@ Total: 53 local checks. Sensor protocol fixtures are synthetic and do not establ
 
 Desktop/mobile guided captures: guided-laptop-pour-desktop.png, guided-laptop-pour-mobile.png.
 
-Production publication and post-deploy evidence follow in this directory.
+## Production verification
+
+Source a629de01a4d8baa2161ec793b0617f1ffacbac0c is READY as dpl_5vfTyjcwzMdu8AgWQB936KovEeSA at https://spiritatlas-one.vercel.app. Immutable URL: https://spiritatlas-ewe1wrgir-ilham-firdausi-putras-projects.vercel.app. The public index-CCytpPmt.js and Studio-nCigC3I7.js exactly match the built application.
+
+All 32 public routes/assets passed. All 13 public browser checks passed in 94.9 seconds: eight pairing recovery cases, two guided native-fixture flows/layouts, and three strain geometry/behavior/layout checks. No skipped, unexpected, or flaky tests. The live initial mixing controls were also inspected through the in-app browser. Public guided desktop/mobile screenshots and results are in public-* alongside the local evidence.
+
+## Separate hardware rendering issue
+
+During the owner's physical test, the existing Chrome scene reported repeated WebGPU destroyed-texture submission errors at fractional render-target dimensions (1328/1327 × 855). Quantities kept updating while the picture froze. Passing tests at standard viewport/DPR settings do not clear that issue. The Behind the Bar task is investigating the renderer from this exact application revision, with sole next publication ownership returned after this evidence commit. No new claim of complete physical-hardware acceptance is made by this recovery release. Ingredient/stage navigation still uses visible controls; this release does not implement full motion-only navigation.

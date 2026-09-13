@@ -77,3 +77,10 @@ Final observed correction: the owner deliberately armed stirring for 17.093 seco
 The rendered Strain correction is now public in `13c152928da0496b08ce24f2f50c3bfa1ae43728`, READY deployment `dpl_6oJGAv9jpd5QdirzkrhfC46eSuJE`. It preserves the homepage entry and trailing-slash fix `e0b3560`. Five focused public behavioral checks and all 32 route/asset checks pass. Desktop/mobile pouring, pause and rest captures are recorded under `evidence/strain-public-*`; the exact revision/deployment and test scope are in `strain-public-deployment.json`.
 
 The owner separately reported that motion did not work when opening the bare studio route. Root is investigating the current end-to-end connection and holds sole next release ownership. The earlier actual hardware success does not prove this new browser session is paired. The helper was alive with fresh samples when handed over; its current session expires at 15:46:12 Singapore time and requires a fresh local pairing after restart. No new physical acceptance is claimed for the Strain-only deployment.
+
+
+## Pairing recovery and equal-parts release
+
+Application a629de01a4d8baa2161ec793b0617f1ffacbac0c is public as READY dpl_5vfTyjcwzMdu8AgWQB936KovEeSA. Same-tab pairing restoration, explicit stage-specific laptop actions, and guided initial 1:1:1 pours pass 53 local checks, 13 public browser checks, and 32 public route/asset checks. Evidence and exact scope: `evidence/motion-recovery/README.md`.
+
+The owner subsequently observed continued quantity updates with frozen graphics. The actual Chrome console shows destroyed WebGPU render-target textures at fractional dimensions. This is an open renderer issue, distinct from the verified pairing/quantity changes. The Behind the Bar task takes sole next production ownership to fix it, preserving this release.

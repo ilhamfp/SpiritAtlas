@@ -1,0 +1,14 @@
+{
+  "at": "2026-09-13T07:52:42.928Z",
+  "origin": "https://spiritatlas-one.vercel.app",
+  "revision": "a629de01a4d8baa2161ec793b0617f1ffacbac0c",
+  "deployment": "dpl_5vfTyjcwzMdu8AgWQB936KovEeSA",
+  "checks": {
+    "entry": "/assets/index-CCytpPmt.js",
+    "studio": "Studio-nCigC3I7.js",
+    "matchesBuiltEntry": true,
+    "equalParts": true,
+    "pairingStorage": true,
+    "guidedAction": true
+  }
+}
