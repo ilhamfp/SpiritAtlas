@@ -10,6 +10,7 @@ export type PlaybackState = {
 export type IdleTimeline = {duration: number; sourceStart: number; sourceEnd: number};
 export const DEFAULT_IDLE_TIMELINE: IdleTimeline = {duration: 2.4, sourceStart: 6.4, sourceEnd: 7.2};
 export const INITIAL_PLAYBACK: PlaybackState = {progress: 0, direction: 1, playing: false, speed: 1, looping: false, idleTime: 0};
+export const initialPlayback = (reducedMotion = false): PlaybackState => ({...INITIAL_PLAYBACK, playing: !reducedMotion});
 export const clampProgress = (value: number) => Math.max(0, Math.min(1, value));
 
 // Match the original film's cosine turnaround, including when leaving its loop.

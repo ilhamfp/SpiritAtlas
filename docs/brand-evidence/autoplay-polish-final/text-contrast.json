@@ -1,0 +1,32 @@
+[
+  {
+    "selector": ".cn-title",
+    "size": "26px",
+    "ratio": 13.999182912309147
+  },
+  {
+    "selector": ".cn-intro",
+    "size": "13px",
+    "ratio": 6.8676354134397215
+  },
+  {
+    "selector": ".cn-scene-caption",
+    "size": "12px",
+    "ratio": 6.8676354134397215
+  },
+  {
+    "selector": ".cn-hint",
+    "size": "13px",
+    "ratio": 6.8676354134397215
+  },
+  {
+    "selector": ".cn-ingredients",
+    "size": "12px",
+    "ratio": 6.8676354134397215
+  },
+  {
+    "selector": ".sa-hero-foot .sa-index",
+    "size": "12px",
+    "ratio": 6.8676354134397215
+  }
+]

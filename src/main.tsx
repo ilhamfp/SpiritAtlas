@@ -2,6 +2,7 @@ import React, {lazy, Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import Landing from './Landing';
 import './brand.css';
+import './negroni/classic-negroni.css';
 
 const Atlas = lazy(() => import('./App'));
 const params = new URLSearchParams(window.location.search);

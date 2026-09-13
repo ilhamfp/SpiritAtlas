@@ -12,6 +12,57 @@ async function openClassic(page: Page) {
   await expect(classic(page).locator('.cn-poster')).toHaveCSS('opacity', '0');
 }
 
+for (const viewport of [{width: 1440, height: 1000}, {width: 390, height: 844}]) {
+  test(`cinematic autoplay is muted, continuous and pausable at ${viewport.width}px`, async ({page}) => {
+    await page.setViewportSize(viewport);
+    const heavyRequests: string[] = [];
+    page.on('request', request => {
+      if (/classic-negroni\/(simulation|textures)|\/assets\/(renderer|three)-/.test(request.url())) heavyRequests.push(request.url());
+    });
+    await page.addInitScript(() => {
+      let frames = 0;
+      const request = window.requestAnimationFrame.bind(window);
+      Object.defineProperty(window, '__rafCalls', {get: () => frames});
+      window.requestAnimationFrame = callback => request(time => {frames++; callback(time);});
+    });
+    await openClassic(page);
+    const hero = classic(page);
+    await expect(hero).toHaveAttribute('data-playing', 'true');
+    await expect.poll(async () => Number(await hero.getAttribute('data-progress'))).toBeGreaterThan(0);
+    await expect(hero).toHaveAttribute('data-looping', 'true');
+    const idle = hero.locator('video[data-sequence="idle"]');
+    await expect(idle).toHaveAttribute('data-active', 'true');
+    expect(await idle.evaluate((video: HTMLVideoElement) => video.muted && video.playsInline && !video.paused)).toBe(true);
+    expect(heavyRequests).toEqual([]);
+    await hero.getByRole('button', {name: 'Pause animation', exact: true}).click();
+    const time = await idle.evaluate((video: HTMLVideoElement) => video.currentTime);
+    await page.waitForTimeout(100);
+    const frames = await page.evaluate(() => Reflect.get(window, '__rafCalls'));
+    await page.waitForTimeout(250);
+    expect(await idle.evaluate((video: HTMLVideoElement) => video.currentTime)).toBeCloseTo(time, 2);
+    expect(await page.evaluate(() => Reflect.get(window, '__rafCalls'))).toBe(frames);
+  });
+}
+
+test('blocked autoplay leaves a usable manual play control', async ({page}) => {
+  await page.addInitScript(() => {
+    const play = HTMLMediaElement.prototype.play;
+    let interacted = false;
+    document.addEventListener('pointerdown', event => {if (event.isTrusted) interacted = true;}, {capture: true});
+    HTMLMediaElement.prototype.play = function () {
+      if (!interacted) return Promise.reject(new DOMException('Autoplay blocked', 'NotAllowedError'));
+      return play.call(this);
+    };
+  });
+  await openClassic(page);
+  const hero = classic(page);
+  await expect(hero.getByText('Press play to continue the animation.', {exact: true})).toBeVisible();
+  await expect(hero).toHaveAttribute('data-playing', 'false');
+  await hero.getByRole('button', {name: 'Play animation', exact: true}).click();
+  await expect(hero).toHaveAttribute('data-playing', 'true');
+  await expect(hero.locator('.cn-status')).toBeEmpty();
+});
+
 test('desktop framing keeps playback controls in view and ingredient reveals preserve the layout', async ({page}) => {
   await page.emulateMedia({reducedMotion: 'reduce'});
   for (const viewport of [{width: 1440, height: 1000}, {width: 1280, height: 900}]) {
@@ -59,7 +110,6 @@ test('cinematic playback pauses offscreen and resumes at the same point', async 
   await openClassic(page);
   const hero = classic(page);
   const video = hero.locator('video[data-sequence="forward"]');
-  await hero.getByRole('button', {name: 'Look inside', exact: true}).click();
   await expect.poll(() => video.evaluate((element: HTMLVideoElement) => element.currentTime)).toBeGreaterThan(.2);
   await page.evaluate(() => window.scrollTo({top: document.body.scrollHeight, behavior: 'instant'}));
   await expect(hero).toHaveAttribute('data-suspended', 'true');
