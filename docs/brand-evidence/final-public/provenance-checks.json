@@ -1,0 +1,31 @@
+{
+  "applicationCommit": "b52c971b6b6d7ffc1358229733d6faa63680b43d",
+  "checks": {
+    "src/components/Marble.tsx": {
+      "sha256": "9939c61c99e8c3cb6bf9c53e2c860c4f0f3c8e3baa7ed9bc5a64755c4442a544",
+      "matchesRecorded": true
+    },
+    "public/textures/spiritatlas-marble-base-desktop-v1.webp": {
+      "sha256": "1fca22436a120af5280efe8f81b4c40caabd0b50eba88302a474d31c112d4da9",
+      "matchesRecorded": true
+    },
+    "public/textures/spiritatlas-marble-base-mobile-v1.webp": {
+      "sha256": "4e03de371f6bb609ab81de287cf268a638bd1ec8ac3f0c243f92ebe9640c7b0d",
+      "matchesRecorded": true
+    },
+    "src/data/drinks.ts": {
+      "sha256": "a1bc59b619ea322d34cab5bac0ac8fdc57c7c2693c2b11e89ef87945e7f50b75",
+      "matchesRecorded": true
+    },
+    "src/routes.ts": {
+      "sha256": "a2b40208fd97afbfb5180dc9752fb4aa0afdc785e1e54bfb9d832a5f0c15e269",
+      "matchesRecorded": true
+    },
+    "src/scenes/Viewer.tsx": {
+      "sha256": "51826de39eb9562d08c1b6bb5a30d328c483081dd7a7f31115668f90e374be01",
+      "matchesRecorded": true
+    }
+  },
+  "trackedSecretEnvFiles": [],
+  "envIgnored": true
+}

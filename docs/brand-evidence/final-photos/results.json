@@ -1,0 +1,249 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/brand.config.ts",
+      "reference-photos.spec.ts"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/final-photos/test-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "collection-routes.spec.ts",
+          "espresso-collection.spec.ts",
+          "ingredient-visibility.spec.ts",
+          "recipe-completion.spec.ts",
+          "atlas-expansion-routes.spec.ts",
+          "reference-photos.spec.ts",
+          "content-contract.spec.ts",
+          "new-collection-content.spec.ts"
+        ],
+        "timeout": 100000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/brand-evidence/final-photos/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "reference-photos.spec.ts",
+      "file": "reference-photos.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "eleven local references retain credited source provenance and Pine has an explicit missing-photo note",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 70,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:56:38.816Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a8353951d0645a88153-559a69fd9ef8611add9c",
+          "file": "reference-photos.spec.ts",
+          "line": 35,
+          "column": 1
+        },
+        {
+          "title": "a Martini loads its photo only on request and resumes the same mounted 3D pose and camera",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10515,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:56:38.911Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "atlas-martini-reference-photo",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/final-photos/test-output/reference-photos-a-Martini-9c711--mounted-3D-pose-and-camera/attachments/atlas-martini-reference-photo-6e96faa625df6ec6aef3db85e72e19e5c3d12d9f.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a8353951d0645a88153-2920dec54f5aac5f6919",
+          "file": "reference-photos.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "comparison photos switch independently and shared expansion restores every live viewer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7526,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:56:50.184Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "independent-comparison-reference-photos",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/final-photos/test-output/reference-photos-compariso-d92cf--restores-every-live-viewer/attachments/independent-comparison-reference-photos-8566b1a78992f62de2c20bf32fbf479789dfc587.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a8353951d0645a88153-85d8546f492468fd73b4",
+          "file": "reference-photos.spec.ts",
+          "line": 80,
+          "column": 1
+        },
+        {
+          "title": "phone photos work without WebGL, retry a failed image and explain Pine’s unavailable reference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3985,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:56:57.717Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "reference-photo-phone-no-webgl",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/final-photos/test-output/reference-photos-phone-pho-b1bf3-ine’s-unavailable-reference/attachments/reference-photo-phone-no-webgl-3a504852b8d490c07c72ebedbe09eee577ecdf22.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8a8353951d0645a88153-dca9c8130202af39572a",
+          "file": "reference-photos.spec.ts",
+          "line": 115,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T05:56:38.314Z",
+    "duration": 23609.114,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

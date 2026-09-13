@@ -1,0 +1,83 @@
+[
+  {
+    "width": 390,
+    "controls": [
+      {
+        "name": "Cinematic",
+        "width": 84.703125,
+        "height": 44,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgba(255, 255, 227, 0.05)"
+      },
+      {
+        "name": "Explore 3D",
+        "width": 88.46875,
+        "height": 44,
+        "color": "rgb(185, 179, 176)",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "name": "Look inside",
+        "width": 111.03125,
+        "height": 44,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgb(44, 42, 45)"
+      },
+      {
+        "name": "Play animation",
+        "width": 44,
+        "height": 44,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "name": "Deconstruction progress",
+        "width": 159.609375,
+        "height": 44,
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(59, 59, 59)"
+      },
+      {
+        "name": "Playback speed: 1 times. Change speed",
+        "width": 44,
+        "height": 44,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "name": "Reset Negroni",
+        "width": 44,
+        "height": 44,
+        "color": "rgb(255, 255, 227)",
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    ],
+    "focus": {
+      "style": "solid",
+      "width": "2px",
+      "color": "rgb(255, 255, 227)"
+    },
+    "loading": {
+      "bounds": {
+        "x": 40,
+        "y": 790.21875,
+        "width": 310,
+        "height": 36
+      },
+      "foreground": "rgb(255, 255, 227)",
+      "background": "rgba(26, 25, 22, 0.85)"
+    },
+    "actual3D": {
+      "before": "744a3ba088169b677d8f0e223768cffd24b9bc633faf94aeac790e65e25459ce",
+      "afterKey": "67d704d1ad80eb5c6365266654e41262a13d47dccd7d7a583634f8a67c647782",
+      "afterReset": "8c114d60fb897e2f2534b7035044482b075db663dac78287562b00f239ef760a",
+      "afterGesture": "c1a7eac0b8505bdf32b8903143e9a27cf78569864fc1e7c8d199e2b4dda07f37",
+      "expanded": "8f6c5689dd0eb961f437d7bf7e0d565aa41b00b5aae86155dea504b650f45e78",
+      "reassembled": "c1a7eac0b8505bdf32b8903143e9a27cf78569864fc1e7c8d199e2b4dda07f37",
+      "framesBefore": 3,
+      "framesSettled": 20,
+      "framesLater": 20
+    },
+    "errors": []
+  }
+]

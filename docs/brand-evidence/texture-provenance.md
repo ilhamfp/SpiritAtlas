@@ -37,7 +37,7 @@ Both requests used quality `high`, WebP output, compression `92`, and `n=1`. Bot
 
 The original artwork was visually inspected with the BBF hero through `87c9eca`. Public evidence in `dpr-motion/` covers eight desktop/mobile, DPR 1/2 and normal/reduced-motion cases: settled Canvas2D RGBA hashes were unchanged after 1,500 ms; 51,552 desktop and 13,806 mobile grid-cell centers matched exactly across pixel density and motion preferences. Smooth ribbon interiors, peach pools, dark channels and selected square-dot contours remained visible together, with calm space for copy.
 
-Remote `main` at `6e6effd` subsequently introduced Classic Negroni while release verification ran. Its integration preserves these decorative assets and mask, so the asset-generation provenance and unchanged artwork measurements remain valid. They do **not** verify the new hero’s framing, rendering, animation, controls, loading or photographic fidelity. Those requirements belong to acceptance of the changed feature. The mixed-deployment `production-accepted/` run recorded 6/10 passing; no final goal completion is claimed. See [the release-scoped visual audit](completion/visual-audit.md).
+The Classic Negroni integration preserves these decorative assets and the mask. Fresh checks for accepted application `b52c971` (formerly `2807652`) confirm their hashes match the recorded generation and DPR/motion evidence. All three final public viewport compositions and the live/loading/expanded states were visually accepted in [the final visual audit](final-public/visual-audit.md). The final 17 public journeys, four photo gates and current mobile live probe separately establish behavior; artwork provenance alone does not establish interaction correctness.
 
 ## Reproduction
 
