@@ -1,0 +1,62 @@
+{
+  "source": "Negroni \u2014 Still Life, original explode-anim project",
+  "assetVersion": "Orange V2 / cinematic manifest v3",
+  "files": [
+    {
+      "file": "cinematic/negroni-idle.mp4",
+      "bytes": 983687,
+      "sourceSha256": "67c60ab0e58c6f348bb644b734a6714d70dd190cce40607e4e95f8d481552723"
+    },
+    {
+      "file": "cinematic/negroni-reverse.mp4",
+      "bytes": 3626369,
+      "sourceSha256": "1621c59655fd932fc07878978b4d43fc9271f2960b5b6c97e2d1117fc3c76217"
+    },
+    {
+      "file": "cinematic/negroni-forward.mp4",
+      "bytes": 3626058,
+      "sourceSha256": "c22890152ab36951302c314188921effb2704a17440884fb2d45d8cfce9c11ca"
+    },
+    {
+      "file": "cinematic/poster.png",
+      "bytes": 635082,
+      "sourceSha256": "2c334dec46ed60a3bc050d0984f2e81980fb0ccbf2c8a6d2aa207abe8791e454"
+    },
+    {
+      "file": "cinematic/manifest.json",
+      "bytes": 1696,
+      "sourceSha256": "1638bec33d4fc9b3e6aa271fcef50d617487a116cbaf93bc43dbfec555641d8c"
+    },
+    {
+      "file": "simulation/negroni.bin",
+      "bytes": 6249600,
+      "sourceSha256": "be079621ee37213a87b63a79131f218c8ef112b8d3b3933cc8a5509c36aea715"
+    },
+    {
+      "file": "simulation/negroni.json",
+      "bytes": 40500,
+      "sourceSha256": "7a4ceb2594e986509a4beeea8c4e3befdd6c89ea0aabc91990e0a28a791be6db"
+    },
+    {
+      "file": "studio_small_09_1k.hdr",
+      "bytes": 1615248,
+      "sourceSha256": "e7cfda5f4e98e623db12b8bfd0184e048488e4855d9c83e2751fb44a32e80c45"
+    },
+    {
+      "file": "textures/orange-cross-section-v2.png",
+      "bytes": 2389378,
+      "sourceSha256": "094bc57032d3d0155d7b35651c8451bc6f9bfca0ecbd4104e0bc058beb0e2d41"
+    },
+    {
+      "file": "textures/orange-microheight-v2.png",
+      "bytes": 2345387,
+      "sourceSha256": "e6ef6b577cc171b94f90b22339f71676edc7419507b6e6c1528d219fd44f9b3d"
+    },
+    {
+      "file": "textures/orange-v2.material.json",
+      "bytes": 1367,
+      "sourceSha256": "21970b93ed6269b329d2c44514069a19bda84ac0cc5bb7dc39980128d5d9ea60"
+    }
+  ],
+  "note": "Movie, poster, cache, HDR and texture bytes copied unchanged. JSON URLs namespaced to /classic-negroni/."
+}

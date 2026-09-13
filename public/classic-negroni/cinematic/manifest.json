@@ -1,0 +1,49 @@
+{
+  "version": 3,
+  "duration": 7.2,
+  "fps": 60,
+  "frameCount": 433,
+  "idleFrameCount": 144,
+  "idleDuration": 2.4,
+  "idleTimeline": {
+    "duration": 2.4,
+    "sourceStart": 6.4,
+    "sourceEnd": 7.2
+  },
+  "forward": "/classic-negroni/cinematic/negroni-forward.mp4?v=c22890152ab3",
+  "reverse": "/classic-negroni/cinematic/negroni-reverse.mp4?v=1621c59655fd",
+  "idle": "/classic-negroni/cinematic/negroni-idle.mp4?v=67c60ab0e58c",
+  "poster": "/classic-negroni/cinematic/poster.png",
+  "sha256": {
+    "forward": "c22890152ab36951302c314188921effb2704a17440884fb2d45d8cfce9c11ca",
+    "reverse": "1621c59655fd932fc07878978b4d43fc9271f2960b5b6c97e2d1117fc3c76217",
+    "idle": "67c60ab0e58c6f348bb644b734a6714d70dd190cce40607e4e95f8d481552723"
+  },
+  "renderer": "Blender Cycles, Metal GPU, OpenImageDenoise",
+  "resolution": 720,
+  "samples": 32,
+  "source": "60 fps mesh samples of the 4800-particle Position Based Fluids cache; native Cycles rendering of every distinct pose",
+  "citrus": {
+    "name": "Fresh Valencia orange v2",
+    "manifest": "/classic-negroni/textures/orange-v2.material.json",
+    "sourceManifest": "public/textures/orange-v2.material.json",
+    "assets": [
+      {
+        "file": "/classic-negroni/textures/orange-cross-section-v2.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 2389378,
+        "sha256": "094bc57032d3d0155d7b35651c8451bc6f9bfca0ecbd4104e0bc058beb0e2d41"
+      },
+      {
+        "file": "/classic-negroni/textures/orange-microheight-v2.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 2345387,
+        "sha256": "e6ef6b577cc171b94f90b22339f71676edc7419507b6e6c1528d219fd44f9b3d"
+      }
+    ]
+  },
+  "reversePlayback": true,
+  "idlePlayback": "Cosine-eased circulation between source times 7.2 and 6.4 seconds"
+}
