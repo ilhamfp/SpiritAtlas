@@ -1,52 +1,41 @@
 # SpiritAtlas behavior verification
 
-## Current evidence boundary
+## Accepted application and public URL
 
-Remote `main` at `6e6effd` introduced Classic Negroni during the last public run. The feature has been preserved in the integrated working tree. The saved BBF checks and screenshots are historical evidence through `87c9eca`; they must not be presented as final verification of the replacement hero. Its changed controls, rendering, loading and fallback behavior require their own acceptance. The original goal remains incomplete.
+Public URL: https://spiritatlas-one.vercel.app. Application `b52c971` is the rewritten identity of tested `2807652`. Deployment `dpl_AspB2EQxQBkkjL3AFZ94DwaGZ99s` builds documentation commit `e13da8e` with identical application bytes. The fresh 34-resource comparison in `final-public/current-resource-check.json` confirms this boundary. Uncommitted refinements in another task are outside these results.
 
-The integrated working tree passes 11 unit checks (`node --experimental-strip-types`), the production build, and **12/12 focused local journeys** in about 1.4 minutes (`integration-local/results.json`). Current-release public visual and behavioral acceptance remain unproven.
+## Final verification
 
-## Recorded runs
-
-| Run | Result | What it proves |
+| Evidence | Result | Coverage |
 | --- | --- | --- |
-| `integration-local/results.json` | **12/12 passed**, about 1.4 min | Current integrated Classic Negroni release, local browser verification |
-| `existing-complete/results.json` | **39/39 passed**, 89.2 s | Existing route, content, source geometry, ingredient, recipe and reference gates before integration |
-| `production-complete/results.json` | **10/10 passed**, 105.9 s | Public BBF landing journeys at `2d39e07` |
-| `loading-accepted/results.json` | Passed | Public BBF compact loading state at `87c9eca`, including a held real GLB request, 11.36:1 text contrast and no glass/control overlap |
-| `production-accepted/results.json` | **6 passed, 4 failed**, 229.6 s | A run spanning different deployments; not final public acceptance |
+| `final-public/results.json` | 17/17 passed; 107.2 s; no skipped/flaky cases | Three viewport sizes, primary CTA, three bar entries, cinematic pixel changes/playback, live 3D, ingredients, comparison, direct routes/refresh, loading cancellation, offscreen pause, touch and reduced motion |
+| `final-photos/results.json` | 4/4 passed; 23.6 s | All 11 local photo/source records; on-demand photos preserving mounted pose/camera; independent comparison photos and expansion; mobile without WebGL, image retry and the explicit missing-photo state |
+| `final-live/results.json` | 1/1 mobile probe passed; zero errors | Visible keyboard focus, held renderer and faithful film loading state, actual keyboard/touch canvas changes, live expansion/reassembly, drawing stopped after reduced-motion settling |
+| `final-public/current-resource-check.json` | 34/34 HTTP 200 and exact hashes | Public HTML, scripts, styles, both fonts, 11 photographs, generated artwork and loading posters |
+| `final-public/current-vercel-build.log` | TypeScript and production build passed | Current public deployment from `e13da8e`; matches the saved application build |
+| `animation-integration-final/README.md` | 11 unit checks and build passed; final three compositions passed | Playback/assets unchanged by the final compositor fix; caption minimum measured assembled-pose contrast 5.99:1 |
+| `release-controls/results.json` | Six control groups passed | Stage Enter/R, visible keyboard focus, range, speeds, left orbit/exact reset, navigation anchors/footer; controls unchanged in accepted app |
+| `release-extra/results.json` | Two desktop/mobile cases passed | Held real renderer, keyboard and pointer/touch orbit, live expand/collapse and reduced-motion settling; supplemented by current mobile probe |
+| `dpr-motion/` | Eight public cases passed | Unchanged artwork at desktop/mobile widths, DPR 1/2 and normal/reduced motion; stable pixels after 1,500 ms and identical grid-cell coverage |
 
-The failed keyboard/bar journey in `production-accepted/` records HTTP 404 for `/assets/App-CNqJ4F8m.js` and a failed dynamic import during the deployment change. Two other failures wait for `viewer-bbf-negroni` after the landing hero changed; the fallback check expects the earlier BBF unavailable-WebGL message. These failures are retained without converting them into passes. A new, coherent public run must exercise the integrated release once its deployment is stable.
+The focused suite rejects uncaught page errors, failed first-party HTTP responses and failed requests except navigation aborts. The unavailable-WebGL case deliberately records the expected context-creation diagnostic and verifies recovery; it is not a normal runtime error. With movie requests held, first contentful paint was 316 ms in the recorded browser sample, the headline/CTA and decoded poster were usable, and no heavy 3D scene assets were requested. Live rendering loads on demand.
 
-The public visitor URL is https://spiritatlas-one.vercel.app. Earlier fresh unauthenticated sessions returned HTTP 200. A separate immutable deployment URL redirected to Vercel login; no authentication settings were changed.
+Final visual and source-fidelity acceptance is recorded in [the final visual audit](final-public/visual-audit.md). Pixel screenshots alone do not prove interactions; the runtime results above do.
 
-## Historical focused coverage
+## Preservation and historical failures
 
-Independent Playwright Chrome/Chromium contexts exercised the BBF implementation’s meaningful risks:
+The existing route/content/recipe/source/reference suite passed 39/39 locally before Classic integration. The later public `release-existing/` run recorded 36/39, exposing three real photo-loading failures: an unanchored Vercel exclusion dropped `public/references`. The final photo rerun above covers all three failed flows after the fix; current atlas/data/route hashes also match their recorded versions. This establishes preserved coverage across the runs without relabeling the failed run as a pass.
 
-- Headline, primary CTA, real fonts and decoded poster before 3D code or models finished; only the hero GLB requested initially.
-- Landing views at 1440×1000, 768×1024 and 390×844, with overflow, image decode, CTA visibility and text-contrast checks.
-- Keyboard CTA and visible focus, all three bar entries, direct route navigation/refresh and return home.
-- Real component expansion/reassembly and actual mouse, keyboard and touch camera changes.
-- Ingredient navigation and the three-drink comparison, including synchronized/independent rotation, reset, refresh and return paths.
-- Unavailable-WebGL fallback and reduced-motion behavior without blocking ingredient information.
+`production-release/` recorded 15/16 while an external deployment replaced a loaded asset version. The subsequent stable `final-public/` run passed all 17 focused cases. Earlier BBF runs and `production-accepted/` remain historical; the latter recorded 6 passes and 4 failures during the hero/deployment change. None are counted as final Classic acceptance.
 
-These runs rejected uncaught page errors, failed first-party HTTP responses and non-navigation-abort request failures. Simulated WebGL unavailability was an explicit test condition. Historical passing runs do not revalidate changed code automatically.
+## Reproduction
 
-## Earlier local evidence
-
-`local-final/results.json` records 10/10 BBF journeys in 73 seconds. Existing baseline evidence previously combined 38 passes with a separately corrected fallback assertion; `existing-complete/` now contains the clean 39/39 run. Additional content and editable-asset files recorded 8/8 and 1/1 passes. Separate loading, retry, unavailable-WebGL and reduced-motion gates recorded 4/4.
-
-Two earlier tests were maintained for the landing route and configured server URL. Fallback assertions account for the 56px reference toolbar while retaining a 210px fallback content area. The original local 324ms first contentful paint sample is a single local-machine observation, not a public-network or low-end-device guarantee.
-
-`production-final/results.json` recorded 9/10 after favicon/bundle corrections, with a premature poster-decode assertion. The later test waits for actual image decode. That historical result is superseded by the passing BBF run at `2d39e07`, not by a claimed pass for the current Classic Negroni feature.
-
-## Reverification commands
+Use the accepted source revision for these recorded expectations; later refinements may change its tests. Set `ATLAS_BRAND_URL` to the public visitor alias and `ATLAS_BRAND_RUN` to a new evidence directory to preserve prior results.
 
 ```sh
-npx playwright test -c tests/brand.config.ts
-ATLAS_BRAND_EXISTING=1 ATLAS_BRAND_RUN=existing npx playwright test -c tests/brand.config.ts
-ATLAS_BRAND_URL=https://spiritatlas-one.vercel.app ATLAS_BRAND_RUN=production npx playwright test -c tests/brand.config.ts
+ATLAS_BRAND_URL=https://spiritatlas-one.vercel.app ATLAS_BRAND_RUN=verify-public npx playwright test -c tests/brand.config.ts
+ATLAS_BRAND_URL=https://spiritatlas-one.vercel.app ATLAS_BRAND_EXISTING=1 ATLAS_BRAND_RUN=verify-photos npx playwright test -c tests/brand.config.ts reference-photos.spec.ts
+node docs/brand-evidence/final-live/probe.mjs
 ```
 
-Focused expectations now exercise the integrated hero while retaining meaningful behavior assertions; all 12 local journeys passed. Final public success, runtime cleanliness and visual acceptance remain unproven until that release is checked.
+The mobile probe uses Chrome touch emulation and real WebGL on the test computer. It does not establish physical-device GPU performance or physically simulated ingredient separation.

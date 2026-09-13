@@ -1,50 +1,37 @@
 # SpiritAtlas implementation and evidence
 
-## Current release status — 13 September 2026
+## Accepted public release — 13 September 2026
 
-The public application at tested revision `2807652` includes the Classic Negroni framing, touch, reduced-motion and loading refinements, the reference-photo deployment fix, and the cinematic frame-composition fix. Its final focused public run passed all 17 journeys. Website work is paused at the user's request while the repository history is reviewed and republished; this document does not claim completion of the full design objective.
+Public URL: https://spiritatlas-one.vercel.app. The inspected production deployment is `dpl_AspB2EQxQBkkjL3AFZ94DwaGZ99s`, built from `e13da8e`. Its application is identical to `b52c971` (formerly `2807652` before the requested history amendments). Fresh checks confirm all 34 recorded public resources have the same bytes as the tested application. Historical revision IDs identify the source originally tested.
 
-Public URL: https://spiritatlas-one.vercel.app. The latest inspected deployment is `dpl_9fenqtE46JZBHSUm3pCTxz47haEp`; its Vercel and local production builds succeeded. All 34 checked resources returned HTTP 200 and matched local bytes, including both font families, all 11 reference photographs, textures and posters. See `brand-evidence/final-public/`. Immutable metadata URLs are Vercel-protected; the public alias is the visitor URL. Revision IDs in historical evidence identify the code tested before the requested history amendments.
+The original landing objective is satisfied by the evidence below. All three required viewport compositions, the live cocktail, loading states and continuation were visually reviewed. No material visual defect remains in the inspected states. Later autoplay and studio refinements are separate ongoing work and are not represented as part of this accepted release.
 
-## Latest verification and identified corrections
+## What changed
 
-- Public `2807652`: 17/17 focused journeys passed, covering all three viewport sizes, cinematic frame changes and playback, live 3D, touch scrolling, reduced motion, loading cancellation, the atlas and bar entries, ingredients, comparison, direct routes and refresh. Screenshots and machine-readable results: `brand-evidence/final-public/`.
-- Earlier Classic refinement batch: production build and 11 unit checks passed, followed by 16/16 local browser journeys. The final solid Paper caption was rebuilt and all three viewport composition checks passed; the lowest sampled caption contrast is 5.99:1. Evidence: `brand-evidence/animation-integration-final/`.
-- Public `bc4f017`: 12/12 landing journeys, 2 desktop/mobile live-3D loading/orbit/expansion checks, and 6 additional control groups passed. Both real fonts loaded. No normal first-party runtime errors occurred; the WebGL-failure test records its intentional context-creation diagnostic. Evidence: `brand-evidence/release-verification/`, `release-extra/`, and `release-controls/`.
-- Historical public preservation checks: 36/39 passed. Three photo-loading journeys exposed 404 responses for all 11 reference images. The root-anchored `.vercelignore` fix now ships those images, and the latest public resource checks confirm all 11 return the correct bytes. The three photo interaction journeys have not yet been rerun after that fix. Evidence: `brand-evidence/release-existing/` and `final-public/deployment.json`.
-- The intermediate `production-release/` browser run recorded 15 passes and one failure when an external deployment replaced its loaded asset version. Preserve that result as a mixed-deployment run; the subsequent stable `final-public/` run passed all 17 journeys.
-- The original artwork and Bayer mask are unchanged; their source/asset hashes still match the recorded generation and DPR/motion evidence. No API-key pattern appears in current source/build assets; `.env` remains untracked.
+- Built the editorial landing with real Instrument Sans and IBM Plex Mono fonts, the exact charcoal/orange/peach/cream palette, the requested headline, and direct atlas, bar, ingredient and comparison entries. Existing four-collection behavior is preserved.
+- Generated distinct desktop and portrait marbled textures using the verified `gpt-image-2.5-sunburst` identifier. A separate stable 5-CSS-pixel square-grid mask creates selected dissolve contours while keeping drink, type and controls sharp. Normal visits serve static artwork.
+- Preserved the supplied Classic Negroni film and working interactive 3D scene. Corrected cinematic frame composition, scene framing, caption contrast, touch scrolling, reduced-motion camera behavior and cancellation of pending renderer loads.
+- Kept initial copy and actions independent of heavy scenes, with a decoded poster and useful WebGL recovery. Fixed the Vercel exclusion rule so all 11 reference photographs ship.
 
-The history review found zero removed-name matches across all 12 application commits and all 1,227 objects reachable from their main history, including archived and compressed assets. The wider scan of all current references also found zero matches in 1,490 objects. That review does not substitute for the remaining design acceptance.
+## Completion evidence
 
-## Scope and design authority
+| Objective criterion | Authoritative evidence and result |
+| --- | --- |
+| 1. Build and relevant gates | Local and Vercel TypeScript/production builds passed. The 11 playback/asset unit checks passed; their implementation and tests are unchanged in this release. Final public journeys: 17/17. Final reference gates: 4/4. No normal first-party runtime errors or failed required resources in these checks. |
+| 2. Visual acceptance | Actual public first-viewport and full-page captures at 1440×1000, 768×1024 and 390×844, plus live/loading/expanded states: [final visual audit](brand-evidence/final-public/visual-audit.md). Fonts decoded, crops are intentional, and no material overflow or overlap was found. |
+| 3. Controls and preservation | The 17 public journeys cover the primary CTA, all three bar entries, ingredients, comparison, route refresh, touch and reduced motion. Additional current mobile live and earlier unchanged control checks verify actual pointer/keyboard orbit, reset, visible focus, speed/range controls and return paths. The three previously failed photo interactions now pass. |
+| 4. Loading and fallback | With cinematic files held, the headline, CTA and decoded poster remain usable without early heavy 3D requests; recorded FCP was 316 ms in that browser sample. Held renderer loading, cancellation/retry, induced WebGL failure and reduced-motion settling all pass. |
+| 5. Public deployment | Fresh unauthenticated journeys pass at the public alias. All 34 checked resources return HTTP 200 with expected hashes, including fonts, all 11 reference photos, textures and posters. Direct atlas/drink routes and refresh pass. |
+| 6. Final artifacts | Screenshots, build logs, resource/provenance checks and results are in `brand-evidence/final-public/`, `final-photos/` and `final-live/`. This document and the [behavior record](brand-evidence/behavior-verification.md) identify their scope and limitations. |
 
-The user objective is the supplied `goal-objective.md`; exact typography, palette and artwork rules are in `SpiritAtlas-Brand-Kit/`. All five required kit files and both reference images were read or visually inspected. SpiritAtlas retains four cocktail collections. Its three featured bar entries connect Bar Bon Funk’s BBF Negroni, MOGA’s Ichigo Negroni and Bar Somma’s Negroni Express to the atlas, ingredient exploration, reference photographs and comparison.
+The full existing suite previously passed 39/39 locally. Its public rerun recorded 36/39 because of the photo deployment issue; the four final reference gates include the three corrected photo flows. These are complementary runs, not a claimed new single 39-case public run. Earlier failed and mixed-deployment evidence remains intact and is identified in the behavior record.
 
-The original art direction combines charcoal negative space, Instrument Sans and restrained IBM Plex Mono, orange ribbons, peach pools, dark channels and selected square-dot contours. Orange actions use dark text. The generated artwork is separate from drink rendering and interface layers; normal visits make no image-generation requests.
+## Artwork, sources and credentials
 
-## Completed work and its evidence boundary
+All five required brand-kit files and both supplied reference images were inspected. The texture prompts, access verification, actual model identifier and asset hashes are recorded in [texture provenance](brand-evidence/texture-provenance.md). Eight public DPR/motion cases proved stable square coverage across DPR 1/2 and normal/reduced motion. Fresh source and asset hashes confirm that renderer and both textures are unchanged.
 
-- Generated original desktop and separately recomposed mobile smooth textures with the verified `gpt-image-2.5-sunburst` identifier. Prompts, model/access verification and static asset records: [texture provenance](brand-evidence/texture-provenance.md).
-- Applied an independent stable 5-CSS-pixel Bayer coverage mask. Eight public DPR/motion cases showed unchanged canvas pixels over 1,500 ms and identical grid-cell coverage across DPR 1/2 and normal/reduced motion. This remains evidence for the unchanged artwork, not the replacement hero. See `brand-evidence/dpr-motion/`.
-- In the BBF hero version through `87c9eca`, preserved the live scene and reversible ingredient/orbit controls, rendered faithful loading posters, corrected mobile text joins, protected label contrast and compacted loading feedback so it cleared the glass and zoom controls. BBF visual and loading captures are historical; the Classic Negroni feature owns acceptance of its changed presentation and controls.
-- Separated React from the lazy Three.js bundle, fixed the favicon, and stabilized the Canvas Suspense boundary in the earlier implementation. Prior scans found no API key in frontend source/build output; `.env` and `.vercel` were excluded from version control. These recorded checks do not replace final checks after integration.
+The bar descriptions, drink identities and reference photographs use existing project sources. The Classic Negroni keeps its original glass, ice, liquid and garnish assets; the live rendering remains available alongside the film. `.env` is ignored and absent from the committed application. The fresh scan of 136 relevant committed files found no credential patterns; source/build checks and provenance are retained without key values.
 
-## Recorded verification
+## Limits
 
-| Evidence | Recorded result | Scope |
-| --- | --- | --- |
-| `brand-evidence/existing-complete/results.json` | 39/39 passed, 89.2 s | Existing route, content, ingredient, source and reference checks before Classic Negroni integration |
-| `brand-evidence/production-complete/results.json` | 10/10 passed, 105.9 s | Public BBF landing at `2d39e07` |
-| `brand-evidence/loading-accepted/results.json` | Passed | Public compact BBF loading badge at `87c9eca`; 11.36:1 contrast and no overlap with glass/zoom controls |
-| `brand-evidence/production-accepted/results.json` | **6 passed, 4 failed**, 229.6 s | Mixed-deployment run; not final acceptance |
-
-During `production-accepted/`, navigation requested an obsolete `App-CNqJ4F8m.js` chunk and received HTTP 404 as the deployment changed. Other failures targeted the BBF hero or its fallback after Classic Negroni replaced it. These are recorded failures, not a passing run or proof that the new hero satisfies the original goal. The directory name does not imply acceptance.
-
-Earlier local BBF evidence includes 10/10 focused journeys, 4/4 loading/retry/WebGL/reduced-motion gates and source-grounded poster studies. Earlier public `production-final/` recorded 9/10 with an immediate poster-decode assertion failure; the subsequent readiness assertion waited for actual decode. Preserve these as history rather than current release status.
-
-## Remaining work
-
-Before completing the full design objective, review the final `2807652` screenshots against the brand checklist and rerun the three photo interaction journeys after the verified deployment fix. The latest focused public behavior run is complete; the prior BBF screenshots cannot prove the changed hero's visual acceptance. These remaining website checks were paused by the user's explicit stop instruction.
-
-Detailed behavior scope: [behavior verification](brand-evidence/behavior-verification.md). Historical visual audit and the current release boundary: [visual audit](brand-evidence/completion/visual-audit.md). No final goal-completion claim is made.
+The live renderer approximates the offline film's lighting. Ingredient motion is explanatory choreography, not a physical unmixing simulation. Timing and touch checks use desktop Chrome with mobile emulation; no physical low-end-phone GPU performance claim is made. Immutable Vercel metadata URLs remain protected; the public visitor alias above is verified without authentication.

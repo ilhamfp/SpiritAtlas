@@ -1,0 +1,68 @@
+Fetching deployment "spiritatlas-6tlrwmum3-ilham-firdausi-putras-projects.vercel.app" in ilham-firdausi-putras-projects
+2026-09-13T05:55:08.275Z  Running build in Washington, D.C., USA (East) – iad1 (Turbo Build Machine)
+2026-09-13T05:55:08.276Z  Build machine configuration: 30 cores, 60 GB
+2026-09-13T05:55:08.410Z  Cloning github.com/ilhamfp/SpiritAtlas (Branch: main, Commit: e13da8e)
+2026-09-13T05:55:23.066Z  Cloning completed: 14.655s
+2026-09-13T05:55:23.141Z  Found .vercelignore
+2026-09-13T05:55:23.238Z  Removed 996 ignored files defined in .vercelignore
+2026-09-13T05:55:23.238Z  /.git/config
+2026-09-13T05:55:23.238Z  /.git/description
+2026-09-13T05:55:23.238Z  /.git/FETCH_HEAD
+2026-09-13T05:55:23.238Z  /.git/HEAD
+2026-09-13T05:55:23.238Z  /.git/hooks/applypatch-msg.sample
+2026-09-13T05:55:23.238Z  /.git/hooks/commit-msg.sample
+2026-09-13T05:55:23.238Z  /.git/hooks/fsmonitor-watchman.sample
+2026-09-13T05:55:23.238Z  /.git/hooks/post-update.sample
+2026-09-13T05:55:23.238Z  /.git/hooks/pre-applypatch.sample
+2026-09-13T05:55:23.238Z  /.git/hooks/pre-commit.sample
+2026-09-13T05:55:23.293Z  Restored build cache from previous deployment (9fenqtE46JZBHSUm3pCTxz47haEp)
+2026-09-13T05:55:23.473Z  Running "vercel build"
+2026-09-13T05:55:23.486Z  Vercel CLI 59.11.7
+2026-09-13T05:55:23.992Z  Installing dependencies...
+2026-09-13T05:55:24.965Z
+2026-09-13T05:55:24.965Z  up to date in 751ms
+2026-09-13T05:55:24.965Z
+2026-09-13T05:55:24.965Z  18 packages are looking for funding
+2026-09-13T05:55:24.965Z  run `npm fund` for details
+2026-09-13T05:55:25.073Z
+2026-09-13T05:55:25.073Z  > spiritatlas@1.0.0 build
+2026-09-13T05:55:25.073Z  > tsc --noEmit && vite build
+2026-09-13T05:55:25.073Z
+2026-09-13T05:55:25.584Z  vite v8.3.0 building client environment for production...
+2026-09-13T05:55:25.591Z  transforming...
+2026-09-13T05:55:25.885Z  ✓ 2457 modules transformed.
+2026-09-13T05:55:26.029Z  rendering chunks...
+2026-09-13T05:55:26.154Z  computing gzip size...
+2026-09-13T05:55:26.172Z  dist/index.html                                                       1.47 kB │ gzip:   0.81 kB
+2026-09-13T05:55:26.172Z  dist/assets/instrument-sans-latin-ext-wght-normal-B5bTHO_g.woff2     11.14 kB
+2026-09-13T05:55:26.172Z  dist/assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff             13.14 kB
+2026-09-13T05:55:26.172Z  dist/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2            14.70 kB
+2026-09-13T05:55:26.172Z  dist/assets/instrument-sans-latin-wght-normal-BbzFLZTg.woff2         30.09 kB
+2026-09-13T05:55:26.172Z  dist/assets/maplibre-gl-worker-DsvDs_fr.js                          506.72 kB
+2026-09-13T05:55:26.172Z  dist/assets/Viewer-VJZSSb2X.css                                       4.35 kB │ gzip:   1.39 kB
+2026-09-13T05:55:26.172Z  dist/assets/index-wSoNOqj0.css                                       24.54 kB │ gzip:   6.19 kB
+2026-09-13T05:55:26.172Z  dist/assets/App-C6czc-3z.css                                         64.65 kB │ gzip:  11.79 kB
+2026-09-13T05:55:26.172Z  dist/assets/map-CKRTiAqP.css                                         82.86 kB │ gzip:  10.71 kB
+2026-09-13T05:55:26.172Z  dist/assets/rolldown-runtime-hePW80VL.js                              0.71 kB │ gzip:   0.42 kB
+2026-09-13T05:55:26.173Z  dist/assets/Viewer-MGJBTzGm.js                                       35.48 kB │ gzip:  11.97 kB
+2026-09-13T05:55:26.173Z  dist/assets/renderer-CgPVAO2x.js                                     46.79 kB │ gzip:  16.61 kB
+2026-09-13T05:55:26.173Z  dist/assets/App-Dn4LGhXk.js                                          48.23 kB │ gzip:  14.66 kB
+2026-09-13T05:55:26.173Z  dist/assets/index-ugF9tyg3.js                                        65.75 kB │ gzip:  21.00 kB
+2026-09-13T05:55:26.173Z  dist/assets/react-CtYP0wlk.js                                       189.60 kB │ gzip:  59.61 kB
+2026-09-13T05:55:26.173Z  dist/assets/map--FHYeYtF.js                                       1,057.88 kB │ gzip: 283.61 kB
+2026-09-13T05:55:26.173Z  dist/assets/three-vIYDzzE_.js                                     1,304.46 kB │ gzip: 390.38 kB
+2026-09-13T05:55:26.173Z
+2026-09-13T05:55:26.173Z  [plugin builtin:vite-reporter]
+2026-09-13T05:55:26.173Z  (!) Some chunks are larger than 1100 kB after minification. Consider:
+2026-09-13T05:55:26.173Z  - Using dynamic import() to code-split the application
+2026-09-13T05:55:26.173Z  - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+2026-09-13T05:55:26.173Z  - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2026-09-13T05:55:26.173Z  ✓ built in 589ms
+2026-09-13T05:55:26.510Z  Build Completed in /vercel/output [3s]
+2026-09-13T05:55:26.534Z  Deploying outputs...
+2026-09-13T05:55:27.631Z  Deployment completed
+2026-09-13T05:55:27.635Z  Creating build cache...
+2026-09-13T05:55:31.376Z  Created build cache: 4s
+2026-09-13T05:55:31.376Z  Uploading build cache [88.25 MB]
+2026-09-13T05:55:33.035Z  Build cache uploaded: 1.659s
+status	● Ready
