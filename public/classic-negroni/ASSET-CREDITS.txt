@@ -11,3 +11,8 @@ License: CC0 1.0 Universal
 https://polyhaven.com/license
 
 See docs/classic-negroni-import.json in the repository for source asset hashes.
+
+The specialty Negroni runtime also includes the derived droplet-clearance mask
+from the user's bar-test project. Its versioned binary and metadata preserve
+the completed classic-based animation snapshot. See
+docs/specialty-animation-migration.md for scope and verification.

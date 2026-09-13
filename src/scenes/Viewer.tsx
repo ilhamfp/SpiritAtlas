@@ -11,6 +11,8 @@ import {ingredientDisplayName} from '../data/ingredientEvidence';
 import {useViewerVisibility} from './useViewerVisibility';
 import {BarEnvironment, BarCountertop, useBarEnvironment, BAR_ROTATION} from './BarEnvironment';
 import {BarLighting} from './BarLighting';
+import {ClassicVariantViewer} from './ClassicVariantViewer';
+import {classicVariant} from '../animation/classic-variants.js';
 import bbfAsset from '../../assets/blender/bbf-negroni.json';
 import ichigoAsset from '../../assets/blender/ichigo-negroni.json';
 import sommaAsset from '../../assets/blender/negroni-express.json';
@@ -277,7 +279,7 @@ function SceneContents(props:SceneProps & {environment:THREE.Texture}){
   <OpticalPipeline buffers={buffers} hero={props.viewer.hero}/>
  </>
 }
-export function Viewer(props:ViewerProps){
+function LegacyViewer(props:ViewerProps){
  const {drinkId}=props;const drink=drinkById[drinkId];const rail=useRef<HTMLDivElement>(null);const lines=useRef<SVGSVGElement>(null);const host=useRef<HTMLDivElement>(null);const [attempt,setAttempt]=useState(0);const [ready,setReady]=useState(false);
  const visible=useViewerVisibility(host);
  // Retain a monotonic count across model retries within this mounted viewer.
@@ -307,5 +309,20 @@ export function Viewer(props:ViewerProps){
   <div ref={rail} className="ingredient-labels" aria-hidden={props.expansion<=.65}>{labels.map((i)=><button key={i.category} data-category={i.category} data-evidence={i.evidence} style={{opacity:0}} aria-pressed={props.selectedCategory===i.category} tabIndex={props.expansion>.65?0:-1} onClick={()=>props.onSelectCategory?.(i.category)} onFocus={()=>props.onSelectCategory?.(i.category)} onMouseEnter={()=>props.onSelectCategory?.(i.category)}><span>{categories.findIndex(c=>c.id===i.category)+1}</span>{ingredientDisplayName(i)}</button>)}</div>
   {supported?<><div className="viewer-zoom"><button aria-label="Zoom in" onClick={()=>orbitBy(0,0,.15)}><Plus size={17}/></button><button aria-label="Zoom out" onClick={()=>orbitBy(0,0,-.15)}><Minus size={17}/></button></div><span className="viewer-input-hint">Drag to rotate · <span className="desktop-hint">double-click to {props.expansion>.5?'reassemble':'expand'}</span><span className="touch-hint">swipe horizontally</span></span></>:null}
  </div>
+}
+export function Viewer(props:ViewerProps){
+ const variant=useMemo(()=>{
+  const base=classicVariant(props.drinkId);if(!base)return null;
+  const drink=drinkById[props.drinkId];
+  // Keep the current Atlas ingredient evidence while reusing the source scene.
+  const liquidLabels=base.liquidLabels.map((fallback,index)=>{
+   const ingredient=drink.ingredients.find(item=>item.category===['spirit','bitter','vermouth'][index]);
+   return ingredient?ingredientDisplayName(ingredient):fallback;
+  }) as typeof base.liquidLabels;
+  return {...base,liquidLabels};
+ },[props.drinkId]);
+ // Keep the existing diagnostic model routes and explicit no-WebGL fallback.
+ const legacyRequested=modelQuery.get('webgl')==='off'||modelQuery.has('assetCandidate')||modelQuery.has('interfaces');
+ return variant&&!legacyRequested?<ClassicVariantViewer key={props.drinkId} {...props} variant={variant}/>:<LegacyViewer {...props}/>;
 }
 export default Viewer;

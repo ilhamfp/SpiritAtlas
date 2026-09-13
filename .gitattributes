@@ -1,0 +1,2 @@
+# Simulation buffers must retain exact bytes on every checkout.
+public/classic-negroni/simulation/*.bin binary

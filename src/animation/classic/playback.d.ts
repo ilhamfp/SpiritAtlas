@@ -1,0 +1,4 @@
+import type {SpecialtyPlaybackState} from '../specialty-cinematic.js';
+export interface ClassicPlaybackState extends SpecialtyPlaybackState {id:string;status:'ready'|'disposed';rigProgress:number;target:number;reducedMotion:boolean;idleEnabled:boolean;moving:boolean;duration:number}
+export interface ClassicPlayback {readonly state:ClassicPlaybackState;read():ClassicPlaybackState;update(dt:number):boolean;setTarget(n:number):void;seek(n:number):void;play():void;pause():void;explode():void;assemble():void;reverse():void;reset():void;setSpeed(n:number):void;setReducedMotion(n:boolean):void;restorePlayback(state:SpecialtyPlaybackState):void;dispose():void}
+export function createClassicPlayback(options:{id:string;reducedMotion?:boolean;onChange?:(state:ClassicPlaybackState)=>void}):ClassicPlayback;
