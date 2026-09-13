@@ -1,17 +1,17 @@
 import {useEffect, useRef, useState} from 'react';
 import type {CSSProperties} from 'react';
 import {ArrowUpRight, ChevronLeft, ChevronRight, Pause, Play, RotateCcw} from 'lucide-react';
-import {advancePlayback, clampProgress, deconstruct, DEFAULT_IDLE_TIMELINE, idleSampleProgress, initialPlayback, INITIAL_PLAYBACK, movieTime, nextDirection, togglePlayback} from './playback';
-import type {IdleTimeline, PlaybackState} from './playback';
+import {advancePlayback, clampProgress, deconstruct, finishPlaybackLeg, initialPlayback, INITIAL_PLAYBACK, movieTime, nextDirection, togglePlayback} from './playback';
+import type {PlaybackState} from './playback';
 import type {NegroniRenderer} from './renderer';
 
 type Mode = 'cinematic' | '3d';
-type Manifest = {duration: number; forward: string; reverse: string; idle: string; poster: string; idleTimeline: IdleTimeline};
+type Manifest = {duration: number; forward: string; reverse: string; poster: string};
 type MediaIssue = '' | 'slow' | 'failed';
 type UIState = PlaybackState & {mode: Mode; suspended: boolean; hasFrame: boolean; loading3D: boolean; mediaIssue: MediaIssue; status: string};
 type Commands = {action: () => void; toggle: () => void; seek: (value: number) => void; speed: () => void; reset: () => void; retry: () => void; rotate: (delta: number) => void};
 const ASSET_ROOT = '/classic-negroni/cinematic';
-const DEFAULT_MANIFEST: Manifest = {duration: 7.2, forward: `${ASSET_ROOT}/negroni-forward.mp4`, reverse: `${ASSET_ROOT}/negroni-reverse.mp4`, idle: `${ASSET_ROOT}/negroni-idle.mp4`, poster: `${ASSET_ROOT}/poster.png`, idleTimeline: DEFAULT_IDLE_TIMELINE};
+const DEFAULT_MANIFEST: Manifest = {duration: 7.2, forward: `${ASSET_ROOT}/negroni-forward.mp4`, reverse: `${ASSET_ROOT}/negroni-reverse.mp4`, poster: `${ASSET_ROOT}/poster.png`};
 const noop = () => {};
 
 /** The original Negroni films and optional live scene share one reversible timeline. */
@@ -21,7 +21,6 @@ export default function ClassicNegroni() {
   const liveRef = useRef<HTMLDivElement>(null);
   const forwardRef = useRef<HTMLVideoElement>(null);
   const reverseRef = useRef<HTMLVideoElement>(null);
-  const idleRef = useRef<HTMLVideoElement>(null);
   const commands = useRef<Commands>({action: noop, toggle: noop, seek: noop, speed: noop, reset: noop, retry: noop, rotate: noop});
   const [ui, setUI] = useState<UIState>({...INITIAL_PLAYBACK, mode: 'cinematic', suspended: false, hasFrame: false, loading3D: false, mediaIssue: '', status: ''});
 
@@ -29,7 +28,7 @@ export default function ClassicNegroni() {
     const root = rootRef.current!;
     const stage = stageRef.current!;
     const container = liveRef.current!;
-    const videos = [forwardRef.current!, reverseRef.current!, idleRef.current!];
+    const videos = [forwardRef.current!, reverseRef.current!];
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     let controller = new AbortController();
     let rendererController: AbortController | null = null;
@@ -72,9 +71,6 @@ export default function ClassicNegroni() {
       root.dataset.progress = state.progress.toFixed(5);
       root.dataset.playing = String(actuallyPlaying);
       root.dataset.playIntent = String(state.playing);
-      root.dataset.looping = String(state.looping);
-      root.dataset.idleTime = state.idleTime.toFixed(5);
-      root.dataset.sampleProgress = (state.looping ? idleSampleProgress(state.idleTime, manifest.duration, manifest.idleTimeline) : state.progress).toFixed(5);
       root.dataset.direction = String(state.direction);
       root.dataset.suspended = String(suspended);
       setUI({...state, mode, suspended, hasFrame: !!shownVideo, loading3D, mediaIssue, status});
@@ -82,8 +78,7 @@ export default function ClassicNegroni() {
 
     function readFilm() {
       if (mode !== 'cinematic' || pendingSeek || current.readyState < 2) return;
-      if (state.looping) state.idleTime = current.currentTime;
-      else if (state.playing) state.progress = clampProgress(state.direction === 1 ? current.currentTime / manifest.duration : 1 - current.currentTime / manifest.duration);
+      if (state.playing) state.progress = clampProgress(state.direction === 1 ? current.currentTime / manifest.duration : 1 - current.currentTime / manifest.duration);
     }
 
     function revealFilm() {
@@ -116,8 +111,7 @@ export default function ClassicNegroni() {
 
     function pose() {
       if (!renderer || mode !== '3d') return;
-      const sample = state.looping ? idleSampleProgress(state.idleTime, manifest.duration, manifest.idleTimeline) : state.progress;
-      renderer.setPose(sample, state.looping ? 1 : undefined);
+      renderer.setPose(state.progress);
     }
 
     function syncMedia(forceSeek = false) {
@@ -129,7 +123,7 @@ export default function ClassicNegroni() {
         return;
       }
       renderer?.setVisible(false);
-      const next = videos[state.looping ? 2 : state.direction === 1 ? 0 : 1];
+      const next = videos[state.direction === 1 ? 0 : 1];
       const changed = next !== current;
       if (changed) current.pause();
       current = next;
@@ -220,12 +214,12 @@ export default function ClassicNegroni() {
     }
 
     commands.current = {
-      action() {readFilm(); update(deconstruct(state, reducedMotion, manifest.duration, manifest.idleTimeline));},
-      toggle() {readFilm(); update(togglePlayback(state, reducedMotion), false);},
+      action() {readFilm(); update(deconstruct(state, reducedMotion));},
+      toggle() {readFilm(); update(togglePlayback(state), false);},
       seek(value) {
         readFilm();
         const progress = clampProgress(value);
-        update({...state, progress, direction: progress >= state.progress ? 1 : -1, playing: false, looping: false, idleTime: 0});
+        update({...state, progress, direction: progress >= state.progress ? 1 : -1, playing: false});
       },
       speed() {readFilm(); const speeds = [1, .5, .25]; update({...state, speed: speeds[(speeds.indexOf(state.speed) + 1) % speeds.length]}, false);},
       reset() {
@@ -276,10 +270,8 @@ export default function ClassicNegroni() {
       const loaded = () => {if (video === current) {revealFilm(); startFilm();}};
       const seeked = () => {if (video === current) {pendingSeek = false; revealFilm(); startFilm();}};
       const ended = () => {
-        if (mode !== 'cinematic' || video !== current || state.looping || !state.playing) return;
-        state.progress = state.direction === 1 ? 1 : 0;
-        if (state.direction === 1 && !reducedMotion) {state.looping = true; state.idleTime = 0;}
-        else state.playing = false;
+        if (mode !== 'cinematic' || video !== current || !state.playing) return;
+        state = finishPlaybackLeg(state, reducedMotion);
         syncMedia(true);
         publish();
       };
@@ -306,8 +298,7 @@ export default function ClassicNegroni() {
       renderer?.setReducedMotion(reducedMotion);
       if (reducedMotion) {
         readFilm();
-        if (state.looping) state.progress = idleSampleProgress(state.idleTime, manifest.duration, manifest.idleTimeline);
-        update({...state, playing: false, looping: false, idleTime: 0});
+        update({...state, playing: false});
       }
     };
     mediaQuery.addEventListener('change', motionChanged);
@@ -319,7 +310,7 @@ export default function ClassicNegroni() {
       previous = now;
       if (!suspended) {
         if (mode === 'cinematic') readFilm();
-        else if (renderer) {state = advancePlayback(state, delta, reducedMotion, manifest.duration, manifest.idleTimeline); pose();}
+        else if (renderer) {state = advancePlayback(state, delta, reducedMotion, manifest.duration); pose();}
       }
       if (now - lastUI > 50 || !state.playing) {lastUI = now; publish();}
       syncFrameLoop();
@@ -332,13 +323,13 @@ export default function ClassicNegroni() {
         if (!response.ok) throw new Error('Film manifest unavailable');
         const value = await response.json();
         if (disposed || signal.aborted) return;
-        manifest = {...DEFAULT_MANIFEST, ...value, idleTimeline: value.idleTimeline ?? DEFAULT_IDLE_TIMELINE};
+        manifest = {...DEFAULT_MANIFEST, ...value};
       } catch {
         if (disposed || signal.aborted) return;
         // The stable local filenames remain usable if only the manifest failed.
       }
       if (disposed || signal.aborted) return;
-      [manifest.forward, manifest.reverse, manifest.idle].forEach((src, index) => {videos[index].src = src;});
+      [manifest.forward, manifest.reverse].forEach((src, index) => {videos[index].src = src;});
       syncMedia(true);
     }
     void loadFilms();
@@ -363,7 +354,6 @@ export default function ClassicNegroni() {
 
   const percent = Math.round(ui.progress * 100);
   const comingTogether = nextDirection(ui) === -1;
-  const sceneState = ui.looping ? 'Every ingredient, in motion' : ui.progress < .002 ? 'The perfect serve' : ui.progress > .998 ? 'Five beautiful parts' : ui.playing ? ui.direction === 1 ? 'Coming apart' : 'Coming together' : 'A moment, suspended';
   const mediaIssue = ui.mode === 'cinematic' ? ui.mediaIssue : '';
   const loadingText = ui.loading3D ? 'Preparing rotation…' : !ui.hasFrame && ui.mode === 'cinematic' && !ui.status && !mediaIssue ? 'Loading animation…' : '';
   const videoProps = {muted: true, playsInline: true, preload: 'auto', controls: false, 'aria-hidden': true as const, tabIndex: -1, className: 'cn-video'};
@@ -380,14 +370,12 @@ export default function ClassicNegroni() {
         <img className="cn-poster" src={DEFAULT_MANIFEST.poster} alt="Classic Negroni with ruby red liquid, clear ice, and a fresh orange slice in a rocks glass" fetchPriority="high" />
         <video {...videoProps} ref={forwardRef} data-sequence="forward" data-active="false" />
         <video {...videoProps} ref={reverseRef} data-sequence="reverse" data-active="false" />
-        <video {...videoProps} ref={idleRef} data-sequence="idle" data-active="false" loop />
         <div className="cn-renderer" ref={liveRef} hidden />
       </div>
     </div>
     <div className="cn-details">
-    <div className="cn-scene-caption" aria-hidden="true"><span>{sceneState}</span><span className="cn-ratio">1 : 1 : 1</span></div>
     <div className="cn-header">
-      <div><h2 className="cn-title">Classic Negroni</h2><p className="cn-intro">Gin · Campari · sweet vermouth</p></div>
+      <h2 className="cn-title">Classic Negroni</h2>
       <button type="button" className="cn-primary-action" aria-expanded={ui.progress > .5} onClick={() => commands.current.action()}>{comingTogether ? 'Bring it together' : 'Look inside'}{comingTogether ? <RotateCcw size={16} aria-hidden="true"/> : <ArrowUpRight size={17} aria-hidden="true"/>}</button>
     </div>
     <div className="cn-controls">
@@ -395,12 +383,14 @@ export default function ClassicNegroni() {
         <button type="button" className="cn-icon-button" aria-label={ui.playing ? 'Pause animation' : 'Play animation'} title={ui.playing ? 'Pause animation' : 'Play animation'} onClick={() => commands.current.toggle()}>{ui.playing ? <Pause size={16} aria-hidden="true"/> : <Play size={16} aria-hidden="true"/>}</button>
         <input className="cn-timeline" type="range" min={0} max={1000} step={1} value={Math.round(ui.progress * 1000)} style={{'--progress': `${percent}%`} as CSSProperties} aria-label="Deconstruction progress" aria-valuetext={`${percent}% deconstructed`} onChange={event => commands.current.seek(Number(event.currentTarget.value) / 1000)} />
         <span className="cn-progress-value" aria-hidden="true">{String(percent).padStart(2, '0')}%</span>
+      </div>
+      <div className="cn-adjustments">
+      <div className="cn-playback-options">
         <button type="button" className="cn-speed" aria-label={`Playback speed: ${ui.speed} times. Change speed`} onClick={() => commands.current.speed()}>{ui.speed}×</button>
         <button type="button" className="cn-icon-button" aria-label="Reset Negroni" title="Reset Negroni" onClick={() => commands.current.reset()}><RotateCcw size={15} aria-hidden="true"/></button>
       </div>
-      <div className="cn-hint"><span>{ui.mode === '3d' ? 'Drag to explore another angle' : 'Rotate to explore another angle'}</span><div className="cn-orbit-controls"><button type="button" className="cn-icon-button" disabled={ui.loading3D} aria-label="Rotate Negroni left" onClick={() => commands.current.rotate(-Math.PI / 8)}><ChevronLeft size={16} aria-hidden="true"/></button><button type="button" className="cn-icon-button" disabled={ui.loading3D} aria-label="Rotate Negroni right" onClick={() => commands.current.rotate(Math.PI / 8)}><ChevronRight size={16} aria-hidden="true"/></button></div></div>
+      <div className="cn-orbit-controls"><button type="button" className="cn-icon-button" disabled={ui.loading3D} aria-label="Rotate Negroni left" onClick={() => commands.current.rotate(-Math.PI / 8)}><ChevronLeft size={16} aria-hidden="true"/></button><button type="button" className="cn-icon-button" disabled={ui.loading3D} aria-label="Rotate Negroni right" onClick={() => commands.current.rotate(Math.PI / 8)}><ChevronRight size={16} aria-hidden="true"/></button></div></div>
     </div>
-    <ul className="cn-ingredients" aria-label="Classic Negroni ingredients" aria-hidden={ui.progress <= .65}><li>Gin</li><li>Campari</li><li>Sweet vermouth</li><li>Ice</li><li>Orange</li></ul>
     <p className={`cn-status${loadingText ? ' cn-loading' : ''}`} role="status" aria-live="polite">{ui.status || (mediaIssue === 'failed' ? 'The animation could not load. Retry, or use the arrows to rotate the drink.' : mediaIssue === 'slow' ? 'The animation is taking longer to load. You can wait or retry.' : loadingText)}</p>
     {mediaIssue && <button type="button" className="cn-retry" onClick={() => commands.current.retry()}>Retry animation</button>}
     </div>

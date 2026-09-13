@@ -29,3 +29,6 @@
 @media(max-width:1000px){.sa-hero-coordinate,.sa-bar-top .sa-index:nth-child(2){font-size:12px;letter-spacing:.02em}}
 @media(max-width:650px){.sa-drink-caption .sa-index,.sa-hero-foot>.sa-index,.sa-comparison-inner>.sa-index{font-size:12px}.sa-hero-viewer .ingredient-labels button{font-size:12px;max-width:115px}.sa-hero-foot>.sa-index{max-width:none}.sa-hero-foot{gap:8px}}
 .sa-landing button:disabled{opacity:.35;cursor:not-allowed}
+
+/* Keep direct actions spaced from headings after removing repeated instructions. */
+.sa-inside-copy > .sa-action, .sa-comparison-inner > .sa-action { margin-top: 28px; }

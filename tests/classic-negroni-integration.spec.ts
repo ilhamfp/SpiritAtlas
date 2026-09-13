@@ -29,17 +29,17 @@ for (const viewport of [{width: 1440, height: 1000}, {width: 390, height: 844}])
     const hero = classic(page);
     await expect(hero).toHaveAttribute('data-playing', 'true');
     await expect.poll(async () => Number(await hero.getAttribute('data-progress'))).toBeGreaterThan(0);
-    await expect(hero).toHaveAttribute('data-looping', 'true');
-    const idle = hero.locator('video[data-sequence="idle"]');
-    await expect(idle).toHaveAttribute('data-active', 'true');
-    expect(await idle.evaluate((video: HTMLVideoElement) => video.muted && video.playsInline && !video.paused)).toBe(true);
+    await expect(hero).toHaveAttribute('data-direction', '-1');
+    const reverse = hero.locator('video[data-sequence="reverse"]');
+    await expect(reverse).toHaveAttribute('data-active', 'true');
+    expect(await reverse.evaluate((video: HTMLVideoElement) => video.muted && video.playsInline && !video.paused)).toBe(true);
     expect(heavyRequests).toEqual([]);
     await hero.getByRole('button', {name: 'Pause animation', exact: true}).click();
-    const time = await idle.evaluate((video: HTMLVideoElement) => video.currentTime);
+    const time = await reverse.evaluate((video: HTMLVideoElement) => video.currentTime);
     await page.waitForTimeout(100);
     const frames = await page.evaluate(() => Reflect.get(window, '__rafCalls'));
     await page.waitForTimeout(250);
-    expect(await idle.evaluate((video: HTMLVideoElement) => video.currentTime)).toBeCloseTo(time, 2);
+    expect(await reverse.evaluate((video: HTMLVideoElement) => video.currentTime)).toBeCloseTo(time, 2);
     expect(await page.evaluate(() => Reflect.get(window, '__rafCalls'))).toBe(frames);
   });
 }
@@ -131,25 +131,25 @@ test('a failed reverse preload offers recovery when selected and keeps the prece
   await expect(hero.locator('.cn-status')).toBeEmpty();
 });
 
-test('a delayed circulation clip keeps the last frame and offers retry until it arrives', async ({page}) => {
+test('a delayed reverse clip keeps the last frame and offers retry at the automatic turnaround', async ({page}) => {
   let release!: () => void;
   const held = new Promise<void>(resolve => {release = resolve;});
-  await page.route('**/classic-negroni/cinematic/negroni-idle.mp4*', async route => {await held; await route.continue();});
+  await page.route('**/classic-negroni/cinematic/negroni-reverse.mp4*', async route => {await held; await route.continue();});
   try {
     await page.goto('/', {waitUntil: 'domcontentloaded'});
     const hero = classic(page);
-    await expect(hero).toHaveAttribute('data-looping', 'true');
+    await expect(hero).toHaveAttribute('data-direction', '-1');
     await expect(hero.getByRole('button', {name: 'Retry animation', exact: true})).toBeVisible();
     await expect(hero.locator('video[data-sequence="forward"]')).toHaveCSS('opacity', '1');
     await expect(hero.locator('.cn-poster')).toHaveCSS('opacity', '0');
     release();
-    await expect(hero.locator('video[data-sequence="idle"]')).toHaveAttribute('data-active', 'true');
+    await expect(hero.locator('video[data-sequence="reverse"]')).toHaveAttribute('data-active', 'true');
     await expect(hero).toHaveAttribute('data-playing', 'true');
     await expect(hero.locator('.cn-status')).toBeEmpty();
   } finally {release();}
 });
 
-test('desktop framing keeps playback controls in view and ingredient reveals preserve the layout', async ({page}) => {
+test('desktop framing keeps playback controls in view and motion preserves the minimal layout', async ({page}) => {
   await page.emulateMedia({reducedMotion: 'reduce'});
   for (const viewport of [{width: 1440, height: 1000}, {width: 1280, height: 900}]) {
     await page.setViewportSize(viewport);
@@ -159,7 +159,8 @@ test('desktop framing keeps playback controls in view and ingredient reveals pre
     expect(controls!.y + controls!.height).toBeLessThan(viewport.height);
     const before = await page.locator('.sa-hero-foot').boundingBox();
     await hero.getByRole('button', {name: 'Look inside', exact: true}).click();
-    await expect(hero.getByRole('list', {name: 'Classic Negroni ingredients'})).toBeVisible();
+    await expect(hero).toHaveAttribute('data-progress', '1.00000');
+    await expect(hero.getByRole('list', {name: 'Classic Negroni ingredients'})).toHaveCount(0);
     expect(await page.locator('.sa-hero-foot').boundingBox()).toEqual(before);
     await hero.getByRole('button', {name: 'Bring it together', exact: true}).click();
     expect(await page.locator('.sa-hero-foot').boundingBox()).toEqual(before);

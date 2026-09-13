@@ -8,25 +8,25 @@ Bar Bon Funk recipe or linked to its detail page.
 ## Rendering and motion
 
 - Cinematic starts muted and inline as soon as its first frame is ready, then
-  continues into the separated-ingredient circulation loop. It needs no click.
+  continuously alternates between full separation and full reassembly: 0% →
+  100% → 0% → 100%. It needs no click.
   Reduced-motion visitors start with a still; browsers that block autoplay keep
   the poster/decoded frame and offer an explicit Play control.
 - Playback and the JavaScript frame loop suspend when the stage is offscreen or
   the page is hidden. Pause and Reset stop the loop until the visitor resumes.
 - Cinematic uses the original Cycles movies without transcoding: 720 × 720,
   60 fps, 433 transition frames over 7.2 seconds, with a 144-frame, 2.4-second
-  circulation loop. Reassembly uses the separately encoded reverse movie.
+  circulation loop retained as an original asset. The homepage now plays only
+  the forward and separately encoded reverse movies.
 - Rotating the drink reuses the original glass, modeled ice, orange V2 textures, HDR
   studio lighting, layered refraction and 128³ marching-cubes liquid surface.
   Three.js and the 4,800-particle cache load only after a rotation request.
 - The film and rotatable scene share progress, playback direction, pause state and speed.
-  During final circulation the liquid samples the original loop while the
-  ingredient rig stays fully separated.
+  Both representations reverse automatically at each endpoint.
 - The homepage controls stay local to the component. Loading, visibility,
   reduced-motion and unmount cleanup are handled independently of the atlas.
 - The stage scales with desktop viewport height to keep playback controls in
-  view. Ingredient labels reserve their space so separation does not move the
-  controls or the next section; transport and view controls use 44px targets.
+  view. Motion does not change the control layout; all buttons use 44px targets.
 - Vertical swipes scroll over the live scene while horizontal drags orbit it.
   Reduced motion also disables the live camera's easing and inertia, including
   when the preference changes after loading. Explicit playback stays available.
@@ -147,3 +147,22 @@ artwork; mobile keeps a flat charcoal background without that decoration.
 
 The unified-player checks and responsive captures are recorded in
 `docs/brand-evidence/unified-player/README.md`.
+
+### Continuous full cycles and less text
+
+Playback now reverses at both endpoints, preserving the original forward and
+reverse film frames. The live scene follows the same full 0–100–0 cycle and
+retains elapsed frame time through each turnaround. Pause, scrubbing, speed,
+reset, offscreen suspension and reduced-motion behavior remain available. The
+old idle movie stays in the imported asset archive but is no longer requested
+by the homepage.
+
+The player now shows its title and functional controls. Motion captions, ratio,
+recipe subtitle, rotation instructions and the revealed ingredient list are
+removed. Transport and adjustment controls share a row when space permits and
+wrap into two compact rows on phones, keeping every button at least 44px.
+Repeated instructional paragraphs and decorative taglines are also removed from
+the landing page; useful bar descriptions and drink-specific details remain.
+
+Verification for this refinement is recorded in
+`docs/brand-evidence/continuous-player/README.md`.

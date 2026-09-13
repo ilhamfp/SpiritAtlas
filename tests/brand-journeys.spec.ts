@@ -14,7 +14,6 @@ const expectedFailures = new WeakMap<Page, RegExp[]>();
 const classic = (page: Page) => page.getByRole('region', { name: 'Classic Negroni experience', exact: true });
 const film = (page: Page, sequence = 'forward') => classic(page).locator(`video[data-sequence="${sequence}"]`);
 const progress = async (page: Page) => Number(await classic(page).getAttribute('data-progress'));
-const sampleProgress = async (page: Page) => Number(await classic(page).getAttribute('data-sample-progress'));
 const filmTime = (page: Page, sequence = 'forward') => film(page, sequence).evaluate((video: HTMLVideoElement) => video.currentTime);
 const heavyAsset = (url: string) => /\/classic-negroni\/(?:simulation\/|textures\/|[^/]+\.hdr)|\/src\/negroni\/renderer\.js|\/assets\/(?:renderer|three)-[^/]+\.js|\.glb(?:\?|$)/.test(url);
 
@@ -165,7 +164,7 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 768, height: 102
         const linear = value / 255;
         return linear <= .04045 ? linear / 12.92 : ((linear + .055) / 1.055) ** 2.4;
       }).reduce((sum, value, index) => sum + value * [.2126, .7152, .0722][index], 0);
-      return ['.sa-hero h1', '.sa-hero h1 span', '.sa-hero-copy p', '.sa-hero-copy .sa-action'].map(selector => {
+      return ['.sa-hero h1', '.sa-hero h1 span', '.sa-hero-copy .sa-action'].map(selector => {
         const style = getComputedStyle(document.querySelector(selector)!);
         const foreground = rgba(style.color);
         const background = rgba(selector.endsWith('.sa-action') ? style.backgroundColor : getComputedStyle(document.querySelector('.sa-landing')!).backgroundColor);
@@ -181,7 +180,8 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 768, height: 102
       const link = page.getByRole('link', { name: `Explore ${entry.bar}: ${entry.name}`, exact: true });
       await expect(link).toHaveAttribute('href', `/?drink=${entry.id}`);
     }
-    await expect(page.locator('.sa-section-heading p')).toHaveText('One city. Three interpretations of the Negroni. Start with a familiar drink. See where it takes you.');
+    await expect(classic(page).locator('.cn-scene-caption, .cn-hint, .cn-intro, .cn-ingredients')).toHaveCount(0);
+    await expect(page.locator('.sa-hero-copy p, .sa-section-heading p, .sa-comparison-inner > p')).toHaveCount(0);
     await page.screenshot({ path: `${evidenceDir}/homepage-${viewport.width}x${viewport.height}.png` });
     // Visit each section before the full-page capture so native lazy images are
     // decoded and reveal transitions reflect an actual completed scroll journey.
@@ -291,8 +291,9 @@ test('original cinematic frames advance, pause, reverse at the same pose, and sc
   await expect(hero).toHaveAttribute('data-direction', '-1');
   expect(Math.abs(await progress(page) - beforeReverse)).toBeLessThan(.1);
   await expect.poll(() => progress(page)).toBeLessThan(beforeReverse - .05);
-  await expect(hero).toHaveAttribute('data-playing', 'false');
-  expect(await progress(page)).toBe(0);
+  await expect(hero).toHaveAttribute('data-direction', '1');
+  await expect(hero).toHaveAttribute('data-playing', 'true');
+  await hero.getByRole('button', {name: 'Pause animation', exact: true}).click();
   await seekMidpoint(page);
   await waitFilm(page);
   expect(await filmTime(page)).toBeCloseTo(3.6, 1);
@@ -308,30 +309,27 @@ test('original cinematic frames advance, pause, reverse at the same pose, and sc
   await testInfo.attach('cinematic-playback', { body: JSON.stringify({ paused, beforeReverse, scrubbed: await progress(page) }), contentType: 'application/json' });
 });
 
-test('expanded film circulates continuously, pauses its actual frame and reassembles from the visible idle pose', async ({ page }, testInfo) => {
+test('automatic playback completes 0 to 100 to 0 to 100 using the full forward and reverse films', async ({page}, testInfo) => {
   await page.goto('/');
   await waitFilm(page);
   const hero = classic(page);
-  // The initial unfold and circulation must run without a user gesture.
-  await expect(hero).toHaveAttribute('data-looping', 'true');
-  await waitFilm(page, 'idle');
-  await expect.poll(() => filmTime(page, 'idle')).toBeGreaterThan(.25);
-  expect(await film(page, 'idle').evaluate((video: HTMLVideoElement) => video.loop && !video.paused)).toBe(true);
-  await hero.getByRole('button', { name: 'Pause animation', exact: true }).click();
-  const idleTime = await filmTime(page, 'idle');
-  const visiblePose = await sampleProgress(page);
-  await page.waitForTimeout(350);
-  expect(await filmTime(page, 'idle')).toBeCloseTo(idleTime, 2);
-  expect(await sampleProgress(page)).toBeCloseTo(visiblePose, 4);
-  await page.screenshot({ path: `${evidenceDir}/classic-expanded-1440x1000.png` });
-  await hero.getByRole('button', { name: 'Bring it together', exact: true }).click();
+  await hero.evaluate(root => {
+    const endpoints: {sequence: string; time: number}[] = [];
+    Reflect.set(window, '__negroniEndpoints', endpoints);
+    root.querySelectorAll('video').forEach(video => video.addEventListener('ended', () => endpoints.push({sequence: video.dataset.sequence!, time: video.currentTime})));
+  });
+  await expect.poll(() => page.evaluate(() => Reflect.get(window, '__negroniEndpoints').length), {timeout: 30000}).toBeGreaterThanOrEqual(3);
+  const endpoints = await page.evaluate(() => Reflect.get(window, '__negroniEndpoints') as {sequence: string; time: number}[]);
+  expect(endpoints.slice(0, 3).map(item => item.sequence)).toEqual(['forward', 'reverse', 'forward']);
+  for (const endpoint of endpoints.slice(0, 3)) expect(endpoint.time).toBeGreaterThan(7.1);
+  await expect(hero).toHaveAttribute('data-playing', 'true');
   await waitFilm(page, 'reverse');
-  expect(Math.abs(await progress(page) - visiblePose)).toBeLessThan(.08);
-  await expect.poll(() => progress(page)).toBeLessThan(visiblePose - .08);
-  await expect(hero).toHaveAttribute('data-playing', 'false');
-  await expect(hero).toHaveAttribute('data-progress', '0.00000');
-  await expect(hero.getByRole('button', { name: 'Look inside', exact: true })).toBeVisible();
-  await testInfo.attach('idle-to-reverse-continuity', { body: JSON.stringify({ idleTime, visiblePose, reassembled: await progress(page) }), contentType: 'application/json' });
+  await hero.getByRole('button', {name: 'Pause animation', exact: true}).click();
+  const pausedAt = await progress(page);
+  await page.waitForTimeout(250);
+  expect(await progress(page)).toBeCloseTo(pausedAt, 4);
+  await page.screenshot({path: `${evidenceDir}/classic-full-cycle-1440x1000.png`});
+  await testInfo.attach('full-cycle-endpoints', {body: JSON.stringify(endpoints), contentType: 'application/json'});
 });
 
 test('one player loads rotation on demand, preserves the selected pose and resets to the original film', async ({ page }, testInfo) => {
@@ -368,6 +366,10 @@ test('one player loads rotation on demand, preserves the selected pose and reset
   expect(await progress(page)).toBeCloseTo(selectedPose, 3);
   await hero.getByRole('button', { name: 'Play animation', exact: true }).click();
   await expect.poll(async () => Number(await canvas.getAttribute('data-progress'))).toBeGreaterThan(selectedPose + .025);
+  await expect(hero).toHaveAttribute('data-direction', '-1');
+  await expect.poll(async () => Number(await canvas.getAttribute('data-progress'))).toBeLessThan(.9);
+  await expect(hero).toHaveAttribute('data-direction', '1');
+  await expect.poll(async () => Number(await canvas.getAttribute('data-progress'))).toBeGreaterThan(.03);
   await hero.getByRole('button', { name: 'Pause animation', exact: true }).click();
   await page.screenshot({ path: `${evidenceDir}/classic-live-3d-1440x1000.png` });
   await testInfo.attach('classic-live-scene', { body: JSON.stringify({ selectedPose, finalPose: await progress(page), heavyRequests }), contentType: 'application/json' });
@@ -467,7 +469,6 @@ test.describe('phone touch and reduced motion', () => {
     await expect(hero).toHaveAttribute('data-playing', 'false');
     await hero.getByRole('button', { name: 'Look inside', exact: true }).tap();
     await expect(hero).toHaveAttribute('data-progress', '1.00000');
-    await expect(hero).toHaveAttribute('data-looping', 'false');
     await waitFilm(page);
     const still = await filmTime(page);
     await page.waitForTimeout(350);
@@ -481,7 +482,6 @@ test.describe('phone touch and reduced motion', () => {
     await expect.poll(() => progress(page)).toBeGreaterThan(.1);
     await expect(hero).toHaveAttribute('data-progress', '1.00000');
     await expect(hero).toHaveAttribute('data-playing', 'false');
-    await expect(hero).toHaveAttribute('data-looping', 'false');
     await page.screenshot({ path: `${evidenceDir}/classic-reduced-motion-390x844.png` });
     await page.getByRole('link', { name: 'Explore the atlas', exact: true }).tap();
     await expect(page.getByRole('region', { name: 'Featured bars' })).toBeVisible();
