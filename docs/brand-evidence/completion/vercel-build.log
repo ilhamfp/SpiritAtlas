@@ -1,0 +1,52 @@
+Retrieving project…
+Deploying ilham-firdausi-putras-projects/spiritatlas
+Uploading [--------------------] (0.0B/72.2KB)
+Uploading [========------------] (32.0KB/72.2KB)
+Uploading [=============-------] (48.0KB/72.2KB)
+Uploading [===============-----] (54.7KB/72.2KB)
+Uploading [====================] (72.2KB/72.2KB)
+Inspect: https://vercel.com/ilham-firdausi-putras-projects/spiritatlas/AwYcJx4BAHWSHZ1WBMBaMtqGQ9kf [3s]
+Production: https://spiritatlas-iqc8ua9nf-ilham-firdausi-putras-projects.vercel.app [3s]
+Building...
+Building...
+Building: Running build in Washington, D.C., USA (East) – iad1 (Turbo Build Machine)
+Building: Build machine configuration: 30 cores, 60 GB
+Building: Retrieving list of deployment files...
+Building: Downloading 155 deployment files...
+Building: Restored build cache from previous deployment (DCNxzLauBFGz7q3suqXRUH2EmxnD)
+Building: Running "vercel build"
+Building: Vercel CLI 59.11.7
+Building: Installing dependencies...
+Building: up to date in 724ms
+Building: 18 packages are looking for funding
+Building: run `npm fund` for details
+Building: > spiritatlas@1.0.0 build
+Building: > tsc --noEmit && vite build
+Building: vite v8.3.0 building client environment for production...
+Building: transforming...
+Building: ✓ 2443 modules transformed.
+Production: https://spiritatlas-iqc8ua9nf-ilham-firdausi-putras-projects.vercel.app [8s]
+Completing...
+Aliased: https://spiritatlas-one.vercel.app [10s]
+{
+  "status": "ok",
+  "deployment": {
+    "id": "dpl_AwYcJx4BAHWSHZ1WBMBaMtqGQ9kf",
+    "url": "https://spiritatlas-iqc8ua9nf-ilham-firdausi-putras-projects.vercel.app",
+    "inspectorUrl": "https://vercel.com/ilham-firdausi-putras-projects/spiritatlas/AwYcJx4BAHWSHZ1WBMBaMtqGQ9kf",
+    "readyState": "READY",
+    "target": "production",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_AwYcJx4BAHWSHZ1WBMBaMtqGQ9kf"
+  },
+  "message": "Deployment spiritatlas-iqc8ua9nf-ilham-firdausi-putras-projects.vercel.app ready.",
+  "next": [
+    {
+      "command": "vercel inspect spiritatlas-iqc8ua9nf-ilham-firdausi-putras-projects.vercel.app",
+      "when": "Inspect deployment"
+    },
+    {
+      "command": "vercel deploy --prod",
+      "when": "Promote to production"
+    }
+  ]
+}

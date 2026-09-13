@@ -1,0 +1,147 @@
+{
+  "publicURL": "https://spiritatlas-one.vercel.app",
+  "method": "Fresh unauthenticated Chrome desktop and mobile contexts. 3D code deliberately held for the first label, then released while model GLB is held for the second. Screenshots show faithful poster loading states. Actual DOM text colors are compared to each opaque computed backing. This isolates loading UI; live scene journeys are tested separately.",
+  "results": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "capturedAt": "2026-09-13T05:14:50.250Z",
+      "url": "https://spiritatlas-one.vercel.app/",
+      "httpStatus": 200,
+      "code": {
+        "background": "rgb(44, 42, 45)",
+        "backgroundOpaque": true,
+        "opacity": "1",
+        "texts": [
+          {
+            "text": "Preparing your drink…",
+            "color": "rgb(185, 179, 176)",
+            "fontSize": "12px",
+            "contrast": 6.8676354134397215
+          }
+        ],
+        "bounds": {
+          "x": 984.0625,
+          "y": 697.5,
+          "width": 139.859375,
+          "height": 30
+        },
+        "withinViewport": true
+      },
+      "model": {
+        "background": "rgb(44, 42, 45)",
+        "backgroundOpaque": true,
+        "opacity": "1",
+        "texts": [
+          {
+            "text": "Preparing live 3D",
+            "color": "rgb(236, 229, 216)",
+            "fontSize": "13px",
+            "contrast": 11.357663422003561
+          },
+          {
+            "text": "Glass, ingredients & garnish",
+            "color": "rgb(193, 182, 167)",
+            "fontSize": "14px",
+            "contrast": 7.1242853187467805
+          }
+        ],
+        "bounds": {
+          "x": 953.0390625,
+          "y": 635.609375,
+          "width": 201.921875,
+          "height": 91.890625
+        },
+        "withinViewport": true
+      },
+      "noModelsBeforeCode": true,
+      "codeRequests": [
+        "/assets/three-BoWlbv93.js"
+      ],
+      "modelRequests": [
+        "/models/bbf-negroni.glb"
+      ],
+      "errors": [],
+      "scripts": [
+        "/assets/index-ChhHIMdp.js"
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capturedAt": "2026-09-13T05:14:53.894Z",
+      "url": "https://spiritatlas-one.vercel.app/",
+      "httpStatus": 200,
+      "code": {
+        "background": "rgb(44, 42, 45)",
+        "backgroundOpaque": true,
+        "opacity": "1",
+        "texts": [
+          {
+            "text": "Preparing your drink…",
+            "color": "rgb(185, 179, 176)",
+            "fontSize": "12px",
+            "contrast": 6.8676354134397215
+          }
+        ],
+        "bounds": {
+          "x": 125.0625,
+          "y": 690.21875,
+          "width": 139.859375,
+          "height": 30
+        },
+        "withinViewport": true
+      },
+      "model": {
+        "background": "rgb(44, 42, 45)",
+        "backgroundOpaque": true,
+        "opacity": "1",
+        "texts": [
+          {
+            "text": "Preparing live 3D",
+            "color": "rgb(236, 229, 216)",
+            "fontSize": "13px",
+            "contrast": 11.357663422003561
+          },
+          {
+            "text": "Glass, ingredients & garnish",
+            "color": "rgb(193, 182, 167)",
+            "fontSize": "14px",
+            "contrast": 7.1242853187467805
+          }
+        ],
+        "bounds": {
+          "x": 94.0390625,
+          "y": 628.328125,
+          "width": 201.921875,
+          "height": 91.890625
+        },
+        "withinViewport": true
+      },
+      "noModelsBeforeCode": true,
+      "codeRequests": [
+        "/assets/three-BoWlbv93.js"
+      ],
+      "modelRequests": [
+        "/models/bbf-negroni.glb"
+      ],
+      "errors": [],
+      "scripts": [
+        "/assets/index-ChhHIMdp.js"
+      ]
+    }
+  ],
+  "immutableCheck": {
+    "requestedURL": "https://spiritatlas-hbbu1fe2g-ilham-firdausi-putras-projects.vercel.app",
+    "actualURL": "https://vercel.com/login",
+    "error": "Error: Immutable deployment redirects unauthenticated visitors to Vercel login",
+    "freshUnauthenticatedContext": true
+  },
+  "passed": false,
+  "loadingContrastPassed": true,
+  "immutableHomepagePublic": false
+}

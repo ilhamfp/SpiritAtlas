@@ -31,7 +31,13 @@ Both requests used quality `high`, WebP output, compression `92`, and `n=1`. Bot
 - Mobile accepted as an intentional portrait recomposition: the top and central field remain charcoal, with side ribbons and broad peach pools concentrated in the lower half. It is a separately generated composition, not a center crop.
 - Neither file contains lettering, logos, cocktails, circular particles, or baked square dots. A small amount of tonal texture is visible on close inspection, but there is no uniform noise overlay or full-image pixelation.
 - Soft luminous ridges are baked decorative shading. Do not use either output as a physically calibrated material.
-- Palette and form meet the smooth-base requirements; final dissolve density, actual responsive placement, and relationship to the drink must still be assessed in the rendered page.
+- Palette and form met the smooth-base requirements in the inspected BBF landing. The separate square-grid mask, responsive crops and protected copy regions were subsequently inspected in public screenshots; this is evidence for the artwork in that composition, not acceptance of a later replacement hero.
+
+## Rendered verification and release scope
+
+The original artwork was visually inspected with the BBF hero through `87c9eca`. Public evidence in `dpr-motion/` covers eight desktop/mobile, DPR 1/2 and normal/reduced-motion cases: settled Canvas2D RGBA hashes were unchanged after 1,500 ms; 51,552 desktop and 13,806 mobile grid-cell centers matched exactly across pixel density and motion preferences. Smooth ribbon interiors, peach pools, dark channels and selected square-dot contours remained visible together, with calm space for copy.
+
+Remote `main` at `6e6effd` subsequently introduced Classic Negroni while release verification ran. Its integration preserves these decorative assets and mask, so the asset-generation provenance and unchanged artwork measurements remain valid. They do **not** verify the new hero’s framing, rendering, animation, controls, loading or photographic fidelity. Those requirements belong to acceptance of the changed feature. The mixed-deployment `production-accepted/` run recorded 6/10 passing; no final goal completion is claimed. See [the release-scoped visual audit](completion/visual-audit.md).
 
 ## Reproduction
 

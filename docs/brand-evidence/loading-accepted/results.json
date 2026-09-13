@@ -1,0 +1,70 @@
+{
+  "capturedAt": "2026-09-13T05:22:40.152Z",
+  "httpStatus": 200,
+  "freshUnauthenticatedContext": true,
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "method": "Actual BBF GLB request held while the public/local poster is decoded. Poster alpha bounds above 127 are transformed through object-fit contain into CSS coordinates and compared with the compact badge and named zoom controls. Screenshot inspected separately.",
+  "url": "https://spiritatlas-one.vercel.app/",
+  "badge": {
+    "x": 132.28125,
+    "y": 684.71875,
+    "width": 125.4375,
+    "height": 35.5,
+    "right": 257.71875,
+    "bottom": 720.21875
+  },
+  "visibleStatusText": "Preparing live 3D",
+  "background": "rgb(44, 42, 45)",
+  "color": "rgb(236, 229, 216)",
+  "contrast": 11.357663422003561,
+  "opaque": true,
+  "glassAlphaBoundsCss": {
+    "x": 118.36111111111111,
+    "y": 510.6076388888889,
+    "right": 271.6388888888889,
+    "bottom": 682.4854166666667
+  },
+  "poster": {
+    "src": "https://spiritatlas-one.vercel.app/posters/bbf-negroni-loading.png",
+    "naturalWidth": 975,
+    "naturalHeight": 900,
+    "objectFit": "contain",
+    "alphaThreshold": 127
+  },
+  "zoom": [
+    {
+      "label": "Zoom in",
+      "x": 286,
+      "y": 684.21875,
+      "width": 44,
+      "height": 44,
+      "right": 330,
+      "bottom": 728.21875
+    },
+    {
+      "label": "Zoom out",
+      "x": 334,
+      "y": 684.21875,
+      "width": 44,
+      "height": 44,
+      "right": 378,
+      "bottom": 728.21875
+    }
+  ],
+  "badgeOverlapsGlass": false,
+  "badgeOverlapsZoom": false,
+  "badgeWithinViewport": true,
+  "spinnerDisplay": "none",
+  "subtitleDisplay": "none",
+  "scripts": [
+    "/assets/index-9bog6Rca.js"
+  ],
+  "modelRequests": [
+    "/models/bbf-negroni.glb"
+  ],
+  "errors": [],
+  "passed": true
+}

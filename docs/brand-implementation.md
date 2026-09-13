@@ -1,52 +1,43 @@
 # SpiritAtlas implementation and evidence
 
-## Objective and authority
-User objective: attachment goal-objective.md. Exact palette, typography and artwork rules: SpiritAtlas-Brand-Kit. Both reference images visually inspected on 2026-09-13.
+## Current release status — 13 September 2026
 
-## Application scope
-SpiritAtlas contains four cocktail collections. The landing page focuses on Bar Bon Funk’s BBF Negroni, MOGA’s Ichigo Negroni and Bar Somma’s Negroni Express, while retaining atlas navigation, ingredient exploration, reference photographs and comparison.
+Remote `main` at `6e6effd` introduced the Classic Negroni hero while public verification was running. That feature has been preserved in the integrated working tree alongside the existing brand work. The original landing goal is **not marked complete**: the changed hero needs its own visual, loading, fallback and interaction acceptance, followed by a coherent public run against one stable deployment.
 
-## Art direction
-Visual thesis: a spacious charcoal cocktail publication, with smooth orange ribbons and peach pools dissolving into ordered squares around a sharply rendered real Negroni.
-Content plan: editorial hero and live drink; three bar entries; explanation of ingredient exploration; three-Negroni comparison invitation.
-Interaction thesis: restrained hero reveal; manual orbit and ingredient reveal; editorial links transition into preserved atlas/drink/comparison routes. No ambient spin, random moving particles or visitor image generation.
+Public production alias: https://spiritatlas-one.vercel.app. Earlier unauthenticated checks returned HTTP 200. Historical screenshots and passing runs below describe their recorded versions; they do not establish acceptance of the Classic Negroni release. Immutable deployment metadata URLs were Vercel-protected when checked and are not the public visitor URL.
 
-## Initial implementation notes
-- Read all five required kit files and visually inspected reference and supplied texture.
-- Existing atlas includes query routes, explicit expansion controls, touch/keyboard orbit, comparison sync and reference photographs.
-- Vercel CLI authenticated as ilhamfp; no existing SpiritAtlas project link found.
-- .env is ignored and never read into frontend code; development generation only.
-- Requested image model verified in official documentation; asset agent checks actual account access.
+## Current integration checks
 
-## Initial work plan
-Implement landing composition, integrate brand fonts/tokens, render faithful posters, inspect and refine all three viewports, run existing behavioral gates, production deploy and verify unauthenticated journeys.
+The integrated Classic Negroni working tree passes 11 unit checks (`node --experimental-strip-types`), the production build, and all 12 focused local journeys in about 1.4 minutes (`brand-evidence/integration-local/results.json`). These current local checks do not turn the mixed-deployment public run into a pass. Current-release public visual and behavioral acceptance remain unproven.
 
-## Visual pass 1 (local Chromium)
-Actual screenshots captured at 1440×1000, 768×1024, 390×844. Fonts loaded; no horizontal overflow. Identified: decorative field behind caption/coordinates reduced contrast, redundant viewer instructions, mobile cocktail too small, pending MOGA/Somma posters. Correcting artwork fade/calm label surfaces and responsive live camera sizing before next review. Build and TypeScript pass; expected large Three.js chunk remains lazy-loaded.
-- Mobile framing root cause found in actual computed canvas dimensions: canvas was 382×150 inside a 310px stage. Made live viewer fill a definite positioned stage; now 382×310, preserving authored camera.
-- Exact-model texture generation complete: gpt-image-2.5-sunburst, verified account access, desktop and independently recomposed mobile images. Separate stable 5-CSS-pixel Bayer coverage mask, no per-frame randomness. Prompts and provenance: docs/brand-evidence/texture-provenance.md.
-- New Vercel project spiritatlas linked under authenticated account. Initial production deployment underway; final verification will follow the completed visual fixes.
-- Poster/loading assets now rendered from the actual scenes, including all original three Negronis. Dedicated BBF loading poster matches the final landing camera. Scene provenance: docs/brand-evidence/scene-study/.
-- Canvas Suspense boundary moved inside the stable Canvas after repeated captures exposed canvas recreation during load. Browser orbit → expansion → reassembly passes for all three; materials/geometry and atlas optical behavior preserved.
-- First local behavior run: 9/10 tests passed; the remaining failure was an incorrect test selector, corrected. Required user journeys, fallback, fonts, reduced motion and only one initial GLB all passed. Relevant existing collection gates running.
-- Accessibility review corrections: mobile zoom/rotation targets at least 44×44 px; mono indices minimum 11 px; ingredient annotations 12 px. Dark text remains on orange and peach actions.
-- Source and built frontend scan found no OPENAI_API_KEY, public key variable, or API-key token pattern. git check-ignore confirms .env and .vercel metadata excluded; git ls-files .env empty.
-- Public alias returned HTTP 200 without authentication. Final build/deployment inspection remains pending latest visual adjustments.
+## Scope and design authority
 
-## Final local verification
-- Brand journey suite: 10/10 passing at 1440×1000, 768×1024 and 390×844. No horizontal overflow; font files loaded; poster images decoded; contrast checks pass. All required links, orbit, ingredient expansion/reassembly, comparison synchronization/independence, touch and keyboard journeys pass.
-- Existing relevant collection/content/geometry/source gates: 39 unique tests pass. Two assertions were updated for the intentional landing route and existing reference-viewer toolbar; a hardcoded test port was corrected to use the configured application URL. Run history retained.
-- Existing held-loading, failed-model retry, WebGL fallback and reduced-motion runtime gates: 4/4 pass. Hero orbit/expand/reassemble also verified for each of the three drinks during poster capture.
-- Hero review: neutral studio environment removes blue ice cast; controlled outer-glass coverage allows the base to transmit the decorative field instead of appearing solid brown. Original atlas scene environment/materials remain. No model geometry regenerated.
-- WebGL fallback exposes ingredient navigation and disables unavailable hero orbit arrows.
-- Relevant artifacts: docs/brand-evidence/local-final/, existing/, existing-additional/, scene-study/, scene-qa-results.json. Production verification pending final deployment.
+The user objective is the supplied `goal-objective.md`; exact typography, palette and artwork rules are in `SpiritAtlas-Brand-Kit/`. All five required kit files and both reference images were read or visually inspected. SpiritAtlas retains four cocktail collections. Its three featured bar entries connect Bar Bon Funk’s BBF Negroni, MOGA’s Ichigo Negroni and Bar Somma’s Negroni Express to the atlas, ingredient exploration, reference photographs and comparison.
 
-## Production deployment
-Public alias: https://spiritatlas-one.vercel.app
-Initial code deployment: https://spiritatlas-7w418snuo-ilham-firdausi-putras-projects.vercel.app
-Vercel deployment ID: dpl_9RW7C1VagL7hxj7gHuhsNcSfXK3S. Ready, production, 2026-09-13. Remote Vercel build (TypeScript + Vite) passed, alongside local production build. No separate lint script exists in the existing project.
-The initial public-browser verification found the favicon issue recorded below.
+The original art direction combines charcoal negative space, Instrument Sans and restrained IBM Plex Mono, orange ribbons, peach pools, dark channels and selected square-dot contours. Orange actions use dark text. The generated artwork is separate from drink rendering and interface layers; normal visits make no image-generation requests.
 
-## Production review correction
-All public journey bodies succeeded, but strict console checks found a missing favicon request. Added the actual Instrument Sans S glyph as the static browser icon and ensured the explicit HTML icon link is deployed.
-Production HTML inspection also exposed eager loading of Three because shared React code had been placed in its vendor chunk. Separated React from Three: initial HTML now preloads only React and the tiny runtime; the Three chunk is loaded with the lazy Viewer. This makes the headline/action independent of all 3D code, in addition to the model/poster loading separation already tested. The corrected deployment is https://spiritatlas-55tq97p3u-ilham-firdausi-putras-projects.vercel.app (dpl_21xUQehXGf2bdo5Yn2AWW15qmWHa). The public alias remains https://spiritatlas-one.vercel.app. The saved public-browser run completed with 9/10 journeys passed. The loading test failed its immediate poster-decoding assertion; the cause has not been verified. The focused local loading run passed 1/1. Results and captures are retained under docs/brand-evidence/production-final/ and local-loading-final/. Further verification was stopped at the user’s request; a passing final production suite is not claimed.
+## Completed work and its evidence boundary
+
+- Generated original desktop and separately recomposed mobile smooth textures with the verified `gpt-image-2.5-sunburst` identifier. Prompts, model/access verification and static asset records: [texture provenance](brand-evidence/texture-provenance.md).
+- Applied an independent stable 5-CSS-pixel Bayer coverage mask. Eight public DPR/motion cases showed unchanged canvas pixels over 1,500 ms and identical grid-cell coverage across DPR 1/2 and normal/reduced motion. This remains evidence for the unchanged artwork, not the replacement hero. See `brand-evidence/dpr-motion/`.
+- In the BBF hero version through `87c9eca`, preserved the live scene and reversible ingredient/orbit controls, rendered faithful loading posters, corrected mobile text joins, protected label contrast and compacted loading feedback so it cleared the glass and zoom controls. BBF visual and loading captures are historical; the Classic Negroni feature owns acceptance of its changed presentation and controls.
+- Separated React from the lazy Three.js bundle, fixed the favicon, and stabilized the Canvas Suspense boundary in the earlier implementation. Prior scans found no API key in frontend source/build output; `.env` and `.vercel` were excluded from version control. These recorded checks do not replace final checks after integration.
+
+## Recorded verification
+
+| Evidence | Recorded result | Scope |
+| --- | --- | --- |
+| `brand-evidence/existing-complete/results.json` | 39/39 passed, 89.2 s | Existing route, content, ingredient, source and reference checks before Classic Negroni integration |
+| `brand-evidence/production-complete/results.json` | 10/10 passed, 105.9 s | Public BBF landing at `2d39e07` |
+| `brand-evidence/loading-accepted/results.json` | Passed | Public compact BBF loading badge at `87c9eca`; 11.36:1 contrast and no overlap with glass/zoom controls |
+| `brand-evidence/production-accepted/results.json` | **6 passed, 4 failed**, 229.6 s | Mixed-deployment run; not final acceptance |
+
+During `production-accepted/`, navigation requested an obsolete `App-CNqJ4F8m.js` chunk and received HTTP 404 as the deployment changed. Other failures targeted the BBF hero or its fallback after Classic Negroni replaced it. These are recorded failures, not a passing run or proof that the new hero satisfies the original goal. The directory name does not imply acceptance.
+
+Earlier local BBF evidence includes 10/10 focused journeys, 4/4 loading/retry/WebGL/reduced-motion gates and source-grounded poster studies. Earlier public `production-final/` recorded 9/10 with an immediate poster-decode assertion failure; the subsequent readiness assertion waited for actual decode. Preserve these as history rather than current release status.
+
+## Remaining work
+
+Retain the integrated Classic Negroni feature and verify its changed hero against the full objective: real interactive rendering, faithful loading/fallback states, visible and accessible controls, all three required viewport compositions, and the preserved bar/ingredient/comparison journeys. Run final public checks after deployment stabilizes and record that release’s screenshots and results. The prior BBF screenshots cannot prove the changed hero’s acceptance.
+
+Detailed behavior scope: [behavior verification](brand-evidence/behavior-verification.md). Historical visual audit and the current release boundary: [visual audit](brand-evidence/completion/visual-audit.md). No final goal-completion claim is made.

@@ -1,0 +1,642 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/brand.config.ts"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/integration-local/test-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "brand-journeys.spec.ts"
+        ],
+        "timeout": 100000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/brand-evidence/integration-local/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "brand-journeys.spec.ts",
+      "file": "brand-journeys.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "headline, CTA and original Negroni poster remain usable while cinematic files are delayed, without requesting 3D assets",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1346,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:28:40.570Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "initial-classic-loading",
+                      "contentType": "application/json",
+                      "body": "eyJtb3ZpZXMiOlsiL2NsYXNzaWMtbmVncm9uaS9jaW5lbWF0aWMvbmVncm9uaS1mb3J3YXJkLm1wNCIsIi9jbGFzc2ljLW5lZ3JvbmkvY2luZW1hdGljL25lZ3JvbmktcmV2ZXJzZS5tcDQiLCIvY2xhc3NpYy1uZWdyb25pL2NpbmVtYXRpYy9uZWdyb25pLWlkbGUubXA0Il0sImhlYXZ5UmVxdWVzdHMiOltdLCJwb3N0ZXJEZWNvZGVkIjp0cnVlfQ=="
+                    },
+                    {
+                      "name": "initial-font-loading",
+                      "contentType": "application/json",
+                      "body": "eyJwYWludCI6W3sibmFtZSI6ImZpcnN0LXBhaW50IiwibXMiOjY0fSx7Im5hbWUiOiJmaXJzdC1jb250ZW50ZnVsLXBhaW50IiwibXMiOjEyNH1dLCJmb250cyI6WyJodHRwOi8vMTI3LjAuMC4xOjQxODYvYXNzZXRzL2luc3RydW1lbnQtc2Fucy1sYXRpbi13Z2h0LW5vcm1hbC1CYnpGTFpUZy53b2ZmMiIsImh0dHA6Ly8xMjcuMC4wLjE6NDE4Ni9hc3NldHMvaWJtLXBsZXgtbW9uby1sYXRpbi00MDAtbm9ybWFsLURNSjhWRzh5LndvZmYyIl0sImxvYWRlZEZvbnRzIjpbIkluc3RydW1lbnQgU2FucyBWYXJpYWJsZSIsIklCTSBQbGV4IE1vbm8iXX0="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-68a4e479abf44dde7fa1",
+          "file": "brand-journeys.spec.ts",
+          "line": 60,
+          "column": 1
+        },
+        {
+          "title": "landing composition and links at 1440x1000",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4202,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:28:42.179Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwLCJkb2N1bWVudFdpZHRoIjoxNDQwLCJmb250cyI6WyJJbnN0cnVtZW50IFNhbnMgVmFyaWFibGUiLCJJQk0gUGxleCBNb25vIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-24c0d5844e898f2d14ab",
+          "file": "brand-journeys.spec.ts",
+          "line": 105,
+          "column": 3
+        },
+        {
+          "title": "landing composition and links at 768x1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3771,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:28:46.395Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6NzY4LCJoZWlnaHQiOjEwMjQsImRvY3VtZW50V2lkdGgiOjc2OCwiZm9udHMiOlsiSW5zdHJ1bWVudCBTYW5zIFZhcmlhYmxlIiwiSUJNIFBsZXggTW9ubyJdfQ=="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-1d8d6c307d0b99e658cf",
+          "file": "brand-journeys.spec.ts",
+          "line": 105,
+          "column": 3
+        },
+        {
+          "title": "landing composition and links at 390x844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2002,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:28:50.174Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjg0NCwiZG9jdW1lbnRXaWR0aCI6MzkwLCJmb250cyI6WyJJbnN0cnVtZW50IFNhbnMgVmFyaWFibGUiLCJJQk0gUGxleCBNb25vIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-de4873abb30f62004d28",
+          "file": "brand-journeys.spec.ts",
+          "line": 105,
+          "column": 3
+        },
+        {
+          "title": "keyboard CTA enters atlas and each featured bar opens the correct working experience with return home",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10378,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:28:52.183Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-9b095981d1cdda698f77",
+          "file": "brand-journeys.spec.ts",
+          "line": 167,
+          "column": 1
+        },
+        {
+          "title": "original cinematic frames advance, pause, reverse at the same pose, and scrub with visible controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4380,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:29:02.574Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "cinematic-playback",
+                      "contentType": "application/json",
+                      "body": "eyJwYXVzZWQiOjAuOTczNjMyLCJiZWZvcmVSZXZlcnNlIjowLjE4NTY0LCJzY3J1YmJlZCI6MC41MDA1fQ=="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-7f34b58055e1bcf5272f",
+          "file": "brand-journeys.spec.ts",
+          "line": 192,
+          "column": 1
+        },
+        {
+          "title": "expanded film circulates continuously, pauses its actual frame and reassembles from the visible idle pose",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15979,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:29:06.968Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "idle-to-reverse-continuity",
+                      "contentType": "application/json",
+                      "body": "eyJpZGxlVGltZSI6MC41Mjk5NjUsInZpc2libGVQb3NlIjowLjk1NDU4LCJyZWFzc2VtYmxlZCI6MH0="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-3900b43a3136b99c3a62",
+          "file": "brand-journeys.spec.ts",
+          "line": 230,
+          "column": 1
+        },
+        {
+          "title": "Explore 3D loads the original fluid scene on demand and preserves the selected pose when switching modes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11679,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:29:22.957Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "classic-live-scene",
+                      "contentType": "application/json",
+                      "body": "eyJzZWxlY3RlZFBvc2UiOjAuNSwiZmluYWxQb3NlIjowLjU2MDE4LCJoZWF2eVJlcXVlc3RzIjpbIi9hc3NldHMvcmVuZGVyZXItQ2tnVG1odm8uanMiLCIvYXNzZXRzL3RocmVlLXZJWUR6ekVfLmpzIiwiL2NsYXNzaWMtbmVncm9uaS9zaW11bGF0aW9uL25lZ3JvbmkuanNvbiIsIi9jbGFzc2ljLW5lZ3Jvbmkvc2ltdWxhdGlvbi9uZWdyb25pLmJpbiIsIi9jbGFzc2ljLW5lZ3Jvbmkvc3R1ZGlvX3NtYWxsXzA5XzFrLmhkciIsIi9jbGFzc2ljLW5lZ3JvbmkvdGV4dHVyZXMvb3JhbmdlLWNyb3NzLXNlY3Rpb24tdjIucG5nIiwiL2NsYXNzaWMtbmVncm9uaS90ZXh0dXJlcy9vcmFuZ2UtbWljcm9oZWlnaHQtdjIucG5nIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-98fe05685a99610c6c0d",
+          "file": "brand-journeys.spec.ts",
+          "line": 256,
+          "column": 1
+        },
+        {
+          "title": "ingredient entry restores expansion and the comparison entry preserves synchronized and independent rotation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9619,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:29:34.649Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "comparison-rendered-cameras",
+                      "contentType": "application/json",
+                      "body": "W3siZSI6MC45OTkzNDU2MDUzODM5MzIsInBhcnRzIjpbeyJpZCI6Imdhcm5pc2hfb3JhbmdlIiwicG9zaXRpb24iOlswLDcuMDQsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6Imdhcm5pc2giLCJub3JtYWxNYXAiOnsid2lkdGgiOjIwNDgsImhlaWdodCI6MjA0OH0sImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJpY2VfaW5jbHVzaW9ucyIsInBvc2l0aW9uIjpbLTAuMDY1ODk2NTkzMDM0MjY3NDMsMi43MjU5MzM1ODAzOTg1NiwwLjM2NTMxMjA2OTY1NDQ2NDddLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJzdHJ1Y3R1cmUiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfYml0dGVyIiwicG9zaXRpb24iOlswLDUuNTAwMDAwMDIzODQxODU4LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5IjoiYml0dGVyIiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJ1c2VyLWNvbmZpcm1lZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV9tb2RpZmllcnMiLCJwb3NpdGlvbiI6WzAsNy42MDAwMDAwMjM4NDE4NTgsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJtb2RpZmllcnMiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6ImluZmVycmVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX3NwaXJpdCIsInBvc2l0aW9uIjpbMCw0LjQ1MDAwMDAyMzg0MTg1NzYsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJzcGlyaXQiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6InZpZGVvLWNvbmZpcm1lZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV92ZXJtb3V0aCIsInBvc2l0aW9uIjpbMCw2LjU1MDAwMDAyMzg0MTg1NywwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6InZlcm1vdXRoIiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJ2aWRlby1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJpY2UiLCJwb3NpdGlvbiI6WzAsMy4wOTk5OTk5OTI4NDc0NDMsLTAuMDM1MDAwMDAwMTQ5MDExNjFdLCJyb3RhdGlvbiI6WzAuMDA3NzM2MzE1Mjc4MzgyNDI0LDAuMDYwMDQ1MjAzMTg2NjYwNzUsMC4wMTIwNTcxNjg2MDU5OTUxNzgsMC45OTgwOTI4NTUyNDIyNzM0XSwic2NhbGUiOlsxLjAwMDAwMDAwMTQwNDUxNjUsMS4wMDAwMDAwMDAwNzY4NDgzLDEuMDAwMDAwMDAxMzcyNDkxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJzdHJ1Y3R1cmUiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJsaXF1aWQiLCJwb3NpdGlvbiI6WzAsMCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoibWl4dHVyZSIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiZ2xhc3MiLCJwb3NpdGlvbiI6WzAsMCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfV0sImNhbWVyYSI6eyJhemltdXRoIjowLCJlbGV2YXRpb24iOjAuMTYsInpvb20iOjEsInRhcmdldCI6WzAsNC42NDk5OTU2NzI0NjAwOCwwXSwicG9zaXRpb24iOlswLDcuNDIyMTI3NzE2NzUzMjc2LDE3LjE3Nzc0MTM1NjEzNjI2M10sImZvdiI6MzV9LCJmcmFtZVRpbWVzIjpbMzI3LjY5OTk5OTk5OTI1NDk0LDQ5OC40MDAwMDAwMDAzNzI1MywyMTQuOTAwMDAwMDAwMzcyNTMsMzkuNDAwMDAwMDAwMzcyNTMsMzUwLjA5OTk5OTk5OTYyNzQ3LDE2LjE5OTk5OTk5OTI1NDk0MiwxNTIuMjAwMDAwMDAxMTE3NiwzMy4xOTk5OTk5OTkyNTQ5NCwxNC42OTk5OTk5OTkyNTQ5NDIsMTcsMTYuMzAwMDAwMDAwNzQ1MDU4LDE2LjgwMDAwMDAwMDc0NTA1OCwxNi41LDE2LjY5OTk5OTk5OTI1NDk0MiwxNi41OTk5OTk5OTk2Mjc0NywxNi43MDAwMDAwMDExMTc1ODcsMTYuNjk5OTk5OTk5MjU0OTQyLDE2LjY5OTk5OTk5OTI1NDk0MiwxNi42MDAwMDAwMDE0OTAxMTYsMTYuNjk5OTk5OTk5MjU0OTQyLDE2LjY5OTk5OTk5OTI1NDk0MiwxNi43MDAwMDAwMDExMTc1ODcsMTYuNTk5OTk5OTk5NjI3NDcsMTcuNTk5OTk5OTk5NjI3NDcsMTUuODAwMDAwMDAwNzQ1MDU4LDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjY5OTk5OTk5OTI1NDk0MiwxNi42MDAwMDAwMDE0OTAxMTYsMTYuNjk5OTk5OTk5MjU0OTQyLDE2LjgwMDAwMDAwMDc0NTA1OCwxNi41OTk5OTk5OTk2Mjc0NywxNi41OTk5OTk5OTk2Mjc0NywxNi41OTk5OTk5OTk2Mjc0NywxNi43MDAwMDAwMDExMTc1ODcsMTYuNjk5OTk5OTk5MjU0OTQyLDE2LjY5OTk5OTk5OTI1NDk0MiwxNi42MDAwMDAwMDE0OTAxMTYsMTYuNzk5OTk5OTk4ODgyNDEzLDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjYwMDAwMDAwMTQ5MDExNiwxNi42OTk5OTk5OTkyNTQ5NDIsMTYuNjk5OTk5OTk5MjU0OTQyLDE2LjUsMTYuODAwMDAwMDAwNzQ1MDU4LDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjcwMDAwMDAwMTExNzU4NywxNi42OTk5OTk5OTkyNTQ5NDIsMTYuODAwMDAwMDAwNzQ1MDU4LDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjY5OTk5OTk5OTI1NDk0MiwxNi43MDAwMDAwMDExMTc1ODcsMTYuNSwxNi42OTk5OTk5OTkyNTQ5NDIsMTYuODAwMDAwMDAwNzQ1MDU4LDE3LjU5OTk5OTk5OTYyNzQ3LDE1LjU5OTk5OTk5OTYyNzQ3MSwxNi41OTk5OTk5OTk2Mjc0NywyMC4zMDAwMDAwMDA3NDUwNTgsMTMuNDAwMDAwMDAwMzcyNTI5LDE2LjI5OTk5OTk5ODg4MjQxMywxNi43MDAwMDAwMDExMTc1ODcsMTcuMDk5OTk5OTk5NjI3NDcsMTYuMTk5OTk5OTk5MjU0OTQyLDE2LjcwMDAwMDAwMTExNzU4NywxNi42OTk5OTk5OTkyNTQ5NDIsMTYuMzAwMDAwMDAwNzQ1MDU4LDE3XSwicmVuZGVyZWRGcmFtZXMiOjY3LCJyZW5kZXJlZEF0IjozMDUxLjE5OTk5OTk5OTI1NSwicmVhZHkiOnRydWUsInN0YWdlIjp7ImJhY2tncm91bmRCbHVycmluZXNzIjowLjA5OTk2NzI4MDI2OTE5NjYzLCJiYWNrZ3JvdW5kSW50ZW5zaXR5IjowLjM0MDE3MDE0MjYwMDE3NzcsImVudmlyb25tZW50SW50ZW5zaXR5IjoxLCJzdG9uZVN0cmVuZ3RoIjowLjEyMDAyNjE3NTc4NDY0MjcxLCJzdG9uZU1pcEJpYXMiOjJ9fSx7ImUiOjAuOTk5NDUwMjc5MTc1MjY5NywicGFydHMiOlt7ImlkIjoiZ2FybmlzaF9mbG93ZXJfYmFzZSIsInBvc2l0aW9uIjpbMC4yNSw4LjU2NTc4MTY0MTAwNjQ3LC0wLjA1OTk5OTk5ODY1ODg5NTQ5XSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsInJlcHJlc2VudGF0aW9uIjoicGxhdXNpYmxlLWhpZGRlbi1mbG93ZXItYXR0YWNobWVudCIsImV2aWRlbmNlIjoidW52ZXJpZmllZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6Imdhcm5pc2hfcGV0YWxfMDBfMDAiLCJwb3NpdGlvbiI6WzAsNi41NTM3ODE1OTI0NzMzODc1LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJnYXJuaXNoIiwibm9ybWFsTWFwIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDh9LCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiZ2FybmlzaF9wZXRhbF8wMF8wMSIsInBvc2l0aW9uIjpbMCw2LjU1Mzc4MTU5MjQ3MzM4NzUsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6Imdhcm5pc2giLCJub3JtYWxNYXAiOnsid2lkdGgiOjIwNDgsImhlaWdodCI6MjA0OH0sImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJnYXJuaXNoX3BldGFsXzAwXzAyIiwicG9zaXRpb24iOlswLDYuNTUzNzgxNTkyNDczMzg3NSwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6Imdhcm5pc2hfcGV0YWxfMDBfMDQiLCJwb3NpdGlvbiI6WzAsNi41NTM3ODE1OTI0NzMzODc1LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJnYXJuaXNoIiwibm9ybWFsTWFwIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDh9LCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiZ2FybmlzaF9wZXRhbF8wMF8wNSIsInBvc2l0aW9uIjpbMCw2LjU1Mzc4MTU5MjQ3MzM4NzUsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6Imdhcm5pc2giLCJub3JtYWxNYXAiOnsid2lkdGgiOjIwNDgsImhlaWdodCI6MjA0OH0sImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJnYXJuaXNoX3BldGFsXzAwXzA2IiwicG9zaXRpb24iOlswLDYuNTUzNzgxNTkyNDczMzg3NSwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6Imdhcm5pc2hfcGV0YWxfMDBfMDciLCJwb3NpdGlvbiI6WzAsNi41NTM3ODE1OTI0NzMzODc1LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJnYXJuaXNoIiwibm9ybWFsTWFwIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDh9LCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiZ2FybmlzaF9yZWRfcm91bmQiLCJwb3NpdGlvbiI6WzAuMjUsOC40ODE3ODE1MzAzODAyNSwtMC4wNTk5OTk5OTg2NTg4OTU0OV0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6Imdhcm5pc2giLCJub3JtYWxNYXAiOnsid2lkdGgiOjIwNDgsImhlaWdodCI6MjA0OH0sImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJpY2VfaW5jbHVzaW9ucyIsInBvc2l0aW9uIjpbLTAuMDY1ODk2NTkzMDM0MjY3NDMsMi43MjU5MzM1OTQ3MDM2NzQyLDAuMzY1MzEyMDY5NjU0NDY0N10sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV9iaXR0ZXIiLCJwb3NpdGlvbiI6WzAsNS41MDAwMDAwMjM4NDE4NTgsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJiaXR0ZXIiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6InVzZXItY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX21vZGlmaWVycyIsInBvc2l0aW9uIjpbMCw3LjYwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6Im1vZGlmaWVycyIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidmlkZW8tY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX3NwaXJpdCIsInBvc2l0aW9uIjpbMCw0LjQ1MDAwMDAyMzg0MTg1NzYsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJzcGlyaXQiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6ImluZmVycmVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX3Zlcm1vdXRoIiwicG9zaXRpb24iOlswLDYuNTUwMDAwMDIzODQxODU3LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5IjoidmVybW91dGgiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6ImluZmVycmVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiaWNlIiwicG9zaXRpb24iOlswLDMuMDk5OTk5OTQ3NTQ3OTEyNSwtMC4wMzUwMDAwMDAxNDkwMTE2MV0sInJvdGF0aW9uIjpbMC4wMDc3MzYzMTUyNzgzODI0MjQsMC4wNjAwNDUyMDMxODY2NjA3NSwwLjAxMjA1NzE2ODYwNTk5NTE3OCwwLjk5ODA5Mjg1NTI0MjI3MzRdLCJzY2FsZSI6WzEuMDAwMDAwMDAxNDA0NTE2NSwxLjAwMDAwMDAwMDA3Njg0ODMsMS4wMDAwMDAwMDEzNzI0OTFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImxpcXVpZCIsInBvc2l0aW9uIjpbMCwwLDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6ZmFsc2UsInJvbGUiOiJtaXh0dXJlIiwiY2F0ZWdvcnkiOiJzdHJ1Y3R1cmUiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJnbGFzcyIsInBvc2l0aW9uIjpbMCwwLDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJzdHJ1Y3R1cmUiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9XSwiY2FtZXJhIjp7ImF6aW11dGgiOjAsImVsZXZhdGlvbiI6MC4xNiwiem9vbSI6MSwidGFyZ2V0IjpbMCw0LjY0OTk5Njk0NTk0ODU4MTUsMF0sInBvc2l0aW9uIjpbMCw3LjQyMjEzMDM4ODI4MjY2NCwxNy4xNzc3NDUyOTE5NTE4XSwiZm92IjozNX0sImZyYW1lVGltZXMiOls1NC4yOTk5OTk5OTg4ODI0MSwzMzQuOTAwMDAwMDAwMzcyNTMsNTkuNTk5OTk5OTk5NjI3NDcsMTMzLjgwMDAwMDAwMDc0NTA2LDguMDk5OTk5OTk5NjI3NDcxLDE0LjU5OTk5OTk5OTYyNzQ3MSwxNy4yMDAwMDAwMDExMTc1ODcsMTUuOTAwMDAwMDAwMzcyNTI5LDE3LjE5OTk5OTk5OTI1NDk0MiwxNi4zMDAwMDAwMDA3NDUwNTgsMTYuODk5OTk5OTk4NTA5ODg0LDE2LjQwMDAwMDAwMDM3MjUzLDE2LjUsMTYuNzAwMDAwMDAxMTE3NTg3LDE2Ljg5OTk5OTk5ODUwOTg4NCwxNi42MDAwMDAwMDE0OTAxMTYsMTYuNTk5OTk5OTk5NjI3NDcsMTYuNTk5OTk5OTk5NjI3NDcsMTYuNjk5OTk5OTk5MjU0OTQyLDE2LjYwMDAwMDAwMTQ5MDExNiwxNy43OTk5OTk5OTg4ODI0MTMsMTUuODAwMDAwMDAwNzQ1MDU4LDE2LjUsMTYuNTk5OTk5OTk5NjI3NDcsMTYuNjk5OTk5OTk5MjU0OTQyLDE2LjYwMDAwMDAwMTQ5MDExNiwxNi44OTk5OTk5OTg1MDk4ODQsMTYuNjAwMDAwMDAxNDkwMTE2LDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjUsMTYuNzk5OTk5OTk4ODgyNDEzLDE2LjcwMDAwMDAwMTExNzU4NywxNi41OTk5OTk5OTk2Mjc0NywxNi41OTk5OTk5OTk2Mjc0NywxNi43MDAwMDAwMDExMTc1ODcsMTYuNSwxNywxNi41LDE2LjY5OTk5OTk5OTI1NDk0MiwxNi40MDAwMDAwMDAzNzI1MywxNy4wOTk5OTk5OTk2Mjc0NywxNi4zMDAwMDAwMDA3NDUwNTgsMTYuNjk5OTk5OTk5MjU0OTQyLDE2LjkwMDAwMDAwMDM3MjUzLDE2Ljc5OTk5OTk5ODg4MjQxMywxNi42MDAwMDAwMDE0OTAxMTYsMTYuNSwxNi43OTk5OTk5OTg4ODI0MTMsMTYuNDAwMDAwMDAwMzcyNTMsMTYuOTAwMDAwMDAwMzcyNTMsMTYuNjk5OTk5OTk5MjU0OTQyLDE3LjcwMDAwMDAwMTExNzU4NywxNS41OTk5OTk5OTk2Mjc0NzEsMTYuNSwyMC4yOTk5OTk5OTg4ODI0MTMsMTMuNDAwMDAwMDAwMzcyNTI5LDE2LjUsMTYuNzAwMDAwMDAxMTE3NTg3LDE3LjA5OTk5OTk5OTYyNzQ3LDE2LDE2LjY5OTk5OTk5OTI1NDk0MiwxNi43MDAwMDAwMDExMTc1ODcsMTYuNSwxNi44OTk5OTk5OTg1MDk4ODRdLCJyZW5kZXJlZEZyYW1lcyI6NjYsInJlbmRlcmVkQXQiOjMwNTIuNDAwMDAwMDAwMzcyNSwicmVhZHkiOnRydWUsInN0YWdlIjp7ImJhY2tncm91bmRCbHVycmluZXNzIjowLjA5OTk3MjUxMzk1ODc2MzQ3LCJiYWNrZ3JvdW5kSW50ZW5zaXR5IjowLjM0MDE0MjkyNzQxNDQyOTksImVudmlyb25tZW50SW50ZW5zaXR5IjoxLCJzdG9uZVN0cmVuZ3RoIjowLjEyMDAyMTk4ODgzMjk4OTE5LCJzdG9uZU1pcEJpYXMiOjJ9fSx7ImUiOjAuOTk5NDQ3OTY1NDkyNDc0NCwicGFydHMiOlt7ImlkIjoiZ2FybmlzaF9zaGlzaGl0byIsInBvc2l0aW9uIjpbMCw2LjU4NDc5NjUyNDA0Nzg1MSwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6Imdhcm5pc2hfc3RlbSIsInBvc2l0aW9uIjpbMCw2LjU4NDc5NjUyNDA0Nzg1MSwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImljZV9pbmNsdXNpb25zIiwicG9zaXRpb24iOlstMC4wNjU4OTY1OTMwMzQyNjc0MywyLjcyNTkzMzU5NDcwMzY3NDIsMC4zNjUzMTIwNjk2NTQ0NjQ3XSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX2JpdHRlciIsInBvc2l0aW9uIjpbMCw1LjUwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6ImJpdHRlciIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidXNlci1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfbW9kaWZpZXJzIiwicG9zaXRpb24iOlswLDcuNjAwMDAwMDIzODQxODU4LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5IjoibW9kaWZpZXJzIiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJ2aWRlby1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfc3Bpcml0IiwicG9zaXRpb24iOlswLDQuNDUwMDAwMDIzODQxODU3NiwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6InNwaXJpdCIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoiaW5mZXJyZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfdmVybW91dGgiLCJwb3NpdGlvbiI6WzAsNi41NTAwMDAwMjM4NDE4NTcsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJ2ZXJtb3V0aCIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoiaW5mZXJyZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJpY2UiLCJwb3NpdGlvbiI6WzAsMy4wOTk5OTk5NDc1NDc5MTI1LC0wLjAzNTAwMDAwMDE0OTAxMTYxXSwicm90YXRpb24iOlswLjAwNzczNjMxNTI3ODM4MjQyNCwwLjA2MDA0NTIwMzE4NjY2MDc1LDAuMDEyMDU3MTY4NjA1OTk1MTc4LDAuOTk4MDkyODU1MjQyMjczNF0sInNjYWxlIjpbMS4wMDAwMDAwMDE0MDQ1MTY1LDEuMDAwMDAwMDAwMDc2ODQ4MywxLjAwMDAwMDAwMTM3MjQ5MV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoibGlxdWlkIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjpmYWxzZSwicm9sZSI6Im1peHR1cmUiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImdsYXNzIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH1dLCJjYW1lcmEiOnsiYXppbXV0aCI6MCwiZWxldmF0aW9uIjowLjE2LCJ6b29tIjoxLCJ0YXJnZXQiOlswLDQuNjQ5OTk2OTIwMTkxMjUyLDBdLCJwb3NpdGlvbiI6WzAsNy40MjIxMzAzMzQyNDg4MjI1LDE3LjE3Nzc0NTIxMjM0Njc2NF0sImZvdiI6MzV9LCJmcmFtZVRpbWVzIjpbMjE2LjQwMDAwMDAwMDM3MjUzLDM0LDMzNC41OTk5OTk5OTk2Mjc0NywxMDkuNDAwMDAwMDAwMzcyNTMsODQuMzk5OTk5OTk4NTA5ODgsNy42MDAwMDAwMDE0OTAxMTYsMTQuNTk5OTk5OTk5NjI3NDcxLDE3LjI5OTk5OTk5ODg4MjQxMywxNS45MDAwMDAwMDAzNzI1MjksMTcuMDk5OTk5OTk5NjI3NDcsMTYuNDAwMDAwMDAwMzcyNTMsMTYuOTAwMDAwMDAwMzcyNTMsMTYuMzAwMDAwMDAwNzQ1MDU4LDE2LjUsMTYuNTk5OTk5OTk5NjI3NDcsMTcsMTYuNjk5OTk5OTk5MjU0OTQyLDE2LjUsMTYuNSwxNi45MDAwMDAwMDAzNzI1MywxNi40MDAwMDAwMDAzNzI1MywxNy43OTk5OTk5OTg4ODI0MTMsMTYsMTYuNDAwMDAwMDAwMzcyNTMsMTYuNzAwMDAwMDAxMTE3NTg3LDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjUsMTcsMTYuNSwxNi41OTk5OTk5OTk2Mjc0NywxNi41LDE2LjkwMDAwMDAwMDM3MjUzLDE2Ljc5OTk5OTk5ODg4MjQxMywxNi41LDE2LjUsMTYuNzAwMDAwMDAxMTE3NTg3LDE2LjUsMTcuMDk5OTk5OTk5NjI3NDcsMTYuNDAwMDAwMDAwMzcyNTMsMTYuNjk5OTk5OTk5MjU0OTQyLDE2LjQwMDAwMDAwMDM3MjUzLDE3LjA5OTk5OTk5OTYyNzQ3LDE2LjMwMDAwMDAwMDc0NTA1OCwxNi42OTk5OTk5OTkyNTQ5NDIsMTcsMTcsMTYuMjAwMDAwMDAxMTE3NTg3LDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjkwMDAwMDAwMDM3MjUzLDE2LjI5OTk5OTk5ODg4MjQxMywxNywxNi41LDE3LjgwMDAwMDAwMDc0NTA1OCwxNS42OTk5OTk5OTkyNTQ5NDIsMTYuNDAwMDAwMDAwMzcyNTMsMjAuNDAwMDAwMDAwMzcyNTMsMTMuMDk5OTk5OTk5NjI3NDcxLDE2LjgwMDAwMDAwMDc0NTA1OCwxNi41OTk5OTk5OTk2Mjc0NywxNy4wOTk5OTk5OTk2Mjc0NywxNiwxNi41OTk5OTk5OTk2Mjc0NywxNi43MDAwMDAwMDExMTc1ODcsMTYuNTk5OTk5OTk5NjI3NDcsMTddLCJyZW5kZXJlZEZyYW1lcyI6NjYsInJlbmRlcmVkQXQiOjMwNTMuMDk5OTk5OTk5NjI3NSwicmVhZHkiOnRydWUsInN0YWdlIjp7ImJhY2tncm91bmRCbHVycmluZXNzIjowLjA5OTk3MjM5ODI3NDYyMzc0LCJiYWNrZ3JvdW5kSW50ZW5zaXR5IjowLjM0MDE0MzUyODk3MTk1Njc3LCJlbnZpcm9ubWVudEludGVuc2l0eSI6MSwic3RvbmVTdHJlbmd0aCI6MC4xMjAwMjIwODEzODAzMDEwMywic3RvbmVNaXBCaWFzIjoyfX1d"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-d2ece6791ae757a4df68",
+          "file": "brand-journeys.spec.ts",
+          "line": 292,
+          "column": 1
+        },
+        {
+          "title": "direct atlas and all Negroni routes resolve and survive refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6455,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:29:44.278Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-c18e56a6ff78564382ea",
+          "file": "brand-journeys.spec.ts",
+          "line": 334,
+          "column": 1
+        },
+        {
+          "title": "WebGL unavailable restores the cinematic film without blocking the landing or ingredient entry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1697,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:29:50.744Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "WyJUSFJFRS5XZWJHTFJlbmRlcmVyOiBUSFJFRS5XZWJHTFJlbmRlcmVyOiBFcnJvciBjcmVhdGluZyBXZWJHTCBjb250ZXh0LiBbaHR0cDovLzEyNy4wLjAuMTo0MTg2L2Fzc2V0cy90aHJlZS12SVlEenpFXy5qc10iXQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-08b24349e4daf313b0d0",
+          "file": "brand-journeys.spec.ts",
+          "line": 344,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "phone touch and reduced motion",
+          "file": "brand-journeys.spec.ts",
+          "line": 374,
+          "column": 6,
+          "specs": [
+            {
+              "title": "touch controls choose stable cinematic endpoints and explicit playback does not start an idle loop",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 100000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9106,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-13T05:29:52.449Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "touch-reduced-motion",
+                          "contentType": "application/json",
+                          "body": "eyJlbmRwb2ludFNlY29uZHMiOjcuMiwiZXhwbGljaXRQbGF5YmFja0NvbXBsZXRlZCI6dHJ1ZX0="
+                        },
+                        {
+                          "name": "runtime-errors",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "835d211cf8ffd964d224-86e2c920c47d9aff2934",
+              "file": "brand-journeys.spec.ts",
+              "line": 376,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T05:28:39.968Z",
+    "duration": 81878.08700000001,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

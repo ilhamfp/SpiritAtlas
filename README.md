@@ -6,6 +6,8 @@ Public site: https://spiritatlas-one.vercel.app
 
 An editorial landing page and interactive Singapore cocktail atlas. The original Bar Bon Funk, MOGA and Bar Somma Negronis retain their live Three.js rendering, ingredient exploration, reference photographs and synchronized comparison. The existing additional cocktail collections remain accessible in the atlas.
 
+The homepage features the **Classic Negroni** from the original *Negroni — Still Life* study: equal parts gin, Campari and sweet vermouth, with ice and orange. Its default Cinematic view uses the original 720 × 720, 60 fps Cycles films; Explore 3D loads the original geometry, materials and particle cache on demand. Both views support deconstruction, reassembly, pause, timeline scrubbing and slow motion. The classic is not attributed to a featured venue. See [integration notes](docs/classic-negroni.md).
+
 ## Run
 
 ```sh

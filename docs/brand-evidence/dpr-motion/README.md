@@ -1,0 +1,11 @@
+# Decorative grid and reduced-motion evidence
+
+Verified the public `https://spiritatlas-one.vercel.app` homepage in eight fresh unauthenticated Chrome contexts: 1440×1000 and 390×844, each at device pixel ratios 1 and 2 with normal and reduced motion.
+
+The deployed decorative Canvas2D image was sampled after its texture, real fonts and faithful poster loaded, then sampled again 1,500ms later. Exact RGBA SHA-256 hashes were unchanged in all eight cases. Comparing alpha coverage at the centers of the 5-CSS-pixel grid produced identical results across DPR and motion preferences: 51,552 of 51,552 desktop cells and 13,806 of 13,806 mobile cells matched. The canvas backing resolution doubled at DPR 2 while its CSS dimensions and grid coordinates remained fixed. Sampled isolated dots occupy roughly 3 CSS pixels; minor edge rasterization differences do not change cell placement or density.
+
+Reduced-motion sessions reported `prefers-reduced-motion: reduce`, `animation-name: none`, animation duration `0s`, and transition duration `0s` on the hero copy. Normal sessions reported the brief `hero-enter` animation. No first-party page errors or HTTP asset failures were observed.
+
+`results.json` retains canvas sizes, hashes, cell comparison counts, alpha samples, loaded font families, actual script paths and screenshot paths. Representative desktop and mobile captures were visually compared at CSS scale and retain the same fine square spacing, calm copy regions and directional artwork.
+
+The 3D dependency was intentionally held during this isolated decoration audit. Screenshots therefore show the faithful poster and loading label, and do not claim to verify live cocktail interaction. Full live-scene and reduced-motion interaction evidence is recorded separately in the production journey results. The loading label contrast concern found in these captures was corrected with opaque charcoal backings. The public [loading contrast measurements](../loading-contrast-final/results.json) confirm 6.87:1 for the first status. The final model-loading feedback is a [compact badge with 11.36:1 contrast](../loading-accepted/README.md), verified clear of the mobile glass and controls. These DPR images remain historical evidence from before that status-label fix; the decorative renderer was unchanged.

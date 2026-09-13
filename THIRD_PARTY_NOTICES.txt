@@ -56,3 +56,17 @@ bar-supplied photographs via CNA Luxury (4 April 2024); ATLAS's official website
 MOGA's official serving gallery; Somma Bar via Robb Report Singapore
 (10 January 2025); and Jigger & Pony's official Wasabi Highball photograph.
 The website displays each source credit and link alongside its photo.
+
+Classic Negroni homepage study
+-------------------------------
+The homepage includes the user-authored Negroni — Still Life geometry, directed
+fluid simulation, orange textures and Cycles animation from the explode-anim
+project. The original media bytes and source hashes are recorded in
+docs/classic-negroni-import.json. Rendering adaptation notes are in
+docs/classic-negroni.md.
+
+Studio Small 09 HDRI by Sergej Majboroda / Poly Haven:
+https://polyhaven.com/a/studio_small_09 — CC0 1.0 Universal.
+The orange V2 color and micro-height textures were generated for that study;
+the height data is approximate relief, not a measured scan.
+Three.js and its MarchingCubes implementation retain their upstream MIT license.

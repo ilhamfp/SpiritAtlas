@@ -1,0 +1,711 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/brand.config.ts"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-accepted/test-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "brand-journeys.spec.ts"
+        ],
+        "timeout": 100000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/brand-evidence/production-accepted/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "brand-journeys.spec.ts",
+      "file": "brand-journeys.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "headline, CTA and faithful poster appear while 3D code and models are held; only the hero model is requested initially",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5345,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:22:49.126Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "blocked-3d-code",
+                      "contentType": "application/json",
+                      "body": "eyJjb2RlUmVxdWVzdHMiOlsiL2Fzc2V0cy90aHJlZS1Cb1dsYnY5My5qcyJdLCJtb2RlbHMiOltdLCJoZWFkbGluZVZpc2libGUiOnRydWUsImN0YVZpc2libGUiOnRydWUsInBvc3RlckRlY29kZWQiOnRydWV9"
+                    },
+                    {
+                      "name": "loading-status-contrast",
+                      "contentType": "application/json",
+                      "body": "eyJjb2RlTG9hZGluZ0NvbnRyYXN0Ijp7ImJhY2tncm91bmRBbHBoYSI6MSwibWluaW11bVJhdGlvIjo2Ljg2NzYzNTQxMzQzOTcyMTV9LCJtb2RlbExvYWRpbmdDb250cmFzdCI6eyJiYWNrZ3JvdW5kQWxwaGEiOjEsIm1pbmltdW1SYXRpbyI6MTEuMzU3NjYzNDIyMDAzNTYxfX0="
+                    },
+                    {
+                      "name": "initial-loading",
+                      "contentType": "application/json",
+                      "body": "ewogICJtb2RlbHMiOiBbCiAgICAiL21vZGVscy9iYmYtbmVncm9uaS5nbGIiCiAgXSwKICAicGFpbnQiOiBbCiAgICB7CiAgICAgICJuYW1lIjogImZpcnN0LXBhaW50IiwKICAgICAgIm1zIjogMjA0CiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJmaXJzdC1jb250ZW50ZnVsLXBhaW50IiwKICAgICAgIm1zIjogMzEyCiAgICB9CiAgXSwKICAiZm9udHMiOiBbCiAgICAiaHR0cHM6Ly9zcGlyaXRhdGxhcy1vbmUudmVyY2VsLmFwcC9hc3NldHMvaW5zdHJ1bWVudC1zYW5zLWxhdGluLXdnaHQtbm9ybWFsLUJiekZMWlRnLndvZmYyIiwKICAgICJodHRwczovL3NwaXJpdGF0bGFzLW9uZS52ZXJjZWwuYXBwL2Fzc2V0cy9pYm0tcGxleC1tb25vLWxhdGluLTQwMC1ub3JtYWwtRE1KOFZHOHkud29mZjIiCiAgXSwKICAibG9hZGVkRm9udHMiOiBbCiAgICAiSW5zdHJ1bWVudCBTYW5zIFZhcmlhYmxlIiwKICAgICJJQk0gUGxleCBNb25vIgogIF0KfQ=="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-0ac2864a8568953f6acb",
+          "file": "brand-journeys.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "landing composition and links at 1440x1000",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7019,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:22:55.005Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwLCJkb2N1bWVudFdpZHRoIjoxNDQwLCJmb250cyI6WyJJbnN0cnVtZW50IFNhbnMgVmFyaWFibGUiLCJJQk0gUGxleCBNb25vIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-24c0d5844e898f2d14ab",
+          "file": "brand-journeys.spec.ts",
+          "line": 111,
+          "column": 3
+        },
+        {
+          "title": "landing composition and links at 768x1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6539,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:23:02.033Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6NzY4LCJoZWlnaHQiOjEwMjQsImRvY3VtZW50V2lkdGgiOjc2OCwiZm9udHMiOlsiSW5zdHJ1bWVudCBTYW5zIFZhcmlhYmxlIiwiSUJNIFBsZXggTW9ubyJdfQ=="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-1d8d6c307d0b99e658cf",
+          "file": "brand-journeys.spec.ts",
+          "line": 111,
+          "column": 3
+        },
+        {
+          "title": "landing composition and links at 390x844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7362,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:23:08.580Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjg0NCwiZG9jdW1lbnRXaWR0aCI6MzkwLCJmb250cyI6WyJJbnN0cnVtZW50IFNhbnMgVmFyaWFibGUiLCJJQk0gUGxleCBNb25vIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-de4873abb30f62004d28",
+          "file": "brand-journeys.spec.ts",
+          "line": 111,
+          "column": 3
+        },
+        {
+          "title": "keyboard CTA enters atlas and each featured bar opens the correct working experience with return home",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 41290,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { level: 1 })\nExpected: \u001b[32m\"Ichigo Negroni\"\u001b[39m\nTimeout: 25000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByRole('heading', { level: 1 }) with timeout 25000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { level: 1 })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { level: 1 })\nExpected: \u001b[32m\"Ichigo Negroni\"\u001b[39m\nTimeout: 25000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByRole('heading', { level: 1 }) with timeout 25000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { level: 1 })\u001b[22m\n\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:185:59",
+                    "location": {
+                      "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                      "column": 59,
+                      "line": 185
+                    },
+                    "snippet": "  183 |     await waitLive(page, [entry.id]);\n  184 |     await page.reload();\n> 185 |     await expect(page.getByRole('heading', { level: 1 })).toHaveText(entry.name);\n      |                                                           ^\n  186 |     await waitLive(page, [entry.id]);\n  187 |     await page.getByRole('link', { name: 'SpiritAtlas home', exact: true }).click();\n  188 |     await expect(headline(page)).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                        "column": 59,
+                        "line": 185
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { level: 1 })\nExpected: \u001b[32m\"Ichigo Negroni\"\u001b[39m\nTimeout: 25000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByRole('heading', { level: 1 }) with timeout 25000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { level: 1 })\u001b[22m\n\n\n  183 |     await waitLive(page, [entry.id]);\n  184 |     await page.reload();\n> 185 |     await expect(page.getByRole('heading', { level: 1 })).toHaveText(entry.name);\n      |                                                           ^\n  186 |     await waitLive(page, [entry.id]);\n  187 |     await page.getByRole('link', { name: 'SpiritAtlas home', exact: true }).click();\n  188 |     await expect(headline(page)).toBeVisible();\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:185:59"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                        "column": 97,
+                        "line": 56
+                      },
+                      "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 5\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"404 https://spiritatlas-one.vercel.app/assets/App-CNqJ4F8m.js\",\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 () [https://spiritatlas-one.vercel.app/assets/App-CNqJ4F8m.js]\",\u001b[39m\n\u001b[31m+   \"Failed to fetch dynamically imported module: https://spiritatlas-one.vercel.app/assets/App-CNqJ4F8m.js\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  54 | test.afterEach(async ({ page }, testInfo) => {\n  55 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 56 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  57 | });\n  58 |\n  59 | test('headline, CTA and faithful poster appear while 3D code and models are held; only the hero model is requested initially', async ({ page }, testInfo) => {\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:56:97"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:23:15.949Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-accepted/test-output/brand-journeys-keyboard-CT-a02c7-experience-with-return-home/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "WyI0MDQgaHR0cHM6Ly9zcGlyaXRhdGxhcy1vbmUudmVyY2VsLmFwcC9hc3NldHMvQXBwLUNOcUo0RjhtLmpzIiwiRmFpbGVkIHRvIGxvYWQgcmVzb3VyY2U6IHRoZSBzZXJ2ZXIgcmVzcG9uZGVkIHdpdGggYSBzdGF0dXMgb2YgNDA0ICgpIFtodHRwczovL3NwaXJpdGF0bGFzLW9uZS52ZXJjZWwuYXBwL2Fzc2V0cy9BcHAtQ05xSjRGOG0uanNdIiwiRmFpbGVkIHRvIGZldGNoIGR5bmFtaWNhbGx5IGltcG9ydGVkIG1vZHVsZTogaHR0cHM6Ly9zcGlyaXRhdGxhcy1vbmUudmVyY2VsLmFwcC9hc3NldHMvQXBwLUNOcUo0RjhtLmpzIl0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-accepted/test-output/brand-journeys-keyboard-CT-a02c7-experience-with-return-home/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-accepted/test-output/brand-journeys-keyboard-CT-a02c7-experience-with-return-home/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                    "column": 59,
+                    "line": 185
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-9b095981d1cdda698f77",
+          "file": "brand-journeys.spec.ts",
+          "line": 167,
+          "column": 1
+        },
+        {
+          "title": "featured live drink expands and collapses real parts and supports visible, keyboard and pointer orbit",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 46879,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('viewer-bbf-negroni')\nExpected: \u001b[32m\"true\"\u001b[39m\nTimeout: 45000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('viewer-bbf-negroni') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('viewer-bbf-negroni')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('viewer-bbf-negroni')\nExpected: \u001b[32m\"true\"\u001b[39m\nTimeout: 45000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('viewer-bbf-negroni') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('viewer-bbf-negroni')\u001b[22m\n\n    at waitLive (/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts:26:36)\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:194:9",
+                    "location": {
+                      "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts",
+                      "column": 36,
+                      "line": 26
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers.ts:26\n\n  24 | export async function waitLive(page: Page, ids: readonly DrinkId[]) {\n  25 |   for (const id of ids) {\n> 26 |     await expect(viewer(page, id)).toHaveAttribute('data-live', 'true', { timeout: 45_000 });\n     |                                    ^\n  27 |     await expect.poll(() => page.evaluate((drinkId) => Boolean((window as unknown as { __atlasViewers?: Record<string, ViewerSnapshot> }).__atlasViewers?.[drinkId]?.ready), id)).toBe(true);\n  28 |     await expect(viewer(page, id).locator('canvas')).toBeVisible();\n  29 |   }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts",
+                        "column": 36,
+                        "line": 26
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('viewer-bbf-negroni')\nExpected: \u001b[32m\"true\"\u001b[39m\nTimeout: 45000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('viewer-bbf-negroni') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('viewer-bbf-negroni')\u001b[22m\n\n\n   at helpers.ts:26\n\n  24 | export async function waitLive(page: Page, ids: readonly DrinkId[]) {\n  25 |   for (const id of ids) {\n> 26 |     await expect(viewer(page, id)).toHaveAttribute('data-live', 'true', { timeout: 45_000 });\n     |                                    ^\n  27 |     await expect.poll(() => page.evaluate((drinkId) => Boolean((window as unknown as { __atlasViewers?: Record<string, ViewerSnapshot> }).__atlasViewers?.[drinkId]?.ready), id)).toBe(true);\n  28 |     await expect(viewer(page, id).locator('canvas')).toBeVisible();\n  29 |   }\n    at waitLive (/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts:26:36)\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:194:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:23:58.623Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-accepted/test-output/brand-journeys-featured-li-fc8a2--keyboard-and-pointer-orbit/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-accepted/test-output/brand-journeys-featured-li-fc8a2--keyboard-and-pointer-orbit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-accepted/test-output/brand-journeys-featured-li-fc8a2--keyboard-and-pointer-orbit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts",
+                    "column": 36,
+                    "line": 26
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-05b1baa11a3f4a5d5863",
+          "file": "brand-journeys.spec.ts",
+          "line": 192,
+          "column": 1
+        },
+        {
+          "title": "ingredient entry restores expansion and the comparison entry preserves synchronized and independent rotation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22300,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:24:47.054Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "comparison-rendered-cameras",
+                      "contentType": "application/json",
+                      "body": "W3siZSI6MC45OTkzMzQwNTI2ODY4OTMzLCJwYXJ0cyI6W3siaWQiOiJnYXJuaXNoX29yYW5nZSIsInBvc2l0aW9uIjpbMCw3LjA0LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJnYXJuaXNoIiwibm9ybWFsTWFwIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDh9LCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiaWNlX2luY2x1c2lvbnMiLCJwb3NpdGlvbiI6Wy0wLjA2NTg5NjU5MzAzNDI2NzQzLDIuNzI1OTMzNTgwMzk4NTYsMC4zNjUzMTIwNjk2NTQ0NjQ3XSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX2JpdHRlciIsInBvc2l0aW9uIjpbMCw1LjUwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6ImJpdHRlciIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidXNlci1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfbW9kaWZpZXJzIiwicG9zaXRpb24iOlswLDcuNjAwMDAwMDIzODQxODU4LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5IjoibW9kaWZpZXJzIiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJpbmZlcnJlZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV9zcGlyaXQiLCJwb3NpdGlvbiI6WzAsNC40NTAwMDAwMjM4NDE4NTc2LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5Ijoic3Bpcml0IiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJ2aWRlby1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfdmVybW91dGgiLCJwb3NpdGlvbiI6WzAsNi41NTAwMDAwMjM4NDE4NTcsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJ2ZXJtb3V0aCIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidmlkZW8tY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiaWNlIiwicG9zaXRpb24iOlswLDMuMDk5OTk5OTkyODQ3NDQzLC0wLjAzNTAwMDAwMDE0OTAxMTYxXSwicm90YXRpb24iOlswLjAwNzczNjMxNTI3ODM4MjQyNCwwLjA2MDA0NTIwMzE4NjY2MDc1LDAuMDEyMDU3MTY4NjA1OTk1MTc4LDAuOTk4MDkyODU1MjQyMjczNF0sInNjYWxlIjpbMS4wMDAwMDAwMDE0MDQ1MTY1LDEuMDAwMDAwMDAwMDc2ODQ4MywxLjAwMDAwMDAwMTM3MjQ5MV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoibGlxdWlkIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjpmYWxzZSwicm9sZSI6Im1peHR1cmUiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImdsYXNzIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH1dLCJjYW1lcmEiOnsiYXppbXV0aCI6MCwiZWxldmF0aW9uIjowLjE2LCJ6b29tIjoxLCJ0YXJnZXQiOlswLDQuNjQ5OTk1NTE4MzQ4OTAxLDBdLCJwb3NpdGlvbiI6WzAsNy40MjIxMjczOTM0NTgyNzUsMTcuMTc3NzQwODc5ODQzNjQzXSwiZm92IjozNX0sImZyYW1lVGltZXMiOlsyNDUsMTcuNTk5OTk5OTk5NjI3NDcsMTMuOTAwMDAwMDAwMzcyNTI5LDQwMC4xOTk5OTk5OTkyNTQ5NCwxNS44MDAwMDAwMDA3NDUwNTgsMTcwLjY5OTk5OTk5OTI1NDk0LDMxLjE5OTk5OTk5OTI1NDk0MiwxNS40MDAwMDAwMDAzNzI1MjksMTYuODAwMDAwMDAwNzQ1MDU4LDE1LjU5OTk5OTk5OTYyNzQ3MSwxNy40MDAwMDAwMDAzNzI1MywxNi45MDAwMDAwMDAzNzI1MywxNiwxNy4yOTk5OTk5OTg4ODI0MTMsMTYuNSwxNi41OTk5OTk5OTk2Mjc0NywxNi4yMDAwMDAwMDExMTc1ODcsMTcuNDAwMDAwMDAwMzcyNTMsMTYsMTcuMjk5OTk5OTk4ODgyNDEzLDE2LjIwMDAwMDAwMTExNzU4NywxNy4xOTk5OTk5OTkyNTQ5NDIsMTguNjk5OTk5OTk5MjU0OTQyLDE0LjUsMTYuMTAwMDAwMDAxNDkwMTE2LDE3LjI5OTk5OTk5ODg4MjQxMywxNiwxNy4zMDAwMDAwMDA3NDUwNTgsMTUuOTAwMDAwMDAwMzcyNTI5LDE3LjU5OTk5OTk5OTYyNzQ3LDE2LjU5OTk5OTk5OTYyNzQ3LDE1LjkwMDAwMDAwMDM3MjUyOSwxNy40MDAwMDAwMDAzNzI1MywxNi42OTk5OTk5OTkyNTQ5NDIsMTUuOTAwMDAwMDAwMzcyNTI5LDE3LjI5OTk5OTk5ODg4MjQxMywxNi4yMDAwMDAwMDExMTc1ODcsMTcuMTk5OTk5OTk5MjU0OTQyLDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjcwMDAwMDAwMTExNzU4NywxNi42OTk5OTk5OTkyNTQ5NDIsMTYuNSwxNi4wOTk5OTk5OTk2Mjc0NywxNy40MDAwMDAwMDAzNzI1MywxNi4yMDAwMDAwMDExMTc1ODcsMTcuMDk5OTk5OTk5NjI3NDcsMTYuNjk5OTk5OTk5MjU0OTQyLDE1LjkwMDAwMDAwMDM3MjUyOSwxNy41LDE2LjU5OTk5OTk5OTYyNzQ3LDE2LDE3LjMwMDAwMDAwMDc0NTA1OCwxNi4xOTk5OTk5OTkyNTQ5NDIsMTkuNzAwMDAwMDAxMTE3NTg3LDE0LjY5OTk5OTk5OTI1NDk0MiwxNi4wOTk5OTk5OTk2Mjc0NywxNS45MDAwMDAwMDAzNzI1MjksMTcuNjk5OTk5OTk5MjU0OTQyLDE1LjcwMDAwMDAwMTExNzU4NywxNy4yOTk5OTk5OTg4ODI0MTMsMTYuMzAwMDAwMDAwNzQ1MDU4LDE3LjA5OTk5OTk5OTYyNzQ3LDE2LjA5OTk5OTk5OTYyNzQ3LDE2LjQwMDAwMDAwMDM3MjUzLDE2LjU5OTk5OTk5OTYyNzQ3XSwicmVuZGVyZWRGcmFtZXMiOjY2LCJyZW5kZXJlZEF0IjozNTM5LjA5OTk5OTk5OTYyNzUsInJlYWR5Ijp0cnVlLCJzdGFnZSI6eyJiYWNrZ3JvdW5kQmx1cnJpbmVzcyI6MC4wOTk5NjY3MDI2MzQzNDQ2NiwiYmFja2dyb3VuZEludGVuc2l0eSI6MC4zNDAxNzMxNDYzMDE0MDc3NywiZW52aXJvbm1lbnRJbnRlbnNpdHkiOjEsInN0b25lU3RyZW5ndGgiOjAuMTIwMDI2NjM3ODkyNTI0MjUsInN0b25lTWlwQmlhcyI6Mn19LHsiZSI6MC45OTk0NDYwMjk5ODY1MzEzLCJwYXJ0cyI6W3siaWQiOiJnYXJuaXNoX2Zsb3dlcl9iYXNlIiwicG9zaXRpb24iOlswLjI1LDguNTY1NzgxNjQxMDA2NDcsLTAuMDU5OTk5OTk4NjU4ODk1NDldLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJnYXJuaXNoIiwicmVwcmVzZW50YXRpb24iOiJwbGF1c2libGUtaGlkZGVuLWZsb3dlci1hdHRhY2htZW50IiwiZXZpZGVuY2UiOiJ1bnZlcmlmaWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiZ2FybmlzaF9wZXRhbF8wMF8wMCIsInBvc2l0aW9uIjpbMCw2LjU1Mzc4MTU5MjQ3MzM4NzUsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6Imdhcm5pc2giLCJub3JtYWxNYXAiOnsid2lkdGgiOjIwNDgsImhlaWdodCI6MjA0OH0sImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJnYXJuaXNoX3BldGFsXzAwXzAxIiwicG9zaXRpb24iOlswLDYuNTUzNzgxNTkyNDczMzg3NSwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6Imdhcm5pc2hfcGV0YWxfMDBfMDIiLCJwb3NpdGlvbiI6WzAsNi41NTM3ODE1OTI0NzMzODc1LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJnYXJuaXNoIiwibm9ybWFsTWFwIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDh9LCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiZ2FybmlzaF9wZXRhbF8wMF8wNCIsInBvc2l0aW9uIjpbMCw2LjU1Mzc4MTU5MjQ3MzM4NzUsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6Imdhcm5pc2giLCJub3JtYWxNYXAiOnsid2lkdGgiOjIwNDgsImhlaWdodCI6MjA0OH0sImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJnYXJuaXNoX3BldGFsXzAwXzA1IiwicG9zaXRpb24iOlswLDYuNTUzNzgxNTkyNDczMzg3NSwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6Imdhcm5pc2hfcGV0YWxfMDBfMDYiLCJwb3NpdGlvbiI6WzAsNi41NTM3ODE1OTI0NzMzODc1LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJnYXJuaXNoIiwibm9ybWFsTWFwIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDh9LCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiZ2FybmlzaF9wZXRhbF8wMF8wNyIsInBvc2l0aW9uIjpbMCw2LjU1Mzc4MTU5MjQ3MzM4NzUsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6Imdhcm5pc2giLCJub3JtYWxNYXAiOnsid2lkdGgiOjIwNDgsImhlaWdodCI6MjA0OH0sImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJnYXJuaXNoX3JlZF9yb3VuZCIsInBvc2l0aW9uIjpbMC4yNSw4LjQ4MTc4MTUzMDM4MDI1LC0wLjA1OTk5OTk5ODY1ODg5NTQ5XSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImljZV9pbmNsdXNpb25zIiwicG9zaXRpb24iOlstMC4wNjU4OTY1OTMwMzQyNjc0MywyLjcyNTkzMzU5NDcwMzY3NDIsMC4zNjUzMTIwNjk2NTQ0NjQ3XSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX2JpdHRlciIsInBvc2l0aW9uIjpbMCw1LjUwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6ImJpdHRlciIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidXNlci1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfbW9kaWZpZXJzIiwicG9zaXRpb24iOlswLDcuNjAwMDAwMDIzODQxODU4LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5IjoibW9kaWZpZXJzIiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJ2aWRlby1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfc3Bpcml0IiwicG9zaXRpb24iOlswLDQuNDUwMDAwMDIzODQxODU3NiwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6InNwaXJpdCIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoiaW5mZXJyZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfdmVybW91dGgiLCJwb3NpdGlvbiI6WzAsNi41NTAwMDAwMjM4NDE4NTcsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJ2ZXJtb3V0aCIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoiaW5mZXJyZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJpY2UiLCJwb3NpdGlvbiI6WzAsMy4wOTk5OTk5NDc1NDc5MTI1LC0wLjAzNTAwMDAwMDE0OTAxMTYxXSwicm90YXRpb24iOlswLjAwNzczNjMxNTI3ODM4MjQyNCwwLjA2MDA0NTIwMzE4NjY2MDc1LDAuMDEyMDU3MTY4NjA1OTk1MTc4LDAuOTk4MDkyODU1MjQyMjczNF0sInNjYWxlIjpbMS4wMDAwMDAwMDE0MDQ1MTY1LDEuMDAwMDAwMDAwMDc2ODQ4MywxLjAwMDAwMDAwMTM3MjQ5MV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoibGlxdWlkIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjpmYWxzZSwicm9sZSI6Im1peHR1cmUiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImdsYXNzIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH1dLCJjYW1lcmEiOnsiYXppbXV0aCI6MCwiZWxldmF0aW9uIjowLjE2LCJ6b29tIjoxLCJ0YXJnZXQiOlswLDQuNjQ5OTk2ODk4NTYwOTYzLDBdLCJwb3NpdGlvbiI6WzAsNy40MjIxMzAyODg4NzI3MDgsMTcuMTc3NzQ1MTQ1NDk2NjddLCJmb3YiOjM1fSwiZnJhbWVUaW1lcyI6WzI0NS41OTk5OTk5OTk2Mjc0NywyODEuNSw0MTguNTk5OTk5OTk5NjI3NDcsNzMuMTAwMDAwMDAxNDkwMTIsMTM3LjY5OTk5OTk5OTI1NDk0LDcuMDk5OTk5OTk5NjI3NDcxLDE1LjQwMDAwMDAwMDM3MjUyOSwxNi41OTk5OTk5OTk2Mjc0NywxNS41OTk5OTk5OTk2Mjc0NzEsMTcuMjAwMDAwMDAxMTE3NTg3LDE3LjA5OTk5OTk5OTYyNzQ3LDE1LjkwMDAwMDAwMDM3MjUyOSwxNy4xOTk5OTk5OTkyNTQ5NDIsMTYuNTk5OTk5OTk5NjI3NDcsMTYuNSwxNi4xMDAwMDAwMDE0OTAxMTYsMTcuNSwxNi4wOTk5OTk5OTk2Mjc0NywxNy4xOTk5OTk5OTkyNTQ5NDIsMTYuMjAwMDAwMDAxMTE3NTg3LDE3LjA5OTk5OTk5OTYyNzQ3LDE4Ljc5OTk5OTk5ODg4MjQxMywxNC40MDAwMDAwMDAzNzI1MjksMTYuMjAwMDAwMDAxMTE3NTg3LDE3LjE5OTk5OTk5OTI1NDk0MiwxNi4zMDAwMDAwMDA3NDUwNTgsMTcsMTUuODk5OTk5OTk4NTA5ODg0LDE3LjUsMTYuOTAwMDAwMDAwMzcyNTMsMTUuODAwMDAwMDAwNzQ1MDU4LDE3LjQwMDAwMDAwMDM3MjUzLDE2LjU5OTk5OTk5OTYyNzQ3LDE2LDE3LjE5OTk5OTk5OTI1NDk0MiwxNi4zMDAwMDAwMDA3NDUwNTgsMTcuMjk5OTk5OTk4ODgyNDEzLDE2LjQwMDAwMDAwMDM3MjUzLDE2LjkwMDAwMDAwMDM3MjUzLDE2LjQwMDAwMDAwMDM3MjUzLDE2Ljc5OTk5OTk5ODg4MjQxMywxNi4xMDAwMDAwMDE0OTAxMTYsMTcuMDk5OTk5OTk5NjI3NDcsMTYuNSwxNy4wOTk5OTk5OTk2Mjc0NywxNi41OTk5OTk5OTk2Mjc0NywxNS43MDAwMDAwMDExMTc1ODcsMTcuNTk5OTk5OTk5NjI3NDcsMTYuNzk5OTk5OTk4ODgyNDEzLDE1LjkwMDAwMDAwMDM3MjUyOSwxNy4zMDAwMDAwMDA3NDUwNTgsMTYuMjk5OTk5OTk4ODgyNDEzLDE5LjUsMTQuOTAwMDAwMDAwMzcyNTI5LDE2LjA5OTk5OTk5OTYyNzQ3LDE1LjkwMDAwMDAwMDM3MjUyOSwxNy41LDE1LjkwMDAwMDAwMDM3MjUyOSwxNy4zMDAwMDAwMDA3NDUwNTgsMTYuMjk5OTk5OTk4ODgyNDEzLDE3LDE2LjA5OTk5OTk5OTYyNzQ3LDE2LjUsMTYuNV0sInJlbmRlcmVkRnJhbWVzIjo2NSwicmVuZGVyZWRBdCI6MzU0MC4zMDAwMDAwMDA3NDUsInJlYWR5Ijp0cnVlLCJzdGFnZSI6eyJiYWNrZ3JvdW5kQmx1cnJpbmVzcyI6MC4wOTk5NzIzMDE0OTkzMjY1NywiYmFja2dyb3VuZEludGVuc2l0eSI6MC4zNDAxNDQwMzIyMDM1MDE5LCJlbnZpcm9ubWVudEludGVuc2l0eSI6MSwic3RvbmVTdHJlbmd0aCI6MC4xMjAwMjIxNTg4MDA1Mzg3NCwic3RvbmVNaXBCaWFzIjoyfX0seyJlIjowLjk5OTQ0MzY5ODQxOTYxMzEsInBhcnRzIjpbeyJpZCI6Imdhcm5pc2hfc2hpc2hpdG8iLCJwb3NpdGlvbiI6WzAsNi41ODQ3OTY1MjQwNDc4NTEsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6Imdhcm5pc2giLCJub3JtYWxNYXAiOnsid2lkdGgiOjIwNDgsImhlaWdodCI6MjA0OH0sImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJnYXJuaXNoX3N0ZW0iLCJwb3NpdGlvbiI6WzAsNi41ODQ3OTY1MjQwNDc4NTEsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6Imdhcm5pc2giLCJub3JtYWxNYXAiOnsid2lkdGgiOjIwNDgsImhlaWdodCI6MjA0OH0sImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJpY2VfaW5jbHVzaW9ucyIsInBvc2l0aW9uIjpbLTAuMDY1ODk2NTkzMDM0MjY3NDMsMi43MjU5MzM1OTQ3MDM2NzQyLDAuMzY1MzEyMDY5NjU0NDY0N10sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV9iaXR0ZXIiLCJwb3NpdGlvbiI6WzAsNS41MDAwMDAwMjM4NDE4NTgsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJiaXR0ZXIiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6InVzZXItY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX21vZGlmaWVycyIsInBvc2l0aW9uIjpbMCw3LjYwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6Im1vZGlmaWVycyIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidmlkZW8tY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX3NwaXJpdCIsInBvc2l0aW9uIjpbMCw0LjQ1MDAwMDAyMzg0MTg1NzYsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJzcGlyaXQiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6ImluZmVycmVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX3Zlcm1vdXRoIiwicG9zaXRpb24iOlswLDYuNTUwMDAwMDIzODQxODU3LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5IjoidmVybW91dGgiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6ImluZmVycmVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiaWNlIiwicG9zaXRpb24iOlswLDMuMDk5OTk5OTQ3NTQ3OTEyNSwtMC4wMzUwMDAwMDAxNDkwMTE2MV0sInJvdGF0aW9uIjpbMC4wMDc3MzYzMTUyNzgzODI0MjQsMC4wNjAwNDUyMDMxODY2NjA3NSwwLjAxMjA1NzE2ODYwNTk5NTE3OCwwLjk5ODA5Mjg1NTI0MjI3MzRdLCJzY2FsZSI6WzEuMDAwMDAwMDAxNDA0NTE2NSwxLjAwMDAwMDAwMDA3Njg0ODMsMS4wMDAwMDAwMDEzNzI0OTFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImxpcXVpZCIsInBvc2l0aW9uIjpbMCwwLDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6ZmFsc2UsInJvbGUiOiJtaXh0dXJlIiwiY2F0ZWdvcnkiOiJzdHJ1Y3R1cmUiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJnbGFzcyIsInBvc2l0aW9uIjpbMCwwLDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJzdHJ1Y3R1cmUiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9XSwiY2FtZXJhIjp7ImF6aW11dGgiOjAsImVsZXZhdGlvbiI6MC4xNiwiem9vbSI6MSwidGFyZ2V0IjpbMCw0LjY0OTk5Njg3MjQwNDAxMywwXSwicG9zaXRpb24iOlswLDcuNDIyMTMwMjM0MDAwNTQxLDE3LjE3Nzc0NTA2NDY1NjU3M10sImZvdiI6MzV9LCJmcmFtZVRpbWVzIjpbMjA5LjUsMjguODAwMDAwMDAwNzQ1MDU4LDk4LjA5OTk5OTk5OTYyNzQ3LDEyNC41LDg2LjkwMDAwMDAwMDM3MjUzLDYuNzk5OTk5OTk4ODgyNDEzLDE1LjA5OTk5OTk5OTYyNzQ3MSwxNi44MDAwMDAwMDA3NDUwNTgsMTUuNSwxNy4xOTk5OTk5OTkyNTQ5NDIsMTcuMTAwMDAwMDAxNDkwMTE2LDE1Ljc5OTk5OTk5ODg4MjQxMywxNy4wOTk5OTk5OTk2Mjc0NywxNi44MDAwMDAwMDA3NDUwNTgsMTYuNSwxNi4xOTk5OTk5OTkyNTQ5NDIsMTcuMjAwMDAwMDAxMTE3NTg3LDE2LjA5OTk5OTk5OTYyNzQ3LDE3LjQwMDAwMDAwMDM3MjUzLDE2LjQwMDAwMDAwMDM3MjUzLDE2Ljc5OTk5OTk5ODg4MjQxMywxOC43MDAwMDAwMDExMTc1ODcsMTQuNSwxNi4xOTk5OTk5OTkyNTQ5NDIsMTcuMzAwMDAwMDAwNzQ1MDU4LDE2LjE5OTk5OTk5OTI1NDk0MiwxNy4zMDAwMDAwMDA3NDUwNTgsMTUuNSwxNy41OTk5OTk5OTk2Mjc0NywxNi45MDAwMDAwMDAzNzI1MywxNS43OTk5OTk5OTg4ODI0MTMsMTcuNDAwMDAwMDAwMzcyNTMsMTYuNTk5OTk5OTk5NjI3NDcsMTYsMTcuMjAwMDAwMDAxMTE3NTg3LDE2LjA5OTk5OTk5OTYyNzQ3LDE3LjUsMTYuMTk5OTk5OTk5MjU0OTQyLDE3LjA5OTk5OTk5OTYyNzQ3LDE2LjQwMDAwMDAwMDM3MjUzLDE2LjcwMDAwMDAwMTExNzU4NywxNi4wOTk5OTk5OTk2Mjc0NywxNy4wOTk5OTk5OTk2Mjc0NywxNi41LDE3LjMwMDAwMDAwMDc0NTA1OCwxNi41LDE1LjU5OTk5OTk5OTYyNzQ3MSwxNy41OTk5OTk5OTk2Mjc0NywxNi45MDAwMDAwMDAzNzI1MywxNS43OTk5OTk5OTg4ODI0MTMsMTcuMzAwMDAwMDAwNzQ1MDU4LDE2LjUsMTkuMzAwMDAwMDAwNzQ1MDU4LDE1LjE5OTk5OTk5OTI1NDk0MiwxNS44MDAwMDAwMDA3NDUwNTgsMTYsMTcuNjk5OTk5OTk5MjU0OTQyLDE1LjY5OTk5OTk5OTI1NDk0MiwxNy4zMDAwMDAwMDA3NDUwNTgsMTYuMzAwMDAwMDAwNzQ1MDU4LDE2Ljg5OTk5OTk5ODUwOTg4NCwxNi4xMDAwMDAwMDE0OTAxMTYsMTYuNzk5OTk5OTk4ODgyNDEzLDE2LjMwMDAwMDAwMDc0NTA1OF0sInJlbmRlcmVkRnJhbWVzIjo2NSwicmVuZGVyZWRBdCI6MzU0MS4wOTk5OTk5OTk2Mjc1LCJyZWFkeSI6dHJ1ZSwic3RhZ2UiOnsiYmFja2dyb3VuZEJsdXJyaW5lc3MiOjAuMDk5OTcyMTg0OTIwOTgwNjcsImJhY2tncm91bmRJbnRlbnNpdHkiOjAuMzQwMTQ0NjM4NDEwOTAwNTMsImVudmlyb25tZW50SW50ZW5zaXR5IjoxLCJzdG9uZVN0cmVuZ3RoIjowLjEyMDAyMjI1MjA2MzIxNTQ2LCJzdG9uZU1pcEJpYXMiOjJ9fV0="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-d2ece6791ae757a4df68",
+          "file": "brand-journeys.spec.ts",
+          "line": 221,
+          "column": 1
+        },
+        {
+          "title": "direct atlas and all Negroni routes resolve and survive refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13022,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:25:10.557Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-c18e56a6ff78564382ea",
+          "file": "brand-journeys.spec.ts",
+          "line": 263,
+          "column": 1
+        },
+        {
+          "title": "WebGL unavailable offers informative fallback without blocking landing and ingredient entry",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 25990,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Interactive 3D is unavailable in this browser.', { exact: true })\nExpected: visible\nTimeout: 25000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Interactive 3D is unavailable in this browser.', { exact: true }) with timeout 25000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Interactive 3D is unavailable in this browser.', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Interactive 3D is unavailable in this browser.', { exact: true })\nExpected: visible\nTimeout: 25000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Interactive 3D is unavailable in this browser.', { exact: true }) with timeout 25000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Interactive 3D is unavailable in this browser.', { exact: true })\u001b[22m\n\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:283:99",
+                    "location": {
+                      "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                      "column": 99,
+                      "line": 283
+                    },
+                    "snippet": "  281 |   await page.goto('/');\n  282 |   await expect(headline(page)).toBeVisible();\n> 283 |   await expect(page.getByText('Interactive 3D is unavailable in this browser.', { exact: true })).toBeVisible();\n      |                                                                                                   ^\n  284 |   await expect(page.getByRole('button', { name: 'Rotate featured cocktail left', exact: true })).toBeDisabled();\n  285 |   await expect(page.getByRole('button', { name: 'Rotate featured cocktail right', exact: true })).toBeDisabled();\n  286 |   await page.getByRole('button', { name: 'Explore ingredients', exact: true }).click();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                        "column": 99,
+                        "line": 283
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Interactive 3D is unavailable in this browser.', { exact: true })\nExpected: visible\nTimeout: 25000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Interactive 3D is unavailable in this browser.', { exact: true }) with timeout 25000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Interactive 3D is unavailable in this browser.', { exact: true })\u001b[22m\n\n\n  281 |   await page.goto('/');\n  282 |   await expect(headline(page)).toBeVisible();\n> 283 |   await expect(page.getByText('Interactive 3D is unavailable in this browser.', { exact: true })).toBeVisible();\n      |                                                                                                   ^\n  284 |   await expect(page.getByRole('button', { name: 'Rotate featured cocktail left', exact: true })).toBeDisabled();\n  285 |   await expect(page.getByRole('button', { name: 'Rotate featured cocktail right', exact: true })).toBeDisabled();\n  286 |   await page.getByRole('button', { name: 'Explore ingredients', exact: true }).click();\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:283:99"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:25:23.589Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-accepted/test-output/brand-journeys-WebGL-unava-ad808-anding-and-ingredient-entry/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-accepted/test-output/brand-journeys-WebGL-unava-ad808-anding-and-ingredient-entry/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-accepted/test-output/brand-journeys-WebGL-unava-ad808-anding-and-ingredient-entry/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                    "column": 99,
+                    "line": 283
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-c7a97ced688ff2f2eee2",
+          "file": "brand-journeys.spec.ts",
+          "line": 273,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "phone touch and reduced motion",
+          "file": "brand-journeys.spec.ts",
+          "line": 292,
+          "column": 6,
+          "specs": [
+            {
+              "title": "touch orbit, visible ingredient controls and stable reduced-motion presentation",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 100000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 46181,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('viewer-bbf-negroni')\nExpected: \u001b[32m\"true\"\u001b[39m\nTimeout: 45000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('viewer-bbf-negroni') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('viewer-bbf-negroni')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('viewer-bbf-negroni')\nExpected: \u001b[32m\"true\"\u001b[39m\nTimeout: 45000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('viewer-bbf-negroni') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('viewer-bbf-negroni')\u001b[22m\n\n    at waitLive (/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts:26:36)\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:296:11",
+                        "location": {
+                          "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts",
+                          "column": 36,
+                          "line": 26
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mhelpers.ts:26\n\n  24 | export async function waitLive(page: Page, ids: readonly DrinkId[]) {\n  25 |   for (const id of ids) {\n> 26 |     await expect(viewer(page, id)).toHaveAttribute('data-live', 'true', { timeout: 45_000 });\n     |                                    ^\n  27 |     await expect.poll(() => page.evaluate((drinkId) => Boolean((window as unknown as { __atlasViewers?: Record<string, ViewerSnapshot> }).__atlasViewers?.[drinkId]?.ready), id)).toBe(true);\n  28 |     await expect(viewer(page, id).locator('canvas')).toBeVisible();\n  29 |   }"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts",
+                            "column": 36,
+                            "line": 26
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('viewer-bbf-negroni')\nExpected: \u001b[32m\"true\"\u001b[39m\nTimeout: 45000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('viewer-bbf-negroni') with timeout 45000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('viewer-bbf-negroni')\u001b[22m\n\n\n   at helpers.ts:26\n\n  24 | export async function waitLive(page: Page, ids: readonly DrinkId[]) {\n  25 |   for (const id of ids) {\n> 26 |     await expect(viewer(page, id)).toHaveAttribute('data-live', 'true', { timeout: 45_000 });\n     |                                    ^\n  27 |     await expect.poll(() => page.evaluate((drinkId) => Boolean((window as unknown as { __atlasViewers?: Record<string, ViewerSnapshot> }).__atlasViewers?.[drinkId]?.ready), id)).toBe(true);\n  28 |     await expect(viewer(page, id).locator('canvas')).toBeVisible();\n  29 |   }\n    at waitLive (/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts:26:36)\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:296:11"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-13T05:25:50.648Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-accepted/test-output/brand-journeys-phone-touch-62316-reduced-motion-presentation/test-failed-1.png"
+                        },
+                        {
+                          "name": "runtime-errors",
+                          "contentType": "application/json",
+                          "body": "W10="
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-accepted/test-output/brand-journeys-phone-touch-62316-reduced-motion-presentation/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production-accepted/test-output/brand-journeys-phone-touch-62316-reduced-motion-presentation/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/helpers.ts",
+                        "column": 36,
+                        "line": 26
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "835d211cf8ffd964d224-6c2cb53cfaffa09dd8e1",
+              "file": "brand-journeys.spec.ts",
+              "line": 294,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T05:22:48.701Z",
+    "duration": 229605.959,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

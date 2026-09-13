@@ -1,0 +1,175 @@
+{
+  "scope": "Integrated local production build preserving Classic Negroni and pending landing fixes. This is not a production-deployment acceptance report.",
+  "mergeParents": [
+    "87c9eca",
+    "6e6effd"
+  ],
+  "browser": {
+    "report": "../integration-local/results.json",
+    "stats": {
+      "startTime": "2026-09-13T05:28:39.968Z",
+      "duration": 81878.08700000001,
+      "expected": 12,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "journeys": [
+      {
+        "title": "headline, CTA and original Negroni poster remain usable while cinematic files are delayed, without requesting 3D assets",
+        "status": "passed",
+        "runtimeErrors": [
+          []
+        ]
+      },
+      {
+        "title": "landing composition and links at 1440x1000",
+        "status": "passed",
+        "runtimeErrors": [
+          []
+        ]
+      },
+      {
+        "title": "landing composition and links at 768x1024",
+        "status": "passed",
+        "runtimeErrors": [
+          []
+        ]
+      },
+      {
+        "title": "landing composition and links at 390x844",
+        "status": "passed",
+        "runtimeErrors": [
+          []
+        ]
+      },
+      {
+        "title": "keyboard CTA enters atlas and each featured bar opens the correct working experience with return home",
+        "status": "passed",
+        "runtimeErrors": [
+          []
+        ]
+      },
+      {
+        "title": "original cinematic frames advance, pause, reverse at the same pose, and scrub with visible controls",
+        "status": "passed",
+        "runtimeErrors": [
+          []
+        ]
+      },
+      {
+        "title": "expanded film circulates continuously, pauses its actual frame and reassembles from the visible idle pose",
+        "status": "passed",
+        "runtimeErrors": [
+          []
+        ]
+      },
+      {
+        "title": "Explore 3D loads the original fluid scene on demand and preserves the selected pose when switching modes",
+        "status": "passed",
+        "runtimeErrors": [
+          []
+        ]
+      },
+      {
+        "title": "ingredient entry restores expansion and the comparison entry preserves synchronized and independent rotation",
+        "status": "passed",
+        "runtimeErrors": [
+          []
+        ]
+      },
+      {
+        "title": "direct atlas and all Negroni routes resolve and survive refresh",
+        "status": "passed",
+        "runtimeErrors": [
+          []
+        ]
+      },
+      {
+        "title": "WebGL unavailable restores the cinematic film without blocking the landing or ingredient entry",
+        "status": "passed",
+        "runtimeErrors": [
+          [
+            "THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context. [http://127.0.0.1:4186/assets/three-vIYDzzE_.js]"
+          ]
+        ]
+      },
+      {
+        "title": "touch controls choose stable cinematic endpoints and explicit playback does not start an idle loop",
+        "status": "passed",
+        "runtimeErrors": [
+          []
+        ]
+      }
+    ]
+  },
+  "build": {
+    "command": "npm run build",
+    "result": "passed",
+    "includes": [
+      "TypeScript noEmit",
+      "Vite production build"
+    ]
+  },
+  "classicUnitTests": {
+    "command": "node --experimental-strip-types --test tests/classic-negroni-assets.test.mjs tests/classic-negroni-playback.test.mjs",
+    "passed": 11,
+    "failed": 0
+  },
+  "historicalReports": {
+    "existing-complete": {
+      "startTime": "2026-09-13T05:05:33.497Z",
+      "duration": 89222.638,
+      "expected": 39,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "production-complete": {
+      "startTime": "2026-09-13T05:11:58.452Z",
+      "duration": 105938.629,
+      "expected": 10,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "production-accepted": {
+      "startTime": "2026-09-13T05:22:48.701Z",
+      "duration": 229605.959,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    }
+  },
+  "limitations": [
+    "The production alias changed during production-accepted. Its6/10 result is retained as a mixed-deployment failure, not final acceptance.",
+    "Physical-phone GPU performance was not measured."
+  ],
+  "screenshots": {
+    "homepage-1440x1000.png": [
+      1440,
+      1000
+    ],
+    "homepage-full-768x1024.png": [
+      768,
+      3020
+    ],
+    "homepage-390x844.png": [
+      390,
+      844
+    ],
+    "homepage-full-1440x1000.png": [
+      1440,
+      3605
+    ],
+    "homepage-full-390x844.png": [
+      390,
+      4877
+    ],
+    "homepage-768x1024.png": [
+      768,
+      1024
+    ]
+  }
+}

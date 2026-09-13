@@ -1,0 +1,2685 @@
+{
+  "publicURL": "https://spiritatlas-one.vercel.app",
+  "method": "Eight new unauthenticated Chrome contexts. 3D dependency requests deliberately held to isolate decorative Canvas2D from GPU scene work. The actual deployed decorative canvas was sampled after fonts/poster loaded and again 1500ms later. 5-CSS-pixel grid cell center occupancy is compared across DPR and motion; screenshots saved at CSS scale. This is decorative behavior evidence, not live-3D interaction verification.",
+  "results": [
+    {
+      "case": "1440x1000-no-preference-dpr1",
+      "capturedAt": "2026-09-13T05:06:11.530Z",
+      "hash": "78e0ca2b0701e25d204ca23e88f44000ae1af6b9b6e195f0422b2f9935f89479",
+      "canvas": {
+        "width": 1440,
+        "height": 896,
+        "cssWidth": 1440,
+        "cssHeight": 896,
+        "scale": 1
+      },
+      "alphaPixels": {
+        "full": 335282,
+        "empty": 904274,
+        "partial": 50684
+      },
+      "sampleRows": [
+        {
+          "yCss": 102.5,
+          "runs": [
+            {
+              "xCss": 1041,
+              "widthCss": 3,
+              "centerCss": 1042.5
+            },
+            {
+              "xCss": 1061,
+              "widthCss": 3,
+              "centerCss": 1062.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            }
+          ]
+        },
+        {
+          "yCss": 152.5,
+          "runs": [
+            {
+              "xCss": 1071,
+              "widthCss": 3,
+              "centerCss": 1072.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            },
+            {
+              "xCss": 1181,
+              "widthCss": 3,
+              "centerCss": 1182.5
+            },
+            {
+              "xCss": 1191,
+              "widthCss": 3,
+              "centerCss": 1192.5
+            }
+          ]
+        },
+        {
+          "yCss": 202.5,
+          "runs": [
+            {
+              "xCss": 1041,
+              "widthCss": 3,
+              "centerCss": 1042.5
+            },
+            {
+              "xCss": 1061,
+              "widthCss": 3,
+              "centerCss": 1062.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            }
+          ]
+        },
+        {
+          "yCss": 252.5,
+          "runs": [
+            {
+              "xCss": 1051,
+              "widthCss": 3,
+              "centerCss": 1052.5
+            },
+            {
+              "xCss": 1071,
+              "widthCss": 3,
+              "centerCss": 1072.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            }
+          ]
+        },
+        {
+          "yCss": 302.5,
+          "runs": [
+            {
+              "xCss": 981,
+              "widthCss": 3,
+              "centerCss": 982.5
+            },
+            {
+              "xCss": 1001,
+              "widthCss": 3,
+              "centerCss": 1002.5
+            },
+            {
+              "xCss": 1011,
+              "widthCss": 3,
+              "centerCss": 1012.5
+            },
+            {
+              "xCss": 1021,
+              "widthCss": 3,
+              "centerCss": 1022.5
+            },
+            {
+              "xCss": 1031,
+              "widthCss": 3,
+              "centerCss": 1032.5
+            },
+            {
+              "xCss": 1041,
+              "widthCss": 3,
+              "centerCss": 1042.5
+            },
+            {
+              "xCss": 1051,
+              "widthCss": 3,
+              "centerCss": 1052.5
+            },
+            {
+              "xCss": 1061,
+              "widthCss": 3,
+              "centerCss": 1062.5
+            },
+            {
+              "xCss": 1071,
+              "widthCss": 3,
+              "centerCss": 1072.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            }
+          ]
+        }
+      ],
+      "reducedMotion": false,
+      "heroAnimation": "hero-enter",
+      "heroAnimationDuration": "0.85s",
+      "heroTransition": "0s",
+      "fonts": [
+        "Instrument Sans Variable",
+        "IBM Plex Mono"
+      ],
+      "scripts": [
+        "/assets/index-DxA60nGm.js"
+      ],
+      "url": "https://spiritatlas-one.vercel.app/",
+      "secondCanvasHash": "78e0ca2b0701e25d204ca23e88f44000ae1af6b9b6e195f0422b2f9935f89479",
+      "settledSeparationMs": 1500,
+      "unchanged": true,
+      "cssGridSample": {
+        "pitchCss": 5,
+        "offsetCss": 2.5,
+        "occupiedCellsHash": "683bcf8262813430bb66cc8efba4a8c19f04200169fcdaf8179eda1771f0efb8"
+      },
+      "held3D": [
+        "/assets/three-BoWlbv93.js"
+      ],
+      "errors": [],
+      "screenshot": "docs/brand-evidence/dpr-motion/1440x1000-no-preference-dpr1-isolated-artwork.png"
+    },
+    {
+      "case": "1440x1000-no-preference-dpr2",
+      "capturedAt": "2026-09-13T05:06:15.308Z",
+      "hash": "7747c92f6e80533a5c601b9c532ab114f749c262131c9a20558c100a200ea011",
+      "canvas": {
+        "width": 2880,
+        "height": 1792,
+        "cssWidth": 1440,
+        "cssHeight": 896,
+        "scale": 2
+      },
+      "alphaPixels": {
+        "full": 1369963,
+        "empty": 3707956,
+        "partial": 83041
+      },
+      "sampleRows": [
+        {
+          "yCss": 102.5,
+          "runs": [
+            {
+              "xCss": 1041,
+              "widthCss": 3,
+              "centerCss": 1042.5
+            },
+            {
+              "xCss": 1061,
+              "widthCss": 3,
+              "centerCss": 1062.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            }
+          ]
+        },
+        {
+          "yCss": 152.5,
+          "runs": [
+            {
+              "xCss": 1071,
+              "widthCss": 3,
+              "centerCss": 1072.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            },
+            {
+              "xCss": 1181,
+              "widthCss": 3,
+              "centerCss": 1182.5
+            },
+            {
+              "xCss": 1191,
+              "widthCss": 3,
+              "centerCss": 1192.5
+            }
+          ]
+        },
+        {
+          "yCss": 202.5,
+          "runs": [
+            {
+              "xCss": 1041,
+              "widthCss": 3,
+              "centerCss": 1042.5
+            },
+            {
+              "xCss": 1061,
+              "widthCss": 3,
+              "centerCss": 1062.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            }
+          ]
+        },
+        {
+          "yCss": 252.5,
+          "runs": [
+            {
+              "xCss": 1051,
+              "widthCss": 3,
+              "centerCss": 1052.5
+            },
+            {
+              "xCss": 1071,
+              "widthCss": 3,
+              "centerCss": 1072.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1170.5,
+              "widthCss": 4,
+              "centerCss": 1172.5
+            }
+          ]
+        },
+        {
+          "yCss": 302.5,
+          "runs": [
+            {
+              "xCss": 981,
+              "widthCss": 3,
+              "centerCss": 982.5
+            },
+            {
+              "xCss": 1001,
+              "widthCss": 3,
+              "centerCss": 1002.5
+            },
+            {
+              "xCss": 1011,
+              "widthCss": 3,
+              "centerCss": 1012.5
+            },
+            {
+              "xCss": 1021,
+              "widthCss": 3,
+              "centerCss": 1022.5
+            },
+            {
+              "xCss": 1031,
+              "widthCss": 3,
+              "centerCss": 1032.5
+            },
+            {
+              "xCss": 1041,
+              "widthCss": 3,
+              "centerCss": 1042.5
+            },
+            {
+              "xCss": 1051,
+              "widthCss": 3,
+              "centerCss": 1052.5
+            },
+            {
+              "xCss": 1061,
+              "widthCss": 3,
+              "centerCss": 1062.5
+            },
+            {
+              "xCss": 1071,
+              "widthCss": 3,
+              "centerCss": 1072.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            }
+          ]
+        }
+      ],
+      "reducedMotion": false,
+      "heroAnimation": "hero-enter",
+      "heroAnimationDuration": "0.85s",
+      "heroTransition": "0s",
+      "fonts": [
+        "Instrument Sans Variable",
+        "IBM Plex Mono"
+      ],
+      "scripts": [
+        "/assets/index-DxA60nGm.js"
+      ],
+      "url": "https://spiritatlas-one.vercel.app/",
+      "secondCanvasHash": "7747c92f6e80533a5c601b9c532ab114f749c262131c9a20558c100a200ea011",
+      "settledSeparationMs": 1500,
+      "unchanged": true,
+      "cssGridSample": {
+        "pitchCss": 5,
+        "offsetCss": 2.5,
+        "occupiedCellsHash": "683bcf8262813430bb66cc8efba4a8c19f04200169fcdaf8179eda1771f0efb8"
+      },
+      "held3D": [
+        "/assets/three-BoWlbv93.js"
+      ],
+      "errors": [],
+      "screenshot": "docs/brand-evidence/dpr-motion/1440x1000-no-preference-dpr2-isolated-artwork.png"
+    },
+    {
+      "case": "1440x1000-reduce-dpr1",
+      "capturedAt": "2026-09-13T05:06:19.349Z",
+      "hash": "78e0ca2b0701e25d204ca23e88f44000ae1af6b9b6e195f0422b2f9935f89479",
+      "canvas": {
+        "width": 1440,
+        "height": 896,
+        "cssWidth": 1440,
+        "cssHeight": 896,
+        "scale": 1
+      },
+      "alphaPixels": {
+        "full": 335282,
+        "empty": 904274,
+        "partial": 50684
+      },
+      "sampleRows": [
+        {
+          "yCss": 102.5,
+          "runs": [
+            {
+              "xCss": 1041,
+              "widthCss": 3,
+              "centerCss": 1042.5
+            },
+            {
+              "xCss": 1061,
+              "widthCss": 3,
+              "centerCss": 1062.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            }
+          ]
+        },
+        {
+          "yCss": 152.5,
+          "runs": [
+            {
+              "xCss": 1071,
+              "widthCss": 3,
+              "centerCss": 1072.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            },
+            {
+              "xCss": 1181,
+              "widthCss": 3,
+              "centerCss": 1182.5
+            },
+            {
+              "xCss": 1191,
+              "widthCss": 3,
+              "centerCss": 1192.5
+            }
+          ]
+        },
+        {
+          "yCss": 202.5,
+          "runs": [
+            {
+              "xCss": 1041,
+              "widthCss": 3,
+              "centerCss": 1042.5
+            },
+            {
+              "xCss": 1061,
+              "widthCss": 3,
+              "centerCss": 1062.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            }
+          ]
+        },
+        {
+          "yCss": 252.5,
+          "runs": [
+            {
+              "xCss": 1051,
+              "widthCss": 3,
+              "centerCss": 1052.5
+            },
+            {
+              "xCss": 1071,
+              "widthCss": 3,
+              "centerCss": 1072.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            }
+          ]
+        },
+        {
+          "yCss": 302.5,
+          "runs": [
+            {
+              "xCss": 981,
+              "widthCss": 3,
+              "centerCss": 982.5
+            },
+            {
+              "xCss": 1001,
+              "widthCss": 3,
+              "centerCss": 1002.5
+            },
+            {
+              "xCss": 1011,
+              "widthCss": 3,
+              "centerCss": 1012.5
+            },
+            {
+              "xCss": 1021,
+              "widthCss": 3,
+              "centerCss": 1022.5
+            },
+            {
+              "xCss": 1031,
+              "widthCss": 3,
+              "centerCss": 1032.5
+            },
+            {
+              "xCss": 1041,
+              "widthCss": 3,
+              "centerCss": 1042.5
+            },
+            {
+              "xCss": 1051,
+              "widthCss": 3,
+              "centerCss": 1052.5
+            },
+            {
+              "xCss": 1061,
+              "widthCss": 3,
+              "centerCss": 1062.5
+            },
+            {
+              "xCss": 1071,
+              "widthCss": 3,
+              "centerCss": 1072.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            }
+          ]
+        }
+      ],
+      "reducedMotion": true,
+      "heroAnimation": "none",
+      "heroAnimationDuration": "0s",
+      "heroTransition": "0s",
+      "fonts": [
+        "Instrument Sans Variable",
+        "IBM Plex Mono"
+      ],
+      "scripts": [
+        "/assets/index-DxA60nGm.js"
+      ],
+      "url": "https://spiritatlas-one.vercel.app/",
+      "secondCanvasHash": "78e0ca2b0701e25d204ca23e88f44000ae1af6b9b6e195f0422b2f9935f89479",
+      "settledSeparationMs": 1500,
+      "unchanged": true,
+      "cssGridSample": {
+        "pitchCss": 5,
+        "offsetCss": 2.5,
+        "occupiedCellsHash": "683bcf8262813430bb66cc8efba4a8c19f04200169fcdaf8179eda1771f0efb8"
+      },
+      "held3D": [
+        "/assets/three-BoWlbv93.js"
+      ],
+      "errors": [],
+      "screenshot": "docs/brand-evidence/dpr-motion/1440x1000-reduce-dpr1-isolated-artwork.png"
+    },
+    {
+      "case": "1440x1000-reduce-dpr2",
+      "capturedAt": "2026-09-13T05:06:22.735Z",
+      "hash": "7747c92f6e80533a5c601b9c532ab114f749c262131c9a20558c100a200ea011",
+      "canvas": {
+        "width": 2880,
+        "height": 1792,
+        "cssWidth": 1440,
+        "cssHeight": 896,
+        "scale": 2
+      },
+      "alphaPixels": {
+        "full": 1369963,
+        "empty": 3707956,
+        "partial": 83041
+      },
+      "sampleRows": [
+        {
+          "yCss": 102.5,
+          "runs": [
+            {
+              "xCss": 1041,
+              "widthCss": 3,
+              "centerCss": 1042.5
+            },
+            {
+              "xCss": 1061,
+              "widthCss": 3,
+              "centerCss": 1062.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            }
+          ]
+        },
+        {
+          "yCss": 152.5,
+          "runs": [
+            {
+              "xCss": 1071,
+              "widthCss": 3,
+              "centerCss": 1072.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            },
+            {
+              "xCss": 1181,
+              "widthCss": 3,
+              "centerCss": 1182.5
+            },
+            {
+              "xCss": 1191,
+              "widthCss": 3,
+              "centerCss": 1192.5
+            }
+          ]
+        },
+        {
+          "yCss": 202.5,
+          "runs": [
+            {
+              "xCss": 1041,
+              "widthCss": 3,
+              "centerCss": 1042.5
+            },
+            {
+              "xCss": 1061,
+              "widthCss": 3,
+              "centerCss": 1062.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1171,
+              "widthCss": 3,
+              "centerCss": 1172.5
+            }
+          ]
+        },
+        {
+          "yCss": 252.5,
+          "runs": [
+            {
+              "xCss": 1051,
+              "widthCss": 3,
+              "centerCss": 1052.5
+            },
+            {
+              "xCss": 1071,
+              "widthCss": 3,
+              "centerCss": 1072.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            },
+            {
+              "xCss": 1111,
+              "widthCss": 3,
+              "centerCss": 1112.5
+            },
+            {
+              "xCss": 1121,
+              "widthCss": 3,
+              "centerCss": 1122.5
+            },
+            {
+              "xCss": 1131,
+              "widthCss": 3,
+              "centerCss": 1132.5
+            },
+            {
+              "xCss": 1141,
+              "widthCss": 3,
+              "centerCss": 1142.5
+            },
+            {
+              "xCss": 1151,
+              "widthCss": 3,
+              "centerCss": 1152.5
+            },
+            {
+              "xCss": 1161,
+              "widthCss": 3,
+              "centerCss": 1162.5
+            },
+            {
+              "xCss": 1170.5,
+              "widthCss": 4,
+              "centerCss": 1172.5
+            }
+          ]
+        },
+        {
+          "yCss": 302.5,
+          "runs": [
+            {
+              "xCss": 981,
+              "widthCss": 3,
+              "centerCss": 982.5
+            },
+            {
+              "xCss": 1001,
+              "widthCss": 3,
+              "centerCss": 1002.5
+            },
+            {
+              "xCss": 1011,
+              "widthCss": 3,
+              "centerCss": 1012.5
+            },
+            {
+              "xCss": 1021,
+              "widthCss": 3,
+              "centerCss": 1022.5
+            },
+            {
+              "xCss": 1031,
+              "widthCss": 3,
+              "centerCss": 1032.5
+            },
+            {
+              "xCss": 1041,
+              "widthCss": 3,
+              "centerCss": 1042.5
+            },
+            {
+              "xCss": 1051,
+              "widthCss": 3,
+              "centerCss": 1052.5
+            },
+            {
+              "xCss": 1061,
+              "widthCss": 3,
+              "centerCss": 1062.5
+            },
+            {
+              "xCss": 1071,
+              "widthCss": 3,
+              "centerCss": 1072.5
+            },
+            {
+              "xCss": 1081,
+              "widthCss": 3,
+              "centerCss": 1082.5
+            },
+            {
+              "xCss": 1091,
+              "widthCss": 3,
+              "centerCss": 1092.5
+            },
+            {
+              "xCss": 1101,
+              "widthCss": 3,
+              "centerCss": 1102.5
+            }
+          ]
+        }
+      ],
+      "reducedMotion": true,
+      "heroAnimation": "none",
+      "heroAnimationDuration": "0s",
+      "heroTransition": "0s",
+      "fonts": [
+        "Instrument Sans Variable",
+        "IBM Plex Mono"
+      ],
+      "scripts": [
+        "/assets/index-DxA60nGm.js"
+      ],
+      "url": "https://spiritatlas-one.vercel.app/",
+      "secondCanvasHash": "7747c92f6e80533a5c601b9c532ab114f749c262131c9a20558c100a200ea011",
+      "settledSeparationMs": 1500,
+      "unchanged": true,
+      "cssGridSample": {
+        "pitchCss": 5,
+        "offsetCss": 2.5,
+        "occupiedCellsHash": "683bcf8262813430bb66cc8efba4a8c19f04200169fcdaf8179eda1771f0efb8"
+      },
+      "held3D": [
+        "/assets/three-BoWlbv93.js"
+      ],
+      "errors": [],
+      "screenshot": "docs/brand-evidence/dpr-motion/1440x1000-reduce-dpr2-isolated-artwork.png"
+    },
+    {
+      "case": "390x844-no-preference-dpr1",
+      "capturedAt": "2026-09-13T05:06:26.183Z",
+      "hash": "be3d233893a84d2210d336763689559ac1bb80e4accdb5b260019b57f41e3922",
+      "canvas": {
+        "width": 390,
+        "height": 886,
+        "cssWidth": 390,
+        "cssHeight": 886.21875,
+        "scale": 1
+      },
+      "alphaPixels": {
+        "full": 170361,
+        "empty": 151991,
+        "partial": 23188
+      },
+      "sampleRows": [
+        {
+          "yCss": 102.5,
+          "runs": [
+            {
+              "xCss": 36,
+              "widthCss": 3,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 41,
+              "widthCss": 3,
+              "centerCss": 42.5
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 61,
+              "widthCss": 3,
+              "centerCss": 62.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 351,
+              "widthCss": 3,
+              "centerCss": 352.5
+            },
+            {
+              "xCss": 356,
+              "widthCss": 3,
+              "centerCss": 357.5
+            }
+          ]
+        },
+        {
+          "yCss": 152.5,
+          "runs": [
+            {
+              "xCss": 36,
+              "widthCss": 3,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 41,
+              "widthCss": 3,
+              "centerCss": 42.5
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 351,
+              "widthCss": 3,
+              "centerCss": 352.5
+            },
+            {
+              "xCss": 356,
+              "widthCss": 3,
+              "centerCss": 357.5
+            }
+          ]
+        },
+        {
+          "yCss": 202.5,
+          "runs": [
+            {
+              "xCss": 36,
+              "widthCss": 3,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 41,
+              "widthCss": 3,
+              "centerCss": 42.5
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 61,
+              "widthCss": 3,
+              "centerCss": 62.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 351,
+              "widthCss": 3,
+              "centerCss": 352.5
+            },
+            {
+              "xCss": 356,
+              "widthCss": 3,
+              "centerCss": 357.5
+            }
+          ]
+        },
+        {
+          "yCss": 252.5,
+          "runs": [
+            {
+              "xCss": 36,
+              "widthCss": 3,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 41,
+              "widthCss": 3,
+              "centerCss": 42.5
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 351,
+              "widthCss": 3,
+              "centerCss": 352.5
+            },
+            {
+              "xCss": 356,
+              "widthCss": 3,
+              "centerCss": 357.5
+            }
+          ]
+        },
+        {
+          "yCss": 302.5,
+          "runs": [
+            {
+              "xCss": 36,
+              "widthCss": 3,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 41,
+              "widthCss": 3,
+              "centerCss": 42.5
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 61,
+              "widthCss": 3,
+              "centerCss": 62.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 351,
+              "widthCss": 3,
+              "centerCss": 352.5
+            },
+            {
+              "xCss": 356,
+              "widthCss": 3,
+              "centerCss": 357.5
+            }
+          ]
+        }
+      ],
+      "reducedMotion": false,
+      "heroAnimation": "hero-enter",
+      "heroAnimationDuration": "0.85s",
+      "heroTransition": "0s",
+      "fonts": [
+        "Instrument Sans Variable",
+        "IBM Plex Mono"
+      ],
+      "scripts": [
+        "/assets/index-DxA60nGm.js"
+      ],
+      "url": "https://spiritatlas-one.vercel.app/",
+      "secondCanvasHash": "be3d233893a84d2210d336763689559ac1bb80e4accdb5b260019b57f41e3922",
+      "settledSeparationMs": 1500,
+      "unchanged": true,
+      "cssGridSample": {
+        "pitchCss": 5,
+        "offsetCss": 2.5,
+        "occupiedCellsHash": "b642b3b52d9769422e9e2db23bbfe52b3499dec18b92f46de6aa52067f6cf2f8"
+      },
+      "held3D": [
+        "/assets/three-BoWlbv93.js"
+      ],
+      "errors": [],
+      "screenshot": "docs/brand-evidence/dpr-motion/390x844-no-preference-dpr1-isolated-artwork.png"
+    },
+    {
+      "case": "390x844-no-preference-dpr2",
+      "capturedAt": "2026-09-13T05:06:29.601Z",
+      "hash": "a0201639fc599234ce39105091b15d88a1880cfd96584b5b31ad5d0df8bfad78",
+      "canvas": {
+        "width": 780,
+        "height": 1772,
+        "cssWidth": 390,
+        "cssHeight": 886.21875,
+        "scale": 2
+      },
+      "alphaPixels": {
+        "full": 696960,
+        "empty": 650810,
+        "partial": 34390
+      },
+      "sampleRows": [
+        {
+          "yCss": 102.5,
+          "runs": [
+            {
+              "xCss": 25.5,
+              "widthCss": 4,
+              "centerCss": 27.5
+            },
+            {
+              "xCss": 30.5,
+              "widthCss": 4,
+              "centerCss": 32.5
+            },
+            {
+              "xCss": 35.5,
+              "widthCss": 4,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 40.5,
+              "widthCss": 3.5,
+              "centerCss": 42.25
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 61,
+              "widthCss": 3,
+              "centerCss": 62.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 350.5,
+              "widthCss": 3.5,
+              "centerCss": 352.25
+            },
+            {
+              "xCss": 355.5,
+              "widthCss": 4,
+              "centerCss": 357.5
+            },
+            {
+              "xCss": 360.5,
+              "widthCss": 4,
+              "centerCss": 362.5
+            },
+            {
+              "xCss": 365.5,
+              "widthCss": 4,
+              "centerCss": 367.5
+            }
+          ]
+        },
+        {
+          "yCss": 152.5,
+          "runs": [
+            {
+              "xCss": 25.5,
+              "widthCss": 4,
+              "centerCss": 27.5
+            },
+            {
+              "xCss": 30.5,
+              "widthCss": 4,
+              "centerCss": 32.5
+            },
+            {
+              "xCss": 35.5,
+              "widthCss": 4,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 40.5,
+              "widthCss": 3.5,
+              "centerCss": 42.25
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 350.5,
+              "widthCss": 3.5,
+              "centerCss": 352.25
+            },
+            {
+              "xCss": 355.5,
+              "widthCss": 4,
+              "centerCss": 357.5
+            },
+            {
+              "xCss": 360.5,
+              "widthCss": 4,
+              "centerCss": 362.5
+            },
+            {
+              "xCss": 365.5,
+              "widthCss": 4,
+              "centerCss": 367.5
+            }
+          ]
+        },
+        {
+          "yCss": 202.5,
+          "runs": [
+            {
+              "xCss": 25.5,
+              "widthCss": 4,
+              "centerCss": 27.5
+            },
+            {
+              "xCss": 30.5,
+              "widthCss": 4,
+              "centerCss": 32.5
+            },
+            {
+              "xCss": 35.5,
+              "widthCss": 4,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 40.5,
+              "widthCss": 3.5,
+              "centerCss": 42.25
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 61,
+              "widthCss": 3,
+              "centerCss": 62.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 350.5,
+              "widthCss": 3.5,
+              "centerCss": 352.25
+            },
+            {
+              "xCss": 355.5,
+              "widthCss": 4,
+              "centerCss": 357.5
+            },
+            {
+              "xCss": 360.5,
+              "widthCss": 4,
+              "centerCss": 362.5
+            },
+            {
+              "xCss": 365.5,
+              "widthCss": 4,
+              "centerCss": 367.5
+            }
+          ]
+        },
+        {
+          "yCss": 252.5,
+          "runs": [
+            {
+              "xCss": 25.5,
+              "widthCss": 4,
+              "centerCss": 27.5
+            },
+            {
+              "xCss": 30.5,
+              "widthCss": 4,
+              "centerCss": 32.5
+            },
+            {
+              "xCss": 35.5,
+              "widthCss": 4,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 40.5,
+              "widthCss": 3.5,
+              "centerCss": 42.25
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 350.5,
+              "widthCss": 3.5,
+              "centerCss": 352.25
+            },
+            {
+              "xCss": 355.5,
+              "widthCss": 4,
+              "centerCss": 357.5
+            },
+            {
+              "xCss": 360.5,
+              "widthCss": 4,
+              "centerCss": 362.5
+            },
+            {
+              "xCss": 365.5,
+              "widthCss": 4,
+              "centerCss": 367.5
+            }
+          ]
+        },
+        {
+          "yCss": 302.5,
+          "runs": [
+            {
+              "xCss": 25.5,
+              "widthCss": 4,
+              "centerCss": 27.5
+            },
+            {
+              "xCss": 30.5,
+              "widthCss": 4,
+              "centerCss": 32.5
+            },
+            {
+              "xCss": 35.5,
+              "widthCss": 4,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 40.5,
+              "widthCss": 3.5,
+              "centerCss": 42.25
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 61,
+              "widthCss": 3,
+              "centerCss": 62.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 350.5,
+              "widthCss": 3.5,
+              "centerCss": 352.25
+            },
+            {
+              "xCss": 355.5,
+              "widthCss": 4,
+              "centerCss": 357.5
+            },
+            {
+              "xCss": 360.5,
+              "widthCss": 4,
+              "centerCss": 362.5
+            },
+            {
+              "xCss": 365.5,
+              "widthCss": 4,
+              "centerCss": 367.5
+            }
+          ]
+        }
+      ],
+      "reducedMotion": false,
+      "heroAnimation": "hero-enter",
+      "heroAnimationDuration": "0.85s",
+      "heroTransition": "0s",
+      "fonts": [
+        "Instrument Sans Variable",
+        "IBM Plex Mono"
+      ],
+      "scripts": [
+        "/assets/index-DxA60nGm.js"
+      ],
+      "url": "https://spiritatlas-one.vercel.app/",
+      "secondCanvasHash": "a0201639fc599234ce39105091b15d88a1880cfd96584b5b31ad5d0df8bfad78",
+      "settledSeparationMs": 1500,
+      "unchanged": true,
+      "cssGridSample": {
+        "pitchCss": 5,
+        "offsetCss": 2.5,
+        "occupiedCellsHash": "b642b3b52d9769422e9e2db23bbfe52b3499dec18b92f46de6aa52067f6cf2f8"
+      },
+      "held3D": [
+        "/assets/three-BoWlbv93.js"
+      ],
+      "errors": [],
+      "screenshot": "docs/brand-evidence/dpr-motion/390x844-no-preference-dpr2-isolated-artwork.png"
+    },
+    {
+      "case": "390x844-reduce-dpr1",
+      "capturedAt": "2026-09-13T05:06:33.259Z",
+      "hash": "be3d233893a84d2210d336763689559ac1bb80e4accdb5b260019b57f41e3922",
+      "canvas": {
+        "width": 390,
+        "height": 886,
+        "cssWidth": 390,
+        "cssHeight": 886.21875,
+        "scale": 1
+      },
+      "alphaPixels": {
+        "full": 170361,
+        "empty": 151991,
+        "partial": 23188
+      },
+      "sampleRows": [
+        {
+          "yCss": 102.5,
+          "runs": [
+            {
+              "xCss": 36,
+              "widthCss": 3,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 41,
+              "widthCss": 3,
+              "centerCss": 42.5
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 61,
+              "widthCss": 3,
+              "centerCss": 62.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 351,
+              "widthCss": 3,
+              "centerCss": 352.5
+            },
+            {
+              "xCss": 356,
+              "widthCss": 3,
+              "centerCss": 357.5
+            }
+          ]
+        },
+        {
+          "yCss": 152.5,
+          "runs": [
+            {
+              "xCss": 36,
+              "widthCss": 3,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 41,
+              "widthCss": 3,
+              "centerCss": 42.5
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 351,
+              "widthCss": 3,
+              "centerCss": 352.5
+            },
+            {
+              "xCss": 356,
+              "widthCss": 3,
+              "centerCss": 357.5
+            }
+          ]
+        },
+        {
+          "yCss": 202.5,
+          "runs": [
+            {
+              "xCss": 36,
+              "widthCss": 3,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 41,
+              "widthCss": 3,
+              "centerCss": 42.5
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 61,
+              "widthCss": 3,
+              "centerCss": 62.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 351,
+              "widthCss": 3,
+              "centerCss": 352.5
+            },
+            {
+              "xCss": 356,
+              "widthCss": 3,
+              "centerCss": 357.5
+            }
+          ]
+        },
+        {
+          "yCss": 252.5,
+          "runs": [
+            {
+              "xCss": 36,
+              "widthCss": 3,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 41,
+              "widthCss": 3,
+              "centerCss": 42.5
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 351,
+              "widthCss": 3,
+              "centerCss": 352.5
+            },
+            {
+              "xCss": 356,
+              "widthCss": 3,
+              "centerCss": 357.5
+            }
+          ]
+        },
+        {
+          "yCss": 302.5,
+          "runs": [
+            {
+              "xCss": 36,
+              "widthCss": 3,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 41,
+              "widthCss": 3,
+              "centerCss": 42.5
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 61,
+              "widthCss": 3,
+              "centerCss": 62.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 351,
+              "widthCss": 3,
+              "centerCss": 352.5
+            },
+            {
+              "xCss": 356,
+              "widthCss": 3,
+              "centerCss": 357.5
+            }
+          ]
+        }
+      ],
+      "reducedMotion": true,
+      "heroAnimation": "none",
+      "heroAnimationDuration": "0s",
+      "heroTransition": "0s",
+      "fonts": [
+        "Instrument Sans Variable",
+        "IBM Plex Mono"
+      ],
+      "scripts": [
+        "/assets/index-DxA60nGm.js"
+      ],
+      "url": "https://spiritatlas-one.vercel.app/",
+      "secondCanvasHash": "be3d233893a84d2210d336763689559ac1bb80e4accdb5b260019b57f41e3922",
+      "settledSeparationMs": 1500,
+      "unchanged": true,
+      "cssGridSample": {
+        "pitchCss": 5,
+        "offsetCss": 2.5,
+        "occupiedCellsHash": "b642b3b52d9769422e9e2db23bbfe52b3499dec18b92f46de6aa52067f6cf2f8"
+      },
+      "held3D": [
+        "/assets/three-BoWlbv93.js"
+      ],
+      "errors": [],
+      "screenshot": "docs/brand-evidence/dpr-motion/390x844-reduce-dpr1-isolated-artwork.png"
+    },
+    {
+      "case": "390x844-reduce-dpr2",
+      "capturedAt": "2026-09-13T05:06:36.896Z",
+      "hash": "a0201639fc599234ce39105091b15d88a1880cfd96584b5b31ad5d0df8bfad78",
+      "canvas": {
+        "width": 780,
+        "height": 1772,
+        "cssWidth": 390,
+        "cssHeight": 886.21875,
+        "scale": 2
+      },
+      "alphaPixels": {
+        "full": 696960,
+        "empty": 650810,
+        "partial": 34390
+      },
+      "sampleRows": [
+        {
+          "yCss": 102.5,
+          "runs": [
+            {
+              "xCss": 25.5,
+              "widthCss": 4,
+              "centerCss": 27.5
+            },
+            {
+              "xCss": 30.5,
+              "widthCss": 4,
+              "centerCss": 32.5
+            },
+            {
+              "xCss": 35.5,
+              "widthCss": 4,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 40.5,
+              "widthCss": 3.5,
+              "centerCss": 42.25
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 61,
+              "widthCss": 3,
+              "centerCss": 62.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 350.5,
+              "widthCss": 3.5,
+              "centerCss": 352.25
+            },
+            {
+              "xCss": 355.5,
+              "widthCss": 4,
+              "centerCss": 357.5
+            },
+            {
+              "xCss": 360.5,
+              "widthCss": 4,
+              "centerCss": 362.5
+            },
+            {
+              "xCss": 365.5,
+              "widthCss": 4,
+              "centerCss": 367.5
+            }
+          ]
+        },
+        {
+          "yCss": 152.5,
+          "runs": [
+            {
+              "xCss": 25.5,
+              "widthCss": 4,
+              "centerCss": 27.5
+            },
+            {
+              "xCss": 30.5,
+              "widthCss": 4,
+              "centerCss": 32.5
+            },
+            {
+              "xCss": 35.5,
+              "widthCss": 4,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 40.5,
+              "widthCss": 3.5,
+              "centerCss": 42.25
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 350.5,
+              "widthCss": 3.5,
+              "centerCss": 352.25
+            },
+            {
+              "xCss": 355.5,
+              "widthCss": 4,
+              "centerCss": 357.5
+            },
+            {
+              "xCss": 360.5,
+              "widthCss": 4,
+              "centerCss": 362.5
+            },
+            {
+              "xCss": 365.5,
+              "widthCss": 4,
+              "centerCss": 367.5
+            }
+          ]
+        },
+        {
+          "yCss": 202.5,
+          "runs": [
+            {
+              "xCss": 25.5,
+              "widthCss": 4,
+              "centerCss": 27.5
+            },
+            {
+              "xCss": 30.5,
+              "widthCss": 4,
+              "centerCss": 32.5
+            },
+            {
+              "xCss": 35.5,
+              "widthCss": 4,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 40.5,
+              "widthCss": 3.5,
+              "centerCss": 42.25
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 61,
+              "widthCss": 3,
+              "centerCss": 62.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 350.5,
+              "widthCss": 3.5,
+              "centerCss": 352.25
+            },
+            {
+              "xCss": 355.5,
+              "widthCss": 4,
+              "centerCss": 357.5
+            },
+            {
+              "xCss": 360.5,
+              "widthCss": 4,
+              "centerCss": 362.5
+            },
+            {
+              "xCss": 365.5,
+              "widthCss": 4,
+              "centerCss": 367.5
+            }
+          ]
+        },
+        {
+          "yCss": 252.5,
+          "runs": [
+            {
+              "xCss": 25.5,
+              "widthCss": 4,
+              "centerCss": 27.5
+            },
+            {
+              "xCss": 30.5,
+              "widthCss": 4,
+              "centerCss": 32.5
+            },
+            {
+              "xCss": 35.5,
+              "widthCss": 4,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 40.5,
+              "widthCss": 3.5,
+              "centerCss": 42.25
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 350.5,
+              "widthCss": 3.5,
+              "centerCss": 352.25
+            },
+            {
+              "xCss": 355.5,
+              "widthCss": 4,
+              "centerCss": 357.5
+            },
+            {
+              "xCss": 360.5,
+              "widthCss": 4,
+              "centerCss": 362.5
+            },
+            {
+              "xCss": 365.5,
+              "widthCss": 4,
+              "centerCss": 367.5
+            }
+          ]
+        },
+        {
+          "yCss": 302.5,
+          "runs": [
+            {
+              "xCss": 25.5,
+              "widthCss": 4,
+              "centerCss": 27.5
+            },
+            {
+              "xCss": 30.5,
+              "widthCss": 4,
+              "centerCss": 32.5
+            },
+            {
+              "xCss": 35.5,
+              "widthCss": 4,
+              "centerCss": 37.5
+            },
+            {
+              "xCss": 40.5,
+              "widthCss": 3.5,
+              "centerCss": 42.25
+            },
+            {
+              "xCss": 51,
+              "widthCss": 3,
+              "centerCss": 52.5
+            },
+            {
+              "xCss": 61,
+              "widthCss": 3,
+              "centerCss": 62.5
+            },
+            {
+              "xCss": 341,
+              "widthCss": 3,
+              "centerCss": 342.5
+            },
+            {
+              "xCss": 350.5,
+              "widthCss": 3.5,
+              "centerCss": 352.25
+            },
+            {
+              "xCss": 355.5,
+              "widthCss": 4,
+              "centerCss": 357.5
+            },
+            {
+              "xCss": 360.5,
+              "widthCss": 4,
+              "centerCss": 362.5
+            },
+            {
+              "xCss": 365.5,
+              "widthCss": 4,
+              "centerCss": 367.5
+            }
+          ]
+        }
+      ],
+      "reducedMotion": true,
+      "heroAnimation": "none",
+      "heroAnimationDuration": "0s",
+      "heroTransition": "0s",
+      "fonts": [
+        "Instrument Sans Variable",
+        "IBM Plex Mono"
+      ],
+      "scripts": [
+        "/assets/index-DxA60nGm.js"
+      ],
+      "url": "https://spiritatlas-one.vercel.app/",
+      "secondCanvasHash": "a0201639fc599234ce39105091b15d88a1880cfd96584b5b31ad5d0df8bfad78",
+      "settledSeparationMs": 1500,
+      "unchanged": true,
+      "cssGridSample": {
+        "pitchCss": 5,
+        "offsetCss": 2.5,
+        "occupiedCellsHash": "b642b3b52d9769422e9e2db23bbfe52b3499dec18b92f46de6aa52067f6cf2f8"
+      },
+      "held3D": [
+        "/assets/three-BoWlbv93.js"
+      ],
+      "errors": [],
+      "screenshot": "docs/brand-evidence/dpr-motion/390x844-reduce-dpr2-isolated-artwork.png"
+    }
+  ],
+  "comparisons": [
+    {
+      "viewport": "1440x1000",
+      "motion": "no-preference",
+      "comparison": "DPR1 vs DPR2 at identical CSS grid cell centers",
+      "cells": 51552,
+      "equal": 51552,
+      "equalFraction": 1
+    },
+    {
+      "viewport": "1440x1000",
+      "motion": "reduce",
+      "comparison": "DPR1 vs DPR2 at identical CSS grid cell centers",
+      "cells": 51552,
+      "equal": 51552,
+      "equalFraction": 1
+    },
+    {
+      "viewport": "390x844",
+      "motion": "no-preference",
+      "comparison": "DPR1 vs DPR2 at identical CSS grid cell centers",
+      "cells": 13806,
+      "equal": 13806,
+      "equalFraction": 1
+    },
+    {
+      "viewport": "390x844",
+      "motion": "reduce",
+      "comparison": "DPR1 vs DPR2 at identical CSS grid cell centers",
+      "cells": 13806,
+      "equal": 13806,
+      "equalFraction": 1
+    },
+    {
+      "viewport": "1440x1000",
+      "dpr": 1,
+      "comparison": "Default vs reduced motion at identical CSS grid cell centers",
+      "cells": 51552,
+      "equal": 51552,
+      "equalFraction": 1
+    },
+    {
+      "viewport": "1440x1000",
+      "dpr": 2,
+      "comparison": "Default vs reduced motion at identical CSS grid cell centers",
+      "cells": 51552,
+      "equal": 51552,
+      "equalFraction": 1
+    },
+    {
+      "viewport": "390x844",
+      "dpr": 1,
+      "comparison": "Default vs reduced motion at identical CSS grid cell centers",
+      "cells": 13806,
+      "equal": 13806,
+      "equalFraction": 1
+    },
+    {
+      "viewport": "390x844",
+      "dpr": 2,
+      "comparison": "Default vs reduced motion at identical CSS grid cell centers",
+      "cells": 13806,
+      "equal": 13806,
+      "equalFraction": 1
+    }
+  ],
+  "passed": true
+}

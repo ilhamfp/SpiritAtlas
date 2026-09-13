@@ -1,0 +1,172 @@
+{
+  "url": "https://spiritatlas-one.vercel.app",
+  "reportedDeploymentId": "dpl_AwYcJx4BAHWSHZ1WBMBaMtqGQ9kf",
+  "reportedCommit": "87c9eca",
+  "startedAt": "2026-09-13T05:23:18.731Z",
+  "browser": "153.0.8010.37",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "freshUnauthenticatedContext": true,
+  "ordinaryClicksOnly": true,
+  "checks": [
+    {
+      "name": "Hero Zoom in",
+      "status": "passed",
+      "before": {
+        "azimuth": -0.08,
+        "elevation": 0.16,
+        "zoom": 1.04,
+        "target": [
+          0,
+          1.07,
+          0
+        ],
+        "position": [
+          -0.5196381429504995,
+          2.553945011782119,
+          6.481613853802569
+        ],
+        "fov": 35
+      },
+      "after": {
+        "azimuth": -0.08,
+        "elevation": 0.16,
+        "zoom": 1.19,
+        "target": [
+          0,
+          1.07,
+          0
+        ],
+        "position": [
+          -0.4541375366962349,
+          2.4765569850868943,
+          5.664603704163591
+        ],
+        "fov": 35
+      }
+    },
+    {
+      "name": "Hero Zoom out restores original camera",
+      "status": "passed",
+      "after": {
+        "azimuth": -0.08,
+        "elevation": 0.16,
+        "zoom": 1.04,
+        "target": [
+          0,
+          1.07,
+          0
+        ],
+        "position": [
+          -0.5196381429504995,
+          2.553945011782119,
+          6.481613853802569
+        ],
+        "fov": 35
+      }
+    },
+    {
+      "name": "Hero left orbit",
+      "status": "passed",
+      "before": {
+        "azimuth": -0.08,
+        "elevation": 0.16,
+        "zoom": 1.04,
+        "target": [
+          0,
+          1.07,
+          0
+        ],
+        "position": [
+          -0.5196381429504995,
+          2.553945011782119,
+          6.481613853802569
+        ],
+        "fov": 35
+      },
+      "after": {
+        "azimuth": -0.47269908169872416,
+        "elevation": 0.16,
+        "zoom": 1.04,
+        "target": [
+          0,
+          1.07,
+          0
+        ],
+        "position": [
+          -2.960489281422425,
+          2.553945011782119,
+          5.789373469037679
+        ],
+        "fov": 35
+      }
+    },
+    {
+      "name": "Hero right orbit restores original camera",
+      "status": "passed",
+      "after": {
+        "azimuth": -0.08000000000000002,
+        "elevation": 0.16,
+        "zoom": 1.04,
+        "target": [
+          0,
+          1.07,
+          0
+        ],
+        "position": [
+          -0.5196381429504996,
+          2.553945011782119,
+          6.481613853802569
+        ],
+        "fov": 35
+      }
+    },
+    {
+      "name": "Anchor: The bars",
+      "status": "passed",
+      "hash": "#the-bars",
+      "scrollY": 998,
+      "sectionTop": 2,
+      "sectionBottom": 965.578125
+    },
+    {
+      "name": "Anchor: Inside the drink",
+      "status": "passed",
+      "hash": "#inside",
+      "scrollY": 1929,
+      "sectionTop": 34.578125,
+      "sectionBottom": 774.078125
+    },
+    {
+      "name": "Anchor: Meet the three bars",
+      "status": "passed",
+      "hash": "#the-bars",
+      "scrollY": 926,
+      "sectionTop": 74,
+      "sectionBottom": 1037.578125
+    },
+    {
+      "name": "Footer Back to Singapore enters atlas",
+      "status": "passed",
+      "url": "https://spiritatlas-one.vercel.app/?bar=bar-bon-funk",
+      "featuredBarsVisible": true
+    },
+    {
+      "name": "Atlas wordmark returns home",
+      "status": "passed",
+      "url": "https://spiritatlas-one.vercel.app/",
+      "headlineVisible": true
+    }
+  ],
+  "runtimeErrors": [],
+  "status": "passed",
+  "initialCookieCount": 0,
+  "homepageStatus": 200,
+  "stylesheets": [
+    "https://spiritatlas-one.vercel.app/assets/index-B5Ac4wBL.css",
+    "https://spiritatlas-one.vercel.app/assets/Viewer-VJZSSb2X.css"
+  ],
+  "finishedAt": "2026-09-13T05:23:29.107Z"
+}

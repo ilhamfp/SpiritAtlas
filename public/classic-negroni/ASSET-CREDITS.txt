@@ -1,0 +1,13 @@
+Classic Negroni — from the user's Negroni — Still Life study.
+
+Original glass, ice, orange geometry, directed fluid simulation and Cycles films
+were authored in the explode-anim project. Orange V2 color and micro-height
+textures were generated for that project. Micro-height is approximate relief.
+
+Studio Small 09 HDRI
+Author: Sergej Majboroda / Poly Haven
+Source: https://polyhaven.com/a/studio_small_09
+License: CC0 1.0 Universal
+https://polyhaven.com/license
+
+See docs/classic-negroni-import.json in the repository for source asset hashes.

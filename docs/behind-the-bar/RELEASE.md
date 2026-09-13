@@ -1,18 +1,15 @@
 # SpiritAtlas production release ownership
 
-## Current owner
+## Ownership transfer
 
-The landing-page task `01a098ee-7e22-79e2-b78c-772904e83ecb` is the single production release owner while its final landing release is being verified. This is the shared main-checkout ledger, acknowledged to the Behind the Bar task `01a09932-8b72-79f2-a6f9-2322aaaa28a5`.
+The landing-page task `01a098ee-7e22-79e2-b78c-772904e83ecb` is finishing the user-requested history cleanup and main-branch push. After it confirms the final main revision to task `01a09932-8b72-79f2-a6f9-2322aaaa28a5`, **Behind the Bar becomes the single production release owner**. The landing task will perform no further production deployments after that confirmation.
 
-Behind the Bar implementation remains isolated in `codex/behind-the-bar-v21`. No feature integration has been supplied or verified, and no Behind the Bar production release is authorized by this ledger yet. A feature preview may be used under its PRD.
+## Integration state
 
-## Landing release in progress
+- Public application URL: https://spiritatlas-one.vercel.app.
+- Remote Classic Negroni revision `6e6effd36ced519a16e647f8feb0435dff1eff88` is preserved alongside the pending landing spacing and link fixes. The merge commit containing this ledger identifies their integrated revision.
+- The previous BBF landing deployment `dpl_AwYcJx4BAHWSHZ1WBMBaMtqGQ9kf` was built from `87c9eca`; production changed to the Classic Negroni feature during its last browser run. Its evidence is historical and does not certify the integrated Classic homepage.
+- Current integration checks and their scope are recorded in `docs/brand-implementation.md` and `docs/brand-evidence/integration-local/`.
+- Behind the Bar remains isolated in `codex/behind-the-bar-v21`; no feature revision has been supplied for integration and no combined feature release has been verified.
 
-- Public production URL: https://spiritatlas-one.vercel.app.
-- Current production deployment: `dpl_DCNxzLauBFGz7q3suqXRUH2EmxnD`.
-- Deployed landing revision: `2d39e07`.
-- Remaining landing refinements: make the hero footer link receive pointer input and compact the mobile loading badge. Final revision, deployment and evidence will replace this in-progress record after their verification.
-- Behind the Bar feature revision: not supplied.
-- Integrated feature/landing revision: not created.
-
-Ownership transfer will be recorded here explicitly and sent to the Behind the Bar task after the landing release finishes. Until then, the landing owner alone updates production.
+The receiving owner must integrate its feature against the confirmed final main revision, preserve the Classic homepage and existing atlas behavior, and verify the combined production release under its PRD. Transfer of ownership does not claim that its feature is ready for production.

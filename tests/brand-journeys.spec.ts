@@ -1,6 +1,6 @@
 import { test, expect, type Page } from '@playwright/test';
 import fs from 'node:fs/promises';
-import { drinkIds, expectNoPageOverflow, positionError, snapshot, viewer, waitExpansion, waitLive } from './helpers';
+import { drinkIds, expectNoPageOverflow, snapshot, waitExpansion, waitLive } from './helpers';
 
 const evidenceDir = `docs/brand-evidence/${process.env.ATLAS_BRAND_RUN || 'local'}`;
 const entries = [
@@ -10,27 +10,28 @@ const entries = [
 ] as const;
 const headline = (page: Page) => page.getByRole('heading', { level: 1, name: 'Singapore’s cocktails. Inside out.' });
 const failures = new WeakMap<Page, string[]>();
+const expectedFailures = new WeakMap<Page, RegExp[]>();
+const classic = (page: Page) => page.getByRole('region', { name: 'Classic Negroni experience', exact: true });
+const film = (page: Page, sequence = 'forward') => classic(page).locator(`video[data-sequence="${sequence}"]`);
+const progress = async (page: Page) => Number(await classic(page).getAttribute('data-progress'));
+const sampleProgress = async (page: Page) => Number(await classic(page).getAttribute('data-sample-progress'));
+const filmTime = (page: Page, sequence = 'forward') => film(page, sequence).evaluate((video: HTMLVideoElement) => video.currentTime);
+const heavyAsset = (url: string) => /\/classic-negroni\/(?:simulation\/|textures\/|[^/]+\.hdr)|\/src\/negroni\/renderer\.js|\/assets\/(?:renderer|three)-[^/]+\.js|\.glb(?:\?|$)/.test(url);
 
-async function expectLoadingStatusContrast(page: Page, selector: string) {
-  const status = page.locator(selector);
-  await expect(status).toBeVisible();
-  const contrast = await status.evaluate(element => {
-    const rgba = (value: string) => value.match(/[\d.]+/g)!.map(Number);
-    const luminance = (rgb: number[]) => rgb.slice(0, 3).map(value => {
-      const linear = value / 255;
-      return linear <= .04045 ? linear / 12.92 : ((linear + .055) / 1.055) ** 2.4;
-    }).reduce((sum, value, index) => sum + value * [.2126, .7152, .0722][index], 0);
-    const background = rgba(getComputedStyle(element).backgroundColor);
-    const ratios = [element, ...element.querySelectorAll('span:not(.loading-orbit)')].filter(label => getComputedStyle(label).display !== 'none').map(label => {
-      const foreground = rgba(getComputedStyle(label).color);
-      const a = luminance(foreground), b = luminance(background);
-      return (Math.max(a, b) + .05) / (Math.min(a, b) + .05);
-    });
-    return { backgroundAlpha: background[3] ?? 1, minimumRatio: Math.min(...ratios) };
-  });
-  expect(contrast.backgroundAlpha, 'Loading feedback has an opaque backdrop over the artwork').toBe(1);
-  expect(contrast.minimumRatio, 'Every loading status label meets normal-text contrast').toBeGreaterThanOrEqual(4.5);
-  return contrast;
+async function waitFilm(page: Page, sequence = 'forward') {
+  await expect(classic(page)).toHaveAttribute('data-mode', 'cinematic');
+  await expect(film(page, sequence)).toBeVisible();
+  await expect.poll(() => film(page, sequence).evaluate((video: HTMLVideoElement) => video.readyState)).toBeGreaterThanOrEqual(2);
+}
+
+async function seekMidpoint(page: Page) {
+  const slider = classic(page).getByRole('slider', { name: 'Deconstruction progress' });
+  await slider.scrollIntoViewIfNeeded();
+  const box = await slider.boundingBox();
+  await slider.click({ position: { x: box!.width / 2, y: box!.height / 2 } });
+  await expect.poll(() => progress(page)).toBeGreaterThan(.48);
+  await expect.poll(() => progress(page)).toBeLessThan(.52);
+  await expect(classic(page)).toHaveAttribute('data-playing', 'false');
 }
 
 test.beforeEach(async ({ page }) => {
@@ -53,23 +54,17 @@ test.beforeEach(async ({ page }) => {
 
 test.afterEach(async ({ page }, testInfo) => {
   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });
-  expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);
+  expect(failures.get(page)?.filter(message => !expectedFailures.get(page)?.some(pattern => pattern.test(message))), 'No unexpected first-party runtime errors or failed required asset requests').toEqual([]);
 });
 
-test('headline, CTA and faithful poster appear while 3D code and models are held; only the hero model is requested initially', async ({ page }, testInfo) => {
-  const codeRequests: string[] = [];
-  const models: string[] = [];
-  let releaseCode!: () => void;
-  const heldCode = new Promise<void>(resolve => { releaseCode = resolve; });
+test('headline, CTA and original Negroni poster remain usable while cinematic files are delayed, without requesting 3D assets', async ({ page }, testInfo) => {
+  const heavyRequests: string[] = [];
+  const movies: string[] = [];
   let release!: () => void;
   const held = new Promise<void>(resolve => { release = resolve; });
-  await page.route(/\/(?:assets\/three-[^/]+\.js|src\/scenes\/Viewer\.tsx)(?:\?.*)?$/, async route => {
-    codeRequests.push(new URL(route.request().url()).pathname);
-    await heldCode;
-    await route.continue();
-  });
-  await page.route('**/*.glb*', async route => {
-    models.push(new URL(route.request().url()).pathname);
+  page.on('request', request => { if (heavyAsset(request.url())) heavyRequests.push(new URL(request.url()).pathname); });
+  await page.route('**/classic-negroni/cinematic/*.mp4*', async route => {
+    movies.push(new URL(route.request().url()).pathname);
     await held;
     await route.continue();
   });
@@ -77,34 +72,33 @@ test('headline, CTA and faithful poster appear while 3D code and models are held
     await page.goto('/', { waitUntil: 'domcontentloaded' });
     await expect(headline(page)).toBeVisible();
     await expect(page.getByRole('link', { name: 'Explore the atlas', exact: true })).toBeVisible();
-    await expect.poll(() => codeRequests.length).toBeGreaterThan(0);
-    await expect(page.locator('.hero-poster img')).toBeVisible();
-    await expect.poll(() => page.locator('.hero-poster img').evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0), { timeout: 10_000 }).toBe(true);
-    const codeLoadingContrast = await expectLoadingStatusContrast(page, '.hero-poster > span');
-    expect(models).toEqual([]);
-    await page.screenshot({ path: `${evidenceDir}/loading-before-3d-code-1440x1000.png` });
-    await testInfo.attach('blocked-3d-code', { body: JSON.stringify({ codeRequests, models, headlineVisible: true, ctaVisible: true, posterDecoded: true }), contentType: 'application/json' });
-    releaseCode();
-    await expect.poll(() => models.length).toBeGreaterThan(0);
-    const poster = page.locator('.sa-hero-viewer img').first();
+    await expect(classic(page).getByRole('heading', { name: 'Classic Negroni', exact: true })).toBeVisible();
+    await expect.poll(() => movies.length).toBeGreaterThan(0);
+    const poster = classic(page).locator('.cn-poster');
     await expect(poster).toBeVisible();
-    await expect.poll(() => poster.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0), { timeout: 10_000 }).toBe(true);
-    const modelLoadingContrast = await expectLoadingStatusContrast(page, '.sa-hero-viewer .viewer-loading');
-    await testInfo.attach('loading-status-contrast', { body: JSON.stringify({ codeLoadingContrast, modelLoadingContrast }), contentType: 'application/json' });
-    await page.waitForTimeout(800);
-    expect(models.length).toBe(1);
-    expect(models[0]).toContain('bbf-negroni');
-    await page.screenshot({ path: `${evidenceDir}/loading-poster-1440x1000.png` });
-    const timings = await page.evaluate(() => ({
-      paint: performance.getEntriesByType('paint').map(entry => ({ name: entry.name, ms: entry.startTime })),
-      fonts: performance.getEntriesByType('resource').filter(entry => /\.woff2/.test(entry.name)).map(entry => entry.name),
-      loadedFonts: [...document.fonts].filter(font => font.status === 'loaded').map(font => font.family),
-    }));
-    await testInfo.attach('initial-loading', { body: JSON.stringify({ models, ...timings }, null, 2), contentType: 'application/json' });
-    expect(timings.fonts.some(url => url.includes('instrument-sans'))).toBe(true);
-    expect(timings.loadedFonts.some(font => font.includes('Instrument Sans'))).toBe(true);
-  } finally { releaseCode(); release(); }
-  await waitLive(page, ['bbf-negroni']);
+    await expect.poll(() => poster.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
+    expect(heavyRequests).toEqual([]);
+    await expect(classic(page).locator('canvas')).toHaveCount(0);
+    // A user can ask to expand before decoding completes without losing the poster.
+    await classic(page).getByRole('button', { name: 'Look inside', exact: true }).click();
+    await expect(poster).toBeVisible();
+    await expect(classic(page)).toHaveAttribute('data-playing', 'false');
+    await expect(classic(page)).toHaveAttribute('data-play-intent', 'true');
+    await page.screenshot({ path: `${evidenceDir}/classic-loading-poster-1440x1000.png` });
+    await testInfo.attach('initial-classic-loading', { body: JSON.stringify({ movies, heavyRequests, posterDecoded: true }), contentType: 'application/json' });
+  } finally { release(); }
+  await waitFilm(page);
+  await expect.poll(() => filmTime(page)).toBeGreaterThan(.15);
+  expect(heavyRequests).toEqual([]);
+  await classic(page).getByRole('button', { name: 'Pause animation', exact: true }).click();
+  const timings = await page.evaluate(() => ({
+    paint: performance.getEntriesByType('paint').map(entry => ({ name: entry.name, ms: entry.startTime })),
+    fonts: performance.getEntriesByType('resource').filter(entry => /\.woff2/.test(entry.name)).map(entry => entry.name),
+    loadedFonts: [...document.fonts].filter(font => font.status === 'loaded').map(font => font.family),
+  }));
+  expect(timings.fonts.some(url => url.includes('instrument-sans'))).toBe(true);
+  expect(timings.loadedFonts.some(font => font.includes('Instrument Sans'))).toBe(true);
+  await testInfo.attach('initial-font-loading', { body: JSON.stringify(timings), contentType: 'application/json' });
 });
 
 for (const viewport of [{ width: 1440, height: 1000 }, { width: 768, height: 1024 }, { width: 390, height: 844 }]) {
@@ -113,8 +107,14 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 768, height: 102
     await page.goto('/');
     await expect(headline(page)).toBeVisible();
     await page.evaluate(() => document.fonts.ready);
-    await waitLive(page, ['bbf-negroni']);
+    await waitFilm(page);
     await expectNoPageOverflow(page);
+    const stage = await classic(page).locator('.cn-stage').boundingBox();
+    expect(stage!.width).toBeGreaterThan(230);
+    expect(Math.abs(stage!.width - stage!.height)).toBeLessThan(2);
+    expect(stage!.x).toBeGreaterThanOrEqual(0);
+    expect(stage!.x + stage!.width).toBeLessThanOrEqual(viewport.width + 1);
+    expect(await film(page).evaluate(video => getComputedStyle(video).objectFit)).toBe('contain');
     await expect(page.getByRole('link', { name: 'Explore the atlas', exact: true })).toBeInViewport();
     const contrasts = await page.evaluate(() => {
       const rgba = (value: string) => value.match(/[\d.]+/g)!.map(Number);
@@ -189,33 +189,104 @@ test('keyboard CTA enters atlas and each featured bar opens the correct working 
   }
 });
 
-test('featured live drink expands and collapses real parts and supports visible, keyboard and pointer orbit', async ({ page }, testInfo) => {
+test('original cinematic frames advance, pause, reverse at the same pose, and scrub with visible controls', async ({ page }, testInfo) => {
   await page.goto('/');
-  await waitLive(page, ['bbf-negroni']);
-  const assembled = await snapshot(page, 'bbf-negroni');
-  await page.getByRole('button', { name: 'Look inside', exact: true }).click();
-  await waitExpansion(page, ['bbf-negroni'], 1);
-  expect(positionError(assembled, await snapshot(page, 'bbf-negroni'))).toBeGreaterThan(.02);
-  await page.screenshot({ path: `${evidenceDir}/hero-expanded-1440x1000.png` });
-  await page.getByRole('button', { name: 'Bring it together', exact: true }).click();
-  await waitExpansion(page, ['bbf-negroni'], 0);
-  expect(positionError(assembled, await snapshot(page, 'bbf-negroni'))).toBeLessThan(.002);
-  await page.getByRole('button', { name: 'Rotate featured cocktail right', exact: true }).click();
-  await expect.poll(async () => Math.abs((await snapshot(page, 'bbf-negroni')).camera.azimuth - assembled.camera.azimuth)).toBeGreaterThan(.2);
-  const stage = viewer(page, 'bbf-negroni');
-  const beforeKeyboard = await snapshot(page, 'bbf-negroni');
-  await stage.focus();
-  await stage.press('ArrowRight');
-  await expect.poll(async () => Math.abs((await snapshot(page, 'bbf-negroni')).camera.azimuth - beforeKeyboard.camera.azimuth)).toBeGreaterThan(.05);
-  const beforePointer = await snapshot(page, 'bbf-negroni');
-  const box = await stage.boundingBox();
-  await page.mouse.move(box!.x + box!.width * .6, box!.y + box!.height * .5);
-  await page.mouse.down();
-  await page.mouse.move(box!.x + box!.width * .6 - 110, box!.y + box!.height * .5 + 10, { steps: 12 });
-  await page.mouse.up();
-  await expect.poll(async () => Math.abs((await snapshot(page, 'bbf-negroni')).camera.azimuth - beforePointer.camera.azimuth)).toBeGreaterThan(.1);
-  expect((await snapshot(page, 'bbf-negroni')).e).toBeLessThan(.015);
-  await testInfo.attach('hero-rendered-motion', { body: JSON.stringify({ assembled, final: await snapshot(page, 'bbf-negroni') }), contentType: 'application/json' });
+  await waitFilm(page);
+  const hero = classic(page);
+  await hero.getByRole('button', { name: 'Look inside', exact: true }).click();
+  await expect(hero).toHaveAttribute('data-playing', 'true');
+  await expect.poll(() => filmTime(page)).toBeGreaterThan(.8);
+  expect(await film(page).evaluate((video: HTMLVideoElement) => video.getVideoPlaybackQuality().totalVideoFrames)).toBeGreaterThan(5);
+  await hero.getByRole('button', { name: 'Pause animation', exact: true }).click();
+  const paused = await filmTime(page);
+  await page.waitForTimeout(300);
+  expect(await filmTime(page)).toBeCloseTo(paused, 2);
+  expect(await film(page).evaluate((video: HTMLVideoElement) => video.paused)).toBe(true);
+  await hero.getByRole('button', { name: 'Play animation', exact: true }).click();
+  await expect.poll(() => filmTime(page)).toBeGreaterThan(paused + .3);
+  const beforeReverse = await progress(page);
+  await hero.getByRole('button', { name: 'Bring it together', exact: true }).click();
+  await waitFilm(page, 'reverse');
+  await expect(hero).toHaveAttribute('data-direction', '-1');
+  expect(Math.abs(await progress(page) - beforeReverse)).toBeLessThan(.1);
+  await expect.poll(() => progress(page)).toBeLessThan(beforeReverse - .05);
+  await expect(hero).toHaveAttribute('data-playing', 'false');
+  expect(await progress(page)).toBe(0);
+  await seekMidpoint(page);
+  await waitFilm(page);
+  expect(await filmTime(page)).toBeCloseTo(3.6, 1);
+  await hero.getByRole('button', { name: 'Playback speed: 1 times. Change speed', exact: true }).click();
+  expect(await film(page).evaluate((video: HTMLVideoElement) => video.playbackRate)).toBe(.5);
+  await expect(hero.getByRole('button', { name: 'Playback speed: 0.5 times. Change speed', exact: true })).toBeVisible();
+  await hero.locator('.cn-stage').focus();
+  await hero.locator('.cn-stage').press('Space');
+  await expect(hero).toHaveAttribute('data-playing', 'true');
+  await hero.locator('.cn-stage').press('Space');
+  await expect(hero).toHaveAttribute('data-playing', 'false');
+  await page.screenshot({ path: `${evidenceDir}/classic-scrubbed-1440x1000.png` });
+  await testInfo.attach('cinematic-playback', { body: JSON.stringify({ paused, beforeReverse, scrubbed: await progress(page) }), contentType: 'application/json' });
+});
+
+test('expanded film circulates continuously, pauses its actual frame and reassembles from the visible idle pose', async ({ page }, testInfo) => {
+  await page.goto('/');
+  await waitFilm(page);
+  const hero = classic(page);
+  await hero.getByRole('button', { name: 'Look inside', exact: true }).click();
+  await expect(hero).toHaveAttribute('data-looping', 'true');
+  await waitFilm(page, 'idle');
+  await expect.poll(() => filmTime(page, 'idle')).toBeGreaterThan(.25);
+  expect(await film(page, 'idle').evaluate((video: HTMLVideoElement) => video.loop && !video.paused)).toBe(true);
+  await hero.getByRole('button', { name: 'Pause animation', exact: true }).click();
+  const idleTime = await filmTime(page, 'idle');
+  const visiblePose = await sampleProgress(page);
+  await page.waitForTimeout(350);
+  expect(await filmTime(page, 'idle')).toBeCloseTo(idleTime, 2);
+  expect(await sampleProgress(page)).toBeCloseTo(visiblePose, 4);
+  await page.screenshot({ path: `${evidenceDir}/classic-expanded-1440x1000.png` });
+  await hero.getByRole('button', { name: 'Bring it together', exact: true }).click();
+  await waitFilm(page, 'reverse');
+  expect(Math.abs(await progress(page) - visiblePose)).toBeLessThan(.08);
+  await expect.poll(() => progress(page)).toBeLessThan(visiblePose - .08);
+  await expect(hero).toHaveAttribute('data-playing', 'false');
+  await expect(hero).toHaveAttribute('data-progress', '0.00000');
+  await expect(hero.getByRole('button', { name: 'Look inside', exact: true })).toBeVisible();
+  await testInfo.attach('idle-to-reverse-continuity', { body: JSON.stringify({ idleTime, visiblePose, reassembled: await progress(page) }), contentType: 'application/json' });
+});
+
+test('Explore 3D loads the original fluid scene on demand and preserves the selected pose when switching modes', async ({ page }, testInfo) => {
+  const heavyRequests: string[] = [];
+  page.on('request', request => { if (heavyAsset(request.url())) heavyRequests.push(new URL(request.url()).pathname); });
+  await page.goto('/');
+  await waitFilm(page);
+  await seekMidpoint(page);
+  const selectedPose = await progress(page);
+  expect(heavyRequests).toEqual([]);
+  const hero = classic(page);
+  await hero.getByRole('button', { name: 'Explore 3D', exact: true }).click();
+  await expect(hero.getByRole('button', { name: 'Explore 3D', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  const canvas = hero.getByRole('img', { name: 'Interactive classic Negroni', exact: true });
+  await expect(canvas).toBeVisible();
+  await expect.poll(async () => Number(await canvas.getAttribute('data-rendered-frames'))).toBeGreaterThan(0);
+  await expect.poll(async () => Number(await canvas.getAttribute('data-progress'))).toBeCloseTo(selectedPose, 3);
+  expect(heavyRequests.some(url => url.includes('/simulation/negroni.bin'))).toBe(true);
+  expect(heavyRequests.some(url => url.includes('bbf-negroni'))).toBe(false);
+  expect(await film(page).evaluate((video: HTMLVideoElement) => video.paused)).toBe(true);
+  const beforeOrbit = await canvas.screenshot();
+  await hero.getByRole('button', { name: 'Rotate Negroni right', exact: true }).click();
+  await expect.poll(async () => beforeOrbit.equals(await canvas.screenshot())).toBe(false);
+  await hero.getByRole('button', { name: 'Cinematic', exact: true }).click();
+  await waitFilm(page);
+  expect(await progress(page)).toBeCloseTo(selectedPose, 3);
+  expect(await filmTime(page)).toBeCloseTo(selectedPose * 7.2, 1);
+  await expect(canvas).toBeHidden();
+  await hero.getByRole('button', { name: 'Explore 3D', exact: true }).click();
+  await expect(canvas).toBeVisible();
+  expect(await progress(page)).toBeCloseTo(selectedPose, 3);
+  await hero.getByRole('button', { name: 'Play animation', exact: true }).click();
+  await expect.poll(async () => Number(await canvas.getAttribute('data-progress'))).toBeGreaterThan(selectedPose + .025);
+  await hero.getByRole('button', { name: 'Pause animation', exact: true }).click();
+  await page.screenshot({ path: `${evidenceDir}/classic-live-3d-1440x1000.png` });
+  await testInfo.attach('classic-live-scene', { body: JSON.stringify({ selectedPose, finalPose: await progress(page), heavyRequests }), contentType: 'application/json' });
 });
 
 test('ingredient entry restores expansion and the comparison entry preserves synchronized and independent rotation', async ({ page }, testInfo) => {
@@ -270,57 +341,68 @@ test('direct atlas and all Negroni routes resolve and survive refresh', async ({
   }
 });
 
-test('WebGL unavailable offers informative fallback without blocking landing and ingredient entry', async ({ page }) => {
+test('WebGL unavailable restores the cinematic film without blocking the landing or ingredient entry', async ({ page }) => {
+  // THREE logs its intentional context-creation failure before throwing. All
+  // other runtime and network errors remain fatal and are attached as evidence.
+  expectedFailures.set(page, [/THREE\.WebGLRenderer: Error creating WebGL context\./]);
   await page.addInitScript(() => {
     const getContext = HTMLCanvasElement.prototype.getContext;
-    HTMLCanvasElement.prototype.getContext = function (kind: string, ...args: unknown[]) {
+    HTMLCanvasElement.prototype.getContext = function (this: HTMLCanvasElement, kind: string, ...args: unknown[]) {
       if (kind === 'webgl' || kind === 'webgl2' || kind === 'experimental-webgl') return null;
       return getContext.apply(this, [kind, ...args] as Parameters<typeof getContext>);
     } as typeof getContext;
   });
   await page.goto('/');
   await expect(headline(page)).toBeVisible();
-  await expect(page.getByText('Interactive 3D is unavailable in this browser.', { exact: true })).toBeVisible();
-  await expect(page.getByRole('button', { name: 'Rotate featured cocktail left', exact: true })).toBeDisabled();
-  await expect(page.getByRole('button', { name: 'Rotate featured cocktail right', exact: true })).toBeDisabled();
-  await page.getByRole('button', { name: 'Explore ingredients', exact: true }).click();
-  await expect(page).toHaveURL(/drink=bbf-negroni&expand=1/);
+  await waitFilm(page);
+  await seekMidpoint(page);
+  const selectedPose = await progress(page);
+  const hero = classic(page);
+  await hero.getByRole('button', { name: 'Explore 3D', exact: true }).click();
+  await expect(hero.getByText('3D view is unavailable on this device. Cinematic view restored.', { exact: true })).toBeVisible();
+  await waitFilm(page);
+  await expect(hero.getByRole('button', { name: 'Cinematic', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  expect(await progress(page)).toBeCloseTo(selectedPose, 3);
+  await hero.getByRole('button', { name: 'Play animation', exact: true }).click();
+  await expect.poll(() => filmTime(page)).toBeGreaterThan(selectedPose * 7.2 + .2);
+  await page.getByRole('link', { name: 'Explore ingredients', exact: true }).click();
+  await expect(page).toHaveURL(/drink=ichigo-negroni&expand=1/);
   await expect(page.getByText('Interactive 3D is unavailable in this browser.', { exact: true })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Inside the drink', exact: true })).toBeVisible();
 });
 
 test.describe('phone touch and reduced motion', () => {
   test.use({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true, reducedMotion: 'reduce' });
-  test('touch orbit, visible ingredient controls and stable reduced-motion presentation', async ({ page }, testInfo) => {
+  test('touch controls choose stable cinematic endpoints and explicit playback does not start an idle loop', async ({ page }, testInfo) => {
     await page.goto('/');
-    await waitLive(page, ['bbf-negroni']);
+    await waitFilm(page);
     expect(await page.locator('.sa-hero-copy').evaluate(element => getComputedStyle(element).animationName)).toBe('none');
     expect(await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior)).toBe('auto');
     await expectNoPageOverflow(page);
-    const stage = viewer(page, 'bbf-negroni');
-    await stage.scrollIntoViewIfNeeded();
-    const before = await snapshot(page, 'bbf-negroni');
-    const box = await stage.boundingBox();
-    const x = box!.x + box!.width * .7;
-    const y = box!.y + box!.height * .5;
-    const client = await page.context().newCDPSession(page);
-    await client.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x, y }] });
-    for (let i = 1; i <= 12; i++) await client.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: x - i * 8, y }] });
-    await client.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
-    await expect.poll(async () => Math.abs((await snapshot(page, 'bbf-negroni')).camera.azimuth - before.camera.azimuth)).toBeGreaterThan(.15);
-    await page.getByRole('button', { name: 'Look inside', exact: true }).tap();
-    await waitExpansion(page, ['bbf-negroni'], 1);
-    await page.getByRole('button', { name: 'Bring it together', exact: true }).tap();
-    await waitExpansion(page, ['bbf-negroni'], 0);
-    const after = await snapshot(page, 'bbf-negroni');
+    const hero = classic(page);
+    await expect(hero).toHaveAttribute('data-playing', 'false');
+    await hero.getByRole('button', { name: 'Look inside', exact: true }).tap();
+    await expect(hero).toHaveAttribute('data-progress', '1.00000');
+    await expect(hero).toHaveAttribute('data-looping', 'false');
+    await waitFilm(page);
+    const still = await filmTime(page);
     await page.waitForTimeout(350);
-    expect(positionError(after, await snapshot(page, 'bbf-negroni'))).toBeLessThan(.002);
+    expect(await filmTime(page)).toBeCloseTo(still, 2);
+    expect(await film(page).evaluate((video: HTMLVideoElement) => video.paused)).toBe(true);
+    await hero.getByRole('button', { name: 'Bring it together', exact: true }).tap();
+    await expect(hero).toHaveAttribute('data-progress', '0.00000');
+    await expect(hero).toHaveAttribute('data-playing', 'false');
+    await hero.getByRole('button', { name: 'Play animation', exact: true }).tap();
+    await expect(hero).toHaveAttribute('data-playing', 'true');
+    await expect.poll(() => progress(page)).toBeGreaterThan(.1);
+    await expect(hero).toHaveAttribute('data-progress', '1.00000');
+    await expect(hero).toHaveAttribute('data-playing', 'false');
+    await expect(hero).toHaveAttribute('data-looping', 'false');
+    await page.screenshot({ path: `${evidenceDir}/classic-reduced-motion-390x844.png` });
     await page.getByRole('link', { name: 'Explore the atlas', exact: true }).tap();
     await expect(page.getByRole('region', { name: 'Featured bars' })).toBeVisible();
     await expect(page.locator('.atlas-intro h1')).toHaveText('Three bars. Three takes on the Negroni.');
-    await expect(page.locator('.map-loading')).toHaveCount(0, { timeout: 20_000 });
     await expectNoPageOverflow(page);
-    await page.screenshot({ path: `${evidenceDir}/atlas-mobile-390x844.png` });
-    await testInfo.attach('touch-reduced-motion', { body: JSON.stringify({ before, after }), contentType: 'application/json' });
+    await testInfo.attach('touch-reduced-motion', { body: JSON.stringify({ endpointSeconds: still, explicitPlaybackCompleted: true }), contentType: 'application/json' });
   });
 });

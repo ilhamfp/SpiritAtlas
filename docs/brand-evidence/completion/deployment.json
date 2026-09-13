@@ -1,0 +1,175 @@
+{
+  "date": "2026-09-13",
+  "applicationCommit": "87c9eca5b742068aca5106980ced49ee031068f6",
+  "publicUrl": "https://spiritatlas-one.vercel.app",
+  "deploymentUrl": "https://spiritatlas-iqc8ua9nf-ilham-firdausi-putras-projects.vercel.app",
+  "deploymentId": "dpl_AwYcJx4BAHWSHZ1WBMBaMtqGQ9kf",
+  "build": {
+    "command": "npm run build",
+    "includes": "TypeScript noEmit and Vite production build",
+    "localExitCode": 0,
+    "vercelState": "READY",
+    "lintScript": null,
+    "advisory": "Lazy Three.js and map chunks exceed the configured bundle size advisory."
+  },
+  "applicationFiles": {
+    "src/Landing.tsx": "23db0d35f1883a79c0fcf20079ee13bafe8d056314e8e1e474b4f72a8c4b20a7",
+    "src/App.tsx": "08728df445b2bf5b2e3ce29a06e63e2848cb91b1f759eaa2629031f6d444dfdc",
+    "src/brand.css": "1d906de5f8024766d614d408d58dc0c351b9b21e40e78863280d12dbf87fa2f5",
+    "src/scenes/Viewer.tsx": "51826de39eb9562d08c1b6bb5a30d328c483081dd7a7f31115668f90e374be01",
+    "src/scenes/viewer.css": "db9915fa95a474f1de75fcfcac6d5b12d77d0ed6a7c845b9fb696d8933630f70",
+    "src/components/Marble.tsx": "9939c61c99e8c3cb6bf9c53e2c860c4f0f3c8e3baa7ed9bc5a64755c4442a544",
+    "vite.config.ts": "16ba6f5e094ad7d37c176681060d2de28865e66899f4801b61b03855364e455e",
+    "index.html": "ec1c2b636667f75a1aafe30c1730ace1f5a0dfa6e0a15555dc9e60055261e68a",
+    "package-lock.json": "3cf4968dbba3bc8174ce3efb49a7c41e991d6fc617367cff4a10b20c5d166dd4"
+  },
+  "buildAssets": {
+    "assets/App-C6czc-3z.css": "2a126571595df75730cbb3074d1823490f50e5125c6fff75cdb06779b57b091b",
+    "assets/App-CNqJ4F8m.js": "2b7c4c0f7764962a61009d88df93195688341b4633594af0dea8f98d6812f39d",
+    "assets/Viewer-CxWPv7EB.js": "94ab27b212e119f07618bbe35512d59018902255666e0d2bdbed96cfd914221b",
+    "assets/Viewer-VJZSSb2X.css": "1e9ee07a3bce652bbc9f2d14760a4a43740313214908880f79a15ee9e531a182",
+    "assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff": "328d50b6ece9ca25c46eea3e885ba497f6237f2fb84ef7b92f88e14a1a25e381",
+    "assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+    "assets/index-9bog6Rca.js": "d8f15da62587f2a4d52470249dab73f2cd0f0f9a130ef8e719bd55f34b0db434",
+    "assets/index-B5Ac4wBL.css": "e1017faaaf3974e1ba121bfbf45a947c8af544e23f7d08ff9706d55ff03bb15f",
+    "assets/ingredientEvidence-CPeu9ic6.js": "0a972388710df6c0a1ae742a57dfb8a4d08ac5026c6a3574ab9dd13aa3ddb5e9",
+    "assets/instrument-sans-latin-ext-wght-normal-B5bTHO_g.woff2": "c4fcfea41f2c1cfeea9211fa43679845454a1d0e0d7e95e069c7e73c4ae302d2",
+    "assets/instrument-sans-latin-wght-normal-BbzFLZTg.woff2": "2ee17598a98d8a59e4df8152d015bec9ab8e4d5672cc0ab42bef806b568e3971",
+    "assets/map--FHYeYtF.js": "f4f839677e9ad7ab5d99525ff62118af02a8e362b81f4d021bc1935378cb7084",
+    "assets/map-CKRTiAqP.css": "a44e9c8519685a73587bcb465401eade1c3491d382c22243373c1c42b766f186",
+    "assets/maplibre-gl-worker-DsvDs_fr.js": "291cdeadf73d0eec1467427d6c43267ae3b440d7b9dd6c60312358253d5fb93d",
+    "assets/react-CtYP0wlk.js": "242d1dd4bcb0a094d3bdf21b7f66c22774c9d66ff781893a4287be7f83c82347",
+    "assets/rolldown-runtime-hePW80VL.js": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021",
+    "assets/three-BoWlbv93.js": "87ab6a77dacc9ff08a47bf4aa6424df60ae0f26d2a47d800d157427d81cba373",
+    "index.html": "b76c9e6e5161687537ab40bd7c549a729abadf2487bb24420b6d4b31b07fa3b6"
+  },
+  "publicAssetChecks": [
+    {
+      "path": "assets/App-C6czc-3z.css",
+      "status": 200,
+      "bytes": 64651,
+      "sha256": "2a126571595df75730cbb3074d1823490f50e5125c6fff75cdb06779b57b091b",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/App-CNqJ4F8m.js",
+      "status": 404,
+      "bytes": 79,
+      "sha256": "7c13506818cad53836fa0efdeace138f82ea68d8a4e2ed12f8c8dda02f829068",
+      "matchesLocalBuild": false
+    },
+    {
+      "path": "assets/Viewer-CxWPv7EB.js",
+      "status": 404,
+      "bytes": 79,
+      "sha256": "faef02419d31857e13033a8508285def914bb8ee50538e4d8d5ecbb5d0c4af10",
+      "matchesLocalBuild": false
+    },
+    {
+      "path": "assets/Viewer-VJZSSb2X.css",
+      "status": 404,
+      "bytes": 79,
+      "sha256": "277dbf0f04d575d10d428902e8e5f96e54166a43369e7940085cd3d7bfba2046",
+      "matchesLocalBuild": false
+    },
+    {
+      "path": "assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff",
+      "status": 200,
+      "bytes": 13144,
+      "sha256": "328d50b6ece9ca25c46eea3e885ba497f6237f2fb84ef7b92f88e14a1a25e381",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+      "status": 200,
+      "bytes": 14708,
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/index-9bog6Rca.js",
+      "status": 404,
+      "bytes": 79,
+      "sha256": "c3f98913bfbada264d014d2004c387d9904cfd89265d6381ae28597635905980",
+      "matchesLocalBuild": false
+    },
+    {
+      "path": "assets/index-B5Ac4wBL.css",
+      "status": 404,
+      "bytes": 79,
+      "sha256": "5c1461e7e352b45eaea633b6f837a695fe27724da78c51fbc1ef051c71872a38",
+      "matchesLocalBuild": false
+    },
+    {
+      "path": "assets/ingredientEvidence-CPeu9ic6.js",
+      "status": 404,
+      "bytes": 79,
+      "sha256": "0c4daeeae91e338e01475e5d1d4e89e00a4b8a81baeeeb1050c195c6e7f978d3",
+      "matchesLocalBuild": false
+    },
+    {
+      "path": "assets/instrument-sans-latin-ext-wght-normal-B5bTHO_g.woff2",
+      "status": 200,
+      "bytes": 11144,
+      "sha256": "c4fcfea41f2c1cfeea9211fa43679845454a1d0e0d7e95e069c7e73c4ae302d2",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/instrument-sans-latin-wght-normal-BbzFLZTg.woff2",
+      "status": 200,
+      "bytes": 30092,
+      "sha256": "2ee17598a98d8a59e4df8152d015bec9ab8e4d5672cc0ab42bef806b568e3971",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/map--FHYeYtF.js",
+      "status": 200,
+      "bytes": 1057883,
+      "sha256": "f4f839677e9ad7ab5d99525ff62118af02a8e362b81f4d021bc1935378cb7084",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/map-CKRTiAqP.css",
+      "status": 200,
+      "bytes": 82869,
+      "sha256": "a44e9c8519685a73587bcb465401eade1c3491d382c22243373c1c42b766f186",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/maplibre-gl-worker-DsvDs_fr.js",
+      "status": 200,
+      "bytes": 506723,
+      "sha256": "291cdeadf73d0eec1467427d6c43267ae3b440d7b9dd6c60312358253d5fb93d",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/react-CtYP0wlk.js",
+      "status": 200,
+      "bytes": 189604,
+      "sha256": "242d1dd4bcb0a094d3bdf21b7f66c22774c9d66ff781893a4287be7f83c82347",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/rolldown-runtime-hePW80VL.js",
+      "status": 200,
+      "bytes": 716,
+      "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/three-BoWlbv93.js",
+      "status": 404,
+      "bytes": 79,
+      "sha256": "55ba95e3603438fad996a2384d85bdecf2f74850285037e863e4fa365dfbd721",
+      "matchesLocalBuild": false
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 1479,
+      "sha256": "6deb7414d249d705fd330688b9bf9d233873e51fb11cfafffcfa234881b046ed",
+      "matchesLocalBuild": false
+    }
+  ],
+  "publicBuildMatchesLocal": false
+}

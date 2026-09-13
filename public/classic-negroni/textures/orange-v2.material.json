@@ -1,0 +1,42 @@
+{
+  "name": "Fresh Valencia orange v2",
+  "generatedWith": "Built-in imagegen",
+  "assets": [
+    {
+      "file": "/classic-negroni/textures/orange-cross-section-v2.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2389378,
+      "sha256": "094bc57032d3d0155d7b35651c8451bc6f9bfca0ecbd4104e0bc058beb0e2d41"
+    },
+    {
+      "file": "/classic-negroni/textures/orange-microheight-v2.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2345387,
+      "sha256": "e6ef6b577cc171b94f90b22339f71676edc7419507b6e6c1528d219fd44f9b3d"
+    }
+  ],
+  "baseColor": {
+    "url": "/classic-negroni/textures/orange-cross-section-v2.png",
+    "colorSpace": "sRGB"
+  },
+  "microHeight": {
+    "url": "/classic-negroni/textures/orange-microheight-v2.png",
+    "colorSpace": "Non-Color",
+    "usage": "Subtle bump only; generated approximate surface relief, not calibrated displacement"
+  },
+  "uv": "Centered half-wheel cut face; circular UV radius 0.481 keeps the sampled rim inside the orange texture.",
+  "integrationStatus": "Applied to the live Three.js model, packed Blender scene, and re-rendered 60 fps forward, reverse, and continuous-liquid cinematic videos.",
+  "promptFiles": [
+    "artifacts/orange-v2/prompt.txt",
+    "artifacts/orange-v2/height-prompt.txt"
+  ],
+  "material": {
+    "uvRadius": 0.481,
+    "bumpScale": 0.0014,
+    "roughness": 0.34,
+    "clearcoat": 0.28,
+    "clearcoatRoughness": 0.2
+  }
+}

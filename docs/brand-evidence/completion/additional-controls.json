@@ -1,0 +1,209 @@
+{
+  "url": "https://spiritatlas-one.vercel.app",
+  "startedAt": "2026-09-13T05:15:39.457Z",
+  "browser": "153.0.8010.37",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "freshUnauthenticatedContext": true,
+  "checks": [
+    {
+      "name": "Hero Zoom in",
+      "status": "passed",
+      "before": {
+        "azimuth": -0.08,
+        "elevation": 0.16,
+        "zoom": 1.04,
+        "target": [
+          0,
+          1.07,
+          0
+        ],
+        "position": [
+          -0.5196381429504995,
+          2.553945011782119,
+          6.481613853802569
+        ],
+        "fov": 35
+      },
+      "after": {
+        "azimuth": -0.08,
+        "elevation": 0.16,
+        "zoom": 1.19,
+        "target": [
+          0,
+          1.07,
+          0
+        ],
+        "position": [
+          -0.4541375366962349,
+          2.4765569850868943,
+          5.664603704163591
+        ],
+        "fov": 35
+      }
+    },
+    {
+      "name": "Hero Zoom out restores original camera",
+      "status": "passed",
+      "after": {
+        "azimuth": -0.08,
+        "elevation": 0.16,
+        "zoom": 1.04,
+        "target": [
+          0,
+          1.07,
+          0
+        ],
+        "position": [
+          -0.5196381429504995,
+          2.553945011782119,
+          6.481613853802569
+        ],
+        "fov": 35
+      }
+    },
+    {
+      "name": "Hero left orbit",
+      "status": "passed",
+      "before": {
+        "azimuth": -0.08,
+        "elevation": 0.16,
+        "zoom": 1.04,
+        "target": [
+          0,
+          1.07,
+          0
+        ],
+        "position": [
+          -0.5196381429504995,
+          2.553945011782119,
+          6.481613853802569
+        ],
+        "fov": 35
+      },
+      "after": {
+        "azimuth": -0.47269908169872416,
+        "elevation": 0.16,
+        "zoom": 1.04,
+        "target": [
+          0,
+          1.07,
+          0
+        ],
+        "position": [
+          -2.960489281422425,
+          2.553945011782119,
+          5.789373469037679
+        ],
+        "fov": 35
+      }
+    },
+    {
+      "name": "Hero right orbit restores original camera",
+      "status": "passed",
+      "after": {
+        "azimuth": -0.08000000000000002,
+        "elevation": 0.16,
+        "zoom": 1.04,
+        "target": [
+          0,
+          1.07,
+          0
+        ],
+        "position": [
+          -0.5196381429504996,
+          2.553945011782119,
+          6.481613853802569
+        ],
+        "fov": 35
+      }
+    },
+    {
+      "name": "Anchor: The bars",
+      "status": "passed",
+      "hash": "#the-bars",
+      "scrollY": 419,
+      "sectionTop": 581,
+      "sectionBottom": 1544.578125
+    },
+    {
+      "name": "Anchor: Inside the drink",
+      "status": "passed",
+      "hash": "#inside",
+      "scrollY": 1301,
+      "sectionTop": 662.578125,
+      "sectionBottom": 1402.078125
+    },
+    {
+      "name": "Anchor: Meet the three bars",
+      "status": "failed",
+      "error": "TimeoutError: locator.click: Timeout 25000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Meet the three bars', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <a href=\"#the-bars\">…</a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is not stable\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is not stable\u001b[22m\n\u001b[2m  45 × retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"sa-hero-stage \">…</div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "name": "Footer Back to Singapore enters atlas",
+      "status": "passed",
+      "url": "https://spiritatlas-one.vercel.app/?bar=bar-bon-funk",
+      "featuredBarsVisible": true
+    },
+    {
+      "name": "Atlas wordmark returns home",
+      "status": "passed",
+      "url": "https://spiritatlas-one.vercel.app/",
+      "headlineVisible": true
+    }
+  ],
+  "runtimeErrors": [],
+  "status": "failed",
+  "initialCookieCount": 0,
+  "homepageStatus": 200,
+  "finishedAt": "2026-09-13T05:16:15.285Z",
+  "meetLinkStableTopHitTest": {
+    "scrollY": 0,
+    "rect": {
+      "x": 1212.25,
+      "y": 926,
+      "width": 155.75,
+      "height": 44
+    },
+    "hitStack": [
+      {
+        "tag": "DIV",
+        "class": "sa-hero-stage ",
+        "text": "1.2922° N / 103.8393° E1Orange garnish2Orange zest oils · estimated3Blended vermouths4Camp"
+      },
+      {
+        "tag": "A",
+        "class": "",
+        "text": "Meet the three bars"
+      },
+      {
+        "tag": "DIV",
+        "class": "sa-hero-foot",
+        "text": "SINGAPORE, THROUGH A DIFFERENT GLASSMeet the three bars"
+      },
+      {
+        "tag": "SECTION",
+        "class": "sa-hero",
+        "text": "Singapore’scocktails.Inside out.Explore the bars. Unfold the ingredients. Discover a diffe"
+      },
+      {
+        "tag": "MAIN",
+        "class": "",
+        "text": "Singapore’scocktails.Inside out.Explore the bars. Unfold the ingredients. Discover a diffe"
+      },
+      {
+        "tag": "DIV",
+        "class": "sa-landing",
+        "text": "Skip to contentSpiritAtlas.The barsInside the drinkOpen atlas Singapore’scocktails.Inside "
+      }
+    ],
+    "expectedLinkOwnsHit": false
+  },
+  "meetLinkStableTopRecheck": {
+    "status": "failed",
+    "error": "TimeoutError: locator.click: Timeout 4000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Meet the three bars', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <a href=\"#the-bars\">…</a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"sa-hero-stage \">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div class=\"sa-hero-stage \">…</div> intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m  6 × retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"sa-hero-stage \">…</div> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n"
+  },
+  "finalInspectionAt": "2026-09-13T05:17:31.967Z"
+}
