@@ -16,6 +16,11 @@
 .cn-stage {position:relative;aspect-ratio:1;width:100%;overflow:hidden;background:#1a1916;border-radius:6px;isolation:isolate;}
 .cn-stage .cn-video,.cn-stage .cn-poster,.cn-renderer {position:absolute;inset:0;width:100%;height:100%;}
 .cn-stage .cn-video,.cn-stage .cn-poster {object-fit:contain;display:block;}
+/* Keep decoded films attached to the compositor when their sequence changes. */
+.cn-stage .cn-video {opacity:0;z-index:0;pointer-events:none;}
+.cn-stage .cn-video[data-active="true"] {opacity:1;z-index:1;}
+.cn-stage[data-film-ready="true"] .cn-poster {opacity:0;}
+.cn-renderer {z-index:1;}
 .cn-stage [hidden] {display:none!important;}
 .cn-renderer canvas {display:block;width:100%;height:100%;touch-action:pan-y;outline-offset:-5px;}
 .cn-mode-switch {display:flex;align-items:center;gap:4px;padding:0 0 12px;}

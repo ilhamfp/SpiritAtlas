@@ -66,8 +66,9 @@ Validated locally on 13 September 2026:
 - The homepage fits both 390-pixel and 872-pixel viewports without horizontal
   overflow; the longer reassembly button also fits the mobile header.
 
-The focused Playwright suite now includes the 12 existing brand journeys and
-four integration regressions. All 16 passed against the local production build:
+Before the poster correction below, the focused Playwright suite included the
+12 existing brand journeys and four integration regressions. All 16 passed
+against that local production build:
 desktop control visibility and stable ingredient layout, canceled-load recovery,
 offscreen playback suspension, and actual touch scrolling with an immediately
 settled reduced-motion camera. Responsive screenshots and the report are in
@@ -77,3 +78,23 @@ under `docs/brand-evidence/animation-integration-final/`.
 
 These checks cover the local integration. The Behind the Bar release owner
 coordinates the combined production deployment and its public verification.
+
+### Cinematic poster correction
+
+A subsequent in-app browser check reproduced a visual failure: the cinematic
+timeline and idle movie advanced while the assembled poster remained painted.
+The source movies and copied production assets contained the correct explosion.
+Videos now stay attached instead of toggling `display: none`, the selected film
+uses an explicit opacity layer, and the standalone poster disappears when its
+replacement frame is decoded. The redundant poster on the forward video has
+also been removed.
+
+The same browser now visibly shows the separated liquid, ice and orange, then
+the assembled drink after reverse playback. The browser regression checks the
+composed stage screenshots as well as media time so advancing playback alone
+cannot pass this visual requirement.
+
+The poster correction passes the production build and 11 asset/playback tests.
+Its updated browser regressions were typechecked; the full browser suite was
+not rerun. Visual verification used the in-app browser and local production
+preview, including explosion, reassembly, scrubbing and a 3D round trip.

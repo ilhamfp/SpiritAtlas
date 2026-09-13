@@ -16,6 +16,7 @@ const noop = () => {};
 /** The original Negroni films and optional live scene share one reversible timeline. */
 export default function ClassicNegroni() {
   const rootRef = useRef<HTMLElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
   const liveRef = useRef<HTMLDivElement>(null);
   const forwardRef = useRef<HTMLVideoElement>(null);
   const reverseRef = useRef<HTMLVideoElement>(null);
@@ -25,6 +26,7 @@ export default function ClassicNegroni() {
 
   useEffect(() => {
     const root = rootRef.current!;
+    const stage = stageRef.current!;
     const container = liveRef.current!;
     const videos = [forwardRef.current!, reverseRef.current!, idleRef.current!];
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -65,7 +67,11 @@ export default function ClassicNegroni() {
     function revealFilm() {
       if (mode !== 'cinematic' || current.readyState < 2 || pendingSeek || current.error) return;
       shownVideo = current;
-      videos.forEach(video => {video.hidden = video !== current;});
+      // Keep every video attached to the compositor. Toggling display:none on a
+      // decoded WebKit video can leave its old poster painted over later frames.
+      // The preceding sequence stays visible until this seek has a decoded frame.
+      videos.forEach(video => {video.dataset.active = String(video === current);});
+      stage.dataset.filmReady = 'true';
       ready = true;
       publish();
     }
@@ -210,7 +216,12 @@ export default function ClassicNegroni() {
         if (disposed || video !== current || mode !== 'cinematic') return;
         state.playing = false;
         status = 'The film could not load. Try Explore 3D to see the drink.';
-        if (shownVideo === video) {video.hidden = true; shownVideo = null; ready = false;}
+        if (shownVideo === video || !shownVideo) {
+          videos.forEach(item => {item.dataset.active = 'false';});
+          stage.dataset.filmReady = 'false';
+          shownVideo = null;
+          ready = false;
+        }
         publish();
       };
       const handlers = {loadedmetadata: metadata, loadeddata: loaded, canplay: loaded, seeked, ended, error};
@@ -266,7 +277,6 @@ export default function ClassicNegroni() {
       }
       if (disposed) return;
       [manifest.forward, manifest.reverse, manifest.idle].forEach((src, index) => {videos[index].src = src;});
-      videos[0].poster = manifest.poster;
       syncMedia(true);
     }
     void loadFilms();
@@ -283,7 +293,8 @@ export default function ClassicNegroni() {
       document.removeEventListener('visibilitychange', visibility);
       mediaQuery.removeEventListener('change', motionChanged);
       unbind.forEach(remove => remove());
-      videos.forEach(video => {video.pause(); video.removeAttribute('src'); video.load();});
+      stage.dataset.filmReady = 'false';
+      videos.forEach(video => {video.dataset.active = 'false'; video.pause(); video.removeAttribute('src'); video.load();});
       renderer?.dispose();
     };
   }, []);
@@ -299,16 +310,16 @@ export default function ClassicNegroni() {
       <button type="button" aria-pressed={ui.mode === '3d'} onClick={() => commands.current.mode('3d')}>Explore 3D</button>
     </div>
     <div className="cn-experience">
-      <div className="cn-stage" tabIndex={0} aria-label="Classic Negroni animation. Press Enter to look inside, Space to play or pause, R to reset." onKeyDown={event => {
+      <div className="cn-stage" ref={stageRef} data-film-ready="false" tabIndex={0} aria-label="Classic Negroni animation. Press Enter to look inside, Space to play or pause, R to reset." onKeyDown={event => {
         if (event.target !== event.currentTarget) return;
         if (event.code === 'Space') {event.preventDefault(); commands.current.toggle();}
         else if (event.code === 'Enter') {event.preventDefault(); commands.current.action();}
         else if (event.code === 'KeyR') commands.current.reset();
       }}>
         <img className="cn-poster" src={DEFAULT_MANIFEST.poster} alt="Classic Negroni with ruby red liquid, clear ice, and a fresh orange slice in a rocks glass" fetchPriority="high" />
-        <video {...videoProps} ref={forwardRef} data-sequence="forward" hidden />
-        <video {...videoProps} ref={reverseRef} data-sequence="reverse" hidden />
-        <video {...videoProps} ref={idleRef} data-sequence="idle" loop hidden />
+        <video {...videoProps} ref={forwardRef} data-sequence="forward" data-active="false" />
+        <video {...videoProps} ref={reverseRef} data-sequence="reverse" data-active="false" />
+        <video {...videoProps} ref={idleRef} data-sequence="idle" data-active="false" loop />
         <div className="cn-renderer" ref={liveRef} hidden />
         {((!ui.ready && ui.mode === 'cinematic' && !ui.status) || ui.loading3D) && <div className="cn-loading" role="status">{ui.loading3D ? 'Preparing your 3D view…' : 'Preparing your drink…'}</div>}
         <div className="cn-scene-caption" aria-hidden="true"><span className="cn-scene-state">{sceneState}</span><span>{ui.progress > .5 ? '02 / 02' : '01 / 02'}</span></div>

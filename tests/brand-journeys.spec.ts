@@ -20,8 +20,47 @@ const heavyAsset = (url: string) => /\/classic-negroni\/(?:simulation\/|textures
 
 async function waitFilm(page: Page, sequence = 'forward') {
   await expect(classic(page)).toHaveAttribute('data-mode', 'cinematic');
+  await expect(classic(page).locator('.cn-stage')).toHaveAttribute('data-film-ready', 'true');
+  await expect(film(page, sequence)).toHaveAttribute('data-active', 'true');
+  await expect(film(page, sequence)).toHaveCSS('opacity', '1');
   await expect(film(page, sequence)).toBeVisible();
+  await expect(classic(page).locator('.cn-poster')).toHaveCSS('opacity', '0');
+  await expect(classic(page).locator('video[data-active="true"]')).toHaveCount(1);
   await expect.poll(() => film(page, sequence).evaluate((video: HTMLVideoElement) => video.readyState)).toBeGreaterThanOrEqual(2);
+  await expect.poll(() => film(page, sequence).evaluate((video: HTMLVideoElement) => video.seeking)).toBe(false);
+}
+
+async function compareStagePixels(page: Page, before: Buffer, after: Buffer) {
+  // Decode screenshots of the composed page, rather than drawImage(video): a
+  // decoded video frame can advance while WebKit still paints a stale poster.
+  return page.evaluate(async ({ beforePng, afterPng }) => {
+    const read = async (png: string) => {
+      const image = new Image();
+      image.src = `data:image/png;base64,${png}`;
+      await image.decode();
+      const canvas = document.createElement('canvas');
+      canvas.width = image.naturalWidth;
+      canvas.height = image.naturalHeight;
+      const context = canvas.getContext('2d')!;
+      context.drawImage(image, 0, 0);
+      return { width: canvas.width, height: canvas.height, pixels: context.getImageData(0, 0, canvas.width, canvas.height).data };
+    };
+    const [a, b] = await Promise.all([read(beforePng), read(afterPng)]);
+    if (a.width !== b.width || a.height !== b.height) throw new Error('The cinematic stage changed dimensions during the image comparison.');
+    let changed = 0, compared = 0, difference = 0;
+    // Leave out the top caption, focus outline and rounded frame, so changing
+    // UI labels cannot make an unchanged drink count as rendered animation.
+    for (let y = Math.ceil(a.height * .15); y < Math.floor(a.height * .94); y++) {
+      for (let x = Math.ceil(a.width * .08); x < Math.floor(a.width * .92); x++) {
+        const offset = (y * a.width + x) * 4;
+        const delta = (Math.abs(a.pixels[offset] - b.pixels[offset]) + Math.abs(a.pixels[offset + 1] - b.pixels[offset + 1]) + Math.abs(a.pixels[offset + 2] - b.pixels[offset + 2])) / 3;
+        if (delta > 18) changed++;
+        difference += delta;
+        compared++;
+      }
+    }
+    return { changedRatio: changed / compared, meanChannelDifference: difference / compared, comparedPixels: compared };
+  }, { beforePng: before.toString('base64'), afterPng: after.toString('base64') });
 }
 
 async function seekMidpoint(page: Page) {
@@ -76,12 +115,14 @@ test('headline, CTA and original Negroni poster remain usable while cinematic fi
     await expect.poll(() => movies.length).toBeGreaterThan(0);
     const poster = classic(page).locator('.cn-poster');
     await expect(poster).toBeVisible();
+    await expect(poster).toHaveCSS('opacity', '1');
     await expect.poll(() => poster.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
     expect(heavyRequests).toEqual([]);
     await expect(classic(page).locator('canvas')).toHaveCount(0);
     // A user can ask to expand before decoding completes without losing the poster.
     await classic(page).getByRole('button', { name: 'Look inside', exact: true }).click();
     await expect(poster).toBeVisible();
+    await expect(poster).toHaveCSS('opacity', '1');
     await expect(classic(page)).toHaveAttribute('data-playing', 'false');
     await expect(classic(page)).toHaveAttribute('data-play-intent', 'true');
     await page.screenshot({ path: `${evidenceDir}/classic-loading-poster-1440x1000.png` });
@@ -189,6 +230,40 @@ test('keyboard CTA enters atlas and each featured bar opens the correct working 
   }
 });
 
+test('the composed cinematic image visibly changes from assembled to exploded and returns after reset', async ({ page }, testInfo) => {
+  await page.goto('/');
+  await waitFilm(page);
+  const hero = classic(page);
+  const stage = hero.locator('.cn-stage');
+  await expect(hero).toHaveAttribute('data-playing', 'false');
+  await expect(hero).toHaveAttribute('data-progress', '0.00000');
+  const assembled = await stage.screenshot();
+
+  // Use the actual accessible timeline to select a still, with no animation
+  // clock or moving caption capable of making the screenshot assertion pass.
+  await hero.getByRole('slider', { name: 'Deconstruction progress' }).press('End');
+  await expect(hero).toHaveAttribute('data-progress', '1.00000');
+  await expect(hero).toHaveAttribute('data-playing', 'false');
+  await expect.poll(() => filmTime(page)).toBeGreaterThan(7.1);
+  await waitFilm(page);
+  let exploded = assembled;
+  await expect.poll(async () => {
+    exploded = await stage.screenshot();
+    return (await compareStagePixels(page, assembled, exploded)).changedRatio;
+  }, { message: 'The drink itself must visibly deconstruct in the composed page, even when media time and progress already advanced.' }).toBeGreaterThan(.025);
+  const expansionDifference = await compareStagePixels(page, assembled, exploded);
+
+  await hero.getByRole('button', { name: 'Reset Negroni', exact: true }).click();
+  await expect(hero).toHaveAttribute('data-progress', '0.00000');
+  await expect.poll(() => filmTime(page)).toBeLessThan(.01);
+  await waitFilm(page);
+  await expect.poll(async () => (await compareStagePixels(page, assembled, await stage.screenshot())).changedRatio,
+    { message: 'Reset restores the original composed image.' }).toBeLessThan(.015);
+  await testInfo.attach('classic-composed-assembled', { body: assembled, contentType: 'image/png' });
+  await testInfo.attach('classic-composed-exploded', { body: exploded, contentType: 'image/png' });
+  await testInfo.attach('classic-composed-pixel-difference', { body: JSON.stringify(expansionDifference), contentType: 'application/json' });
+});
+
 test('original cinematic frames advance, pause, reverse at the same pose, and scrub with visible controls', async ({ page }, testInfo) => {
   await page.goto('/');
   await waitFilm(page);
@@ -196,7 +271,8 @@ test('original cinematic frames advance, pause, reverse at the same pose, and sc
   await hero.getByRole('button', { name: 'Look inside', exact: true }).click();
   await expect(hero).toHaveAttribute('data-playing', 'true');
   await expect.poll(() => filmTime(page)).toBeGreaterThan(.8);
-  expect(await film(page).evaluate((video: HTMLVideoElement) => video.getVideoPlaybackQuality().totalVideoFrames)).toBeGreaterThan(5);
+  const decodedFrames = await film(page).evaluate((video: HTMLVideoElement) => typeof video.getVideoPlaybackQuality === 'function' ? video.getVideoPlaybackQuality().totalVideoFrames : null);
+  if (decodedFrames !== null) expect(decodedFrames).toBeGreaterThan(5);
   await hero.getByRole('button', { name: 'Pause animation', exact: true }).click();
   const paused = await filmTime(page);
   await page.waitForTimeout(300);

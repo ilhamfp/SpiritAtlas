@@ -6,7 +6,10 @@ const liveScene = (page: Page) => page.getByRole('img', {name: 'Interactive clas
 async function openClassic(page: Page) {
   await page.goto('/');
   await page.evaluate(() => document.fonts.ready);
-  await expect(classic(page).locator('video[data-sequence="forward"]')).toBeVisible();
+  const forward = classic(page).locator('video[data-sequence="forward"]');
+  await expect(forward).toHaveAttribute('data-active', 'true');
+  await expect(forward).toHaveCSS('opacity', '1');
+  await expect(classic(page).locator('.cn-poster')).toHaveCSS('opacity', '0');
 }
 
 test('desktop framing keeps playback controls in view and ingredient reveals preserve the layout', async ({page}) => {
