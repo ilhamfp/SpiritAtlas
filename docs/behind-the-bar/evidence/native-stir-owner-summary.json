@@ -1,0 +1,58 @@
+{
+  "revision": "9c0666cd19730bcdec0b3e40a46af6fe8f0f4998",
+  "deployment": "dpl_7hZdxewXrX9aVWpZH9NWEGsKygKw",
+  "entry": "/assets/index-Cc4SN3XI.js",
+  "source": "Actual native HID -> public HTTPS page, normal Chrome. Passive observation; no injected samples or automated arming.",
+  "ownerConfirmation": "Earlier glass motion confirmed explicitly by owner. New stirring feel question pending; real owner-armed stir and pour are visible in this passive recording.",
+  "durationSeconds": 90,
+  "stir": {
+    "seconds": 17.093,
+    "inputRange": [
+      -5.99999608847708,
+      5.999901236610745
+    ],
+    "gpuCirculationRange": [
+      -7.162987232208252,
+      3.510816812515259
+    ],
+    "maxGlassTilt": 0,
+    "release": {
+      "atSeconds": 45.405,
+      "circulationAtRelease": -0.8877530694007874,
+      "circulationAfter1point4seconds": -0.14698819816112518
+    }
+  },
+  "physicalPour": {
+    "seconds": 9.601,
+    "inputRange": [
+      0,
+      1
+    ],
+    "neutralPauses": 4,
+    "finalMix": {
+      "core": 0,
+      "ancho": 0,
+      "rice": 0
+    },
+    "finalServing": {
+      "core": 0.6500000000000056,
+      "ancho": 0.17999999999999994,
+      "rice": 0.10000000000000002
+    },
+    "finalArmed": null
+  },
+  "timing": {
+    "sampleToFrame": {
+      "count": 1601,
+      "p95": 35.0380859375,
+      "max": 104.016845703125
+    },
+    "receiptToFrame": {
+      "count": 1601,
+      "p95": 23.69999999999709,
+      "max": 97.20000000037544
+    }
+  },
+  "physicalOnsetToPhotonsMeasured": false,
+  "errors": []
+}

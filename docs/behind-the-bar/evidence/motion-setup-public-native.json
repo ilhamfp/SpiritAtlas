@@ -1,0 +1,14 @@
+{
+  "at": "2026-09-13T06:55:30.943Z",
+  "origin": "https://spiritatlas-one.vercel.app",
+  "entry": "https://spiritatlas-one.vercel.app/assets/index-CFuTJmu9.js",
+  "hasMotionSetup": true,
+  "connected": true,
+  "calibrated": true,
+  "received": 88,
+  "rejected": 89,
+  "armed": null,
+  "physicalMovementVerified": false,
+  "revision": "ebc0579a680bb07a84fc0248ac8ea62b268d7541",
+  "deployment": "dpl_bgDMz7FxWa4NeMizZzvrkDeqn35v"
+}

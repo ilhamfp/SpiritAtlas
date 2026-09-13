@@ -1,0 +1,43 @@
+{
+  "at": "2026-09-13T07:10:51.549Z",
+  "revision": "9c0666cd19730bcdec0b3e40a46af6fe8f0f4998",
+  "deployment": "dpl_7hZdxewXrX9aVWpZH9NWEGsKygKw",
+  "source": "Actual native reader; ordinary Chrome; no injected sensor input",
+  "state": {
+    "entry": "/assets/index-Cc4SN3XI.js",
+    "native": {
+      "status": "Live native samples · calibrated",
+      "connected": true,
+      "calibrated": true,
+      "received": 107,
+      "rejected": 0,
+      "age": 15.299999998882413,
+      "pitch": 0.011236529221081969,
+      "roll": -0.011282931331119714,
+      "neutral": [
+        0.010408678154506672,
+        -0.01199176862024221
+      ],
+      "linear": [
+        -0.018164245491478548,
+        0,
+        -0.017748784516357082
+      ],
+      "gravity": [
+        0.011745963333333333,
+        0.010194650000000003,
+        -0.9794021566666669
+      ],
+      "gyroBias": [
+        -0.08239746166666667,
+        0.007120761666666669,
+        0.09562175499999999
+      ],
+      "armed": null,
+      "stirRate": 0,
+      "stirAxis": 1
+    },
+    "armed": null,
+    "errors": []
+  }
+}

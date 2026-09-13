@@ -1,0 +1,17 @@
+{
+  "revision": "9c0666cd19730bcdec0b3e40a46af6fe8f0f4998",
+  "source": "daef85b",
+  "integratedSource": "b17a4dc",
+  "includesRelease": "821109746c9d321d65d0799fcd56758d5df2a172",
+  "id": "dpl_7hZdxewXrX9aVWpZH9NWEGsKygKw",
+  "url": "https://spiritatlas-r2sw798b6-ilham-firdausi-putras-projects.vercel.app",
+  "public": "https://spiritatlas-one.vercel.app",
+  "state": "READY",
+  "entry": "/assets/index-Cc4SN3XI.js",
+  "studio": "/assets/Studio-BTu-BTRG.js",
+  "verification": {
+    "publicTests": 6,
+    "publicRoutesAndAssets": 32,
+    "failures": 0
+  }
+}

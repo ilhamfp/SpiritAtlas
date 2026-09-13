@@ -1,0 +1,8 @@
+{
+  "at": "2026-09-13T06:54:46.116Z",
+  "origin": "https://spiritatlas-one.vercel.app",
+  "manualArm": true,
+  "outcome": "incomplete",
+  "reason": "page.waitForFunction: Timeout 180000ms exceeded.",
+  "physicalTiltPourVerified": false
+}

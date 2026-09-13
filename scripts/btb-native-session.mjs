@@ -7,7 +7,7 @@ const armMode=process.env.BTB_ARM_MODE==='stir'?'stir':'move';
 const seconds=Number(process.env.BTB_SECONDS||120),pair=JSON.parse(await fs.readFile('.mac-motion/pair.json','utf8'));
 const real=await realBrowser();const {page}=real;let stopVideo;
 try{
-await page.goto(`${origin}/behind-the-bar/diagnostics?preset=stir-demo#motion=${pair.token}`);await page.waitForFunction(()=>window.__btbNative?.received>100&&window.__btb?.scene?.diagnostics.gpuReads>10,{},{timeout:30000});
+await page.goto(`${origin}/behind-the-bar/diagnostics?preset=stir-demo&rehearsal=${Date.now()}#motion=${pair.token}`);await page.waitForFunction(()=>window.__btbNative?.received>100&&window.__btb?.scene?.diagnostics.gpuReads>10,{},{timeout:30000});
 await page.getByRole('button',{name:'Recenter at rest',exact:true}).click();await page.locator('.btb-stage').scrollIntoViewIfNeeded();
 if(process.env.BTB_MANUAL_ARM==='1'){
  await page.evaluate((mode)=>{const note=document.createElement('div');note.id='btb-rehearsal-note';note.style.cssText='position:fixed;bottom:16px;left:20px;right:20px;z-index:100;pointer-events:none;background:#ffffe3;color:#242125;padding:14px 20px;font:15px system-ui;border:1px solid #ff6425;box-shadow:0 8px 28px #0008';note.textContent=mode==='stir'?'Device rehearsal: click Arm stirring, then gently rock or turn the laptop. Reverse the motion, hold still, and watch the drink settle. The glass should stay upright. Keep this window focused.':'Device rehearsal: click Arm movement, then gently tilt left/right and forward/back. Keep this window focused. Set flat and watch it settle. Next click Strain → Arm pour; tilt briefly, then set flat again.';document.body.append(note);},armMode);

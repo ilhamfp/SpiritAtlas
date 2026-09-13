@@ -1,8 +1,8 @@
 # Behind the Bar v2.1 acceptance ledger
 
-13 September 2026. Verified public application revision `058149b684dd22d404cd0665c52196fd438c3648`, deployment `dpl_4uKgScSzwN8PVnwb92GWZWqPufND`: https://spiritatlas-one.vercel.app/behind-the-bar. This includes the native framing correction and separately requested unified landing player. This task is the acknowledged sole owner of this release. Clean release worktree: `/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb-release`, branch `codex/behind-the-bar-release`.
+13 September 2026. Current verified native-stir application: `9c0666cd19730bcdec0b3e40a46af6fe8f0f4998`, READY deployment `dpl_7hZdxewXrX9aVWpZH9NWEGsKygKw`, https://spiritatlas-one.vercel.app/behind-the-bar. This preserves the accepted studio, current hero/player and subsequent specialty-animation work. Native-stir source daef85b is integrated as b17a4dc. Release ownership was explicitly returned by the landing task for this bounded follow-up; see RELEASE.md. Evidence worktree: `/Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release`. Historical reports retain their actual revisions.
 
-Twelve gates have public evidence; BTB-06 and the physical-onset portion of BTB-10 remain open. The working browser game is deployed. A complete physical-laptop demonstration is **not verified**. No synthetic trace, automated arming or screen recording is represented as owner-performed physical movement.
+Thirteen gates now have evidence. The owner physically operated the deployed native stirring and pouring controls, following the earlier confirmed glass movement. The remaining part of BTB-10 is an independently measured physical movement-onset → visible-display latency; sample/receiver → frame estimates are not that measurement.
 
 | Gate | State | Evidence / remaining verification |
 |---|---|---|
@@ -11,11 +11,11 @@ Twelve gates have public evidence; BTB-06 and the physical-onset portion of BTB-
 | BTB-03 TypeGPU | Passed | Actual Apple/metal-3 compute/readback, reversal/release/settle probes and video; public GPU interaction check |
 | BTB-04 conservation | Passed | Per-component source/transit/destination conservation and capacity tests; retained mixing liquid/ice and visual preparation recording |
 | BTB-05 controls | Passed | Complete pointer, keyboard and emulated-touch journeys; unsupported WebGPU fallback |
-| BTB-06 actual M4 Pro | Blocked on owner action | Real uid 501 HID stream reaches deployed scene; calibration, arming and recovery pass. Physical axes, deliberate tilt/slosh/tilt-pour and opening stop/settle rehearsal still need the owner to move the MacBook |
+| BTB-06 actual M4 Pro | Passed | Owner-confirmed tilt/slosh in owner-debug-live (ebc0579); 17.09 s owner-armed stirring with reversal/release and 9.60 s physical tilt-pouring on exact public 9c0666c. Real HID, calibration, upright glass while stirring, neutral pause, all three quantities conserved. Earlier actual restart/takeover/recovery checks retain their 058149b attribution; new-mode public boundary checks pass. See native-stir-owner-summary.json and actual video |
 | BTB-07 fidelity/result | Passed | Baseline/reference captures inspected; canonical glass/ice/pepper retained; distinct authored quantities/garnish preserved. Approximate screen-space optics documented |
 | BTB-08 reliability | Passed | Reset, expiry, takeover, hidden-tab and resource-retry checks; six final public actual-native recovery checks, including a 2.5-second page stall and helper restart, passed after correcting coalesced delivery |
 | BTB-09 responsive/a11y | Passed | Desktop/tablet/phone captures, visible focus and keyboard completion, reduced-motion touch and mute controls |
-| BTB-10 performance | Partial | Production 30-second mean 119.63 FPS / p95 9.30 ms passes 30 FPS floor and 60 FPS target. Final 601 native observations: receipt→frame p95 23.80 ms; sample timestamp→frame estimate p95 34.25 ms. Physical movement onset→visible response is unverified |
+| BTB-10 performance | Partial | Current public 30-second mean 119.07 FPS / p95 9.30 ms passes 30 FPS floor and 60 FPS target. Actual owner session: 1,601 native observations, receipt→frame p95 23.70 ms; sample timestamp→frame estimate p95 35.04 ms. Physical movement onset→visible response is unverified |
 | BTB-11 preservation | Passed | 39 catalogue checks, all 12 cocktails, expansion/comparison, 20 integrated landing checks on 772c3e2. Final unified-player revision has six public landing checks plus 24 local checks and multi-viewport WebKit evidence |
 | BTB-12 production | Passed | Acknowledged owner; exact corrected revision/deployment; 32 public route/asset checks; full preparation; real authenticated HTTPS-origin native stream and recovery |
 | BTB-13 cause/effect | Passed | Fresh-session pointer reversal/release inspection, stationary-pointer fix, two amount/garnish variants. Agent usability inspection, not a human study |
@@ -23,9 +23,9 @@ Twelve gates have public evidence; BTB-06 and the physical-onset portion of BTB-
 
 ## Smallest remaining physical action
 
-Responsible actor: the owner physically holding this MacBook Pro. With the helper connected and laptop flat, recenter, click **Arm movement last**, gently tilt left/right and forward/back, then set flat and let the waves settle. Click **Strain**, deliberately **Arm pour**, tilt briefly, then set flat and disarm. Keep Chrome focused: returning to Codex intentionally disarms. Confirm physical directions; capture synchronized movement-onset evidence before claiming the <150 ms physical target. Exact commands and diagnostic URL are in MACBOOK-PREFLIGHT.md.
+BTB-10 physical-onset timing: the owner or an operator must capture synchronized device movement and display output (for example, a sufficiently fast camera showing both), or provide equivalent calibrated instrumentation. The real sensor timestamps and screen-only video already supplied cannot establish when external physical movement began. This is a measurement limitation; native stirring and pouring now work. No new software change or elevated privilege is needed.
 
-The 120-second production sensor capture was armed for 6.3 seconds with applied tilt below 0.002 rad; the later pour was local and disarmed. The next manual attempt waited 120 seconds for arming and timed out. Neither clears BTB-06. Authentication, device presence, reader privileges and browser security are not the remaining blocker.
+Earlier at-rest and unarmed attempts remain historical evidence. The successful owner-operated recording is `evidence/native-stir-owner.json` and `evidence/native-video/native-stir-owner.webm`. The subjective stirring-feel question is still pending; observed operation is recorded independently of that answer.
 
 ## Iteration record
 
@@ -60,3 +60,13 @@ Release ownership transferred explicitly from landing task and acknowledged, aga
 ## Future release ownership
 
 The landing task explicitly acknowledged resuming sole future production ownership after this acceptance evidence commit is saved and supplied. This task owns the verified 058149b snapshot; it will make no subsequent production push after that handoff. New landing requests continue separately and must preserve this evidence. Any later physical rehearsal must record the application revision actually exercised.
+
+
+## Physical owner feedback and native-stir correction
+
+On 13 September 2026 the owner explicitly confirmed physical laptop movement on deployed ebc0579: “Yes it moves! But it moves the glass, not stirring the drinks!” The passive `owner-debug-live.json` recording captured 113 armed movement snapshots, bounded 0.25 rad glass tilt and real changing sensor values. That advances the physical movement evidence; it does not establish a deliberate physical pour or calibrated movement-onset timing. The recording also confirms GPU circulation stayed zero because native input was mapped only to vessel movement.
+
+Source daef85b adds a separately armed spoon-stirring mode; the glass remains upright, physical angular velocity drives signed bounded spoon/GPU input, and holding still releases it. Build, eight focused motion tests, the native boundary and complete journey pass locally. The integrated hero-plus-stir application passes both the full journey and GPU native-stir regression again. Desktop/mobile captures were inspected. New physical stirring confirmation is pending the owner's next attempt after publication. BTB-06 remains partial pending that requested stirring behavior and deliberate physical tilt-pour; BTB-10 still requires physical-onset evidence.
+
+
+Final observed correction: the owner deliberately armed stirring for 17.093 seconds; input reached both signs, GPU circulation ranged −7.163 to +3.511, and glass tilt stayed exactly zero. When physical movement stopped, spoon input reached zero and circulation decayed from −0.888 to −0.147 in 1.4 seconds. The owner advanced to Strain and armed pour for 9.601 seconds, including neutral pauses. All authored 0.65 Core / 0.18 Ancho / 0.10 Rice transferred without component loss. This was passive observation, with no synthetic packets or automated arming. The recording contained ten rejected native reports and no GPU errors; the observer did not log an individual rejection reason. Public source checks (6), assets/routes (32), and the final 30-second runtime check pass. Historical statements above describing unverified physical pouring are superseded by this exact deployed record.
