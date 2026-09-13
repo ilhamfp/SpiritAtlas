@@ -1,0 +1,144 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/brand.config.ts",
+      "-g",
+      "headline, CTA"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/local-contrast-fixed/test-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "brand-journeys.spec.ts"
+        ],
+        "timeout": 100000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/brand-evidence/local-contrast-fixed/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "brand-journeys.spec.ts",
+      "file": "brand-journeys.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "headline, CTA and faithful poster appear while 3D code and models are held; only the hero model is requested initially",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3302,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:09:56.383Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "blocked-3d-code",
+                      "contentType": "application/json",
+                      "body": "eyJjb2RlUmVxdWVzdHMiOlsiL2Fzc2V0cy90aHJlZS1Cb1dsYnY5My5qcyJdLCJtb2RlbHMiOltdLCJoZWFkbGluZVZpc2libGUiOnRydWUsImN0YVZpc2libGUiOnRydWUsInBvc3RlckRlY29kZWQiOnRydWV9"
+                    },
+                    {
+                      "name": "loading-status-contrast",
+                      "contentType": "application/json",
+                      "body": "eyJjb2RlTG9hZGluZ0NvbnRyYXN0Ijp7ImJhY2tncm91bmRBbHBoYSI6MSwibWluaW11bVJhdGlvIjo2Ljg2NzYzNTQxMzQzOTcyMTV9LCJtb2RlbExvYWRpbmdDb250cmFzdCI6eyJiYWNrZ3JvdW5kQWxwaGEiOjEsIm1pbmltdW1SYXRpbyI6Ny4xMjQyODUzMTg3NDY3ODA1fX0="
+                    },
+                    {
+                      "name": "initial-loading",
+                      "contentType": "application/json",
+                      "body": "ewogICJtb2RlbHMiOiBbCiAgICAiL21vZGVscy9iYmYtbmVncm9uaS5nbGIiCiAgXSwKICAicGFpbnQiOiBbCiAgICB7CiAgICAgICJuYW1lIjogImZpcnN0LXBhaW50IiwKICAgICAgIm1zIjogNDgKICAgIH0sCiAgICB7CiAgICAgICJuYW1lIjogImZpcnN0LWNvbnRlbnRmdWwtcGFpbnQiLAogICAgICAibXMiOiAxMDQKICAgIH0KICBdLAogICJmb250cyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjQxODYvYXNzZXRzL2luc3RydW1lbnQtc2Fucy1sYXRpbi13Z2h0LW5vcm1hbC1CYnpGTFpUZy53b2ZmMiIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTg2L2Fzc2V0cy9pYm0tcGxleC1tb25vLWxhdGluLTQwMC1ub3JtYWwtRE1KOFZHOHkud29mZjIiCiAgXSwKICAibG9hZGVkRm9udHMiOiBbCiAgICAiSW5zdHJ1bWVudCBTYW5zIFZhcmlhYmxlIiwKICAgICJJQk0gUGxleCBNb25vIgogIF0KfQ=="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-0ac2864a8568953f6acb",
+          "file": "brand-journeys.spec.ts",
+          "line": 59,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T05:09:55.851Z",
+    "duration": 4776.032,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -11,6 +11,28 @@ const entries = [
 const headline = (page: Page) => page.getByRole('heading', { level: 1, name: 'Singapore’s cocktails. Inside out.' });
 const failures = new WeakMap<Page, string[]>();
 
+async function expectLoadingStatusContrast(page: Page, selector: string) {
+  const status = page.locator(selector);
+  await expect(status).toBeVisible();
+  const contrast = await status.evaluate(element => {
+    const rgba = (value: string) => value.match(/[\d.]+/g)!.map(Number);
+    const luminance = (rgb: number[]) => rgb.slice(0, 3).map(value => {
+      const linear = value / 255;
+      return linear <= .04045 ? linear / 12.92 : ((linear + .055) / 1.055) ** 2.4;
+    }).reduce((sum, value, index) => sum + value * [.2126, .7152, .0722][index], 0);
+    const background = rgba(getComputedStyle(element).backgroundColor);
+    const ratios = [element, ...element.querySelectorAll('span:not(.loading-orbit)')].map(label => {
+      const foreground = rgba(getComputedStyle(label).color);
+      const a = luminance(foreground), b = luminance(background);
+      return (Math.max(a, b) + .05) / (Math.min(a, b) + .05);
+    });
+    return { backgroundAlpha: background[3] ?? 1, minimumRatio: Math.min(...ratios) };
+  });
+  expect(contrast.backgroundAlpha, 'Loading feedback has an opaque backdrop over the artwork').toBe(1);
+  expect(contrast.minimumRatio, 'Every loading status label meets normal-text contrast').toBeGreaterThanOrEqual(4.5);
+  return contrast;
+}
+
 test.beforeEach(async ({ page }) => {
   const errors: string[] = [];
   failures.set(page, errors);
@@ -58,6 +80,7 @@ test('headline, CTA and faithful poster appear while 3D code and models are held
     await expect.poll(() => codeRequests.length).toBeGreaterThan(0);
     await expect(page.locator('.hero-poster img')).toBeVisible();
     await expect.poll(() => page.locator('.hero-poster img').evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0), { timeout: 10_000 }).toBe(true);
+    const codeLoadingContrast = await expectLoadingStatusContrast(page, '.hero-poster > span');
     expect(models).toEqual([]);
     await page.screenshot({ path: `${evidenceDir}/loading-before-3d-code-1440x1000.png` });
     await testInfo.attach('blocked-3d-code', { body: JSON.stringify({ codeRequests, models, headlineVisible: true, ctaVisible: true, posterDecoded: true }), contentType: 'application/json' });
@@ -66,6 +89,8 @@ test('headline, CTA and faithful poster appear while 3D code and models are held
     const poster = page.locator('.sa-hero-viewer img').first();
     await expect(poster).toBeVisible();
     await expect.poll(() => poster.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0), { timeout: 10_000 }).toBe(true);
+    const modelLoadingContrast = await expectLoadingStatusContrast(page, '.sa-hero-viewer .viewer-loading');
+    await testInfo.attach('loading-status-contrast', { body: JSON.stringify({ codeLoadingContrast, modelLoadingContrast }), contentType: 'application/json' });
     await page.waitForTimeout(800);
     expect(models.length).toBe(1);
     expect(models[0]).toContain('bbf-negroni');
