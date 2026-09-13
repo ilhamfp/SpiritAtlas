@@ -1,0 +1,24 @@
+{
+  "origin": "https://spiritatlas-one.vercel.app",
+  "status": 200,
+  "body": {
+    "session": "f1f287e4d4df8c08217fca4d1a0dbe5b",
+    "expires": 1789280056524,
+    "samples": 21208,
+    "rejected": 0,
+    "readerAlive": true,
+    "age": 4.512958999999682,
+    "uid": 501
+  },
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+  "gpu": true,
+  "launchArguments": [
+    "--user-data-dir=<temporary-private-profile>",
+    "--remote-debugging-port=9228",
+    "--no-first-run",
+    "--no-default-browser-check",
+    "--window-size=1440,1080",
+    "about:blank"
+  ],
+  "focusEmulation": false
+}

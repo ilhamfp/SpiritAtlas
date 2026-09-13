@@ -1,0 +1,60 @@
+{
+  "at": "2026-09-13T05:54:17.501Z",
+  "origin": "http://127.0.0.1:4191",
+  "actualNativeStream": true,
+  "checks": [
+    {
+      "check": "actual reader paused; stale disarm",
+      "pass": true,
+      "state": {
+        "status": "Sensor stream stale. Motion disarmed.",
+        "connected": true,
+        "calibrated": true,
+        "received": 201,
+        "rejected": 0,
+        "age": 604.7000000011176,
+        "pitch": 0.015247670231093916,
+        "roll": -0.009699853448634383,
+        "neutral": [
+          0.01483977650472612,
+          -0.010156582661977252
+        ],
+        "linear": [
+          0,
+          0,
+          0
+        ],
+        "gravity": [
+          0.009936524999999996,
+          0.014517218333333337,
+          -0.9781921349999999
+        ],
+        "gyroBias": [
+          -0.12715657333333333,
+          0.061035154999999994,
+          0.12105306666666664
+        ],
+        "armed": null,
+        "receiptToApply": [
+          0
+        ]
+      }
+    },
+    {
+      "check": "actual stream resumes without rearming",
+      "pass": true
+    },
+    {
+      "check": "actual browser focus loss disarms",
+      "pass": true
+    },
+    {
+      "check": "neutral actual sensor does not pour; source selection disarms",
+      "pass": true
+    },
+    {
+      "check": "helper restart; new real session requires calibration and never rearms",
+      "pass": true
+    }
+  ]
+}

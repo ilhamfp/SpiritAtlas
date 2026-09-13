@@ -1,0 +1,14 @@
+// Real-device diagnostic only. No synthetic packet or sensor override.
+import {realBrowser,recordRealPage} from './btb-real-browser.mjs';
+import fs from 'node:fs/promises';
+const origin=process.env.BTB_URL||'https://spiritatlas-one.vercel.app';
+const evidence=process.env.BTB_EVIDENCE||'production-native';
+const seconds=Number(process.env.BTB_SECONDS||120),pair=JSON.parse(await fs.readFile('.mac-motion/pair.json','utf8'));
+const real=await realBrowser();const {context,page}=real;
+await page.goto(`${origin}/behind-the-bar/diagnostics?preset=stir-demo#motion=${pair.token}`);await page.waitForFunction(()=>window.__btbNative?.received>100&&window.__btb?.scene?.diagnostics.gpuReads>10,{},{timeout:30000});
+await page.getByRole('button',{name:'Recenter at rest',exact:true}).click();await page.locator('.btb-stage').scrollIntoViewIfNeeded();
+await page.getByRole('button',{name:'Arm movement',exact:true}).click();const stopVideo=await recordRealPage(page,`docs/behind-the-bar/evidence/native-video/${evidence}.webm`);await page.evaluate(()=>{window.__btbCapture=[];window.__btbCaptureTimer=setInterval(()=>{const n=window.__btbNative,m=window.__btb.model,d=window.__btb.scene.diagnostics;window.__btbCapture.push({wall:Date.now(),native:{...n.snapshot(),receiptToApply:undefined},sensor:n.sample?{t:n.sample.t,sampleEpoch:n.sample.sampleEpoch,seq:n.sample.seq,accel:n.sample.accel,gyro:n.sample.gyro}:null,stage:m.stage,armed:m.armed,pour:m.pourTilt,mix:{...m.mix},serving:{...m.serving},tilt:[m.vesselX,m.vesselZ],gpu:d.gpuState.slice(),frame:d.frames});},100);});
+console.log('Real native scene connected, calibrated and armed. Gentle tilt/move, then set down and observe settling.');
+await page.waitForTimeout(seconds*1000);await page.evaluate(()=>clearInterval(window.__btbCaptureTimer));
+const result=await page.evaluate(()=>({recordedAt:new Date().toISOString(),origin:location.origin,browser:navigator.userAgent,hardware:'Mac16,8 Apple M4 Pro macOS 26.3; identified in MACBOOK-PREFLIGHT.md',samples:window.__btbCapture,latency:window.__btb.scene.diagnostics.nativeLatency,receiverProcessing:window.__btbNative.receiptToApply,state:window.__btb.model.snapshot(),errors:window.__btb.scene.diagnostics.errors,physicalPhaseConfirmation:'Pending owner confirmation; stream contains real data and is not a synthetic fixture.'}));
+await fs.writeFile(`docs/behind-the-bar/evidence/${evidence}-session.json`,JSON.stringify({...result,launchArguments:real.args,focusEmulation:false},null,2));await page.screenshot({path:`docs/behind-the-bar/evidence/${evidence}-scene.png`,fullPage:true});await page.getByRole('button',{name:'Disarm',exact:true}).click().catch(()=>{});await stopVideo();await real.close();console.log({samples:result.samples.length,latencyCount:result.latency.length,errors:result.errors,physicalConfirmation:'pending'});

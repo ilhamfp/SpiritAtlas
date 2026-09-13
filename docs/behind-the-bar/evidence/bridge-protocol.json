@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-09-13T05:45:22.409Z",
+  "rows": [
+    {
+      "name": "missing authorization",
+      "status": 401,
+      "allowedOrigin": "https://spiritatlas-one.vercel.app"
+    },
+    {
+      "name": "wrong token",
+      "status": 401,
+      "allowedOrigin": "https://spiritatlas-one.vercel.app"
+    },
+    {
+      "name": "untrusted origin",
+      "status": 403,
+      "allowedOrigin": null
+    },
+    {
+      "name": "valid scoped authorization",
+      "status": 200,
+      "allowedOrigin": "https://spiritatlas-one.vercel.app"
+    },
+    {
+      "name": "one subscriber",
+      "first": 200,
+      "second": 409
+    }
+  ]
+}

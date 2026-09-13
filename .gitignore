@@ -20,3 +20,7 @@ qa/interaction-artifacts/
 public/models/candidates/
 tmp/
 .vercel
+
+# Native motion local artifacts
+tools/mac-motion/.build/
+.mac-motion/

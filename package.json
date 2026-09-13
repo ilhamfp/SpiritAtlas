@@ -22,7 +22,9 @@
     "@types/react-dom": "^19.3.0",
     "@types/three": "^0.186.0",
     "@vitejs/plugin-react": "^6.1.1",
+    "@webgpu/types": "0.1.72",
     "typescript": "^7.0.2",
+    "unplugin-typegpu": "0.12.3",
     "vite": "^8.3.0"
   },
   "type": "module",
@@ -40,6 +42,7 @@
     "react-dom": "19.2.4",
     "three": "0.186.0",
     "three-gpu-pathtracer": "0.0.24",
-    "three-mesh-bvh": "0.9.15"
+    "three-mesh-bvh": "0.9.15",
+    "typegpu": "0.12.5"
   }
 }

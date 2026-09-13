@@ -1,0 +1,10 @@
+import type {Preparation} from './model';
+export class StudioSound {
+ context:AudioContext|null=null;gain:GainNode|null=null;filter:BiquadFilterNode|null=null;source:AudioBufferSourceNode|null=null;muted=false;lastClink=0;
+ unlock(){if(this.muted)return;try{if(!this.context){const c=this.context=new AudioContext();const buffer=c.createBuffer(1,c.sampleRate,c.sampleRate);const data=buffer.getChannelData(0);let seed=713;let brown=0;for(let i=0;i<data.length;i++){seed=(seed*1664525+1013904223)>>>0;brown=(brown+(seed/4294967296*2-1)*.08)/1.02;data[i]=brown;}
+ const source=this.source=c.createBufferSource();source.buffer=buffer;source.loop=true;const filter=this.filter=c.createBiquadFilter();filter.type='lowpass';filter.frequency.value=600;const gain=this.gain=c.createGain();gain.gain.value=0;source.connect(filter).connect(gain).connect(c.destination);source.start();}void this.context.resume();}catch{}}
+ clink(strength=.5){if(this.muted)return;this.unlock();const c=this.context;if(!c||c.currentTime-this.lastClink<.12)return;this.lastClink=c.currentTime;const o=c.createOscillator(),g=c.createGain();o.frequency.setValueAtTime(1100+strength*500,c.currentTime);o.frequency.exponentialRampToValueAtTime(600,c.currentTime+.1);g.gain.setValueAtTime(.02*strength,c.currentTime);g.gain.exponentialRampToValueAtTime(.00001,c.currentTime+.17);o.connect(g).connect(c.destination);o.start();o.stop(c.currentTime+.18);}
+ update(model:Preparation,flow:number,contact:number){const c=this.context;if(!c||!this.gain||!this.filter)return;const pouring=model.transit.length>0;const volume=this.muted||document.hidden?0:pouring?.15:Math.min(.065,Math.abs(flow)*.009);this.gain.gain.setTargetAtTime(volume,c.currentTime,.04);this.filter.frequency.setTargetAtTime(pouring?1000:350+Math.abs(flow)*90,c.currentTime,.04);if(contact>.06)this.clink(Math.min(.8,contact));}
+ setMuted(value:boolean){this.muted=value;if(value&&this.context&&this.gain)this.gain.gain.setValueAtTime(0,this.context.currentTime);}
+ dispose(){this.source?.stop();void this.context?.close();this.context=null;}
+}

@@ -1,0 +1,246 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/btb.config.ts",
+      "tests/btb-browser.spec.ts"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb/tests/btb.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb/tests/docs/behind-the-bar/evidence/test-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/btb-.*\\.spec\\.ts/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/behind-the-bar/evidence/test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "btb-browser.spec.ts",
+      "file": "btb-browser.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "GPU responds to held input, reversal, release and reset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8085,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:31:17.030Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2226983cbb9351b531c4-aa24d6617216627bb9cd",
+          "file": "btb-browser.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "complete three-vessel preparation, personal garnish and comparison preserve the result",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 60019,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb/tests/btb-browser.spec.ts",
+                        "column": 212,
+                        "line": 3
+                      },
+                      "message": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Pause pour', exact: true })\u001b[22m\n\n\n  1 | import {test,expect} from '@playwright/test';\n  2 | async function ready(page:any,preset=''){await page.goto(`/behind-the-bar${preset?'?preset='+preset:''}`);await expect(page.getByText('Live liquid ready',{exact:true})).toBeVisible({timeout:20000});}\n> 3 | async function pour(page:any,seconds:number){await page.getByRole('button',{name:'Pour',exact:true}).click();await page.waitForTimeout(seconds*1000);await page.getByRole('button',{name:'Pause pour',exact:true}).click();await page.waitForTimeout(250);}\n    |                                                                                                                                                                                                                    ^\n  4 | test('GPU responds to held input, reversal, release and reset',async({page})=>{await ready(page,'stir-demo');const before=await page.evaluate(()=>window.__btb!.scene!.diagnostics.gpuDispatches);await page.getByRole('button',{name:'Hold to stir right'}).focus();await page.keyboard.down('Space');await page.waitForTimeout(1100);let positive=await page.evaluate(()=>window.__btb!.scene!.diagnostics.gpuState[4]);expect(positive).toBeGreaterThan(1);await page.keyboard.up('Space');await page.getByRole('button',{name:'Hold to stir left'}).focus();await page.keyboard.down('Space');await page.waitForTimeout(100);const transient=await page.evaluate(()=>window.__btb!.scene!.diagnostics.gpuState[4]);expect(transient).toBeGreaterThan(0);await page.waitForTimeout(1400);expect(await page.evaluate(()=>window.__btb!.scene!.diagnostics.gpuState[4])).toBeLessThan(-1);await page.keyboard.up('Space');await page.waitForTimeout(4000);expect(Math.abs(await page.evaluate(()=>window.__btb!.scene!.diagnostics.gpuState[4]))).toBeLessThan(.1);expect(await page.evaluate(()=>window.__btb!.scene!.diagnostics.gpuDispatches)).toBeGreaterThan(before);await page.getByRole('button',{name:'Reset demo'}).click();await page.waitForTimeout(150);expect(await page.evaluate(()=>window.__btb!.scene!.diagnostics.gpuState[4])).toBe(0);await page.getByRole('button',{name:'Start my remix'}).click();expect(await page.evaluate(()=>window.__btb!.model.origin)).toBe('user');await expect(page.getByRole('button',{name:'Add mixing ice'})).toBeVisible();});\n  5 | test('complete three-vessel preparation, personal garnish and comparison preserve the result',async({page})=>{await ready(page);await page.getByRole('button',{name:'Add mixing ice'}).click();await pour(page,1.1);await pour(page,1.2);await page.getByRole('button',{name:/Ancho Verde Optional modifier/}).click();await pour(page,.7);await page.getByRole('button',{name:/Rice syrup Optional modifier/}).click();await pour(page,.45);await page.getByRole('button',{name:'Stir',exact:true}).click();await page.getByRole('button',{name:'Strain',exact:true}).click();await pour(page,1.8);await page.getByRole('button',{name:'Finish pouring'}).click();await page.getByRole('button',{name:'Express orange oil'}).click();await page.getByRole('button',{name:'Place garnish'}).click();await page.getByRole('slider',{name:'Rotate pepper'}).fill('1.2');await page.getByRole('slider',{name:'Across the rim'}).fill('0.12');await page.getByRole('button',{name:'Place pepper',exact:true}).click();await page.getByRole('button',{name:'Serve',exact:true}).click();await expect(page.getByRole('heading',{name:'Your studio remix'})).toBeVisible();const result=await page.evaluate(()=>window.__btb!.model.snapshot());expect(result.result!.garnish.angle).toBeCloseTo(1.2);expect(result.serving.rice).toBeGreaterThan(0);expect(result.mix.core).toBeGreaterThan(0);for(const d of Object.values(result.conservation))expect(Math.abs(d as number)).toBeLessThan(1e-7);await page.screenshot({path:'docs/behind-the-bar/evidence/serving-personal-desktop.png',fullPage:true});await page.getByRole('button',{name:'Compare with Bar Somma’s presentation'}).click();await page.getByRole('button',{name:'Return to my remix'}).first().click();await page.getByRole('button',{name:'Look around',exact:true}).click();await page.locator('.btb-canvas').focus();await page.keyboard.press('ArrowLeft');expect(await page.evaluate(()=>window.__btb!.model.result)).toEqual(result.result);await page.getByRole('link',{name:'Return to the real drink'}).click();await expect(page).toHaveURL(/drink=negroni-express/);});\n  6 | test('mobile and tablet layouts retain readable controls, direct preview and no overflow',async({page})=>{for(const [width,height] of [[390,844],[768,1024]]){await page.setViewportSize({width,height});await ready(page,'stir-demo');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.screenshot({path:`docs/behind-the-bar/evidence/preview-${width}x${height}.png`,fullPage:true});await page.getByRole('button',{name:'Strain',exact:true}).click();await expect(page.getByRole('button',{name:'Pour',exact:true})).toBeVisible();await page.reload();await expect(page.getByText('Prefilled live preview')).toBeVisible();}});\n    at pour (/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb/tests/btb-browser.spec.ts:3:212)\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas-btb/tests/btb-browser.spec.ts:5:213"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:31:25.696Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb/tests/docs/behind-the-bar/evidence/test-artifacts/btb-browser-complete-three-60daf-parison-preserve-the-result/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "2226983cbb9351b531c4-a75214d5f34783c1f18c",
+          "file": "btb-browser.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "mobile and tablet layouts retain readable controls, direct preview and no overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3705,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:32:26.375Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2226983cbb9351b531c4-0f46f13931157e1bea98",
+          "file": "btb-browser.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "native boundary rejects wrong session/order/invalid values and disarms on stale/reset/takeover",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1508,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:32:30.653Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2226983cbb9351b531c4-191ecb369e0d1c959e85",
+          "file": "btb-browser.spec.ts",
+          "line": 7,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T05:31:16.571Z",
+    "duration": 75817.11,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,12 @@
+import {chromium} from '@playwright/test';
+import fs from 'node:fs/promises';
+const browser=await chromium.launch({channel:'chrome',headless:false});
+const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(String(e)));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+await page.goto('http://127.0.0.1:4190/behind-the-bar?preset=stir-demo');
+await page.waitForTimeout(6500);
+console.log((await page.locator('body').innerText()).slice(0,2500));
+console.log('ERRORS',errors.slice(0,12));
+console.log('DIAGNOSTICS',await page.evaluate(()=>{const d=window.__btb?.scene?.diagnostics;return d?{...d,frameTimes:d.frameTimes.slice(-10)}:null}));
+await page.screenshot({path:'docs/behind-the-bar/evidence/preview-first-desktop.png',fullPage:true});
+await browser.close();

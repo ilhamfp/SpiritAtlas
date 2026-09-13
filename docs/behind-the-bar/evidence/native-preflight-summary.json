@@ -1,0 +1,53 @@
+{
+  "hardware": "MacBook Pro Mac16,8 Apple M4 Pro",
+  "os": "macOS 26.3 25D125",
+  "reader": "203685640287449eaecf521c24d1f5e52486ecb7 adapted minimal C",
+  "privilege": "uid 501, no elevation",
+  "phaseLabels": "Unlabelled; awaiting owner confirmation of deliberate movement",
+  "sensors": {
+    "accel": {
+      "count": 30189,
+      "duration": 300.0160637500012,
+      "hz": 100.62127881644098,
+      "maximumGapMs": 9.939958001268678,
+      "unit": "g",
+      "min": [
+        -0.1731262,
+        -0.1203461,
+        -1.0596771
+      ],
+      "max": [
+        0.1440125,
+        0.2692871,
+        -0.9053345
+      ],
+      "mean": [
+        0.011155537152605253,
+        0.013914936824671239,
+        -0.9797938886382457
+      ]
+    },
+    "gyro": {
+      "count": 30189,
+      "duration": 300.0160637500012,
+      "hz": 100.62127881644098,
+      "maximumGapMs": 9.939958001268678,
+      "unit": "deg/s",
+      "min": [
+        -1.8310547,
+        -2.0141602,
+        -64.8803711
+      ],
+      "max": [
+        1.953125,
+        1.5258789,
+        53.3447266
+      ],
+      "mean": [
+        0.020017527165523866,
+        0.008560166570605187,
+        0.12224419464705688
+      ]
+    }
+  }
+}

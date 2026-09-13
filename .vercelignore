@@ -19,3 +19,5 @@ assets/blender/*.blend
 docs
 scripts
 tests
+tools
+.mac-motion
