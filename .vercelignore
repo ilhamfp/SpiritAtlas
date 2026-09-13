@@ -1,0 +1,10 @@
+.env*
+.git
+SpiritAtlas-Brand-Kit
+node_modules
+qa
+.playwright-mcp
+references
+negroni-bar-crawl.mp4
+bar-somma-negroni-reference.jpg
+public/models/candidates

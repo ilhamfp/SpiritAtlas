@@ -1,0 +1,241 @@
+{
+  "sourceBlend": "assets/blender/candidates/v012/negroni-express-interfaces-air-gap.blend",
+  "sourceBlendSha256": "f33f51e6f37b6c3df789a8f9d75ea38fd0eced0882b041888e2b1cbad1c1dddc",
+  "experimentBlend": "assets/blender/experiments/negroni-express-v012-interfaces-neutral-zero-hero.blend",
+  "experimentBlendSha256": "3a31ea4615412145eee040fd2e8c8cc3a9ab80aa26e770a44a7f480887726718",
+  "scriptSha256": "2a5bf690c8c1db4d4b5f9dff37fe60a11f840115d1b5236a694a128bdd0c4902",
+  "geometryAndNormalsSha256": "b7c2a2b665dec2b8c5b2c9d8a2be020d8eedef27bd1076f451eb107b2ee3d326",
+  "geometryAndNormalsUnchanged": true,
+  "treatment": {
+    "field": "Liquid Principled BSDF Base Color",
+    "before": [
+      0.9599999785423279,
+      0.3400000035762787,
+      0.06499999761581421,
+      1.0
+    ],
+    "after": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "controls": "Fixed hero camera/light, exposure, roughness and rendering settings. Uses the explicitly partitioned meniscus-aware v012 interface source; its relative IORs and baseline liquid-normal restoration are separately recorded. Geometry/normals stay unchanged during white-surface/absorption treatment. The raw v012 d6 control has different interface partitioning. This named illumination control also replaces the world/counter/coaster with equal neutral emission and disables direct lights, as separately recorded.",
+  "render": {
+    "samples": 256,
+    "denoise": true,
+    "baseResolution": [
+      720,
+      900
+    ],
+    "crop": [
+      0.08,
+      0.9,
+      0.18,
+      0.84
+    ],
+    "output": "qa/evidence/blender/negroni-express-hero-v012-interfaces-neutral-zero.png",
+    "completed": true,
+    "elapsedSeconds": 15.773000209010206,
+    "outputSha256": "91eb80a76aec02a5205a895f16501ae496fab9ec45d5fb9db2b19364524ac0d6",
+    "linearOutput": "qa/evidence/blender/negroni-express-hero-v012-interfaces-neutral-zero.exr",
+    "linearOutputSha256": "d81dd716d56e5d30f11a4fe8732f760e9b19ef4a1aebae0a5a6d92b6cfd29ccf",
+    "linearFormat": "32-bit float scene-linear RGBA OpenEXR; display transform is not baked into this output."
+  },
+  "interfaceSource": true,
+  "normalBaselineRestoration": {
+    "beforeSha256": "b2379026277bcf1907ec7df6ce2e785a6675c1a4fb858bf979554972cb534d05",
+    "afterSha256": "b7c2a2b665dec2b8c5b2c9d8a2be020d8eedef27bd1076f451eb107b2ee3d326",
+    "purpose": "Restore validated v012 horizontal liquid normal rule after interface splitting introduced max2.6747degree deviation."
+  },
+  "interfaceMaterials": [
+    {
+      "name": "Glass optical solid walls",
+      "ior": 1.5099999904632568
+    },
+    {
+      "name": "Liquid_negroni-express",
+      "ior": 1.3600000143051147
+    },
+    {
+      "name": "Ice clear wet volume",
+      "ior": 1.309999942779541
+    },
+    {
+      "name": "Liquid contact with glass already resolved",
+      "ior": 1.0
+    },
+    {
+      "name": "Interface liquid to ice n1.36 over1.31",
+      "ior": 1.038167953491211
+    },
+    {
+      "name": "Ice clear wet volume",
+      "ior": 1.309999942779541
+    },
+    {
+      "name": "Ice submerged interface already resolved",
+      "ior": 1.0
+    }
+  ],
+  "materialTreatmentVersion": 2,
+  "usedLiquidMaterialSlots": [
+    0,
+    3
+  ],
+  "treatedLiquidMaterials": [
+    {
+      "name": "Liquid_negroni-express",
+      "baseColor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "baseColorLinks": [],
+      "absorption": [
+        {
+          "color": [
+            0.9850000143051147,
+            0.30000001192092896,
+            0.02500000037252903,
+            1.0
+          ],
+          "density": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Interface liquid to ice n1.36 over1.31",
+      "baseColor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "baseColorLinks": [],
+      "absorption": [
+        {
+          "color": [
+            0.9850000143051147,
+            0.30000001192092896,
+            0.02500000037252903,
+            1.0
+          ],
+          "density": 0.0
+        }
+      ]
+    }
+  ],
+  "nonLiquidMaterialsUnchangedDuringAbsorptionTreatment": true,
+  "iceMaterials": [
+    {
+      "name": "Ice clear wet volume",
+      "baseColor": [
+        0.9800000190734863,
+        0.9900000095367432,
+        1.0,
+        1.0
+      ],
+      "baseColorLinks": [],
+      "absorption": []
+    },
+    {
+      "name": "Ice submerged interface already resolved",
+      "baseColor": [
+        0.9800000190734863,
+        0.9900000095367432,
+        1.0,
+        1.0
+      ],
+      "baseColorLinks": [],
+      "absorption": []
+    }
+  ],
+  "illuminationControl": {
+    "mode": "neutral-emissive",
+    "worldLinearEmission": [
+      1,
+      1,
+      1
+    ],
+    "strength": 1,
+    "disabledLights": [
+      "Left narrow reflected strip",
+      "Right narrow reflected strip",
+      "Broad rear diffuse fill"
+    ],
+    "replacedSurfaces": [
+      {
+        "object": "stage_counter",
+        "before": [
+          "Counter warm veined stone"
+        ],
+        "after": "Neutral terminal radiance stage_counter"
+      },
+      {
+        "object": "stage_square_coaster",
+        "before": [
+          "Coaster ivory engraved paper"
+        ],
+        "after": "Neutral terminal radiance stage_square_coaster"
+      }
+    ],
+    "meaning": "Equal neutral terminal radiance from world, counter and coaster; optical materials/geometry remain separate controls. No source-fidelity claim."
+  },
+  "linearOutputRequested": true,
+  "absorption": {
+    "before": {
+      "color": [
+        0.6499999761581421,
+        0.0949999988079071,
+        0.017999999225139618,
+        1.0
+      ],
+      "density": 0.550000011920929
+    },
+    "after": {
+      "color": [
+        0.9850000143051147,
+        0.30000001192092896,
+        0.02500000037252903,
+        1.0
+      ],
+      "density": 0.0
+    },
+    "linearCoefficientPerAuthoredUnit": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "predictedDirectTransmission": [
+      {
+        "pathLengthAuthoredUnits": 0.25,
+        "RGB": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pathLengthAuthoredUnits": 0.5,
+        "RGB": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "pathLengthAuthoredUnits": 1,
+        "RGB": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "formula": "alpha=(1-linearColor)*density; T=exp(-alpha*pathLength). Surface Fresnel and multiple reflections are separate.",
+    "formulaSource": "https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/volume_coefficients.html"
+  }
+}

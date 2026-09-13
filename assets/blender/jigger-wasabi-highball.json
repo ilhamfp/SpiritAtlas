@@ -1,0 +1,409 @@
+{
+  "drink": "jigger-wasabi-highball",
+  "version": "collections-v1",
+  "family": "highball",
+  "seed": 20260913,
+  "blender": "5.2.1 LTS",
+  "rows": {
+    "modifiers": 6.5,
+    "fizz": 4.85,
+    "spirit": 3.35,
+    "structure": 0.0
+  },
+  "parameters": {
+    "family": "highball",
+    "height": 2.8,
+    "radius": 0.47,
+    "base": 0.43,
+    "fill": 2.57,
+    "iceWidth": 0.51,
+    "iceDepth": 0.48,
+    "iceHeight": 2.27,
+    "iceZ": 1.53,
+    "color": [
+      0.84,
+      0.58,
+      0.2,
+      1
+    ],
+    "source": "https://images.squarespace-cdn.com/content/v1/55dff4d0e4b023d46479cd47/dbfba9ef-c63d-4d8f-9248-4bbce25c2f10/Wasabi%2BHighball.jpg",
+    "note": "Current BLOOM photo: near-straight highball and an orange crescent inside glass. Crescent fruit identity is not asserted."
+  },
+  "sourceReference": {
+    "path": "https://images.squarespace-cdn.com/content/v1/55dff4d0e4b023d46479cd47/dbfba9ef-c63d-4d8f-9248-4bbce25c2f10/Wasabi%2BHighball.jpg",
+    "sha256": null
+  },
+  "scriptSha256": "fcf11e07f4ef87809242c84cfe4c1fcf775bbfd3c9b685df1812fed159ace264",
+  "sourceSha256": "b543bec2cd931b4da6454f5470866699504a2f79481acc3714a719703bccf451",
+  "modelSha256": "6e5845ecacc5ac01c56faecf5ff6e20f2fd3fcd2e628b0690980eac48bff0f86",
+  "modelBytes": 253152,
+  "parts": [
+    {
+      "scenePartId": "glass",
+      "ingredientId": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Current BLOOM photo: near-straight highball and an orange crescent inside glass. Crescent fruit identity is not asserted.",
+      "id": "glass",
+      "category": "structure",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 1346,
+      "triangles": 2688,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.4699999988079071,
+          -0.4699999988079071,
+          0.03500000014901161
+        ],
+        [
+          0.4699999988079071,
+          0.4699999988079071,
+          2.802999973297119
+        ]
+      ]
+    },
+    {
+      "scenePartId": "liquid",
+      "ingredientId": "fizz",
+      "role": "mixture",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Current BLOOM photo: near-straight highball and an orange crescent inside glass. Crescent fruit identity is not asserted.",
+      "id": "liquid",
+      "category": "fizz",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.3919999599456787
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        1.3919999599456787
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 577,
+      "triangles": 1150,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.42951515316963196,
+          -0.42951515316963196,
+          0.21399998664855957
+        ],
+        [
+          0.42951515316963196,
+          0.42951515316963196,
+          2.569999933242798
+        ]
+      ]
+    },
+    {
+      "scenePartId": "ice",
+      "ingredientId": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Current BLOOM photo: near-straight highball and an orange crescent inside glass. Crescent fruit identity is not asserted.",
+      "id": "ice",
+      "category": "structure",
+      "assembledPosition": [
+        0.0,
+        0.03500000014901161,
+        1.5299999713897705
+      ],
+      "expandedPosition": [
+        0.0,
+        0.03500000014901161,
+        1.5299999713897705
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 152,
+      "triangles": 300,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.2549999952316284,
+          -0.20499999821186066,
+          0.39499998092651367
+        ],
+        [
+          0.2549999952316284,
+          0.2750000059604645,
+          2.6649999618530273
+        ]
+      ]
+    },
+    {
+      "scenePartId": "serving_fine_bubbles",
+      "ingredientId": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Current BLOOM photo: near-straight highball and an orange crescent inside glass. Crescent fruit identity is not asserted.",
+      "assembledOnly": true,
+      "id": "serving_fine_bubbles",
+      "category": "structure",
+      "assembledPosition": [
+        0.008167609572410583,
+        0.009575143456459045,
+        1.4346656799316406
+      ],
+      "expandedPosition": [
+        0.008167609572410583,
+        0.009575143456459045,
+        1.4346656799316406
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 2040,
+      "triangles": 3840,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3926907777786255,
+          -0.38383060693740845,
+          0.36554229259490967
+        ],
+        [
+          0.40902602672576904,
+          0.40298086404800415,
+          2.503789186477661
+        ]
+      ]
+    },
+    {
+      "scenePartId": "physical_orange_crescent",
+      "ingredientId": "modifiers",
+      "role": "physical",
+      "lift": 4.899999976158142,
+      "evidence": "visual-observation",
+      "presentationNote": "Orange crescent seen inside the current official photo; specific fruit identity is unverified.",
+      "rigidExpansionGroup": "modifier-accent",
+      "id": "physical_orange_crescent",
+      "category": "modifiers",
+      "assembledPosition": [
+        0.0325000025331974,
+        -0.3400000035762787,
+        1.600000023841858
+      ],
+      "expandedPosition": [
+        0.0325000025331974,
+        -0.3400000035762787,
+        6.5
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 84,
+      "triangles": 164,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.07000000774860382,
+          -0.36500000953674316,
+          1.2599999904632568
+        ],
+        [
+          0.13500000536441803,
+          -0.3149999976158142,
+          1.940000057220459
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_spirit",
+      "ingredientId": "spirit",
+      "role": "recipe",
+      "lift": 3.3349999994039536,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Current BLOOM photo: near-straight highball and an orange crescent inside glass. Crescent fruit identity is not asserted.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_spirit",
+      "category": "spirit",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.015000000596046448
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        3.35
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3400000035762787,
+          -0.3400000035762787,
+          -0.14000000059604645
+        ],
+        [
+          0.3400000035762787,
+          0.3400000035762787,
+          0.17000000178813934
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_fizz",
+      "ingredientId": "fizz",
+      "role": "recipe",
+      "lift": 4.834999999403953,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Current BLOOM photo: near-straight highball and an orange crescent inside glass. Crescent fruit identity is not asserted.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_fizz",
+      "category": "fizz",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.015000000596046448
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        4.85
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3400000035762787,
+          -0.3400000035762787,
+          -0.14000000059604645
+        ],
+        [
+          0.3400000035762787,
+          0.3400000035762787,
+          0.17000000178813934
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_fizz_bubbles",
+      "ingredientId": "fizz",
+      "role": "recipe",
+      "lift": 4.842793969810009,
+      "evidence": "official-menu",
+      "representation": "illustrative-carbonation",
+      "presentationNote": "Current BLOOM photo: near-straight highball and an orange crescent inside glass. Crescent fruit identity is not asserted.",
+      "preserveIllustrationColor": true,
+      "recipeSolid": true,
+      "id": "recipe_fizz_bubbles",
+      "category": "fizz",
+      "assembledPosition": [
+        -0.0027783364057540894,
+        -0.00681518018245697,
+        0.007206030189990997
+      ],
+      "expandedPosition": [
+        -0.0027783364057540894,
+        -0.00681518018245697,
+        4.85
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 748,
+      "triangles": 1408,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3042113780975342,
+          -0.3076539635658264,
+          -0.09769204258918762
+        ],
+        [
+          0.2986546754837036,
+          0.2940235733985901,
+          0.11210410296916962
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_wasabi",
+      "ingredientId": "modifiers",
+      "role": "recipe",
+      "lift": 6.487999998033047,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Current BLOOM photo: near-straight highball and an orange crescent inside glass. Crescent fruit identity is not asserted.",
+      "preserveIllustrationColor": true,
+      "recipeSolid": true,
+      "id": "recipe_wasabi",
+      "category": "modifiers",
+      "assembledPosition": [
+        -0.4699999988079071,
+        0.0,
+        0.012000001966953278
+      ],
+      "expandedPosition": [
+        -0.47,
+        0.0,
+        6.5
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.7419999837875366,
+          -0.2720000147819519,
+          -0.1120000034570694
+        ],
+        [
+          -0.1979999840259552,
+          0.2720000147819519,
+          0.13600000739097595
+        ]
+      ]
+    }
+  ],
+  "checks": {
+    "finiteGeometry": true,
+    "allPartsClosed": true,
+    "semanticCategoriesComplete": true,
+    "structureStationary": true,
+    "garnishRigid": true
+  },
+  "limitations": [
+    "Current BLOOM photo: near-straight highball and an orange crescent inside glass. Crescent fruit identity is not asserted.",
+    "Real editable geometry; serving dimensions, material appearance and all recipe-form scales are illustrative.",
+    "No offline photographic matching or physically measured optical claim.",
+    "Recipe quantities and units remain JSON null. The client supplies current content labels."
+  ]
+}

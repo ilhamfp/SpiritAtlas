@@ -1,0 +1,22 @@
+{
+  "source": "assets/blender/experiments/negroni-express-v012-interfaces-clean-red-d055-hero.blend",
+  "sourceSha256": "f928b306189aacfdcf4d657fe9a2ec9dc401f594ba6018f0b59f116cafb1ceb7",
+  "scene": "assets/blender/experiments/negroni-express-v012-coaster-white-hero.blend",
+  "sceneSha256": "da83fd159cd3aec3b680a6e23f13ce9d313ce9565b93368a19b9e4e24cb573e6",
+  "scriptSha256": "8fe0c25d12033b80fd217524687112f417aee7e69819de69412fe9b8905e50dc",
+  "geometryAndNormalsSha256": "66ec32b3456bd880fdb9dc551c3b4e7ccb4af4c1aeafbf1568181ff99b181c9b",
+  "geometryAndNormalsUnchanged": true,
+  "treatment": {
+    "material": "white",
+    "whiteControl": [
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.7799999713897705,
+    "emission": 0,
+    "pattern": null
+  },
+  "controls": "Only the coaster Base Color graph changes. Same source interface geometry, liquid density0.55, original ice materials, camera, world, direct lighting, roughness, exposure and sample/denoise settings.",
+  "renderCompleted": false
+}

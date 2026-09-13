@@ -1,0 +1,191 @@
+{
+  "drink": "bbf-negroni",
+  "version": "0.14.0-baked",
+  "seed": 20260912,
+  "blender": "5.2.1 LTS",
+  "parameters": {
+    "radius": 1,
+    "height": 1.94,
+    "base": 0.29,
+    "wall": 0.035,
+    "fill": 1.41,
+    "liquid": [
+      0.52,
+      0.085,
+      0.018,
+      1
+    ],
+    "absorption": [
+      0.25,
+      0.012,
+      0.005,
+      1
+    ],
+    "density": 0.9,
+    "ice": 1.25,
+    "ice_z": 0.945
+  },
+  "scriptSha256": "313e66fc429b527f09f135983ed9c686a3306ca7beabba0d6bf45499e3a101dc",
+  "sourceManifestSha256": "e5a5af60c29b5b9515bf9e61b8f89a22332c32dc53d80e9c2da3cfd40223705f",
+  "view": "hero",
+  "camera": {
+    "location": [
+      0.15000000596046448,
+      -10.5,
+      2.931490898132324
+    ],
+    "rotation": [
+      1.3888969421386719,
+      1.8446494332025054e-10,
+      0.014284745790064335
+    ],
+    "lens": 63.0
+  },
+  "render": {
+    "samples": 512,
+    "denoise": false,
+    "viewTransform": "AgX",
+    "look": "AgX - Medium High Contrast"
+  },
+  "parts": [
+    {
+      "id": "glass",
+      "category": "structure",
+      "role": "physical",
+      "lift": 0,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "liquid",
+      "category": "structure",
+      "role": "mixture",
+      "lift": 0,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "ice",
+      "category": "structure",
+      "role": "physical",
+      "lift": 2.1550000000000002,
+      "assembledPosition": [
+        0.0,
+        0.03500000014901161,
+        0.9449999928474426
+      ]
+    },
+    {
+      "id": "garnish_orange",
+      "category": "garnish",
+      "role": "physical",
+      "lift": 7.04,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "recipe_spirit",
+      "category": "spirit",
+      "role": "recipe",
+      "lift": 3.35,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.100000023841858
+      ],
+      "evidence": "confirmed",
+      "representation": "ingredient-diagram",
+      "label": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "recipe_bitter",
+      "category": "bitter",
+      "role": "recipe",
+      "lift": 4.4,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.100000023841858
+      ],
+      "evidence": "confirmed",
+      "representation": "ingredient-diagram",
+      "label": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "recipe_vermouth",
+      "category": "vermouth",
+      "role": "recipe",
+      "lift": 5.449999999999999,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.100000023841858
+      ],
+      "evidence": "confirmed",
+      "representation": "ingredient-diagram",
+      "label": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "recipe_modifiers",
+      "category": "modifiers",
+      "role": "recipe",
+      "lift": 6.5,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.100000023841858
+      ],
+      "evidence": "unverified",
+      "representation": "unknown-placeholder",
+      "label": "Unknown",
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "ice_inclusions",
+      "category": "structure",
+      "role": "physical",
+      "lift": 2.1550000000000002,
+      "assembledPosition": [
+        -0.06589659303426743,
+        -0.3653120696544647,
+        0.5709335803985596
+      ]
+    }
+  ],
+  "outputTag": "v014-baked",
+  "normalBake": {
+    "script": "scripts/bake-garnish-details.py",
+    "scriptSha256": "1bb4c9001414cbad4b163d9a57cea07b44a17b5e8ee96a20a50ff1e2e5fea93c",
+    "sourceBlend": "assets/blender/candidates/v014/bbf-negroni.blend",
+    "sourceBlendSha256": "c1489e3c2f91a04185ce09bf41a0166dc9485f0cde349cae1df05703127643c6",
+    "sourceVersion": "0.14.0",
+    "objects": [
+      "garnish_orange"
+    ],
+    "normalTextureSize": [
+      2048,
+      2048
+    ],
+    "normalTextureSha256": "51dfb17d193bf0715039a56c4c76b70e7a7f32b328adaf4a57130527548aaf40",
+    "modelSha256": "462b261be194c996a9764afa1f7fda06ace1145ce9b737ef45b02ffc0542e090",
+    "blender": "5.2.1 LTS",
+    "device": "CPU",
+    "method": "Tangent +X +Y +Z normal bake of existing authored bump shading; shared UV atlas."
+  }
+}

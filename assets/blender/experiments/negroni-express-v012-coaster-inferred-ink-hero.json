@@ -1,0 +1,48 @@
+{
+  "source": "assets/blender/experiments/negroni-express-v012-interfaces-clean-red-d055-hero.blend",
+  "sourceSha256": "f928b306189aacfdcf4d657fe9a2ec9dc401f594ba6018f0b59f116cafb1ceb7",
+  "scene": "assets/blender/experiments/negroni-express-v012-coaster-inferred-ink-hero.blend",
+  "sceneSha256": "dab3f2338ab64c5303069f29498c7da4dc836942f9659233de332a067193b500",
+  "scriptSha256": "8fe0c25d12033b80fd217524687112f417aee7e69819de69412fe9b8905e50dc",
+  "geometryAndNormalsSha256": "66ec32b3456bd880fdb9dc551c3b4e7ccb4af4c1aeafbf1568181ff99b181c9b",
+  "geometryAndNormalsUnchanged": true,
+  "treatment": {
+    "material": "inferred-ink",
+    "whiteControl": [
+      1,
+      1,
+      1
+    ],
+    "roughness": 0.7799999713897705,
+    "emission": 0,
+    "pattern": {
+      "representation": "inferred-unbranded-ivory-ink",
+      "source": "Native t114 hero shows a high-contrast dark/ivory print and a narrow pale edge; exact artwork/branding is unresolved.",
+      "linearInk": [
+        0.012,
+        0.014,
+        0.011
+      ],
+      "linearPaper": [
+        0.84,
+        0.79,
+        0.66
+      ],
+      "noiseScale": 18,
+      "detail": 1.2,
+      "roughness": 0.55,
+      "thresholds": [
+        0.465,
+        0.515
+      ],
+      "borderFraction": 0.018,
+      "coasterSizeAuthoredUnits": [
+        2.47,
+        2.47
+      ],
+      "noExactPatternClaim": true
+    }
+  },
+  "controls": "Only the coaster Base Color graph changes. Same source interface geometry, liquid density0.55, original ice materials, camera, world, direct lighting, roughness, exposure and sample/denoise settings.",
+  "renderCompleted": false
+}

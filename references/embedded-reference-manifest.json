@@ -1,0 +1,194 @@
+{
+  "checkedAt": "2026-09-13T03:36:32.996421+00:00",
+  "purpose": "User-requested in-app model and source-photo comparison; no external deployment",
+  "transform": "Exact byte copies; existing Negroni source crops were already extracted at native resolution with no color or detail editing",
+  "creditAndScopeData": "src/data/drinkReferences.ts",
+  "sourceProvenance": [
+    "references/manifest.json",
+    "references/espresso-martini/appearance-reference-sources.json",
+    "references/new-collections/serving-image-provenance.json",
+    "references/new-collections/somma-captioned-photo-provenance.json",
+    "references/new-collections/additional-photo-provenance.json"
+  ],
+  "missing": {
+    "somma-pine-highball": "No individually identified matching serving photo found; current menu confirms recipe only"
+  },
+  "references": [
+    {
+      "drinkId": "bbf-negroni",
+      "sourcePath": "references/crops/bbf-hero.png",
+      "publicPath": "public/references/bbf-negroni.png",
+      "src": "/references/bbf-negroni.png",
+      "sha256": "f4aac93b7c6b425f8312b9b6fc885ff45659c2259306a078fc8a60b9c907a580",
+      "sourceSha256": "f4aac93b7c6b425f8312b9b6fc885ff45659c2259306a078fc8a60b9c907a580",
+      "exactCopy": true,
+      "originalUnchanged": true,
+      "bytes": 77940,
+      "dimensions": [
+        345,
+        337
+      ],
+      "format": "PNG"
+    },
+    {
+      "drinkId": "ichigo-negroni",
+      "sourcePath": "references/crops/ichigo-hero.png",
+      "publicPath": "public/references/ichigo-negroni.png",
+      "src": "/references/ichigo-negroni.png",
+      "sha256": "b38e7ebe7d54bafd822e7a73bbbf0e20344efd7c94fe7dfb440d62f3466e4b12",
+      "sourceSha256": "b38e7ebe7d54bafd822e7a73bbbf0e20344efd7c94fe7dfb440d62f3466e4b12",
+      "exactCopy": true,
+      "originalUnchanged": true,
+      "bytes": 128573,
+      "dimensions": [
+        426,
+        486
+      ],
+      "format": "PNG"
+    },
+    {
+      "drinkId": "negroni-express",
+      "sourcePath": "references/crops/somma-hero.png",
+      "publicPath": "public/references/negroni-express.png",
+      "src": "/references/negroni-express.png",
+      "sha256": "bc3e5155d8d5bc1bda2b4edbff12ea216b3d6e3402098a552a882d6c6624a5ec",
+      "sourceSha256": "bc3e5155d8d5bc1bda2b4edbff12ea216b3d6e3402098a552a882d6c6624a5ec",
+      "exactCopy": true,
+      "originalUnchanged": true,
+      "bytes": 204734,
+      "dimensions": [
+        450,
+        494
+      ],
+      "format": "PNG"
+    },
+    {
+      "drinkId": "atlas-espresso-martini",
+      "sourcePath": "references/espresso-martini/atlas-2024.jpg",
+      "publicPath": "public/references/atlas-espresso-martini.jpg",
+      "src": "/references/atlas-espresso-martini.jpg",
+      "sha256": "1418c2ca5994c0bdf75a8fdeac0836df3e6dc32e2b5fce0e6747177b28304314",
+      "sourceSha256": "1418c2ca5994c0bdf75a8fdeac0836df3e6dc32e2b5fce0e6747177b28304314",
+      "exactCopy": true,
+      "originalUnchanged": true,
+      "bytes": 55995,
+      "dimensions": [
+        747,
+        598
+      ],
+      "format": "JPEG"
+    },
+    {
+      "drinkId": "jigger-espresso-martini",
+      "sourcePath": "references/espresso-martini/jigger-2024.jpg",
+      "publicPath": "public/references/jigger-espresso-martini.jpg",
+      "src": "/references/jigger-espresso-martini.jpg",
+      "sha256": "af3014ac20f381843c03167b2d8e996c8e693572737a0f178d2b47b6e7648c8c",
+      "sourceSha256": "af3014ac20f381843c03167b2d8e996c8e693572737a0f178d2b47b6e7648c8c",
+      "exactCopy": true,
+      "originalUnchanged": true,
+      "bytes": 59304,
+      "dimensions": [
+        747,
+        598
+      ],
+      "format": "JPEG"
+    },
+    {
+      "drinkId": "nighthawks",
+      "sourcePath": "references/espresso-martini/nighthawks-2024.jpg",
+      "publicPath": "public/references/nighthawks.jpg",
+      "src": "/references/nighthawks.jpg",
+      "sha256": "411cef48b81e86e864b95a578dee9cfdb4d11dd4cd61cd2569bd4918a7377d0d",
+      "sourceSha256": "411cef48b81e86e864b95a578dee9cfdb4d11dd4cd61cd2569bd4918a7377d0d",
+      "exactCopy": true,
+      "originalUnchanged": true,
+      "bytes": 42574,
+      "dimensions": [
+        747,
+        598
+      ],
+      "format": "JPEG"
+    },
+    {
+      "drinkId": "atlas-martini",
+      "sourcePath": "references/new-collections/atlas-martini-official.jpg",
+      "publicPath": "public/references/atlas-martini.jpg",
+      "src": "/references/atlas-martini.jpg",
+      "sha256": "7bd8cbb34174ab24efe04681b4da77ececc6a218b6e4b55f825dd79874a51291",
+      "sourceSha256": "7bd8cbb34174ab24efe04681b4da77ececc6a218b6e4b55f825dd79874a51291",
+      "exactCopy": true,
+      "originalUnchanged": true,
+      "bytes": 979648,
+      "dimensions": [
+        1400,
+        934
+      ],
+      "format": "JPEG"
+    },
+    {
+      "drinkId": "moga-dirty-sake-tini",
+      "sourcePath": "references/new-collections/moga-dirty-sake-tini.jpg",
+      "publicPath": "public/references/moga-dirty-sake-tini.jpg",
+      "src": "/references/moga-dirty-sake-tini.jpg",
+      "sha256": "7add9c2e7794402fbb787e13df6f78cbe3a728d50f442739cf2f5e94bdadeb68",
+      "sourceSha256": "7add9c2e7794402fbb787e13df6f78cbe3a728d50f442739cf2f5e94bdadeb68",
+      "exactCopy": true,
+      "originalUnchanged": true,
+      "bytes": 94848,
+      "dimensions": [
+        1200,
+        800
+      ],
+      "format": "JPEG"
+    },
+    {
+      "drinkId": "somma-mirkos-martini",
+      "sourcePath": "references/new-collections/somma-mirkos-martini-2025.jpg",
+      "publicPath": "public/references/somma-mirkos-martini.jpg",
+      "src": "/references/somma-mirkos-martini.jpg",
+      "sha256": "d95cd6d3d6c4e8a5705e189e3efab274446b99f8fee710b93d54748dbbd9f852",
+      "sourceSha256": "d95cd6d3d6c4e8a5705e189e3efab274446b99f8fee710b93d54748dbbd9f852",
+      "exactCopy": true,
+      "originalUnchanged": true,
+      "bytes": 511603,
+      "dimensions": [
+        1140,
+        626
+      ],
+      "format": "JPEG"
+    },
+    {
+      "drinkId": "moga-salted-yuzu-highball",
+      "sourcePath": "references/new-collections/moga-salted-yuzu-highball.jpg",
+      "publicPath": "public/references/moga-salted-yuzu-highball.jpg",
+      "src": "/references/moga-salted-yuzu-highball.jpg",
+      "sha256": "a7e649bc41bd2567f6a043aee1f6cae54886a5a95051aeb4884c163dfdafc9b0",
+      "sourceSha256": "a7e649bc41bd2567f6a043aee1f6cae54886a5a95051aeb4884c163dfdafc9b0",
+      "exactCopy": true,
+      "originalUnchanged": true,
+      "bytes": 285721,
+      "dimensions": [
+        1414,
+        2121
+      ],
+      "format": "JPEG"
+    },
+    {
+      "drinkId": "jigger-wasabi-highball",
+      "sourcePath": "references/new-collections/jigger-wasabi-highball-official.jpg",
+      "publicPath": "public/references/jigger-wasabi-highball.jpg",
+      "src": "/references/jigger-wasabi-highball.jpg",
+      "sha256": "d1c351e139ed63d3d875919e4f7e97aca2b642d9a43154151f8cca4ecd28aaf1",
+      "sourceSha256": "d1c351e139ed63d3d875919e4f7e97aca2b642d9a43154151f8cca4ecd28aaf1",
+      "exactCopy": true,
+      "originalUnchanged": true,
+      "bytes": 224730,
+      "dimensions": [
+        2500,
+        1786
+      ],
+      "format": "JPEG"
+    }
+  ]
+}

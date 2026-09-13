@@ -1,0 +1,405 @@
+{
+  "drink": "nighthawks",
+  "version": "espresso-v2-visibility",
+  "seed": 20260913,
+  "blender": "5.2.1 LTS",
+  "parameters": {
+    "photo": "nighthawks-2024.jpg",
+    "height": 2.42,
+    "radius": 0.67,
+    "foot": 0.53,
+    "stem": 1.29,
+    "bowl": [
+      [
+        0.11,
+        1.31
+      ],
+      [
+        0.27,
+        1.4
+      ],
+      [
+        0.42,
+        1.57
+      ],
+      [
+        0.51,
+        1.78
+      ],
+      [
+        0.56,
+        2.01
+      ],
+      [
+        0.59,
+        2.2
+      ],
+      [
+        0.67,
+        2.42
+      ]
+    ],
+    "fill": 2.17,
+    "foam": 2.405,
+    "foamColor": [
+      0.86,
+      0.8,
+      0.68,
+      1
+    ]
+  },
+  "rows": {
+    "garnish": 7.85,
+    "modifiers": 6.0,
+    "coffee": 4.9,
+    "liqueur": 3.85,
+    "spirit": 2.8,
+    "structure": 1.2
+  },
+  "scriptSha256": "09b2e1dac6f16ac8b99580b87edc2268748c798da4b9ecad0eb4d209c1f20e3a",
+  "sourcePhoto": {
+    "path": "references/espresso-martini/nighthawks-2024.jpg",
+    "sha256": "411cef48b81e86e864b95a578dee9cfdb4d11dd4cd61cd2569bd4918a7377d0d",
+    "published": "2024-04-04"
+  },
+  "parts": [
+    {
+      "id": "glass",
+      "category": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "liquid",
+      "category": "coffee",
+      "role": "mixture",
+      "lift": 0.0,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.752500057220459
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        1.752500057220459
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "foam",
+      "category": "modifiers",
+      "role": "physical",
+      "lift": 3.7094454765319824,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        2.2905545234680176
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        6.0
+      ],
+      "evidence": "official-menu",
+      "representation": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "foam_bubbles",
+      "category": "modifiers",
+      "role": "physical",
+      "lift": 3.7094454765319824,
+      "assembledPosition": [
+        9.372830390930176e-05,
+        -0.005481302738189697,
+        2.4060001373291016
+      ],
+      "expandedPosition": [
+        9.372830390930176e-05,
+        -0.005481302738189697,
+        6.115445613861084
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "garnish_feather",
+      "category": "garnish",
+      "role": "physical",
+      "lift": 5.676999962329864,
+      "assembledPosition": [
+        0.0769999623298645,
+        -0.27647846937179565,
+        2.319000005722046
+      ],
+      "expandedPosition": [
+        0.0769999623298645,
+        -0.27647846937179565,
+        7.99599996805191
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null,
+      "expandedRotationX": 0.45,
+      "expandedPivot": [
+        0.0,
+        7.85,
+        0.0
+      ],
+      "expandedPivotConvention": "Runtime Y-up, after authored vertical lift. Group rigid tilt; assembled transform is unchanged."
+    },
+    {
+      "id": "garnish_quill",
+      "category": "garnish",
+      "role": "physical",
+      "lift": 5.676999962329864,
+      "assembledPosition": [
+        0.02511906623840332,
+        -0.26998305320739746,
+        2.315009355545044
+      ],
+      "expandedPosition": [
+        0.02511906623840332,
+        -0.26998305320739746,
+        7.992009317874908
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null,
+      "expandedRotationX": 0.45,
+      "expandedPivot": [
+        0.0,
+        7.85,
+        0.0
+      ],
+      "expandedPivotConvention": "Runtime Y-up, after authored vertical lift. Group rigid tilt; assembled transform is unchanged."
+    },
+    {
+      "id": "garnish_chocolate_seal",
+      "category": "garnish",
+      "role": "physical",
+      "lift": 5.676999962329864,
+      "assembledPosition": [
+        0.15000000596046448,
+        -0.5649999976158142,
+        2.115000009536743
+      ],
+      "expandedPosition": [
+        0.15000000596046448,
+        -0.5649999976158142,
+        7.791999971866607
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null,
+      "expandedRotationX": 0.45,
+      "expandedPivot": [
+        0.0,
+        7.85,
+        0.0
+      ],
+      "expandedPivotConvention": "Runtime Y-up, after authored vertical lift. Group rigid tilt; assembled transform is unchanged."
+    },
+    {
+      "id": "garnish_seal_imprint",
+      "category": "garnish",
+      "role": "physical",
+      "lift": 5.676999962329864,
+      "assembledPosition": [
+        0.15000000596046448,
+        -0.5899999737739563,
+        2.115000009536743
+      ],
+      "expandedPosition": [
+        0.15000000596046448,
+        -0.5899999737739563,
+        7.791999971866607
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null,
+      "expandedRotationX": 0.45,
+      "expandedPivot": [
+        0.0,
+        7.85,
+        0.0
+      ],
+      "expandedPivotConvention": "Runtime Y-up, after authored vertical lift. Group rigid tilt; assembled transform is unchanged."
+    },
+    {
+      "id": "recipe_coffee",
+      "category": "coffee",
+      "role": "recipe",
+      "lift": 4.889999994635582,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.01000000536441803
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        4.9
+      ],
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "quantity": null,
+      "unit": null,
+      "label": "Illustrative ingredient"
+    },
+    {
+      "id": "recipe_liqueur",
+      "category": "liqueur",
+      "role": "recipe",
+      "lift": 3.839999994635582,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.01000000536441803
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        3.85
+      ],
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "quantity": null,
+      "unit": null,
+      "label": "Illustrative ingredient"
+    },
+    {
+      "id": "recipe_rum",
+      "category": "spirit",
+      "role": "recipe",
+      "lift": 2.791500001400709,
+      "assembledPosition": [
+        -0.3199999928474426,
+        0.0,
+        0.008499998599290848
+      ],
+      "expandedPosition": [
+        -0.32,
+        0.0,
+        2.8
+      ],
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "quantity": null,
+      "unit": null,
+      "label": "Illustrative ingredient",
+      "presentationNote": "Equal-sized illustrative rum and vodka droplets; relative amounts and actual spirit brands are unspecified.",
+      "ingredientName": "Rum",
+      "preserveIllustrationColor": true
+    },
+    {
+      "id": "recipe_vodka",
+      "category": "spirit",
+      "role": "recipe",
+      "lift": 2.791500001400709,
+      "assembledPosition": [
+        0.3199999928474426,
+        0.0,
+        0.008499998599290848
+      ],
+      "expandedPosition": [
+        0.32,
+        0.0,
+        2.8
+      ],
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "quantity": null,
+      "unit": null,
+      "label": "Illustrative ingredient",
+      "presentationNote": "Equal-sized illustrative rum and vodka droplets; relative amounts and actual spirit brands are unspecified.",
+      "ingredientName": "Vodka",
+      "preserveIllustrationColor": true
+    },
+    {
+      "id": "recipe_chocolate",
+      "category": "modifiers",
+      "role": "recipe",
+      "lift": 6.0,
+      "assembledPosition": [
+        -1.0399999618530273,
+        0.0,
+        0.0
+      ],
+      "expandedPosition": [
+        -1.04,
+        0.0,
+        6.0
+      ],
+      "evidence": "official-menu",
+      "representation": "illustrative-chocolate-piece",
+      "quantity": null,
+      "unit": null,
+      "recipeSolid": true,
+      "label": "Chocolate \u00b7 illustration",
+      "presentationNote": "Illustrative chocolate form; chocolate type and physical preparation are unspecified by the menu. Distinct from the dated garnish seal.",
+      "illustrativeScale": true,
+      "servingShapeClaim": false
+    },
+    {
+      "id": "recipe_msg",
+      "category": "modifiers",
+      "role": "recipe",
+      "lift": 5.9525000005960464,
+      "assembledPosition": [
+        1.0399999618530273,
+        -0.0029805228114128113,
+        0.04749999940395355
+      ],
+      "expandedPosition": [
+        1.04,
+        -0.0029805228114128113,
+        6.0
+      ],
+      "evidence": "official-menu",
+      "representation": "illustrative-enlarged-msg-crystals",
+      "quantity": null,
+      "unit": null,
+      "recipeSolid": true,
+      "label": "MSG \u00b7 enlarged illustration",
+      "presentationNote": "Enlarged representative crystals for readability; crystal dimensions, serving amount and preparation are not inferred from the photograph.",
+      "illustrativeScale": true,
+      "servingShapeClaim": false
+    }
+  ],
+  "sourceSha256": "404485e83f384b284437f22638376df713c49e14499870594a45c62bdb689b13",
+  "modelSha256": "14e2edfc2f2222f47b946e45d36b7aaac0d91359cbe758581124feb0ae18217a",
+  "modelBytes": 783716,
+  "limitations": [
+    "Independently authored from dated serving photographs; dimensions, unseen details and topping distributions are inferred.",
+    "No recipe measures or physical finished-drink ingredient layers are asserted.",
+    "No serving ice. Espresso is deliberately opaque; no new nested optical experiment.",
+    "No photorealism acceptance claim."
+  ],
+  "visibilityIteration": "Expansion-only solid illustrations and rigid garnish tilt. All existing assembled meshes, materials and transforms preserved."
+}

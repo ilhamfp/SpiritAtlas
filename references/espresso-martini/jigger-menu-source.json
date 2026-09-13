@@ -1,0 +1,24 @@
+{
+  "venue": "Jigger & Pony",
+  "drink": "Espresso Martini",
+  "checkedAt": "2026-09-13",
+  "officialEntry": "https://www.jiggerandpony.com/",
+  "officialFlipbook": "https://jiggerandpony.aflip.in/bloom-menu-2026",
+  "pdfUrl": "https://cdnm.heyzine.com/files/uploaded/v3/790674ab95e832b771ee97c18f9cd833bc92bd3b.pdf",
+  "localPath": "references/espresso-martini/jigger-bloom-menu-2026.pdf",
+  "sha256": "1af939c936dbd031a60b19f7e07516b1b3bfbbbc0652673f8d316170f9b1f7cb",
+  "pdfPagesOneBased": [
+    10
+  ],
+  "printedPage": 10,
+  "menuIngredientNames": [
+    "Grey Goose Vodka",
+    "Jigger & Pony Espresso Martini Blend",
+    "rainforest honey",
+    "cacao tuile"
+  ],
+  "coffeeExplanation": "The narrative identifies freshly brewed espresso using the house blend from PPP Coffee.",
+  "liqueur": "Not named; recipe category remains Unknown.",
+  "quantities": null,
+  "appearance": "Bar-supplied April 4 2024 CNA photograph saved separately; current menu names same cacao tuile but does not prove current exact glass or garnish geometry."
+}

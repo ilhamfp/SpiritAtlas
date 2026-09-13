@@ -1,0 +1,35 @@
+[
+  {
+    "venue": "moga",
+    "requestedUrl": "https://www.moga.com.sg/wp-content/uploads/sites/57/2024/08/MOGA_BarMenu_Digital_2026.pdf",
+    "resolvedUrl": "https://www.moga.com.sg/wp-content/uploads/sites/57/2024/08/MOGA_BarMenu_Digital_2026.pdf",
+    "contentType": "application/pdf",
+    "bytes": 8992247,
+    "sha256": "4cfe020bb98245cca38058c25796f00e1c41b169a1f9db802b8012fdb795d07e",
+    "existingLocal": "references/menus/moga-bar-menu-digital-2026.pdf",
+    "identicalToPreservedSource": true,
+    "checkedAt": "2026-09-13T02:42:45.743719+00:00"
+  },
+  {
+    "venue": "somma",
+    "requestedUrl": "https://www.somma.world/s/BAR-COCKTAIL-MENU_MAY-2026.pdf",
+    "resolvedUrl": "https://static1.squarespace.com/static/669a6a47bf163d18d7dd87d2/t/6a069dc8579b20077ea890a9/1778818505352/BAR+COCKTAIL+MENU_MAY+2026.pdf",
+    "contentType": "application/pdf",
+    "bytes": 2533470,
+    "sha256": "abfa48c34d0facad3450522fa6f02ea16285f39258e33ef06895314dff37c5b5",
+    "existingLocal": "references/menus/somma-may2026-cocktail-menu.pdf",
+    "identicalToPreservedSource": true,
+    "checkedAt": "2026-09-13T02:42:49.265376+00:00"
+  },
+  {
+    "venue": "bbf-events",
+    "requestedUrl": "https://www.bonfunk.com/s/Bar-Bon-Funk-Events-Kit-2026.pdf",
+    "resolvedUrl": "https://static1.squarespace.com/static/66704982824532747e8abd2a/t/69c3a490c0e590596cc040fb/1774429328089/Bar+Bon+Funk+Events+Kit+2026.pdf",
+    "contentType": "application/pdf",
+    "bytes": 5868130,
+    "sha256": "b84e3089bd5683cd8627f29a03f0d8d0133334e5942a7ea15be21a95f87a02e1",
+    "existingLocal": "references/menus/bbf-events-kit-2026.pdf",
+    "identicalToPreservedSource": true,
+    "checkedAt": "2026-09-13T02:42:54.753091+00:00"
+  }
+]

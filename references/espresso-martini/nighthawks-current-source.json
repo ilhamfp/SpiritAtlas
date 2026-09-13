@@ -1,0 +1,21 @@
+{
+  "verifiedAtLocalDate": "2026-09-13",
+  "venue": "Night Hawk",
+  "cocktail": "Nighthawks",
+  "url": "https://www.nighthawk.sg/digitalmenu",
+  "section": "Night Hawk Classics",
+  "ingredients": ["Rum", "vodka", "amaro", "chocolate", "coffee", "MSG", "hot coconut foam"],
+  "quantities": null,
+  "brands": null,
+  "currentGarnishDescription": null,
+  "availability": "Listed on official live menu when checked; no same-day stock guarantee",
+  "historicalAppearance": {
+    "date": "2024-04-04",
+    "source": "https://cnaluxury.channelnewsasia.com/experiences/espresso-martini-singapore-244116",
+    "image": "references/espresso-martini/nighthawks-2024.jpg",
+    "credit": "Night Hawk, via CNA Luxury",
+    "textSupported": ["cold-brew concentrate", "hot coconut foam", "edible white-chocolate logo seal"],
+    "visuallyObserved": ["rounded stemmed bowl with flared lip", "dark drink under thick pale foam", "circular front seal", "long dark feather across the glass"],
+    "limits": "Presentation is dated2024; current menu does not verify seal or feather; colored photographic lighting is not a neutral material-color reference."
+  }
+}

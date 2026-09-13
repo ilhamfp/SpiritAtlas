@@ -1,0 +1,410 @@
+{
+  "drink": "somma-pine-highball",
+  "version": "collections-v1",
+  "family": "highball",
+  "seed": 20260913,
+  "blender": "5.2.1 LTS",
+  "rows": {
+    "modifiers": 6.5,
+    "fizz": 4.85,
+    "spirit": 3.35,
+    "structure": 0.0
+  },
+  "parameters": {
+    "family": "highball",
+    "height": 2.83,
+    "radius": 0.425,
+    "base": 0.41,
+    "fill": 2.6,
+    "iceWidth": 0.45,
+    "iceDepth": 0.46,
+    "iceHeight": 2.29,
+    "iceZ": 1.535,
+    "color": [
+      0.7,
+      0.71,
+      0.45,
+      1
+    ],
+    "source": "references/menus/somma-may2026-cocktail-menu.pdf",
+    "note": "Menu-based illustration: no individually identified serving photo. Slim glass, pale-gold tint and clear ice are estimated; no garnish is invented."
+  },
+  "sourceReference": {
+    "path": "references/menus/somma-may2026-cocktail-menu.pdf",
+    "sha256": "abfa48c34d0facad3450522fa6f02ea16285f39258e33ef06895314dff37c5b5"
+  },
+  "scriptSha256": "fcf11e07f4ef87809242c84cfe4c1fcf775bbfd3c9b685df1812fed159ace264",
+  "sourceSha256": "792b51603b0189bd7c125e10085dae5d011a84a8618c40f58530331229662ea5",
+  "modelSha256": "6a6b6bbf4881a6365e6c237a0c48c21970c658dad0a7926cbc3595b4e210a381",
+  "modelBytes": 259872,
+  "parts": [
+    {
+      "scenePartId": "glass",
+      "ingredientId": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Menu-based illustration: no individually identified serving photo. Slim glass, pale-gold tint and clear ice are estimated; no garnish is invented.",
+      "id": "glass",
+      "category": "structure",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 1346,
+      "triangles": 2688,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.42500001192092896,
+          -0.42500001192092896,
+          0.03500000014901161
+        ],
+        [
+          0.42500001192092896,
+          0.42500001192092896,
+          2.8329999446868896
+        ]
+      ]
+    },
+    {
+      "scenePartId": "liquid",
+      "ingredientId": "fizz",
+      "role": "mixture",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Menu-based illustration: no individually identified serving photo. Slim glass, pale-gold tint and clear ice are estimated; no garnish is invented.",
+      "id": "liquid",
+      "category": "fizz",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.406999945640564
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        1.406999945640564
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 577,
+      "triangles": 1150,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.38670703768730164,
+          -0.38670703768730164,
+          0.21399998664855957
+        ],
+        [
+          0.38670703768730164,
+          0.38670703768730164,
+          2.5999999046325684
+        ]
+      ]
+    },
+    {
+      "scenePartId": "ice",
+      "ingredientId": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Menu-based illustration: no individually identified serving photo. Slim glass, pale-gold tint and clear ice are estimated; no garnish is invented.",
+      "id": "ice",
+      "category": "structure",
+      "assembledPosition": [
+        0.0,
+        0.03500000014901161,
+        1.534999966621399
+      ],
+      "expandedPosition": [
+        0.0,
+        0.03500000014901161,
+        1.534999966621399
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 152,
+      "triangles": 300,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.22499999403953552,
+          -0.19500000774860382,
+          0.38999998569488525
+        ],
+        [
+          0.22499999403953552,
+          0.26500001549720764,
+          2.679999828338623
+        ]
+      ]
+    },
+    {
+      "scenePartId": "serving_fine_bubbles",
+      "ingredientId": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Menu-based illustration: no individually identified serving photo. Slim glass, pale-gold tint and clear ice are estimated; no garnish is invented.",
+      "assembledOnly": true,
+      "id": "serving_fine_bubbles",
+      "category": "structure",
+      "assembledPosition": [
+        0.0027095377445220947,
+        0.0020951181650161743,
+        1.4281049966812134
+      ],
+      "expandedPosition": [
+        0.0027095377445220947,
+        0.0020951181650161743,
+        1.4281049966812134
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 2040,
+      "triangles": 3840,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3610691726207733,
+          -0.3631879687309265,
+          0.3319154977798462
+        ],
+        [
+          0.3664882481098175,
+          0.3673781752586365,
+          2.52429461479187
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_spirit",
+      "ingredientId": "spirit",
+      "role": "recipe",
+      "lift": 3.3349999994039536,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Menu-based illustration: no individually identified serving photo. Slim glass, pale-gold tint and clear ice are estimated; no garnish is invented.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_spirit",
+      "category": "spirit",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.015000000596046448
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        3.35
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3400000035762787,
+          -0.3400000035762787,
+          -0.14000000059604645
+        ],
+        [
+          0.3400000035762787,
+          0.3400000035762787,
+          0.17000000178813934
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_fizz",
+      "ingredientId": "fizz",
+      "role": "recipe",
+      "lift": 4.834999999403953,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Menu-based illustration: no individually identified serving photo. Slim glass, pale-gold tint and clear ice are estimated; no garnish is invented.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_fizz",
+      "category": "fizz",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.015000000596046448
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        4.85
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3400000035762787,
+          -0.3400000035762787,
+          -0.14000000059604645
+        ],
+        [
+          0.3400000035762787,
+          0.3400000035762787,
+          0.17000000178813934
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_fizz_bubbles",
+      "ingredientId": "fizz",
+      "role": "recipe",
+      "lift": 4.842163926362991,
+      "evidence": "official-menu",
+      "representation": "illustrative-carbonation",
+      "presentationNote": "Menu-based illustration: no individually identified serving photo. Slim glass, pale-gold tint and clear ice are estimated; no garnish is invented.",
+      "preserveIllustrationColor": true,
+      "recipeSolid": true,
+      "id": "recipe_fizz_bubbles",
+      "category": "fizz",
+      "assembledPosition": [
+        0.004920020699501038,
+        0.0078069716691970825,
+        0.007836073637008667
+      ],
+      "expandedPosition": [
+        0.004920020699501038,
+        0.0078069716691970825,
+        4.85
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 748,
+      "triangles": 1408,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3013514280319214,
+          -0.27661389112472534,
+          -0.11298316717147827
+        ],
+        [
+          0.3111914396286011,
+          0.2922278046607971,
+          0.1286553144454956
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_plum",
+      "ingredientId": "modifiers",
+      "role": "recipe",
+      "lift": 6.5,
+      "evidence": "official-menu",
+      "representation": "illustrative-plum",
+      "presentationNote": "Menu-based illustration: no individually identified serving photo. Slim glass, pale-gold tint and clear ice are estimated; no garnish is invented.",
+      "preserveIllustrationColor": true,
+      "recipeSolid": true,
+      "id": "recipe_plum",
+      "category": "modifiers",
+      "assembledPosition": [
+        -0.29999998211860657,
+        0.0,
+        0.0
+      ],
+      "expandedPosition": [
+        -0.29999998211860657,
+        0.0,
+        6.5
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 266,
+      "triangles": 528,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.5199999809265137,
+          -0.20000000298023224,
+          -0.23499999940395355
+        ],
+        [
+          -0.07999999821186066,
+          0.20000000298023224,
+          0.23499999940395355
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_orange_bitters",
+      "ingredientId": "modifiers",
+      "role": "recipe",
+      "lift": 6.488900002092123,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Menu-based illustration: no individually identified serving photo. Slim glass, pale-gold tint and clear ice are estimated; no garnish is invented.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_orange_bitters",
+      "category": "modifiers",
+      "assembledPosition": [
+        0.30000001192092896,
+        0.0,
+        0.011099997907876968
+      ],
+      "expandedPosition": [
+        0.3,
+        0.0,
+        6.5
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          0.04840001463890076,
+          -0.2515999972820282,
+          -0.10360001027584076
+        ],
+        [
+          0.5515999794006348,
+          0.2515999972820282,
+          0.1257999986410141
+        ]
+      ]
+    }
+  ],
+  "checks": {
+    "finiteGeometry": true,
+    "allPartsClosed": true,
+    "semanticCategoriesComplete": true,
+    "structureStationary": true,
+    "garnishRigid": true
+  },
+  "limitations": [
+    "Menu-based illustration: no individually identified serving photo. Slim glass, pale-gold tint and clear ice are estimated; no garnish is invented.",
+    "Real editable geometry; serving dimensions, material appearance and all recipe-form scales are illustrative.",
+    "No offline photographic matching or physically measured optical claim.",
+    "Recipe quantities and units remain JSON null. The client supplies current content labels."
+  ]
+}

@@ -1,0 +1,471 @@
+{
+  "drink": "moga-dirty-sake-tini",
+  "version": "collections-v1",
+  "family": "martini",
+  "seed": 20260913,
+  "blender": "5.2.1 LTS",
+  "rows": {
+    "garnish": 7.85,
+    "modifiers": 6.15,
+    "vermouth": 4.8,
+    "spirit": 3.35,
+    "structure": 0.0
+  },
+  "parameters": {
+    "family": "martini",
+    "height": 2.4,
+    "foot": 0.48,
+    "stem": 1.4,
+    "bowl": [
+      [
+        0.075,
+        1.4
+      ],
+      [
+        0.22,
+        1.46
+      ],
+      [
+        0.4,
+        1.63
+      ],
+      [
+        0.54,
+        1.88
+      ],
+      [
+        0.62,
+        2.14
+      ],
+      [
+        0.64,
+        2.4
+      ]
+    ],
+    "fill": 2.275,
+    "color": [
+      0.78,
+      0.79,
+      0.51,
+      1
+    ],
+    "garnish": "ribbon",
+    "source": "references/new-collections/moga-dirty-sake-tini.jpg",
+    "note": "Named official October 2024 upload: rounded coupe and folded green-edged ribbon on a pick. Cucumber identity and geometry are illustrative."
+  },
+  "sourceReference": {
+    "path": "references/new-collections/moga-dirty-sake-tini.jpg",
+    "sha256": "7add9c2e7794402fbb787e13df6f78cbe3a728d50f442739cf2f5e94bdadeb68"
+  },
+  "scriptSha256": "fcf11e07f4ef87809242c84cfe4c1fcf775bbfd3c9b685df1812fed159ace264",
+  "sourceSha256": "a3216a8af2505222d62a7a04cae4dc0780fd19c5e01ac3b4927f4854b60018da",
+  "modelSha256": "5561d21da707e103fc160704ede1068b640f48617b1ad28415ffacfc81fcdf6f",
+  "modelBytes": 192280,
+  "parts": [
+    {
+      "scenePartId": "glass",
+      "ingredientId": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Named official October 2024 upload: rounded coupe and folded green-edged ribbon on a pick. Cucumber identity and geometry are illustrative.",
+      "id": "glass",
+      "category": "structure",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 2210,
+      "triangles": 4416,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.6399999856948853,
+          -0.6399999856948853,
+          0.02500000037252903
+        ],
+        [
+          0.6399999856948853,
+          0.6399999856948853,
+          2.4040000438690186
+        ]
+      ]
+    },
+    {
+      "scenePartId": "liquid",
+      "ingredientId": "vermouth",
+      "role": "mixture",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Named official October 2024 upload: rounded coupe and folded green-edged ribbon on a pick. Cucumber identity and geometry are illustrative.",
+      "id": "liquid",
+      "category": "vermouth",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.8600001335144043
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        1.8600001335144043
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 482,
+      "triangles": 960,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.5983846187591553,
+          -0.5983846187591553,
+          1.4450000524520874
+        ],
+        [
+          0.5983846187591553,
+          0.5983846187591553,
+          2.2750000953674316
+        ]
+      ]
+    },
+    {
+      "scenePartId": "garnish_cucumber_ribbon",
+      "ingredientId": "garnish",
+      "role": "physical",
+      "lift": 5.395490622520446,
+      "evidence": "inferred",
+      "presentationNote": "Named official October 2024 upload: rounded coupe and folded green-edged ribbon on a pick. Cucumber identity and geometry are illustrative.",
+      "rigidExpansionGroup": "garnish",
+      "id": "garnish_cucumber_ribbon",
+      "category": "garnish",
+      "assembledPosition": [
+        -0.12000000476837158,
+        -0.12345743179321289,
+        2.4545092582702637
+      ],
+      "expandedPosition": [
+        -0.12000000476837158,
+        -0.12345743179321289,
+        7.84999988079071
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 324,
+      "triangles": 644,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.2800000011920929,
+          -0.25203877687454224,
+          2.322472333908081
+        ],
+        [
+          0.03999999165534973,
+          0.005123913288116455,
+          2.586545944213867
+        ]
+      ]
+    },
+    {
+      "scenePartId": "garnish_green_edge_-1",
+      "ingredientId": "garnish",
+      "role": "physical",
+      "lift": 5.395490622520446,
+      "evidence": "inferred",
+      "presentationNote": "Named official October 2024 upload: rounded coupe and folded green-edged ribbon on a pick. Cucumber identity and geometry are illustrative.",
+      "rigidExpansionGroup": "garnish",
+      "id": "garnish_green_edge_-1",
+      "category": "garnish",
+      "assembledPosition": [
+        -0.2750000059604645,
+        -0.12351439893245697,
+        2.4545092582702637
+      ],
+      "expandedPosition": [
+        -0.2750000059604645,
+        -0.12351439893245697,
+        7.84999988079071
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 324,
+      "triangles": 644,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.28200000524520874,
+          -0.253038227558136,
+          2.3214731216430664
+        ],
+        [
+          -0.2680000066757202,
+          0.006009429693222046,
+          2.58754563331604
+        ]
+      ]
+    },
+    {
+      "scenePartId": "garnish_green_edge_1",
+      "ingredientId": "garnish",
+      "role": "physical",
+      "lift": 5.395490622520446,
+      "evidence": "inferred",
+      "presentationNote": "Named official October 2024 upload: rounded coupe and folded green-edged ribbon on a pick. Cucumber identity and geometry are illustrative.",
+      "rigidExpansionGroup": "garnish",
+      "id": "garnish_green_edge_1",
+      "category": "garnish",
+      "assembledPosition": [
+        0.03500000014901161,
+        -0.12351439893245697,
+        2.4545092582702637
+      ],
+      "expandedPosition": [
+        0.03500000014901161,
+        -0.12351439893245697,
+        7.84999988079071
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 324,
+      "triangles": 644,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          0.02800000086426735,
+          -0.253038227558136,
+          2.3214731216430664
+        ],
+        [
+          0.041999999433755875,
+          0.006009429693222046,
+          2.58754563331604
+        ]
+      ]
+    },
+    {
+      "scenePartId": "garnish_pick",
+      "ingredientId": "garnish",
+      "role": "physical",
+      "lift": 5.395490622520446,
+      "evidence": "visual-observation",
+      "presentationNote": "Named official October 2024 upload: rounded coupe and folded green-edged ribbon on a pick. Cucumber identity and geometry are illustrative.",
+      "rigidExpansionGroup": "garnish",
+      "id": "garnish_pick",
+      "category": "garnish",
+      "assembledPosition": [
+        0.0,
+        -0.10499999672174454,
+        2.430000066757202
+      ],
+      "expandedPosition": [
+        0.0,
+        -0.10499999672174454,
+        7.825490689277649
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 24,
+      "triangles": 44,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.8203047513961792,
+          -0.13999535143375397,
+          2.4200000762939453
+        ],
+        [
+          0.8203047513961792,
+          -0.07000464200973511,
+          2.440000057220459
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_sake",
+      "ingredientId": "spirit",
+      "role": "recipe",
+      "lift": 3.339800002425909,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Named official October 2024 upload: rounded coupe and folded green-edged ribbon on a pick. Cucumber identity and geometry are illustrative.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_sake",
+      "category": "spirit",
+      "assembledPosition": [
+        -0.23999999463558197,
+        0.0,
+        0.010199997574090958
+      ],
+      "expandedPosition": [
+        -0.24,
+        0.0,
+        3.35
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.47119998931884766,
+          -0.23119999468326569,
+          -0.09520000219345093
+        ],
+        [
+          -0.008799999952316284,
+          0.23119999468326569,
+          0.11559998989105225
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_shochu",
+      "ingredientId": "spirit",
+      "role": "recipe",
+      "lift": 3.339800002425909,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Named official October 2024 upload: rounded coupe and folded green-edged ribbon on a pick. Cucumber identity and geometry are illustrative.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_shochu",
+      "category": "spirit",
+      "assembledPosition": [
+        0.23999999463558197,
+        0.0,
+        0.010199997574090958
+      ],
+      "expandedPosition": [
+        0.24,
+        0.0,
+        3.35
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          0.008799999952316284,
+          -0.23119999468326569,
+          -0.09520000219345093
+        ],
+        [
+          0.47119998931884766,
+          0.23119999468326569,
+          0.11559998989105225
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_vermouth",
+      "ingredientId": "vermouth",
+      "role": "recipe",
+      "lift": 4.784999999403953,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Named official October 2024 upload: rounded coupe and folded green-edged ribbon on a pick. Cucumber identity and geometry are illustrative.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_vermouth",
+      "category": "vermouth",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.015000000596046448
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        4.8
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3400000035762787,
+          -0.3400000035762787,
+          -0.14000000059604645
+        ],
+        [
+          0.3400000035762787,
+          0.3400000035762787,
+          0.17000000178813934
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_modifiers",
+      "ingredientId": "modifiers",
+      "role": "recipe",
+      "lift": 6.134999999403954,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Named official October 2024 upload: rounded coupe and folded green-edged ribbon on a pick. Cucumber identity and geometry are illustrative.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_modifiers",
+      "category": "modifiers",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.015000000596046448
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        6.15
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3400000035762787,
+          -0.3400000035762787,
+          -0.14000000059604645
+        ],
+        [
+          0.3400000035762787,
+          0.3400000035762787,
+          0.17000000178813934
+        ]
+      ]
+    }
+  ],
+  "checks": {
+    "finiteGeometry": true,
+    "allPartsClosed": true,
+    "semanticCategoriesComplete": true,
+    "structureStationary": true,
+    "garnishRigid": true
+  },
+  "limitations": [
+    "Named official October 2024 upload: rounded coupe and folded green-edged ribbon on a pick. Cucumber identity and geometry are illustrative.",
+    "Real editable geometry; serving dimensions, material appearance and all recipe-form scales are illustrative.",
+    "No offline photographic matching or physically measured optical claim.",
+    "Recipe quantities and units remain JSON null. The client supplies current content labels."
+  ]
+}

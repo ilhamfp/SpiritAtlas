@@ -1,0 +1,20 @@
+[
+  {
+    "path": "references/new-collections/atlas-martini-official.jpg",
+    "url": "https://www.atlasbar.sg/themes/atlas/assets/images/ATLAS_ATLAS%20Martini_36.jpg",
+    "sourcePage": "https://www.atlasbar.sg/atlaslondondrygin",
+    "scope": "ATLAS photo under The Story of the ATLAS Martini; publication date not stated",
+    "sha256": "7bd8cbb34174ab24efe04681b4da77ececc6a218b6e4b55f825dd79874a51291",
+    "bytes": 979648,
+    "retrievedAt": "2026-09-13T03:34:06.303831+00:00"
+  },
+  {
+    "path": "references/new-collections/jigger-wasabi-highball-official.jpg",
+    "url": "https://images.squarespace-cdn.com/content/v1/55dff4d0e4b023d46479cd47/dbfba9ef-c63d-4d8f-9248-4bbce25c2f10/Wasabi%2BHighball.jpg",
+    "sourcePage": "https://www.jiggerandpony.com/",
+    "scope": "Named Wasabi Highball photograph on current official homepage and BLOOM2026 menu",
+    "sha256": "d1c351e139ed63d3d875919e4f7e97aca2b642d9a43154151f8cca4ecd28aaf1",
+    "bytes": 224730,
+    "retrievedAt": "2026-09-13T03:34:06.643886+00:00"
+  }
+]

@@ -1,0 +1,94 @@
+{
+  "source": "assets/blender/experiments/negroni-express-v012-interfaces-neutral-unified-d055-hero.blend",
+  "sourceSha256": "adc75a9177d343eeca8f3f0ea00142afd91f6f8a0fb328b05867535e310824e4",
+  "physicalIceSource": "assets/blender/candidates/v012/negroni-express.blend",
+  "physicalIceSourceSha256": "0b3b304938df576ff9bd0ff8d4c00283cd067d8e1037a1378e64c98bbe0434dd",
+  "scriptSha256": "6c4898aea7f69d33bba82413f2a8d8f4cf63425c916dbbe40e7c351ac41952b0",
+  "scene": "assets/blender/experiments/negroni-express-v012-true-contact-neutral-base.blend",
+  "sceneSha256": "69a6d3f226f3d1fb89335035dfff01d49a16c350bb87d8abe0aefaed0e6c42cb",
+  "toleranceAuthoredUnits": 2e-06,
+  "geometryTreatment": "Liquid wall/base now use exact copied glass cavity rings, with original meniscus profile offsets/height retained. Actual ice Boolean displacement and visible above-meniscus ice are rebuilt from unchanged complete source ice.",
+  "contact": {
+    "wetline": 1.262,
+    "glassGap": 0,
+    "activeBoundaryOwner": "liquid",
+    "relativeIOR": 0.9006622516556292,
+    "liquidMaterialCount": 1,
+    "attribute": "liquid_surface_ior",
+    "classCounts": {
+      "glass-contact": 1728,
+      "air-meniscus": 1343,
+      "ice-contact": 6837
+    },
+    "areas": {
+      "glass-contact": 9.923839445225894,
+      "air-meniscus": 1.2200479398211428,
+      "ice-contact": 6.549610507209777
+    },
+    "wetGlassArea": 9.923839723924175,
+    "omittedWetGlassFaces": 960,
+    "maximumMatchedClosureDistance": 6.355661485222065e-08,
+    "glassSurfaceDistanceAfterSplit": 0
+  },
+  "topology": {
+    "glass_closed_volume": {
+      "vertices": 4994,
+      "edges": 10176,
+      "faces": 5184,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.41479085982325753
+    },
+    "ice_closed_volume": {
+      "vertices": 5402,
+      "edges": 16200,
+      "faces": 10800,
+      "nonManifoldEdges": 0,
+      "signedVolume": 2.68595433285872
+    },
+    "liquid": {
+      "vertices": 4956,
+      "edges": 14862,
+      "faces": 9908,
+      "nonManifoldEdges": 0,
+      "signedVolume": 1.7549782597516361
+    },
+    "ice": {
+      "vertices": 2672,
+      "edges": 8010,
+      "faces": 5340,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.9882389668678473
+    },
+    "glass": {
+      "vertices": 4225,
+      "edges": 8448,
+      "faces": 4224,
+      "nonManifoldEdges": 192,
+      "signedVolume": 2.6345840063190975
+    }
+  },
+  "liquidGlassSamples": {
+    "samples": 14864,
+    "strictInsideCount": 0,
+    "minimumNearestOrientedDistance": -8.129891733650669e-08,
+    "examples": []
+  },
+  "liquidIceSamples": {
+    "samples": 14864,
+    "strictInsideCount": 0,
+    "minimumNearestOrientedDistance": -1.2356713632600893e-07,
+    "examples": []
+  },
+  "iceClassification": {
+    "originalAirSurface": 4948,
+    "redundantClosure": 392
+  },
+  "distanceRefinement": {
+    "nearSamples": 74533,
+    "maximumBvhMinusDouble": 6.8907452259736415e-06
+  },
+  "unclassifiedFaces": [],
+  "unchangedOtherGeometryAndNormals": true,
+  "renderCompleted": false,
+  "limitations": "CPU construction checks manifold closed physical volumes, full face-sample contact classification, equal matched interface area, and all vertex/face-centroid signed distances. Near-contact closest points are evaluated in Python doubles against the BVH candidate and its adjacent triangles, retaining the2e-6 tolerance. An independent actual triangle crossing audit and neutral transport control are required before a valid rendering or physical-fidelity claim. Render-only glass is intentionally open; complete closed glass is retained hidden. No expansion or GLB promotion."
+}

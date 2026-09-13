@@ -1,0 +1,24 @@
+[
+  {
+    "path": "references/new-collections/somma-mirkos-martini-2025.jpg",
+    "url": "https://www.robbreport.com.sg/wp-content/uploads/2025/01/SOMMA-BAR-MIRKOS-MARTINI-2.jpg",
+    "page": "https://robbreport.com.sg/somma-cocktail-pasta-bar/",
+    "caption": "Mirko\u2019s Martini; photo by Somma Bar",
+    "published": "2025-01-10",
+    "sha256": "d95cd6d3d6c4e8a5705e189e3efab274446b99f8fee710b93d54748dbbd9f852",
+    "bytes": 511603,
+    "retrievedAt": "2026-09-13T02:48:51.599533+00:00",
+    "usage": "Local research reference only"
+  },
+  {
+    "path": "references/new-collections/somma-menu-group-2026.jpg",
+    "url": "https://www.spiritedasia.com/wp-content/uploads/2026/04/Bar-Somma-Cocktails-02.jpg",
+    "page": "https://www.spiritedasia.com/2026/04/drinkspotting-may-2026/",
+    "caption": "The latest cocktails at Bar Somma; individual drinks unidentified",
+    "published": "2026-04-30",
+    "sha256": "469f95d3738e9ab1fc146c1d5e41ebe8e78dd7a0dda3d88ff084452233f95f6f",
+    "bytes": 360151,
+    "retrievedAt": "2026-09-13T02:48:52.931705+00:00",
+    "usage": "Local research reference only"
+  }
+]

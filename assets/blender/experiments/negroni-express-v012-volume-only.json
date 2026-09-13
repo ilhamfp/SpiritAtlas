@@ -1,0 +1,43 @@
+{
+  "sourceBlend": "assets/blender/candidates/v012/negroni-express.blend",
+  "sourceBlendSha256": "0b3b304938df576ff9bd0ff8d4c00283cd067d8e1037a1378e64c98bbe0434dd",
+  "experimentBlend": "assets/blender/experiments/negroni-express-v012-volume-only.blend",
+  "experimentBlendSha256": "3ca2e5d29cc300fc77b039eeea20a6b1bf12dd4ae40da1401cf96d19a1746cb8",
+  "scriptSha256": "cab67bf3c1f41cfa98687c92067574fbbaab8eb9e85ceb056205a39e65b2a4df",
+  "geometryAndNormalsSha256": "cfac432c5a6ceb3c2bb75bb3056b10eb2c2abf061133544615258b4c6fc68dd8",
+  "geometryAndNormalsUnchanged": true,
+  "treatment": {
+    "field": "Liquid Principled BSDF Base Color",
+    "before": [
+      0.9599999785423279,
+      0.3400000035762787,
+      0.06499999761581421,
+      1.0
+    ],
+    "after": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "controls": "Same v0.12 geometry/normals, camera, lights, world, absorption color/density, IOR, roughness, exposure, view transform and sample/denoise settings as fixed v0.12 hero.",
+  "render": {
+    "samples": 256,
+    "denoise": true,
+    "baseResolution": [
+      720,
+      900
+    ],
+    "crop": [
+      0.08,
+      0.9,
+      0.18,
+      0.84
+    ],
+    "output": "qa/evidence/blender/negroni-express-hero-v012-volume-only.png",
+    "completed": true,
+    "elapsedSeconds": 66.8824714999937,
+    "outputSha256": "1abdf11bf4835dbc3091edacd852a3e386f0cc3530fc2eb3705e77cd2b1d86b5"
+  }
+}

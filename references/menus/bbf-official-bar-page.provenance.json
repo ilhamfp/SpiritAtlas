@@ -1,0 +1,25 @@
+{
+  "requestedUrl": "https://www.bonfunk.com/barbonfunk",
+  "resolvedUrl": "https://www.bonfunk.com/barbonfunk",
+  "retrievedAt": "2026-09-12T14:50:30.345088+00:00",
+  "bytes": 198465,
+  "sha256": "b0becb9382da11256bc794e317d1e0b1a87d13f5e79df892a7354117c906ad59",
+  "headers": {
+    "Accept-Ranges": "bytes",
+    "Age": "52749",
+    "Content-Length": "198465",
+    "Content-Type": "text/html;charset=utf-8",
+    "Date": "Fri, 11 Sep 2026 22:19:10 GMT",
+    "Etag": "W/\"dec36d9197c4a90042bce2294ecfbe9f\"",
+    "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+    "Server": "Squarespace",
+    "Set-Cookie": "crumb=BecUGJ6twKOsMjgwYjc2NTE3MDgzMTZhODFlNTU4OWM2Yjc3MTA5;Secure;Path=/",
+    "Strict-Transport-Security": "max-age=15552000",
+    "Vary": "Accept-Encoding",
+    "X-Content-Type-Options": "nosniff",
+    "X-Contextid": "oFZ9NnKD/EXyEa67f",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Connection": "close"
+  },
+  "scope": "Official public source retained for reference research outside public; not a license to republish."
+}

@@ -1,0 +1,45 @@
+{
+  "source_url": "https://static1.squarespace.com/static/669a6a47bf163d18d7dd87d2/t/6a069dc8579b20077ea890a9/1778818505352/BAR+COCKTAIL+MENU_MAY+2026.pdf",
+  "resolved_url": "https://static1.squarespace.com/static/669a6a47bf163d18d7dd87d2/t/6a069dc8579b20077ea890a9/1778818505352/BAR+COCKTAIL+MENU_MAY+2026.pdf",
+  "retrieved_at_utc": "2026-09-12T14:30:58.215276+00:00",
+  "local_path": "references/menus/somma-may2026-cocktail-menu.pdf",
+  "bytes": 2533470,
+  "sha256": "abfa48c34d0facad3450522fa6f02ea16285f39258e33ef06895314dff37c5b5",
+  "preservation": "Original downloaded bytes; no PDF edits or re-export.",
+  "version": "May 2026 as indicated by source filename; matching to the filmed serving requires separate evidence.",
+  "pdf_page_count": 17,
+  "pdf_metadata_title": "BAR COCKTAIL MENU_MAY 2026",
+  "pdf_metadata_creation_date": "2026-05-15T04:13:59Z",
+  "official_page": "https://www.somma.world/bar",
+  "official_menu_href": "/s/BAR-COCKTAIL-MENU_MAY-2026.pdf",
+  "official_menu_redirect_verified": true,
+  "official_menu_sha256_matches_supplied_url": true,
+  "text_extraction": "Bundled pypdf; all 17 pages saved in somma-may2026-cocktail-menu.text.json. Parser reported wrong object offsets for 92 and 93; relevant visual pages were checked independently.",
+  "visual_review": {
+    "renderer": "Bundled Poppler pdftoppm",
+    "dpi": 110,
+    "pdf_pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11
+    ],
+    "image_only_page_review": "Page 2 is a cocktail-position diagram; it also does not list Negroni Express."
+  },
+  "rendered_page_sha256": {
+    "somma-may2026-cocktail-menu-page-01.png": "af34b6cec61d20b1dfcedb64489799bc24f004852fb6f4ccfd0770fa198eae25",
+    "somma-may2026-cocktail-menu-page-02.png": "c505509e2b4d6e067bded1f2f26990eda9257bc35ad1bcb39f085391d407bfd6",
+    "somma-may2026-cocktail-menu-page-03.png": "e31f127db73e021ff8002a295b7caebafe1c19c576fde69343620b27d63c355e",
+    "somma-may2026-cocktail-menu-page-04.png": "8906c650c02cad8b7a295ecb66ec1abdb9b110cafd05ea655d318a2cc300f189",
+    "somma-may2026-cocktail-menu-page-05.png": "cc4bff1fcdf164fd27c185f02382ff3f5473eda21ee0a6f0704ec4cfb61d217e",
+    "somma-may2026-cocktail-menu-page-06.png": "13fc7ace82a331133dbe590728d23f79a2adce1d87c599340ee77e21bc8bc924",
+    "somma-may2026-cocktail-menu-page-07.png": "c5ecd661c6e67d4bac3f727658a3cfaf599822f94a60894b486dc760a5c7c02d",
+    "somma-may2026-cocktail-menu-page-10.png": "71c94cdfa58b44b31a1aee055d575a3dec28d824e02db357ccd56c7f24d6a91b",
+    "somma-may2026-cocktail-menu-page-11.png": "063e6923e5b1912470082b99de668c2fa3c51069e81b37ebc8fb87027c7368ed"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "queriedAt": "2026-09-12T18:51:11.178043+00:00",
+  "addressQuery": "43 Tanjong Pagar Road",
+  "url": "https://www.onemap.gov.sg/api/common/elastic/search?searchVal=43%20Tanjong%20Pagar%20Road&returnGeom=Y&getAddrDetails=Y&pageNum=1",
+  "response": {
+    "found": 1,
+    "totalNumPages": 1,
+    "pageNum": 1,
+    "results": [
+      {
+        "SEARCHVAL": "TANJONG PAGAR CONSERVATION AREA",
+        "BLK_NO": "43",
+        "ROAD_NAME": "TANJONG PAGAR ROAD",
+        "BUILDING": "TANJONG PAGAR CONSERVATION AREA",
+        "ADDRESS": "43 TANJONG PAGAR ROAD TANJONG PAGAR CONSERVATION AREA SINGAPORE 088464",
+        "POSTAL": "088464",
+        "X": "29198.70674731303",
+        "Y": "29042.28770971857",
+        "LATITUDE": "1.27892261601231",
+        "LONGITUDE": "103.8440894103962"
+      }
+    ]
+  }
+}

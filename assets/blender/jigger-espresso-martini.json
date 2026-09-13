@@ -1,0 +1,275 @@
+{
+  "drink": "jigger-espresso-martini",
+  "version": "espresso-v2-visibility",
+  "seed": 20260913,
+  "blender": "5.2.1 LTS",
+  "parameters": {
+    "photo": "jigger-2024.jpg",
+    "height": 2.4,
+    "radius": 0.76,
+    "foot": 0.56,
+    "stem": 1.55,
+    "bowl": [
+      [
+        0.1,
+        1.55
+      ],
+      [
+        0.26,
+        1.63
+      ],
+      [
+        0.44,
+        1.75
+      ],
+      [
+        0.59,
+        1.92
+      ],
+      [
+        0.69,
+        2.13
+      ],
+      [
+        0.745,
+        2.3
+      ],
+      [
+        0.76,
+        2.4
+      ]
+    ],
+    "fill": 2.335,
+    "foam": 2.39,
+    "foamColor": [
+      0.74,
+      0.54,
+      0.31,
+      1
+    ]
+  },
+  "rows": {
+    "garnish": 7.85,
+    "modifiers": 6.0,
+    "coffee": 4.9,
+    "liqueur": 3.85,
+    "spirit": 2.8,
+    "structure": 1.2
+  },
+  "scriptSha256": "09b2e1dac6f16ac8b99580b87edc2268748c798da4b9ecad0eb4d209c1f20e3a",
+  "sourcePhoto": {
+    "path": "references/espresso-martini/jigger-2024.jpg",
+    "sha256": "af3014ac20f381843c03167b2d8e996c8e693572737a0f178d2b47b6e7648c8c",
+    "published": "2024-04-04"
+  },
+  "parts": [
+    {
+      "id": "glass",
+      "category": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "liquid",
+      "category": "coffee",
+      "role": "mixture",
+      "lift": 0.0,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.965000033378601
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        1.965000033378601
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "crema",
+      "category": "coffee",
+      "role": "mixture",
+      "lift": 0.0,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        2.36555552482605
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        2.36555552482605
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "garnish_cacao_tuile",
+      "category": "garnish",
+      "role": "physical",
+      "lift": 5.440235710144043,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        2.409764289855957
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        7.85
+      ],
+      "evidence": "official-menu",
+      "representation": null,
+      "quantity": null,
+      "unit": null,
+      "expandedRotationX": 0.45,
+      "expandedPivot": [
+        0.0,
+        7.85,
+        0.0
+      ],
+      "expandedPivotConvention": "Runtime Y-up, after authored vertical lift. Group rigid tilt; assembled transform is unchanged."
+    },
+    {
+      "id": "garnish_cacao_texture",
+      "category": "garnish",
+      "role": "physical",
+      "lift": 5.440235710144043,
+      "assembledPosition": [
+        0.020780831575393677,
+        -0.15549331903457642,
+        2.427999973297119
+      ],
+      "expandedPosition": [
+        0.020780831575393677,
+        -0.15549331903457642,
+        7.868235683441162
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null,
+      "expandedRotationX": 0.45,
+      "expandedPivot": [
+        0.0,
+        7.85,
+        0.0
+      ],
+      "expandedPivotConvention": "Runtime Y-up, after authored vertical lift. Group rigid tilt; assembled transform is unchanged."
+    },
+    {
+      "id": "recipe_coffee",
+      "category": "coffee",
+      "role": "recipe",
+      "lift": 4.889999994635582,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.01000000536441803
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        4.9
+      ],
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "quantity": null,
+      "unit": null,
+      "label": "Illustrative ingredient"
+    },
+    {
+      "id": "recipe_liqueur",
+      "category": "liqueur",
+      "role": "recipe",
+      "lift": 3.85,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        3.85
+      ],
+      "evidence": "unverified",
+      "representation": "unknown-placeholder",
+      "quantity": null,
+      "unit": null,
+      "label": "Unknown"
+    },
+    {
+      "id": "recipe_spirit",
+      "category": "spirit",
+      "role": "recipe",
+      "lift": 2.789999994635582,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.01000000536441803
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        2.8
+      ],
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "quantity": null,
+      "unit": null,
+      "label": "Illustrative ingredient"
+    },
+    {
+      "id": "recipe_modifiers",
+      "category": "modifiers",
+      "role": "recipe",
+      "lift": 5.989999994635582,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.01000000536441803
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        6.0
+      ],
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "quantity": null,
+      "unit": null,
+      "label": "Illustrative ingredient"
+    }
+  ],
+  "sourceSha256": "44157e211385f8da2846d3aa324ca9062350655f40b7cfb4b357edd7a1003e4b",
+  "modelSha256": "6e78ef3d4ab79ba1bcf7326991928501aed45e978d80b95e59c6e83250ecf324",
+  "modelBytes": 810456,
+  "limitations": [
+    "Independently authored from dated serving photographs; dimensions, unseen details and topping distributions are inferred.",
+    "No recipe measures or physical finished-drink ingredient layers are asserted.",
+    "No serving ice. Espresso is deliberately opaque; no new nested optical experiment.",
+    "No photorealism acceptance claim."
+  ],
+  "visibilityIteration": "Expansion-only solid illustrations and rigid garnish tilt. All existing assembled meshes, materials and transforms preserved."
+}

@@ -1,0 +1,156 @@
+{
+  "source": "assets/blender/experiments/negroni-express-v012-interfaces-clean-red-d055-hero.blend",
+  "sourceSha256": "f928b306189aacfdcf4d657fe9a2ec9dc401f594ba6018f0b59f116cafb1ceb7",
+  "scene": "assets/blender/experiments/negroni-express-v012-interfaces-source-unified-d055-hero.blend",
+  "sceneSha256": "2e44c905e1ba2e37a0aa2a6c07a1667963756aa88686bab3da8af9c6485aafa6",
+  "scriptSha256": "0d43985575033317e15fc1f5c770f2297f0059ac898a4d3ba0aaea15b25741d6",
+  "geometryAndNormalsSha256": "b7c2a2b665dec2b8c5b2c9d8a2be020d8eedef27bd1076f451eb107b2ee3d326",
+  "geometryAndNormalsUnchanged": true,
+  "sourceLiquidMaterials": {
+    "Liquid_negroni-express": {
+      "ior": 1.3600000143051147,
+      "faces": 1533
+    },
+    "Interface liquid to ice n1.36 over1.31": {
+      "ior": 1.038167953491211,
+      "faces": 3244
+    }
+  },
+  "treatment": {
+    "singleMaterial": "Unified liquid volume with per-face interface IOR",
+    "usedMaterialCount": 1,
+    "faceCount": 4777,
+    "iorAttribute": "liquid_surface_ior",
+    "attributeType": "FLOAT",
+    "attributeDomain": "FACE",
+    "attributeValuesExactlyMatchPriorFaceIORs": true,
+    "attributeNodeOutput": "Fac",
+    "connectedInput": "Principled BSDF.IOR",
+    "volumeColor": [
+      0.9850000143051147,
+      0.30000001192092896,
+      0.02500000037252903,
+      1.0
+    ],
+    "volumeDensity": 0.550000011920929,
+    "volumeDensityBefore": 0.550000011920929
+  },
+  "controls": "One unified liquid shader with exactly preserved per-face IOR values. Source geometry/normals/poses, original ice materials and exposure unchanged. Fixed source hero camera/light/counter preset; hero keeps original source lighting/counter/coaster. The two density candidates differ only by the named liquid density. The photo preset changes its saved camera, light temperature/world strength and native counter crop as previously documented.",
+  "render": {
+    "output": "qa/evidence/blender/negroni-express-hero-v012-interfaces-source-unified-d055.png",
+    "completed": true,
+    "samples": 256,
+    "denoise": true,
+    "engine": "CYCLES",
+    "blenderVersion": "5.2.1 LTS",
+    "blenderBuildHash": "9e2066aef7ef",
+    "viewTransform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": 0.0,
+    "gamma": 1.0,
+    "baseResolution": [
+      720,
+      900
+    ],
+    "crop": [
+      0.07999999821186066,
+      0.8999999761581421,
+      0.18000000715255737,
+      0.8399999737739563
+    ],
+    "camera": "Camera_hero",
+    "lens": 63.0,
+    "seed": 0,
+    "maxBounces": 16,
+    "transmissionBounces": 12,
+    "volumeBounces": 0,
+    "cameraMatrix": [
+      [
+        0.9979971051216125,
+        -0.061852436512708664,
+        0.013268270529806614,
+        0.15000000596046448
+      ],
+      [
+        0.03521479666233063,
+        0.3689584732055664,
+        -0.9287785291671753,
+        -10.5
+      ],
+      [
+        0.05255177617073059,
+        0.9273855090141296,
+        0.3703975975513458,
+        5.187408447265625
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "device": "GPU",
+    "elapsedSeconds": 12.336590375023661,
+    "outputSha256": "72e0e094380bc94dfc80d819df8fa42d21f11d66f7b0f47aee97c13f966acc8c",
+    "linearOutput": "qa/evidence/blender/negroni-express-hero-v012-interfaces-source-unified-d055.exr",
+    "linearOutputSha256": "77601d0f50f9c09c1f6e72d309759ff51031e6129a3bbbddd953d1acfbbb9b9c",
+    "linearFormat": "32-bit float scene-linear RGBA OpenEXR"
+  },
+  "sourceLighting": {
+    "worldColor": [
+      0.27000001072883606,
+      0.25,
+      0.20999999344348907,
+      1.0
+    ],
+    "worldStrength": 0.699999988079071,
+    "lights": [
+      {
+        "name": "Left narrow reflected strip",
+        "hidden": false,
+        "color": [
+          1.0,
+          0.8700000047683716,
+          0.7200000286102295
+        ],
+        "power": 110.0,
+        "location": [
+          -4.5,
+          0.10000000149011612,
+          3.4000000953674316
+        ]
+      },
+      {
+        "name": "Right narrow reflected strip",
+        "hidden": false,
+        "color": [
+          0.8600000143051147,
+          0.9100000262260437,
+          1.0
+        ],
+        "power": 150.0,
+        "location": [
+          4.5,
+          0.30000001192092896,
+          3.4000000953674316
+        ]
+      },
+      {
+        "name": "Broad rear diffuse fill",
+        "hidden": false,
+        "color": [
+          1.0,
+          0.8299999833106995,
+          0.6600000262260437
+        ],
+        "power": 220.0,
+        "location": [
+          0.0,
+          3.5,
+          5.800000190734863
+        ]
+      }
+    ]
+  }
+}

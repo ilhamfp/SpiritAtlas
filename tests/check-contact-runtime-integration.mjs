@@ -1,0 +1,21 @@
+import fs from 'node:fs';import {createHash} from 'node:crypto';import assert from 'node:assert/strict';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {CONTACT_RUNTIME_SHA256,prepareContactGeometry,parseContactBoundary} from '../src/scenes/contact-runtime-schema.ts';
+const source='public/models/candidates/v012-contact/negroni-express-interfaces.glb',sha=b=>createHash('sha256').update(b).digest('hex'),bytes=fs.readFileSync(source);
+assert.equal(sha(bytes),CONTACT_RUNTIME_SHA256);
+const gltf=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
+const prepared=prepareContactGeometry(gltf.scene),hashes=g=>Object.fromEntries(Object.entries(g.attributes).map(([k,a])=>[k,sha(Buffer.from(a.array.buffer,a.array.byteOffset,a.array.byteLength))]));
+const before=prepared.geometries.map(hashes),optics=[];
+for(const g of prepared.geometries){const a=g.attributes.opticalData;for(let i=0;i<a.count;i++)if(a.getY(i)===1){assert.ok(Number.isFinite(a.getX(i)));assert.ok(a.getZ(i)!==a.getW(i));}optics.push([a.getX(0),a.getY(0),a.getZ(0),a.getW(0)]);}
+gltf.scene.traverse(o=>{if(o.isMesh&&!Array.isArray(o.material))o.material.ior=9;});
+assert.deepEqual(prepareContactGeometry(gltf.scene).geometries.map(hashes),before,'Standard material IOR affected explicit contact data');
+const valid=prepared.rows.find(r=>r.part==='liquid'&&r.boundary?.outsideMedium===2).boundary;
+const bad=[['missing',undefined],['extra-field',{...valid,unexpected:true}],['version',{...valid,schemaVersion:2}],['string-medium',{...valid,insideMedium:'1'}],['out-of-range',{...valid,outsideMedium:5}],['fractional-medium',{...valid,insideMedium:1.5}],['negative-ratio',{...valid,relativeIOR:-1}],['nonfinite-ratio',{...valid,relativeIOR:NaN}],['absolute-instead-of-relative',{...valid,relativeIOR:1.36}],['reversed-orientation',{...valid,orientation:'reverse'}],['wrong-omit',{...valid,omitFromOpticalTrace:true}],['missing-omit',Object.fromEntries(Object.entries(valid).filter(([k])=>k!=='omitFromOpticalTrace'))],['wrong-part',valid]];
+for(const [name,b]of bad)assert.throws(()=>parseContactBoundary(b,name==='wrong-part'?'glass':'liquid'),undefined,`Accepted ${name}`);
+const oldPath='qa/baselines/precision-ray-v1/bvh-wavefront-prototype.ts',currentPath='src/scenes/bvh-wavefront-prototype.ts',old=fs.readFileSync(oldPath,'utf8'),current=fs.readFileSync(currentPath,'utf8');
+const body=s=>s.slice(s.indexOf('gltf.scene.updateMatrixWorld(true);'),s.indexOf('// Controlled lighting experiment:'));
+assert.equal(body(current).replace(/}\n$/,''),body(old),'Historical geometry preparation changed');
+const uniforms=s=>s.slice(s.indexOf('const commonUniforms='),s.indexOf('const vertexShader='));assert.equal(uniforms(current),uniforms(old),'Existing stage/absorption uniforms changed');
+const rowTotal=prepared.rows.filter(r=>!r.omitted).reduce((n,r)=>n+r.triangles,0);assert.equal(rowTotal,118624);assert.equal(prepared.omittedTriangles,392);assert.equal(prepared.opticalTriangles,76104);
+const output={date:new Date().toISOString(),source,bytes:bytes.length,sourceSha256:sha(bytes),hashes:Object.fromEntries(['src/scenes/contact-runtime-schema.ts',currentPath,'src/scenes/bvh-wavefront-transport.glsl.ts',import.meta.filename].map(p=>[p,sha(fs.readFileSync(p))])),rows:prepared.rows,preparedAttributeHashes:before,firstOpticalTexels:optics,totalRetainedTriangles:rowTotal,checks:{omitted392:true,optical76104:true,explicitIORUnaffectedByStandardMaterialMutation:true,negativeSchemasRejected:bad.map(([name])=>name),historicalGeometryPreparationSourceExact:true,historicalStageAbsorptionUniformSourceExact:true},limits:'CPU loader/schema/attribute coverage only. GLB source fidelity and actual corner normals are independently audited separately. No browser shader/capture or visual/transport acceptance is claimed by this file.'};
+fs.mkdirSync('qa/evidence/contact-runtime-integration',{recursive:true});fs.writeFileSync('qa/evidence/contact-runtime-integration/cpu.json',JSON.stringify(output,null,2)+'\n');console.log(JSON.stringify({retained:rowTotal,optical:prepared.opticalTriangles,omitted:prepared.omittedTriangles,checks:output.checks},null,2));

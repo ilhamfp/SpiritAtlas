@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-13",
+  "source": "Atlas editor / user confirmation in this task",
+  "statement": "Campari is present in all three Negronis.",
+  "drinks": ["bbf-negroni", "ichigo-negroni", "negroni-express"],
+  "category": "bitter",
+  "evidence": "user-confirmed",
+  "quantities": null,
+  "notes": "Ingredient identity only. Does not independently establish measures, BBF blend composition, or other brands. Preserve the earlier menu and video evidence as a separate source record."
+}

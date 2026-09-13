@@ -1,0 +1,15 @@
+{
+  "source": "bar-somma-negroni-reference.jpg",
+  "sourceSha256": "3bed097fef388604db76dbc08f9c02c51ed5f9aae5747ce0351528eb0c0e4ca9",
+  "crop": [
+    0,
+    330,
+    413,
+    431
+  ],
+  "nativeDimensions": [
+    413,
+    101
+  ],
+  "transform": "Native crop only, no resizing, color correction or detail synthesis. Used only as a material texture on actual 3D reference counter geometry; contains no cocktail pixels."
+}

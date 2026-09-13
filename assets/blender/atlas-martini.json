@@ -1,0 +1,350 @@
+{
+  "drink": "atlas-martini",
+  "version": "collections-v1",
+  "family": "martini",
+  "seed": 20260913,
+  "blender": "5.2.1 LTS",
+  "rows": {
+    "garnish": 7.85,
+    "modifiers": 6.15,
+    "vermouth": 4.8,
+    "spirit": 3.35,
+    "structure": 0.0
+  },
+  "parameters": {
+    "family": "martini",
+    "height": 2.4,
+    "foot": 0.49,
+    "stem": 1.37,
+    "bowl": [
+      [
+        0.065,
+        1.37
+      ],
+      [
+        0.2,
+        1.57
+      ],
+      [
+        0.38,
+        1.84
+      ],
+      [
+        0.57,
+        2.13
+      ],
+      [
+        0.76,
+        2.4
+      ]
+    ],
+    "fill": 2.265,
+    "color": [
+      0.86,
+      0.78,
+      0.51,
+      1
+    ],
+    "garnish": "lemon",
+    "source": "https://atlasbar.sg/storage/app/media/ATLASMartini_Recipe.pdf",
+    "note": "Undated official recipe specifies Waterford Martini glass and lemon twist; V-profile, crystal pattern, tint and dimensions are illustrative."
+  },
+  "sourceReference": {
+    "path": "https://atlasbar.sg/storage/app/media/ATLASMartini_Recipe.pdf",
+    "sha256": null
+  },
+  "scriptSha256": "fcf11e07f4ef87809242c84cfe4c1fcf775bbfd3c9b685df1812fed159ace264",
+  "sourceSha256": "92cef20961e16155b3884a43a53aa001d0c98bc903b9aba9081724b9f2f66d94",
+  "modelSha256": "35473b54528142a3e366d519c89ca9df882d7909a3e06ff0abd3e0bc68a4b3ca",
+  "modelBytes": 161820,
+  "parts": [
+    {
+      "scenePartId": "glass",
+      "ingredientId": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Undated official recipe specifies Waterford Martini glass and lemon twist; V-profile, crystal pattern, tint and dimensions are illustrative.",
+      "id": "glass",
+      "category": "structure",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 2018,
+      "triangles": 4032,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.7599999904632568,
+          -0.7599999904632568,
+          0.02500000037252903
+        ],
+        [
+          0.7599999904632568,
+          0.7599999904632568,
+          2.4040000438690186
+        ]
+      ]
+    },
+    {
+      "scenePartId": "liquid",
+      "ingredientId": "vermouth",
+      "role": "mixture",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Undated official recipe specifies Waterford Martini glass and lemon twist; V-profile, crystal pattern, tint and dimensions are illustrative.",
+      "id": "liquid",
+      "category": "vermouth",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.840000033378601
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        1.840000033378601
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 386,
+      "triangles": 768,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.6330000162124634,
+          -0.6330000162124634,
+          1.4149999618530273
+        ],
+        [
+          0.6330000162124634,
+          0.6330000162124634,
+          2.265000104904175
+        ]
+      ]
+    },
+    {
+      "scenePartId": "garnish_lemon_twist",
+      "ingredientId": "garnish",
+      "role": "physical",
+      "lift": 5.2910001039505,
+      "evidence": "official-menu",
+      "presentationNote": "Undated official recipe specifies Waterford Martini glass and lemon twist; V-profile, crystal pattern, tint and dimensions are illustrative.",
+      "rigidExpansionGroup": "garnish",
+      "id": "garnish_lemon_twist",
+      "category": "garnish",
+      "assembledPosition": [
+        0.2000221312046051,
+        -0.19549064338207245,
+        2.559000015258789
+      ],
+      "expandedPosition": [
+        0.2000221312046051,
+        -0.19549064338207245,
+        7.850000119209289
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 340,
+      "triangles": 676,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.02695317566394806,
+          -0.3779495656490326,
+          2.3559999465942383
+        ],
+        [
+          0.42699742317199707,
+          -0.01303170621395111,
+          2.7619998455047607
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_spirit",
+      "ingredientId": "spirit",
+      "role": "recipe",
+      "lift": 3.3349999994039536,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Undated official recipe specifies Waterford Martini glass and lemon twist; V-profile, crystal pattern, tint and dimensions are illustrative.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_spirit",
+      "category": "spirit",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.015000000596046448
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        3.35
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3400000035762787,
+          -0.3400000035762787,
+          -0.14000000059604645
+        ],
+        [
+          0.3400000035762787,
+          0.3400000035762787,
+          0.17000000178813934
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_vermouth",
+      "ingredientId": "vermouth",
+      "role": "recipe",
+      "lift": 4.784999999403953,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Undated official recipe specifies Waterford Martini glass and lemon twist; V-profile, crystal pattern, tint and dimensions are illustrative.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_vermouth",
+      "category": "vermouth",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.015000000596046448
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        4.8
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3400000035762787,
+          -0.3400000035762787,
+          -0.14000000059604645
+        ],
+        [
+          0.3400000035762787,
+          0.3400000035762787,
+          0.17000000178813934
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_champagne_vinegar",
+      "ingredientId": "modifiers",
+      "role": "recipe",
+      "lift": 6.1391999997198585,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Undated official recipe specifies Waterford Martini glass and lemon twist; V-profile, crystal pattern, tint and dimensions are illustrative.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_champagne_vinegar",
+      "category": "modifiers",
+      "assembledPosition": [
+        -0.25999999046325684,
+        0.0,
+        0.01080000028014183
+      ],
+      "expandedPosition": [
+        -0.26,
+        0.0,
+        6.15
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.5047999620437622,
+          -0.24480000138282776,
+          -0.10079999268054962
+        ],
+        [
+          -0.015199989080429077,
+          0.24480000138282776,
+          0.12240000069141388
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_orange_bitters",
+      "ingredientId": "modifiers",
+      "role": "recipe",
+      "lift": 6.1391999997198585,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Undated official recipe specifies Waterford Martini glass and lemon twist; V-profile, crystal pattern, tint and dimensions are illustrative.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_orange_bitters",
+      "category": "modifiers",
+      "assembledPosition": [
+        0.25999999046325684,
+        0.0,
+        0.01080000028014183
+      ],
+      "expandedPosition": [
+        0.26,
+        0.0,
+        6.15
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          0.015199989080429077,
+          -0.24480000138282776,
+          -0.10079999268054962
+        ],
+        [
+          0.5047999620437622,
+          0.24480000138282776,
+          0.12240000069141388
+        ]
+      ]
+    }
+  ],
+  "checks": {
+    "finiteGeometry": true,
+    "allPartsClosed": true,
+    "semanticCategoriesComplete": true,
+    "structureStationary": true,
+    "garnishRigid": true
+  },
+  "limitations": [
+    "Undated official recipe specifies Waterford Martini glass and lemon twist; V-profile, crystal pattern, tint and dimensions are illustrative.",
+    "Real editable geometry; serving dimensions, material appearance and all recipe-form scales are illustrative.",
+    "No offline photographic matching or physically measured optical claim.",
+    "Recipe quantities and units remain JSON null. The client supplies current content labels."
+  ]
+}

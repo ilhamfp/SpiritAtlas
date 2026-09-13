@@ -1,0 +1,409 @@
+{
+  "drink": "moga-salted-yuzu-highball",
+  "version": "collections-v1",
+  "family": "highball",
+  "seed": 20260913,
+  "blender": "5.2.1 LTS",
+  "rows": {
+    "modifiers": 6.5,
+    "fizz": 4.85,
+    "spirit": 3.35,
+    "structure": 0.0
+  },
+  "parameters": {
+    "family": "highball",
+    "height": 2.78,
+    "radius": 0.5,
+    "base": 0.4,
+    "fill": 2.55,
+    "iceWidth": 0.52,
+    "iceDepth": 0.54,
+    "iceHeight": 2.24,
+    "iceZ": 1.56,
+    "color": [
+      0.84,
+      0.74,
+      0.4,
+      1
+    ],
+    "source": "references/new-collections/moga-salted-yuzu-highball.jpg",
+    "note": "Named official December 2024 upload: tapered tall glass, pale cloudy gold and long clear ice; no separate garnish."
+  },
+  "sourceReference": {
+    "path": "references/new-collections/moga-salted-yuzu-highball.jpg",
+    "sha256": "a7e649bc41bd2567f6a043aee1f6cae54886a5a95051aeb4884c163dfdafc9b0"
+  },
+  "scriptSha256": "fcf11e07f4ef87809242c84cfe4c1fcf775bbfd3c9b685df1812fed159ace264",
+  "sourceSha256": "ea2978c931723952eca825df9fb9d8977b768bfcf7878818e3282955a5cbc623",
+  "modelSha256": "28983f46fe4b4d58e8cae37ddade0d634a1831bba82086444125ccd0ec38c7b7",
+  "modelBytes": 263528,
+  "parts": [
+    {
+      "scenePartId": "glass",
+      "ingredientId": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Named official December 2024 upload: tapered tall glass, pale cloudy gold and long clear ice; no separate garnish.",
+      "id": "glass",
+      "category": "structure",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 1346,
+      "triangles": 2688,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.5,
+          -0.5,
+          0.03500000014901161
+        ],
+        [
+          0.5,
+          0.5,
+          2.7829999923706055
+        ]
+      ]
+    },
+    {
+      "scenePartId": "liquid",
+      "ingredientId": "fizz",
+      "role": "mixture",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Named official December 2024 upload: tapered tall glass, pale cloudy gold and long clear ice; no separate garnish.",
+      "id": "liquid",
+      "category": "fizz",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.3819999694824219
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        1.3819999694824219
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 605,
+      "triangles": 1214,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.45422521233558655,
+          -0.45422521233558655,
+          0.21399998664855957
+        ],
+        [
+          0.45422521233558655,
+          0.45422521233558655,
+          2.549999952316284
+        ]
+      ]
+    },
+    {
+      "scenePartId": "ice",
+      "ingredientId": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Named official December 2024 upload: tapered tall glass, pale cloudy gold and long clear ice; no separate garnish.",
+      "id": "ice",
+      "category": "structure",
+      "assembledPosition": [
+        0.0,
+        0.03500000014901161,
+        1.559999942779541
+      ],
+      "expandedPosition": [
+        0.0,
+        0.03500000014901161,
+        1.559999942779541
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 152,
+      "triangles": 300,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.25999999046325684,
+          -0.23500001430511475,
+          0.43999993801116943
+        ],
+        [
+          0.25999999046325684,
+          0.3050000071525574,
+          2.679999828338623
+        ]
+      ]
+    },
+    {
+      "scenePartId": "serving_fine_bubbles",
+      "ingredientId": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Named official December 2024 upload: tapered tall glass, pale cloudy gold and long clear ice; no separate garnish.",
+      "assembledOnly": true,
+      "id": "serving_fine_bubbles",
+      "category": "structure",
+      "assembledPosition": [
+        -0.009009838104248047,
+        -0.005009874701499939,
+        1.4272047281265259
+      ],
+      "expandedPosition": [
+        -0.009009838104248047,
+        -0.005009874701499939,
+        1.4272047281265259
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 2040,
+      "triangles": 3840,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.4161972999572754,
+          -0.427329421043396,
+          0.35506367683410645
+        ],
+        [
+          0.3981776237487793,
+          0.41730964183807373,
+          2.4993457794189453
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_spirit",
+      "ingredientId": "spirit",
+      "role": "recipe",
+      "lift": 3.3349999994039536,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Named official December 2024 upload: tapered tall glass, pale cloudy gold and long clear ice; no separate garnish.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_spirit",
+      "category": "spirit",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.015000000596046448
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        3.35
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3400000035762787,
+          -0.3400000035762787,
+          -0.14000000059604645
+        ],
+        [
+          0.3400000035762787,
+          0.3400000035762787,
+          0.17000000178813934
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_fizz",
+      "ingredientId": "fizz",
+      "role": "recipe",
+      "lift": 4.834999999403953,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Named official December 2024 upload: tapered tall glass, pale cloudy gold and long clear ice; no separate garnish.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_fizz",
+      "category": "fizz",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.015000000596046448
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        4.85
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3400000035762787,
+          -0.3400000035762787,
+          -0.14000000059604645
+        ],
+        [
+          0.3400000035762787,
+          0.3400000035762787,
+          0.17000000178813934
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_fizz_bubbles",
+      "ingredientId": "fizz",
+      "role": "recipe",
+      "lift": 4.835797513276338,
+      "evidence": "official-menu",
+      "representation": "illustrative-carbonation",
+      "presentationNote": "Named official December 2024 upload: tapered tall glass, pale cloudy gold and long clear ice; no separate garnish.",
+      "preserveIllustrationColor": true,
+      "recipeSolid": true,
+      "id": "recipe_fizz_bubbles",
+      "category": "fizz",
+      "assembledPosition": [
+        0.007690608501434326,
+        -0.007404997944831848,
+        0.014202486723661423
+      ],
+      "expandedPosition": [
+        0.007690608501434326,
+        -0.007404997944831848,
+        4.85
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 748,
+      "triangles": 1408,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.28964462876319885,
+          -0.2982941269874573,
+          -0.11830008029937744
+        ],
+        [
+          0.3050258457660675,
+          0.28348416090011597,
+          0.14670506119728088
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_yuzu_seasoning",
+      "ingredientId": "modifiers",
+      "role": "recipe",
+      "lift": 6.488900002092123,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Named official December 2024 upload: tapered tall glass, pale cloudy gold and long clear ice; no separate garnish.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_yuzu_seasoning",
+      "category": "modifiers",
+      "assembledPosition": [
+        -0.30000001192092896,
+        0.0,
+        0.011099997907876968
+      ],
+      "expandedPosition": [
+        -0.3,
+        0.0,
+        6.5
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.5515999794006348,
+          -0.2515999972820282,
+          -0.10360001027584076
+        ],
+        [
+          -0.04840001463890076,
+          0.2515999972820282,
+          0.1257999986410141
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_buckwheat_syrup",
+      "ingredientId": "modifiers",
+      "role": "recipe",
+      "lift": 6.488900002092123,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Named official December 2024 upload: tapered tall glass, pale cloudy gold and long clear ice; no separate garnish.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_buckwheat_syrup",
+      "category": "modifiers",
+      "assembledPosition": [
+        0.30000001192092896,
+        0.0,
+        0.011099997907876968
+      ],
+      "expandedPosition": [
+        0.3,
+        0.0,
+        6.5
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          0.04840001463890076,
+          -0.2515999972820282,
+          -0.10360001027584076
+        ],
+        [
+          0.5515999794006348,
+          0.2515999972820282,
+          0.1257999986410141
+        ]
+      ]
+    }
+  ],
+  "checks": {
+    "finiteGeometry": true,
+    "allPartsClosed": true,
+    "semanticCategoriesComplete": true,
+    "structureStationary": true,
+    "garnishRigid": true
+  },
+  "limitations": [
+    "Named official December 2024 upload: tapered tall glass, pale cloudy gold and long clear ice; no separate garnish.",
+    "Real editable geometry; serving dimensions, material appearance and all recipe-form scales are illustrative.",
+    "No offline photographic matching or physically measured optical claim.",
+    "Recipe quantities and units remain JSON null. The client supplies current content labels."
+  ]
+}

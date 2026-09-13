@@ -1,0 +1,73 @@
+{
+  "source": "assets/blender/experiments/negroni-express-v012-interfaces-neutral-d055-hero.blend",
+  "sourceSha256": "01823d1eff016897d71ab571cc9d1efccf03afc9c55045b6a65a2f424e04307a",
+  "scene": "assets/blender/experiments/negroni-express-v012-interfaces-neutral-unified-d055-hero.blend",
+  "sceneSha256": "adc75a9177d343eeca8f3f0ea00142afd91f6f8a0fb328b05867535e310824e4",
+  "scriptSha256": "9f2637eb6decbf9a9e1e894743e21ed4c4f2d6d5dfd899e34ef41f9d0f68b407",
+  "geometryAndNormalsSha256": "b7c2a2b665dec2b8c5b2c9d8a2be020d8eedef27bd1076f451eb107b2ee3d326",
+  "geometryAndNormalsUnchanged": true,
+  "sourceLiquidMaterials": {
+    "Liquid_negroni-express": {
+      "ior": 1.3600000143051147,
+      "faces": 1533
+    },
+    "Interface liquid to ice n1.36 over1.31": {
+      "ior": 1.038167953491211,
+      "faces": 3244
+    }
+  },
+  "treatment": {
+    "singleMaterial": "Unified liquid volume with per-face interface IOR",
+    "usedMaterialCount": 1,
+    "faceCount": 4777,
+    "iorAttribute": "liquid_surface_ior",
+    "attributeType": "FLOAT",
+    "attributeDomain": "FACE",
+    "attributeValuesExactlyMatchPriorFaceIORs": true,
+    "attributeNodeOutput": "Fac",
+    "connectedInput": "Principled BSDF.IOR",
+    "volumeColor": [
+      0.9850000143051147,
+      0.30000001192092896,
+      0.02500000037252903,
+      1.0
+    ],
+    "volumeDensity": 0.550000011920929
+  },
+  "controls": "Same saved neutral-emission scene, all optical geometry/normals/poses, per-face IOR values, roughness, volume coefficient, non-liquid materials, illumination, camera, exposure and rendering settings. Only liquid shader identity is unified; FACE/FLOAT data supplies the prior interface IOR.",
+  "render": {
+    "output": "qa/evidence/blender/negroni-express-hero-v012-interfaces-neutral-unified-d055.png",
+    "completed": true,
+    "samples": 256,
+    "denoise": true,
+    "engine": "CYCLES",
+    "blenderVersion": "5.2.1 LTS",
+    "blenderBuildHash": "9e2066aef7ef",
+    "viewTransform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": 0.0,
+    "gamma": 1.0,
+    "baseResolution": [
+      720,
+      900
+    ],
+    "crop": [
+      0.07999999821186066,
+      0.8999999761581421,
+      0.18000000715255737,
+      0.8399999737739563
+    ],
+    "camera": "Camera_hero",
+    "lens": 63.0,
+    "seed": 0,
+    "maxBounces": 16,
+    "transmissionBounces": 12,
+    "volumeBounces": 0,
+    "device": "GPU",
+    "elapsedSeconds": 13.375908209010959,
+    "outputSha256": "3c0630f040068655e0b23722f63b8cb82a76b291d97fa976a397d8c275527b4f",
+    "linearOutput": "qa/evidence/blender/negroni-express-hero-v012-interfaces-neutral-unified-d055.exr",
+    "linearOutputSha256": "415cef0f2b6650bf83be249a14ec9cb799eb86f6de0b7a5fdc3f002582056e7c",
+    "linearFormat": "32-bit float scene-linear RGBA OpenEXR"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "drink": "bbf-negroni",
+  "version": "0.15.1",
+  "seed": 20260912,
+  "blender": "5.2.1 LTS",
+  "parameters": {
+    "radius": 1,
+    "height": 1.94,
+    "base": 0.29,
+    "wall": 0.035,
+    "fill": 1.41,
+    "liquid": [
+      0.52,
+      0.085,
+      0.018,
+      1
+    ],
+    "absorption": [
+      0.25,
+      0.012,
+      0.005,
+      1
+    ],
+    "density": 0.9,
+    "ice": 1.25,
+    "ice_z": 0.945
+  },
+  "scriptSha256": "068b717db0d340fed1db828bcab6bdc38412f74972994bdfe4bc425fd035a73f",
+  "sourceManifestSha256": "e5a5af60c29b5b9515bf9e61b8f89a22332c32dc53d80e9c2da3cfd40223705f",
+  "view": "hero",
+  "camera": {
+    "location": [
+      0.15000000596046448,
+      -10.5,
+      2.931490898132324
+    ],
+    "rotation": [
+      1.3888969421386719,
+      1.8446494332025054e-10,
+      0.014284745790064335
+    ],
+    "lens": 63.0
+  },
+  "render": {
+    "samples": 512,
+    "denoise": false,
+    "viewTransform": "AgX",
+    "look": "AgX - Medium High Contrast"
+  },
+  "parts": [
+    {
+      "id": "glass",
+      "category": "structure",
+      "role": "physical",
+      "lift": 0,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "liquid",
+      "category": "structure",
+      "role": "mixture",
+      "lift": 0,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "ice",
+      "category": "structure",
+      "role": "physical",
+      "lift": 2.1550000000000002,
+      "assembledPosition": [
+        0.0,
+        0.03500000014901161,
+        0.9449999928474426
+      ]
+    },
+    {
+      "id": "garnish_orange",
+      "category": "garnish",
+      "role": "physical",
+      "lift": 7.04,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "recipe_spirit",
+      "category": "spirit",
+      "role": "recipe",
+      "lift": 3.35,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.100000023841858
+      ],
+      "evidence": "confirmed",
+      "representation": "ingredient-diagram",
+      "label": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "recipe_bitter",
+      "category": "bitter",
+      "role": "recipe",
+      "lift": 4.4,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.100000023841858
+      ],
+      "evidence": "confirmed",
+      "representation": "ingredient-diagram",
+      "label": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "recipe_vermouth",
+      "category": "vermouth",
+      "role": "recipe",
+      "lift": 5.449999999999999,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.100000023841858
+      ],
+      "evidence": "confirmed",
+      "representation": "ingredient-diagram",
+      "label": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "recipe_modifiers",
+      "category": "modifiers",
+      "role": "recipe",
+      "lift": 6.5,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.100000023841858
+      ],
+      "evidence": "unverified",
+      "representation": "unknown-placeholder",
+      "label": "Unknown",
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "ice_inclusions",
+      "category": "structure",
+      "role": "physical",
+      "lift": 2.1550000000000002,
+      "assembledPosition": [
+        -0.06589659303426743,
+        -0.3653120696544647,
+        0.5709335803985596
+      ]
+    }
+  ],
+  "outputTag": "wrapper-repro-v0151-raw",
+  "candidateProvenance": {
+    "baseline": "Validated v0.12 optical fans/normals and lower ice clearances; v0.14 garnish preserved separately.",
+    "uncertainty": "Visible shapes are reference guided; hidden garnish attachment and BBF upper ice seating are inferred, not observed anatomy or recipe claims.",
+    "changes": {
+      "upperIceCutoff": 1.425999999,
+      "upperIceScale": 0.2700870051,
+      "preserved": "orange crown and all lower ice; fresh liquid Boolean"
+    }
+  }
+}

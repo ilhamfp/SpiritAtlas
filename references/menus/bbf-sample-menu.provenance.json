@@ -1,0 +1,32 @@
+{
+  "requestedUrl": "https://www.bonfunk.com/s/BBF_SAMPLE-MENU.pdf",
+  "resolvedUrl": "https://static1.squarespace.com/static/66704982824532747e8abd2a/t/66c4ac11fff1ad5c10a86f0a/1724165139731/BBF_SAMPLE+MENU.pdf",
+  "retrievedAt": "2026-09-12T14:48:50.710577+00:00",
+  "bytes": 388426,
+  "sha256": "8664957f45ab93f3b0f9d02f489075f11b4f59aeb010f4d2bc7a9e941cea2665",
+  "headers": {
+    "Connection": "close",
+    "Content-Length": "388426",
+    "Cache-Control": "public, max-age=94608000",
+    "Content-Type": "application/pdf",
+    "Pragma": "cache",
+    "Server": "Squarespace",
+    "Timing-Allow-Origin": "*",
+    "X-Content-Type-Options": "nosniff",
+    "X-Contextid": "EnU4F4sR/BwSLcWPG",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Via": "1.1 varnish, 1.1 varnish",
+    "Accept-Ranges": "bytes",
+    "Age": "0",
+    "Date": "Sat, 12 Sep 2026 14:48:29 GMT",
+    "X-Served-By": "cache-dfw-kdfw8210058-DFW, cache-qpg1252-QPG",
+    "X-Cache": "MISS, MISS",
+    "X-Cache-Hits": "0, 0",
+    "X-Timer": "S1789224509.730030,VS0,VE1060",
+    "Vary": "Accept-Encoding",
+    "Tracepoint": "Fastly"
+  },
+  "scope": "Official public source retained for reference research, outside public bundle; no publication license inferred.",
+  "pdfInfoFile": "bbf-sample-menu.pdfinfo.txt",
+  "textFile": "bbf-sample-menu.txt"
+}

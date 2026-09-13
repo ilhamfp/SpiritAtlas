@@ -1,0 +1,21 @@
+Connection: close
+Content-Length: 2665574
+Cache-Control: public, max-age=94608000
+Content-Type: application/pdf
+Pragma: cache
+Server: Squarespace
+Timing-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Contextid: DrZyzv7y/uaEhH2Mc
+X-Frame-Options: SAMEORIGIN
+Via: 1.1 varnish, 1.1 varnish
+Accept-Ranges: bytes
+Age: 2
+Date: Sat, 12 Sep 2026 14:33:26 GMT
+X-Served-By: cache-dfw-kdal2120108-DFW, cache-qpg1223-QPG
+X-Cache: MISS, MISS
+X-Cache-Hits: 0, 0
+X-Timer: S1789223604.875752,VS0,VE2782
+Vary: Accept-Encoding
+Tracepoint: Fastly
+

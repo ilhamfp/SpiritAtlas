@@ -1,0 +1,9 @@
+{
+  "asset": "public/textures/somma-stone-tile-v1.png",
+  "method": "Built-in image_gen; generated material inspired by a supplied source crop, not recovered photographic detail.",
+  "reference": "public/textures/somma-counter-photo.png",
+  "original": "bar-somma-negroni-reference.jpg",
+  "scope": "Shared product stage only. Fixed source-matched evidence retains native photo/video crop materials.",
+  "prompt": "Use case: photorealistic-natural.\nAsset type: physically based material base-color tile for an actual 3D bar countertop.\nReference image 1 is a native crop of the user's Somma countertop. Use it only as a reference for its stone material, not a composition to preserve. Create a new, very detailed, seamlessly tileable orthographic photograph of the same TYPE of warm rust-red, terracotta-brown mottled natural stone with fine broken cream/off-white mineral veins, sparse dark brown mineral speckles, irregular reddish microtexture, and naturally varied grain. The reference has long small veins, not giant continuous white marble rivers. Reconstruct plausible texture at much higher detail while retaining its restrained warm mineral colors.\nTop-down flat surface, zero perspective, no objects, no counter edge. Neutral diffuse cross-polarized illumination, no baked-in directional shadows, reflections, shine, vignette, highlights or depth of field. Even exposure and visual density from edge to edge. Seamless wrap horizontally and vertically, 2:1 aspect ratio, high resolution. The material will cover approximately 60 x 30 cm in a close cocktail photograph. Photographic organic detail, avoid synthetic procedural streaks or obvious repetition. No drink, no glasses, no text, no watermark.",
+  "created": "2026-09-12"
+}

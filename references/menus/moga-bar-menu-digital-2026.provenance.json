@@ -1,0 +1,18 @@
+{
+  "sourceUrl": "https://www.moga.com.sg/wp-content/uploads/sites/57/2024/08/MOGA_BarMenu_Digital_2026.pdf",
+  "downloaded": "2026-09-12",
+  "path": "references/menus/moga-bar-menu-digital-2026.pdf",
+  "sha256": "4cfe020bb98245cca38058c25796f00e1c41b169a1f9db802b8012fdb795d07e",
+  "pages": 25,
+  "pdfCreationDate": "2026-06-04T08:11:31+08:00",
+  "transformations": "Original PDF bytes preserved; pypdf text derivative and pdftoppm page19 render separate.",
+  "relevantPage": {
+    "pdfOneBased": 19,
+    "printedPages": [
+      36,
+      37
+    ],
+    "finding": "Classic Negroni lists Tanqueray Gin, Campari, Sweet Vermouth. No Ichigo Negroni listing found in the document. This does not confirm the filmed Ichigo recipe."
+  },
+  "scope": "Official current menu; same-serving identity not established."
+}

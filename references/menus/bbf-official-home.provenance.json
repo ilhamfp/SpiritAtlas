@@ -1,0 +1,25 @@
+{
+  "requestedUrl": "https://www.bonfunk.com/",
+  "resolvedUrl": "https://www.bonfunk.com/",
+  "retrievedAt": "2026-09-12T14:48:51.152037+00:00",
+  "bytes": 208660,
+  "sha256": "6c9a864db92c1c91cbbfb4e49ccec4514fb0663b5bb2c313a5cbbca7cc35025d",
+  "headers": {
+    "Accept-Ranges": "bytes",
+    "Age": "71437",
+    "Content-Length": "208660",
+    "Content-Type": "text/html;charset=utf-8",
+    "Date": "Fri, 11 Sep 2026 17:41:12 GMT",
+    "Etag": "W/\"c60d8ec5e68654fc4e02a58c05191efe\"",
+    "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+    "Server": "Squarespace",
+    "Set-Cookie": "crumb=BVYATRJ/7fiEZDk2NGViYjE4NmI0ZTBiODVmYjI5MTliMjU4NmM4;Secure;Path=/",
+    "Strict-Transport-Security": "max-age=15552000",
+    "Vary": "Accept-Encoding",
+    "X-Content-Type-Options": "nosniff",
+    "X-Contextid": "lao9NwWG/4JaQvwOO",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Connection": "close"
+  },
+  "scope": "Official public source retained for reference research, outside public bundle; no publication license inferred."
+}

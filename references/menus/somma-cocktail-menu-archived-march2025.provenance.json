@@ -1,0 +1,23 @@
+{
+  "source_url": "https://static1.squarespace.com/static/669a6a47bf163d18d7dd87d2/t/67dd50b88077496c164fae4d/1742557388683/Bar+Somma+Cocktails+menu+.pdf",
+  "discovery_url": "https://www.somma.world/s/Bar-Somma-Cocktails-menu.pdf",
+  "retrieved_at_utc": "2026-09-12T14:33:48.094525+00:00",
+  "local_path": "references/menus/somma-cocktail-menu-archived-march2025.pdf",
+  "sha256": "e02bec7e66dd8e960a26d346c037f096181fbb36e8b59997c21f06b8bd8f7732",
+  "bytes": 2665574,
+  "version_note": "PDF metadata and URL upload timestamp indicate March 2025; not a printed menu date. Archived official menu, distinct from the user-supplied May 2026 edition.",
+  "pdf_page_count": 18,
+  "pdf_metadata_creation_date": "2025-03-21T11:26:55Z",
+  "visual_review": {
+    "renderer": "Bundled Poppler pdftoppm",
+    "dpi": 130,
+    "pdf_pages_inspected": [
+      3,
+      7
+    ]
+  },
+  "rendered_page_sha256": {
+    "somma-cocktail-menu-archived-march2025-page-03.png": "9b8cadfbf4a2ea29153237941e4c4a8ee9ae84bee9702e98e1c2b78fd7c0b52f",
+    "somma-cocktail-menu-archived-march2025-page-07.png": "8910824be9b70481b8f2da14f19d77245895a91344bdc39e049936864ceaa144"
+  }
+}

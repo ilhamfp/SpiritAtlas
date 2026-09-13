@@ -1,0 +1,96 @@
+{
+  "sourceBlend": "assets/blender/candidates/v012/negroni-express.blend",
+  "sourceBlendSha256": "0b3b304938df576ff9bd0ff8d4c00283cd067d8e1037a1378e64c98bbe0434dd",
+  "experimentBlend": "assets/blender/experiments/negroni-express-v012-absorption-red-d6-hero.blend",
+  "experimentBlendSha256": "0665a940191e4cbf47fb6806f3d7af255d5a5dec4613b7c83621a3c91d7189f4",
+  "scriptSha256": "fcd5bdfa18ded7e8691acd52d9155afa65ec21a70eae5a7d5d79873a5aa94648",
+  "geometryAndNormalsSha256": "cfac432c5a6ceb3c2bb75bb3056b10eb2c2abf061133544615258b4c6fc68dd8",
+  "geometryAndNormalsUnchanged": true,
+  "treatment": {
+    "field": "Liquid Principled BSDF Base Color",
+    "before": [
+      0.9599999785423279,
+      0.3400000035762787,
+      0.06499999761581421,
+      1.0
+    ],
+    "after": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "controls": "Same v0.12 geometry/normals, IOR, roughness, exposure, view transform and sample/denoise settings. Uses the fixed hero camera/light preset; only named liquid surface/absorption fields are treated.",
+  "render": {
+    "samples": 256,
+    "denoise": true,
+    "baseResolution": [
+      720,
+      900
+    ],
+    "crop": [
+      0.08,
+      0.9,
+      0.18,
+      0.84
+    ],
+    "output": "qa/evidence/blender/negroni-express-hero-v012-absorption-red-d6.png",
+    "completed": true,
+    "elapsedSeconds": 55.66948554100236,
+    "outputSha256": "735587f3dd60dd3139257bdd934b21d1428a5aeb61c181d23e68593e747a3324"
+  },
+  "absorption": {
+    "before": {
+      "color": [
+        0.6499999761581421,
+        0.0949999988079071,
+        0.017999999225139618,
+        1.0
+      ],
+      "density": 0.550000011920929
+    },
+    "after": {
+      "color": [
+        0.9850000143051147,
+        0.30000001192092896,
+        0.02500000037252903,
+        1.0
+      ],
+      "density": 6.0
+    },
+    "linearCoefficientPerAuthoredUnit": [
+      0.08999991416931152,
+      4.199999928474426,
+      5.849999997764826
+    ],
+    "predictedDirectTransmission": [
+      {
+        "pathLengthAuthoredUnits": 0.25,
+        "RGB": [
+          0.9777512581736021,
+          0.34993775536853,
+          0.2316564093063369
+        ]
+      },
+      {
+        "pathLengthAuthoredUnits": 0.5,
+        "RGB": [
+          0.9559975228600618,
+          0.12245643263236514,
+          0.05366469197270509
+        ]
+      },
+      {
+        "pathLengthAuthoredUnits": 1,
+        "RGB": [
+          0.9139312637145744,
+          0.01499557789304498,
+          0.0028798991645253183
+        ]
+      }
+    ],
+    "formula": "alpha=(1-linearColor)*density; T=exp(-alpha*pathLength). Surface Fresnel and multiple reflections are separate.",
+    "formulaSource": "https://docs.blender.org/manual/en/latest/render/shader_nodes/shader/volume_coefficients.html"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "productStageVersion": "1.0.0",
+  "sourceVersion": "0.12.0",
+  "drink": "negroni-express",
+  "sourceBlend": "assets/blender/candidates/v012/negroni-express.blend",
+  "sourceBlendSha256": "0b3b304938df576ff9bd0ff8d4c00283cd067d8e1037a1378e64c98bbe0434dd",
+  "productBlend": "assets/blender/product/negroni-express-v2.blend",
+  "productBlendSha256": "dca2c587d42deacf2c203c39613d4709e1141933ea216b01e179d7bc2d91bf10",
+  "scriptSha256": "ca4aa798a628fddc593950a1d2e251fb9a71b5e472b8a84d9e0742262739a4d9",
+  "panorama": {
+    "path": "public/textures/somma-interior-panorama-v2.png",
+    "sha256": "e05fba1dce84c3ece111bd6afb8903673f9506f9ce7bad736f93fc69d08c5ad1",
+    "rotationDegrees": -90,
+    "provenance": "public/textures/somma-interior-panorama-v2.provenance.json"
+  },
+  "stone": {
+    "path": "public/textures/somma-stone-tile-v1.png",
+    "sha256": "03ae32005c63799763c2f575682be7f32802c5a5c1ffef9a10db625d6f495266",
+    "textureMix": 0.15,
+    "baseSRGB": "#837c70",
+    "roughness": 0.66,
+    "tileMeters": [
+      0.6,
+      0.3
+    ],
+    "mirroredRepeat": true,
+    "counterTopAuthoredUnits": 0.035,
+    "counterSizeAuthoredUnits": [
+      24,
+      24
+    ]
+  },
+  "estimatedMetersPerAuthoredUnit": 0.04,
+  "camera": {
+    "positionMeters": [
+      0.006000000052154064,
+      -0.41999998688697815,
+      0.20749633014202118
+    ],
+    "rotationEuler": [
+      1.191359281539917,
+      -2.2606450045259407e-09,
+      0.014284742996096611
+    ],
+    "lens": 63.0,
+    "fstop": 16,
+    "focusMeters": [
+      0.0,
+      0.0,
+      0.041999999433755875
+    ]
+  },
+  "lights": [
+    {
+      "name": "Product warm left narrow key",
+      "positionMeters": [
+        -0.17999999225139618,
+        -0.01600000075995922,
+        0.14399999380111694
+      ],
+      "energyWatts": 0.3840000033378601,
+      "color": [
+        1,
+        0.87,
+        0.72
+      ],
+      "sizeMeters": [
+        0.019999999552965164,
+        0.1599999964237213
+      ]
+    },
+    {
+      "name": "Product restrained cool right fill",
+      "positionMeters": [
+        0.17999999225139618,
+        0.00800000037997961,
+        0.13600000739097595
+      ],
+      "energyWatts": 0.17599999904632568,
+      "color": [
+        0.8,
+        0.88,
+        1
+      ],
+      "sizeMeters": [
+        0.01600000075995922,
+        0.11999999731779099
+      ]
+    }
+  ],
+  "render": {
+    "resolution": [
+      900,
+      1125
+    ],
+    "samples": 256,
+    "denoise": true,
+    "output": "qa/evidence/blender/product/negroni-express-product-v2.png",
+    "completed": true,
+    "elapsedSeconds": 61.20602479099762,
+    "outputSha256": "d4c6131bcde9e09ab7a518814b6ec1ea4139080cc64e6e4129e914bc4a58c98f"
+  },
+  "scope": "Shared product context with generated environment guided by actual Somma interior north star. Unseen environment directions inferred. Primary source-matched scenes unchanged. No fidelity pass."
+}

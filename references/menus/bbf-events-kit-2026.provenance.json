@@ -1,0 +1,32 @@
+{
+  "requestedUrl": "https://www.bonfunk.com/s/Bar-Bon-Funk-Events-Kit-2026.pdf",
+  "resolvedUrl": "https://static1.squarespace.com/static/66704982824532747e8abd2a/t/69c3a490c0e590596cc040fb/1774429328089/Bar+Bon+Funk+Events+Kit+2026.pdf",
+  "retrievedAt": "2026-09-12T14:50:34.431031+00:00",
+  "bytes": 5868130,
+  "sha256": "b84e3089bd5683cd8627f29a03f0d8d0133334e5942a7ea15be21a95f87a02e1",
+  "headers": {
+    "Connection": "close",
+    "Content-Length": "5868130",
+    "Cache-Control": "public, max-age=94608000",
+    "Content-Type": "application/pdf",
+    "Pragma": "cache",
+    "Server": "Squarespace",
+    "Timing-Allow-Origin": "*",
+    "X-Content-Type-Options": "nosniff",
+    "X-Contextid": "zdAxk7lX/ZN4LML5Q",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Via": "1.1 varnish, 1.1 varnish",
+    "Accept-Ranges": "bytes",
+    "Age": "1",
+    "Date": "Sat, 12 Sep 2026 14:50:13 GMT",
+    "X-Served-By": "cache-dfw-kdfw8210112-DFW, cache-sin-wsat1880068-SIN",
+    "X-Cache": "MISS, MISS",
+    "X-Cache-Hits": "0, 0",
+    "X-Timer": "S1789224611.468773,VS0,VE2428",
+    "Vary": "Accept-Encoding",
+    "Tracepoint": "Fastly"
+  },
+  "scope": "Official public source retained for reference research outside public; not a license to republish.",
+  "pdfInfoFile": "bbf-events-kit-2026.pdfinfo.txt",
+  "textFile": "bbf-events-kit-2026.txt"
+}

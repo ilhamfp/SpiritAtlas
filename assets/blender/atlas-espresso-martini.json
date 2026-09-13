@@ -1,0 +1,266 @@
+{
+  "drink": "atlas-espresso-martini",
+  "version": "espresso-v2-visibility",
+  "seed": 20260913,
+  "blender": "5.2.1 LTS",
+  "parameters": {
+    "photo": "atlas-2024.jpg",
+    "height": 2.42,
+    "radius": 0.55,
+    "foot": 0.49,
+    "stem": 1.29,
+    "bowl": [
+      [
+        0.1,
+        1.3
+      ],
+      [
+        0.2,
+        1.39
+      ],
+      [
+        0.32,
+        1.53
+      ],
+      [
+        0.42,
+        1.72
+      ],
+      [
+        0.49,
+        1.95
+      ],
+      [
+        0.535,
+        2.19
+      ],
+      [
+        0.55,
+        2.42
+      ]
+    ],
+    "fill": 2.17,
+    "foam": 2.395,
+    "foamColor": [
+      0.86,
+      0.79,
+      0.63,
+      1
+    ]
+  },
+  "rows": {
+    "garnish": 7.85,
+    "modifiers": 6.0,
+    "coffee": 4.9,
+    "liqueur": 3.85,
+    "spirit": 2.8,
+    "structure": 1.2
+  },
+  "scriptSha256": "09b2e1dac6f16ac8b99580b87edc2268748c798da4b9ecad0eb4d209c1f20e3a",
+  "sourcePhoto": {
+    "path": "references/espresso-martini/atlas-2024.jpg",
+    "sha256": "1418c2ca5994c0bdf75a8fdeac0836df3e6dc32e2b5fce0e6747177b28304314",
+    "published": "2024-04-04"
+  },
+  "parts": [
+    {
+      "id": "glass",
+      "category": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "liquid",
+      "category": "coffee",
+      "role": "mixture",
+      "lift": 0.0,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.752500057220459
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        1.752500057220459
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "foam",
+      "category": "modifiers",
+      "role": "physical",
+      "lift": 3.714446544647217,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        2.285553455352783
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        6.0
+      ],
+      "evidence": "official-menu",
+      "representation": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "foam_bubbles",
+      "category": "modifiers",
+      "role": "physical",
+      "lift": 3.714446544647217,
+      "assembledPosition": [
+        0.014357805252075195,
+        0.033168941736221313,
+        2.3959999084472656
+      ],
+      "expandedPosition": [
+        0.014357805252075195,
+        0.033168941736221313,
+        6.110446453094482
+      ],
+      "evidence": "visual-observation",
+      "representation": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "garnish_cinnamon",
+      "category": "garnish",
+      "role": "physical",
+      "lift": 5.44850001335144,
+      "assembledPosition": [
+        -0.00412335991859436,
+        0.009045004844665527,
+        2.4014999866485596
+      ],
+      "expandedPosition": [
+        -0.00412335991859436,
+        0.009045004844665527,
+        7.85
+      ],
+      "evidence": "official-menu",
+      "representation": null,
+      "quantity": null,
+      "unit": null,
+      "assembledOnly": true
+    },
+    {
+      "id": "recipe_coffee",
+      "category": "coffee",
+      "role": "recipe",
+      "lift": 4.889999994635582,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.01000000536441803
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        4.9
+      ],
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "quantity": null,
+      "unit": null,
+      "label": "Illustrative ingredient"
+    },
+    {
+      "id": "recipe_liqueur",
+      "category": "liqueur",
+      "role": "recipe",
+      "lift": 3.839999994635582,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.01000000536441803
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        3.85
+      ],
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "quantity": null,
+      "unit": null,
+      "label": "Illustrative ingredient"
+    },
+    {
+      "id": "recipe_spirit",
+      "category": "spirit",
+      "role": "recipe",
+      "lift": 2.789999994635582,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.01000000536441803
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        2.8
+      ],
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "quantity": null,
+      "unit": null,
+      "label": "Illustrative ingredient"
+    },
+    {
+      "id": "recipe_cinnamon",
+      "category": "garnish",
+      "role": "recipe",
+      "lift": 7.859999997913837,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        -0.009999997913837433
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        7.85
+      ],
+      "evidence": "official-menu",
+      "representation": "illustrative-enlarged-ground-cinnamon",
+      "quantity": null,
+      "unit": null,
+      "recipeSolid": true,
+      "label": "Cinnamon \u00b7 enlarged illustration",
+      "presentationNote": "Closed ground-cinnamon mound and enlarged granules for readable exploration; not a measured serving amount or a cinnamon stick.",
+      "illustrativeScale": true,
+      "servingShapeClaim": false
+    }
+  ],
+  "sourceSha256": "7032cb156305133e5bc59463802800fcf019bedfe592bf95fe8379d73186b258",
+  "modelSha256": "52585252fead054b888e8c4e79164f07f0c4834f1a5f5ca0036da0d62d36d112",
+  "modelBytes": 975280,
+  "limitations": [
+    "Independently authored from dated serving photographs; dimensions, unseen details and topping distributions are inferred.",
+    "No recipe measures or physical finished-drink ingredient layers are asserted.",
+    "No serving ice. Espresso is deliberately opaque; no new nested optical experiment.",
+    "No photorealism acceptance claim."
+  ],
+  "visibilityIteration": "Expansion-only solid illustrations and rigid garnish tilt. All existing assembled meshes, materials and transforms preserved."
+}

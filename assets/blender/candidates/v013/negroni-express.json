@@ -1,0 +1,184 @@
+{
+  "drink": "negroni-express",
+  "version": "0.13.0",
+  "seed": 20260912,
+  "blender": "5.2.1 LTS",
+  "parameters": {
+    "radius": 1,
+    "height": 1.8,
+    "base": 0.1,
+    "wall": 0.021,
+    "fill": 1.25,
+    "liquid": [
+      0.96,
+      0.34,
+      0.065,
+      1
+    ],
+    "absorption": [
+      0.65,
+      0.095,
+      0.018,
+      1
+    ],
+    "density": 0.55,
+    "ice": 1.35,
+    "ice_height": 1.49,
+    "ice_z": 1.055
+  },
+  "scriptSha256": "9f9c1876cac4ecded53e249b88daccfa56efc6e7c260db0e689e4589aaf216de",
+  "sourceManifestSha256": "e5a5af60c29b5b9515bf9e61b8f89a22332c32dc53d80e9c2da3cfd40223705f",
+  "view": "hero",
+  "camera": {
+    "location": [
+      0.15000000596046448,
+      -10.5,
+      5.187408447265625
+    ],
+    "rotation": [
+      1.1908074617385864,
+      -0.05257599428296089,
+      0.03527083620429039
+    ],
+    "lens": 63.0
+  },
+  "render": {
+    "samples": 512,
+    "denoise": false,
+    "viewTransform": "AgX",
+    "look": "AgX - Medium High Contrast"
+  },
+  "parts": [
+    {
+      "id": "glass",
+      "category": "structure",
+      "role": "physical",
+      "lift": 0,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "liquid",
+      "category": "structure",
+      "role": "mixture",
+      "lift": 0,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "ice",
+      "category": "structure",
+      "role": "physical",
+      "lift": 2.045,
+      "assembledPosition": [
+        0.0,
+        0.03500000014901161,
+        1.0549999475479126
+      ]
+    },
+    {
+      "id": "garnish_shishito",
+      "category": "garnish",
+      "role": "physical",
+      "lift": 6.6,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "recipe_modifiers",
+      "category": "modifiers",
+      "role": "recipe",
+      "lift": 6.5,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.100000023841858
+      ],
+      "evidence": "confirmed",
+      "representation": "ingredient-diagram",
+      "label": null,
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "recipe_spirit",
+      "category": "spirit",
+      "role": "recipe",
+      "lift": 3.35,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.100000023841858
+      ],
+      "evidence": "unverified",
+      "representation": "unknown-placeholder",
+      "label": "Unknown",
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "recipe_bitter",
+      "category": "bitter",
+      "role": "recipe",
+      "lift": 4.4,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.100000023841858
+      ],
+      "evidence": "unverified",
+      "representation": "unknown-placeholder",
+      "label": "Unknown",
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "recipe_vermouth",
+      "category": "vermouth",
+      "role": "recipe",
+      "lift": 5.449999999999999,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.100000023841858
+      ],
+      "evidence": "unverified",
+      "representation": "unknown-placeholder",
+      "label": "Unknown",
+      "quantity": null,
+      "unit": null
+    },
+    {
+      "id": "ice_inclusions",
+      "category": "structure",
+      "role": "physical",
+      "lift": 2.045,
+      "assembledPosition": [
+        -0.06589659303426743,
+        -0.3653120696544647,
+        0.6809335947036743
+      ]
+    },
+    {
+      "id": "garnish_stem",
+      "category": "garnish",
+      "role": "physical",
+      "lift": 6.6,
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "outputTag": "v013"
+}

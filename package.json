@@ -1,0 +1,45 @@
+{
+  "name": "spiritatlas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "playwright test",
+    "assets:build": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 8 --python-exit-code 1 --python scripts/build-assets.py -- --drink all",
+    "assets:render": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 8 --python-exit-code 1 --python scripts/build-assets.py -- --drink all --render",
+    "assets:espresso": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 4 --python-exit-code 1 --python scripts/build-espresso-assets.py",
+    "assets:collections": "/Applications/Blender.app/Contents/MacOS/Blender -b -t 4 --python-exit-code 1 --python scripts/build-new-collections.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  },
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@fontsource-variable/instrument-sans": "^5.3.0",
+    "@fontsource/bodoni-moda": "5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/manrope": "5.3.0",
+    "@react-three/drei": "10.7.8",
+    "@react-three/fiber": "9.7.0",
+    "lucide-react": "1.45.0",
+    "maplibre-gl": "6.9.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "three": "0.186.0",
+    "three-gpu-pathtracer": "0.0.24",
+    "three-mesh-bvh": "0.9.15"
+  }
+}

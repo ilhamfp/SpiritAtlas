@@ -1,0 +1,19 @@
+Title:           BBF_Menu_A5_Web
+Creator:         Pages
+Producer:        macOS Version 14.5 (Build 23F79) Quartz PDFContext
+CreationDate:    Mon Aug 19 22:52:03 2024 +08
+ModDate:         Mon Aug 19 22:52:03 2024 +08
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          yes
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           4
+Encrypted:       no
+Page size:       420 x 595 pts (A5)
+Page rot:        0
+File size:       388426 bytes
+Optimized:       no
+PDF version:     1.4

@@ -1,0 +1,104 @@
+{
+  "productStageVersion": "1.0.0",
+  "sourceVersion": "0.12.0",
+  "drink": "ichigo-negroni",
+  "sourceBlend": "assets/blender/candidates/v012/ichigo-negroni.blend",
+  "sourceBlendSha256": "0d6f8045f18cd803f27d01a5a0a952095ff2bace56e799400263ac6ad39cd322",
+  "productBlend": "assets/blender/product/ichigo-negroni-v2.blend",
+  "productBlendSha256": "00acb6c78d173d016c8d8aa8e3d4ced89b7c336a41712824d914b1095c1adfcb",
+  "scriptSha256": "ca4aa798a628fddc593950a1d2e251fb9a71b5e472b8a84d9e0742262739a4d9",
+  "panorama": {
+    "path": "public/textures/somma-interior-panorama-v2.png",
+    "sha256": "e05fba1dce84c3ece111bd6afb8903673f9506f9ce7bad736f93fc69d08c5ad1",
+    "rotationDegrees": -90,
+    "provenance": "public/textures/somma-interior-panorama-v2.provenance.json"
+  },
+  "stone": {
+    "path": "public/textures/somma-stone-tile-v1.png",
+    "sha256": "03ae32005c63799763c2f575682be7f32802c5a5c1ffef9a10db625d6f495266",
+    "textureMix": 0.15,
+    "baseSRGB": "#837c70",
+    "roughness": 0.66,
+    "tileMeters": [
+      0.6,
+      0.3
+    ],
+    "mirroredRepeat": true,
+    "counterTopAuthoredUnits": 0.035,
+    "counterSizeAuthoredUnits": [
+      24,
+      24
+    ]
+  },
+  "estimatedMetersPerAuthoredUnit": 0.04,
+  "camera": {
+    "positionMeters": [
+      0.006000000052154064,
+      -0.41999998688697815,
+      0.11607041954994202
+    ],
+    "rotationEuler": [
+      1.3916367292404175,
+      -3.529122549750241e-10,
+      0.01428474485874176
+    ],
+    "lens": 63.0,
+    "fstop": 16,
+    "focusMeters": [
+      0.0,
+      0.0,
+      0.041999999433755875
+    ]
+  },
+  "lights": [
+    {
+      "name": "Product warm left narrow key",
+      "positionMeters": [
+        -0.17999999225139618,
+        -0.01600000075995922,
+        0.14399999380111694
+      ],
+      "energyWatts": 0.3840000033378601,
+      "color": [
+        1,
+        0.87,
+        0.72
+      ],
+      "sizeMeters": [
+        0.019999999552965164,
+        0.1599999964237213
+      ]
+    },
+    {
+      "name": "Product restrained cool right fill",
+      "positionMeters": [
+        0.17999999225139618,
+        0.00800000037997961,
+        0.13600000739097595
+      ],
+      "energyWatts": 0.17599999904632568,
+      "color": [
+        0.8,
+        0.88,
+        1
+      ],
+      "sizeMeters": [
+        0.01600000075995922,
+        0.11999999731779099
+      ]
+    }
+  ],
+  "render": {
+    "resolution": [
+      900,
+      1125
+    ],
+    "samples": 256,
+    "denoise": true,
+    "output": "qa/evidence/blender/product/ichigo-negroni-product-v2.png",
+    "completed": true,
+    "elapsedSeconds": 65.66753216698999,
+    "outputSha256": "45159602507f4aff0858ae4cdf727284392c67672880b0449b329d7ab069bca2"
+  },
+  "scope": "Shared product context with generated environment guided by actual Somma interior north star. Unseen environment directions inferred. Primary source-matched scenes unchanged. No fidelity pass."
+}

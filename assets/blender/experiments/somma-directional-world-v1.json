@@ -1,0 +1,17 @@
+{
+  "id": "somma-directional-world-v1",
+  "status": "CPU-prepared, unrendered inferred illumination candidate",
+  "representation": "One smooth oval region of stronger environmental radiance, shared by every ray type",
+  "centerAzimuthDegrees": 150,
+  "centerElevationDegrees": 32,
+  "localHorizontalSigmaDegrees": 60,
+  "localVerticalSigmaDegrees": 22,
+  "peakExtraMultiplier": 3,
+  "baselineMultiplier": 1,
+  "formula": "multiplier(d)=1+3*exp(kappa*(dot(d,n)-1)+beta*(dot(d,h)^2-dot(d,v)^2)); a=1/(2*sigmaH^2), b=1/(2*sigmaV^2), kappa=a+b, beta=(b-a)/2",
+  "basis": "d is the normalized world-space ray travel direction into the environment; Z up; azimuth atan2(Y,X). n is the region center, h its azimuth tangent, v its elevation tangent.",
+  "controls": "Original source-world color, direct lights, true-contact geometry, density3.5, passive-white coaster, camera and exposure remain fixed. Baseline world strength is .7 hero and .75 photo.",
+  "uncertainty": "This is an inferred broad distant light or illuminated surface. Its position, shape and radiance are not recovered from unseen venue geometry. The one fixed world is used for both photo and hero; no per-camera orientation or ray-visibility changes.",
+  "selectionReason": "Measured lower-body/base environment endpoints cluster near azimuth90degrees for hero and205degrees for photo. One broad region between those directions increases their incoming radiance while contributing less integrated upward diffuse irradiance than uniform worldx4.",
+  "notAllowed": ["camera-only lighting", "ray-type-specific visibility", "drink image textures", "geometry or density compensation", "unverified photographic acceptance"]
+}

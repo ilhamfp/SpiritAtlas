@@ -1,0 +1,38 @@
+[
+  {
+    "path": "references/espresso-martini/jigger-2024.jpg",
+    "url": "https://dam.mediacorp.sg/image/upload/s--oX4Nanys--/c_fill%2Cg_center%2Ch_598%2Cw_747/f_auto%2Cq_auto/v1/mediacorp/cna/image/2024/04/04/Jigger%20and%20Pony%20Espresso%20Martini.jpg?itok=NCFU8TlQ",
+    "bytes": 59304,
+    "contentType": "image/jpeg",
+    "sha256": "af3014ac20f381843c03167b2d8e996c8e693572737a0f178d2b47b6e7648c8c",
+    "sourcePage": "https://cnaluxury.channelnewsasia.com/experiences/espresso-martini-singapore-244116",
+    "sourceDate": "2024-04-04",
+    "credit": "Bar-supplied photograph via CNA Luxury",
+    "usage": "Local visual reference only; not bundled for public display",
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "path": "references/espresso-martini/nighthawks-2024.jpg",
+    "url": "https://dam.mediacorp.sg/image/upload/s--Gpuh1wkv--/c_fill%2Cg_center%2Ch_598%2Cw_747/f_auto%2Cq_auto/v1/mediacorp/cna/image/2024/04/04/Nighthawk_Nighthawks.jpg?itok=PRp6nYk0",
+    "bytes": 42574,
+    "contentType": "image/jpeg",
+    "sha256": "411cef48b81e86e864b95a578dee9cfdb4d11dd4cd61cd2569bd4918a7377d0d",
+    "sourcePage": "https://cnaluxury.channelnewsasia.com/experiences/espresso-martini-singapore-244116",
+    "sourceDate": "2024-04-04",
+    "credit": "Bar-supplied photograph via CNA Luxury",
+    "usage": "Local visual reference only; not bundled for public display",
+    "retrievedAt": "2026-09-13"
+  },
+  {
+    "path": "references/espresso-martini/atlas-2024.jpg",
+    "url": "https://dam.mediacorp.sg/image/upload/s--YOE2psuh--/c_fill%2Cg_center%2Ch_598%2Cw_747/f_auto%2Cq_auto/v1/mediacorp/cna/image/2024/04/01/atlas_espresso_martini_espresso_martini_singapore.jpg?itok=k0at1iW_",
+    "bytes": 55995,
+    "contentType": "image/jpeg",
+    "sha256": "1418c2ca5994c0bdf75a8fdeac0836df3e6dc32e2b5fce0e6747177b28304314",
+    "sourcePage": "https://cnaluxury.channelnewsasia.com/experiences/espresso-martini-singapore-244116",
+    "sourceDate": "2024-04-04",
+    "credit": "Bar-supplied photograph via CNA Luxury",
+    "usage": "Local visual reference only; not bundled for public display",
+    "retrievedAt": "2026-09-13"
+  }
+]

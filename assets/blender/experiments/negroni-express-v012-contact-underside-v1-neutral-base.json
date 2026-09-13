@@ -1,0 +1,108 @@
+{
+  "source": "assets/blender/experiments/negroni-express-v012-interfaces-neutral-unified-d055-hero.blend",
+  "sourceSha256": "adc75a9177d343eeca8f3f0ea00142afd91f6f8a0fb328b05867535e310824e4",
+  "physicalIceSource": "assets/blender/candidates/v012/negroni-express.blend",
+  "physicalIceSourceSha256": "0b3b304938df576ff9bd0ff8d4c00283cd067d8e1037a1378e64c98bbe0434dd",
+  "scriptSha256": "ce1c3af43f8b83272ae7376d7f6caba4db97f269124b7f85c6fe4db489da6a67",
+  "scene": "assets/blender/experiments/negroni-express-v012-contact-underside-v1-neutral-base.blend",
+  "sceneSha256": "52814ba9dcb77866bf940111c6fc32e9b2b4530dce2663d7da8d4a3d28471ee3",
+  "toleranceAuthoredUnits": 2e-06,
+  "geometryTreatment": "Original true-contact construction plus a bounded inward-only central ice underside curvature. Glass, meniscus, visible sides/top, pose, source materials and garnish remain fixed. Actual liquid displacement and visible-ice closure are regenerated.",
+  "contact": {
+    "wetline": 1.262,
+    "glassGap": 0,
+    "activeBoundaryOwner": "liquid",
+    "relativeIOR": 0.9006622516556292,
+    "liquidMaterialCount": 1,
+    "attribute": "liquid_surface_ior",
+    "classCounts": {
+      "air-meniscus": 1343,
+      "glass-contact": 1728,
+      "ice-contact": 6837
+    },
+    "areas": {
+      "air-meniscus": 1.2200479398211428,
+      "glass-contact": 9.923839445225894,
+      "ice-contact": 6.5508385243019935
+    },
+    "wetGlassArea": 9.923839723924175,
+    "omittedWetGlassFaces": 960,
+    "maximumMatchedClosureDistance": 6.355661485222065e-08,
+    "glassSurfaceDistanceAfterSplit": 0
+  },
+  "topology": {
+    "glass_closed_volume": {
+      "vertices": 4994,
+      "edges": 10176,
+      "faces": 5184,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.41479085982325753
+    },
+    "ice_closed_volume": {
+      "vertices": 5402,
+      "edges": 16200,
+      "faces": 10800,
+      "nonManifoldEdges": 0,
+      "signedVolume": 2.6760537370065487
+    },
+    "liquid": {
+      "vertices": 4956,
+      "edges": 14862,
+      "faces": 9908,
+      "nonManifoldEdges": 0,
+      "signedVolume": 1.7648788601115766
+    },
+    "ice": {
+      "vertices": 2672,
+      "edges": 8010,
+      "faces": 5340,
+      "nonManifoldEdges": 0,
+      "signedVolume": 0.9882389668678473
+    },
+    "glass": {
+      "vertices": 4225,
+      "edges": 8448,
+      "faces": 4224,
+      "nonManifoldEdges": 192,
+      "signedVolume": 2.6345840063190975
+    }
+  },
+  "liquidGlassSamples": {
+    "samples": 14864,
+    "strictInsideCount": 0,
+    "minimumNearestOrientedDistance": -8.129891733650669e-08,
+    "examples": []
+  },
+  "liquidIceSamples": {
+    "samples": 14864,
+    "strictInsideCount": 0,
+    "minimumNearestOrientedDistance": -1.2356713632600893e-07,
+    "examples": []
+  },
+  "iceClassification": {
+    "originalAirSurface": 4948,
+    "redundantClosure": 392
+  },
+  "distanceRefinement": {
+    "nearSamples": 74533,
+    "maximumBvhMinusDouble": 6.8907452259736415e-06
+  },
+  "unclassifiedFaces": [],
+  "unchangedOtherGeometryAndNormals": true,
+  "renderCompleted": false,
+  "limitations": "CPU construction checks manifold closed physical volumes, full face-sample contact classification, equal matched interface area, and all vertex/face-centroid signed distances. Near-contact closest points are evaluated in Python doubles against the BVH candidate and its adjacent triangles, retaining the2e-6 tolerance. An independent actual triangle crossing audit and neutral transport control are required before a valid rendering or physical-fidelity claim. Render-only glass is intentionally open; complete closed glass is retained hidden. No expansion or GLB promotion.",
+  "undersideTreatment": {
+    "representation": "inferred-underside-curvature-sensitivity",
+    "maximumInwardLocalZ": 0.025,
+    "actualMaximumVertexDisplacement": 0.02499997615814209,
+    "supportHalfWidth": 0.59,
+    "originalFlatBottomLocalZ": -0.745,
+    "formula": "dz=.025*(1-(x/.59)^2)^2*(1-(y/.59)^2)^2, only on original flat underside and within its support square",
+    "changedVertices": 729,
+    "changedFaces": 1566,
+    "totalVertices": 5402,
+    "allOtherVertexPositionsExactlyUnchanged": true,
+    "topSideBevelMaterialAndPoseUnchanged": true,
+    "sourceUncertainty": "The underside is occluded in the native references. This is an explicitly inferred physical sensitivity test, not a recovered shape or a final ingredient claim."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source": "references/frames/selection/t114.00.png",
+  "sourceSha256": "6b82a37ac419badf4e7bccc1fb16e66398612101bd7db2f7489f5a6865727c20",
+  "timeSeconds": 114,
+  "crop": [
+    0,
+    975,
+    720,
+    1180
+  ],
+  "nativeDimensions": [
+    720,
+    205
+  ],
+  "transform": "Native crop only, no resizing or color correction. 3D reference-match counter material only; contains no cocktail or coaster pixels. The footage itself contains optical depth of field."
+}

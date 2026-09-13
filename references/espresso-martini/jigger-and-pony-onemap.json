@@ -1,0 +1,24 @@
+{
+  "queriedAt": "2026-09-12T18:50:31.391161+00:00",
+  "addressQuery": "165 Tanjong Pagar Road",
+  "url": "https://www.onemap.gov.sg/api/common/elastic/search?searchVal=165+Tanjong+Pagar+Road&returnGeom=Y&getAddrDetails=Y&pageNum=1",
+  "response": {
+    "found": 1,
+    "totalNumPages": 1,
+    "pageNum": 1,
+    "results": [
+      {
+        "SEARCHVAL": "AMARA SINGAPORE",
+        "BLK_NO": "165",
+        "ROAD_NAME": "TANJONG PAGAR ROAD",
+        "BUILDING": "AMARA SINGAPORE",
+        "ADDRESS": "165 TANJONG PAGAR ROAD AMARA SINGAPORE SINGAPORE 088539",
+        "POSTAL": "088539",
+        "X": "29138.62422454264",
+        "Y": "28600.545707535",
+        "LATITUDE": "1.274927658382625",
+        "LONGITUDE": "103.8435495305616"
+      }
+    ]
+  }
+}

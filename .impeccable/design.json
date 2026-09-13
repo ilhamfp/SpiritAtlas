@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 2,
+  "name": "SpiritAtlas",
+  "source": "DESIGN.md",
+  "colorMeta": {
+    "primary": {"displayName": "Vermilion action", "role": "primary"},
+    "background": {"displayName": "Warm charcoal", "role": "background"},
+    "foreground": {"displayName": "Cream type", "role": "foreground"}
+  },
+  "extensions": {
+    "breakpoints": [{"name":"wide","value":"1150px"},{"name":"tablet","value":"800px"},{"name":"mobile","value":"600px"}],
+    "motion": {"ease":"cubic-bezier(.16,1,.3,1)","routeEntrance":"650ms","reducedMotion":"remove transitions"},
+    "focus": {"outline":"2px solid #f0b994","outlineOffset":"4px"}
+  },
+  "components": [
+    {"name":"Explore action","kind":"button","refersTo":"button-primary","description":"Primary exploration and reversible recipe actions.","html":"<button class=\"ds-primary\">Explore ingredients</button>","css":".ds-primary{background:#b4432e;color:#fff7ef;padding:13px 18px;border:0;border-radius:0;font:600 12px/1.5 Manrope,sans-serif;min-height:44px;cursor:pointer;transition:background .2s}.ds-primary:hover{background:#bf4832}.ds-primary:focus-visible{outline:2px solid #f0b994;outline-offset:4px}.ds-primary:active{transform:translateY(1px)}"},
+    {"name":"Secondary action","kind":"button","refersTo":"button-secondary","description":"Comparison selection and contextual recovery.","html":"<button class=\"ds-secondary\">Add to comparison</button>","css":".ds-secondary{background:transparent;color:#eee7db;padding:13px 18px;border:1px solid #514c40;border-radius:0;font:600 12px/1.5 Manrope,sans-serif;min-height:44px;cursor:pointer}.ds-secondary:hover{background:#ffffff05}.ds-secondary:focus-visible{outline:2px solid #f0b994;outline-offset:4px}"},
+    {"name":"Atlas navigation","kind":"nav","description":"Compact navigation with an active accent underline.","html":"<nav class=\"ds-nav\"><button aria-current=\"page\">The atlas</button><button>Compare the drinks</button></nav>","css":".ds-nav{display:flex;gap:32px;background:#171714}.ds-nav button{font:500 12px/1.5 Manrope,sans-serif;color:#ada99e;border:0;border-bottom:2px solid transparent;background:none;padding:15px 0;cursor:pointer}.ds-nav button[aria-current]{color:#eee7db;border-bottom-color:#b4432e}.ds-nav button:hover{color:#fff5e4}.ds-nav button:focus-visible{outline:2px solid #f0b994;outline-offset:4px}"},
+    {"name":"Venue index row","kind":"custom","description":"A real venue and its filmed drink, presented without a card shell.","html":"<button class=\"ds-venue\"><strong>Bar Bon Funk</strong><span>BBF Negroni</span><small>New Bahru · Level 2</small></button>","css":".ds-venue{display:flex;flex-direction:column;text-align:left;gap:6px;width:100%;padding:18px 0;border:0;border-bottom:1px solid #38382e;background:#171714;color:#eee7db;cursor:pointer;font-family:Manrope,sans-serif}.ds-venue strong{font-size:17px;font-weight:500}.ds-venue span{font-size:12px;color:#cac4b7}.ds-venue small{font-size:10px;color:#ada99e}.ds-venue:hover strong{color:#f0bc9a}.ds-venue:focus-visible{outline:2px solid #f0b994;outline-offset:4px}"},
+    {"name":"Expansion slider","kind":"input","description":"Continuously separates or reassembles the explanatory recipe.","html":"<label class=\"ds-expansion\">Expansion<input type=\"range\" min=\"0\" max=\"100\" value=\"70\" aria-label=\"Expansion\" /></label>","css":".ds-expansion{display:block;background:#171714;color:#ada99e;font:400 11px/1.5 Manrope,sans-serif;padding:16px}.ds-expansion input{display:block;accent-color:#b4432e;width:100%;margin-top:12px;cursor:pointer}.ds-expansion input:focus-visible{outline:2px solid #f0b994;outline-offset:4px}"}
+  ],
+  "narrative": {
+    "northStar":"An evening atlas and a cocktail study",
+    "overview":"The built interface follows the PRD’s warm, dark studio direction. Editorial drink names and a restrained venue index support the real map and 3D objects. Controls use compact, precise language and recede from the drinks.",
+    "keyCharacteristics":["Cream type on warm charcoal, with one vermilion action accent.","Unboxed venue rows and aligned ingredient columns.","Large interactive objects, persistent visible controls, and discreet evidence details."],
+    "dos":["Do preserve the pinned dark studio identity and each cocktail’s distinct observed appearance.","Do keep map attribution, keyboard focus, recipe disclaimers, and recovery actions legible.","Do use real source evidence and null quantities for unknown recipe measures.","Do preserve aligned categories in comparison, including unverified rows."],
+    "donts":["Don’t use photographs or loading posters as substitutes for interactive geometry.","Don’t introduce conventional equal-parts recipe measures, inferred brands, or numeric taste ratings.","Don’t turn technique explanations into physical layers in the finished drink.","Don’t restore a map provider without inspecting its rendered tiles and worker behavior in both development and production."]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "research.md": {
+    "bytes": 5425,
+    "sha256": "dc46e78cd3cf70d33171f9637bf31906c8f3b6197ba800679bb1fe583f564afd"
+  },
+  "nighthawks-current-source.json": {
+    "bytes": 1140,
+    "sha256": "7aa5eaaa95a0a042c2f830b65a2b74fe450867b08d42a65d2dd66f1f9f75849b"
+  },
+  "atlas-onemap.json": {
+    "bytes": 3122,
+    "sha256": "e81d169e92df1118fa2d4ef8b2b1daa7e6232987a4d7a5a5192074ced8171bc7"
+  },
+  "jigger-and-pony-onemap.json": {
+    "bytes": 753,
+    "sha256": "8b6d32a06b7eef2d3841d76fc5e0a9b7d70734ff42de262c2fac5901d5b7883f"
+  },
+  "night-hawk-onemap.json": {
+    "bytes": 804,
+    "sha256": "c0f78b6645935c4cac704a028509b394b472d695dbc0b1bd40c877c30a93f7ac"
+  }
+}

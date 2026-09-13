@@ -1,0 +1,46 @@
+{
+  "video": {
+    "path": "./negroni-bar-crawl.mp4",
+    "sha256": "d71b44898c23669bf9975797ac687e57af4cfea973dd9616cf81ad8021e338e0",
+    "bytes": 16681402
+  },
+  "photo": {
+    "path": "./bar-somma-negroni-reference.jpg",
+    "sha256": "3bed097fef388604db76dbc08f9c02c51ed5f9aae5747ce0351528eb0c0e4ca9",
+    "bytes": 107954,
+    "format": "JPEG",
+    "size": [
+      413,
+      431
+    ]
+  },
+  "extractor": {
+    "path": "scripts/extract-references.py",
+    "overview_interval_seconds": 1,
+    "selection_interval_seconds": 0.2,
+    "selection_windows_seconds": [
+      [
+        37,
+        40
+      ],
+      [
+        46,
+        50
+      ],
+      [
+        72,
+        77
+      ],
+      [
+        109,
+        115
+      ],
+      [
+        134,
+        141
+      ]
+    ],
+    "source_frame_rate": 25,
+    "transforms": "Decode native-resolution RGB PNG; no resize, denoise, exposure, or sharpening. Browse contact sheets alone are downsampled."
+  }
+}

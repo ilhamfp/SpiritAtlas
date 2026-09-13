@@ -1,0 +1,85 @@
+{
+  "queriedAt": "2026-09-12T18:50:31.317973+00:00",
+  "addressQuery": "600 North Bridge Road",
+  "url": "https://www.onemap.gov.sg/api/common/elastic/search?searchVal=600+North+Bridge+Road&returnGeom=Y&getAddrDetails=Y&pageNum=1",
+  "response": {
+    "error": "Authentication token missing. Please create an account and generate or renew your API Token.",
+    "found": 6,
+    "totalNumPages": 1,
+    "pageNum": 1,
+    "results": [
+      {
+        "SEARCHVAL": "CONSULATE OF THE REPUBLIC OF BOTSWANA",
+        "BLK_NO": "600",
+        "ROAD_NAME": "NORTH BRIDGE ROAD",
+        "BUILDING": "CONSULATE OF THE REPUBLIC OF BOTSWANA",
+        "ADDRESS": "600 NORTH BRIDGE ROAD CONSULATE OF THE REPUBLIC OF BOTSWANA",
+        "POSTAL": "NIL",
+        "X": "30705.57168085221",
+        "Y": "31408.72021868452",
+        "LATITUDE": "1.300323705485394",
+        "LONGITUDE": "103.8576293610129"
+      },
+      {
+        "SEARCHVAL": "CONSULATE-GENERAL OF THE SULTANATE OF OMAN",
+        "BLK_NO": "600",
+        "ROAD_NAME": "NORTH BRIDGE ROAD",
+        "BUILDING": "CONSULATE-GENERAL OF THE SULTANATE OF OMAN",
+        "ADDRESS": "600 NORTH BRIDGE ROAD CONSULATE-GENERAL OF THE SULTANATE OF OMAN",
+        "POSTAL": "NIL",
+        "X": "30693.04318729974",
+        "Y": "31388.83215569519",
+        "LATITUDE": "1.300143845948003",
+        "LONGITUDE": "103.857516785143"
+      },
+      {
+        "SEARCHVAL": "EMBASSY OF MONGOLIA",
+        "BLK_NO": "600",
+        "ROAD_NAME": "NORTH BRIDGE ROAD",
+        "BUILDING": "EMBASSY OF MONGOLIA",
+        "ADDRESS": "600 NORTH BRIDGE ROAD EMBASSY OF MONGOLIA",
+        "POSTAL": "NIL",
+        "X": "30704.0082184216",
+        "Y": "31394.55232032947",
+        "LATITUDE": "1.300195576147248",
+        "LONGITUDE": "103.8576153113744"
+      },
+      {
+        "SEARCHVAL": "EMBASSY OF THE REPUBLIC OF AUSTRIA",
+        "BLK_NO": "600",
+        "ROAD_NAME": "NORTH BRIDGE ROAD",
+        "BUILDING": "EMBASSY OF THE REPUBLIC OF AUSTRIA",
+        "ADDRESS": "600 NORTH BRIDGE ROAD EMBASSY OF THE REPUBLIC OF AUSTRIA",
+        "POSTAL": "NIL",
+        "X": "30704.18262254354",
+        "Y": "31394.30324509181",
+        "LATITUDE": "1.300193323583505",
+        "LONGITUDE": "103.8576168784524"
+      },
+      {
+        "SEARCHVAL": "EMBASSY OF THE UNITED ARAB EMIRATES",
+        "BLK_NO": "600",
+        "ROAD_NAME": "NORTH BRIDGE ROAD",
+        "BUILDING": "EMBASSY OF THE UNITED ARAB EMIRATES",
+        "ADDRESS": "600 NORTH BRIDGE ROAD EMBASSY OF THE UNITED ARAB EMIRATES",
+        "POSTAL": "NIL",
+        "X": "30704.18262254354",
+        "Y": "31394.30324509181",
+        "LATITUDE": "1.300193323583505",
+        "LONGITUDE": "103.8576168784524"
+      },
+      {
+        "SEARCHVAL": "PARKVIEW SQUARE",
+        "BLK_NO": "600",
+        "ROAD_NAME": "NORTH BRIDGE ROAD",
+        "BUILDING": "PARKVIEW SQUARE",
+        "ADDRESS": "600 NORTH BRIDGE ROAD PARKVIEW SQUARE SINGAPORE 188778",
+        "POSTAL": "188778",
+        "X": "30701.753283903",
+        "Y": "31396.82020954601",
+        "LATITUDE": "1.300216086333226",
+        "LONGITUDE": "103.8575950499688"
+      }
+    ]
+  }
+}

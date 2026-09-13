@@ -1,0 +1,471 @@
+{
+  "drink": "somma-mirkos-martini",
+  "version": "collections-v1",
+  "family": "martini",
+  "seed": 20260913,
+  "blender": "5.2.1 LTS",
+  "rows": {
+    "garnish": 7.85,
+    "modifiers": 6.15,
+    "vermouth": 4.8,
+    "spirit": 3.35,
+    "structure": 0.0
+  },
+  "parameters": {
+    "family": "martini",
+    "height": 2.4,
+    "foot": 0.53,
+    "stem": 1.56,
+    "bowl": [
+      [
+        0.08,
+        1.56
+      ],
+      [
+        0.28,
+        1.6
+      ],
+      [
+        0.48,
+        1.73
+      ],
+      [
+        0.65,
+        1.95
+      ],
+      [
+        0.72,
+        2.18
+      ],
+      [
+        0.73,
+        2.4
+      ]
+    ],
+    "fill": 2.285,
+    "color": [
+      0.79,
+      0.81,
+      0.55,
+      1
+    ],
+    "garnish": "olive",
+    "source": "references/new-collections/somma-mirkos-martini-2025.jpg",
+    "note": "Named 2025 photo and cheese/olive reporting inform serving. Exact cheese variety, crisp shape and dimensions are illustrative; photographed splash is not modeled."
+  },
+  "sourceReference": {
+    "path": "references/new-collections/somma-mirkos-martini-2025.jpg",
+    "sha256": "d95cd6d3d6c4e8a5705e189e3efab274446b99f8fee710b93d54748dbbd9f852"
+  },
+  "scriptSha256": "fcf11e07f4ef87809242c84cfe4c1fcf775bbfd3c9b685df1812fed159ace264",
+  "sourceSha256": "d5ec4e814b9f1c755e33c8e138ef76dab86c8cbd8149e42b95db3f0bc5e9bc0e",
+  "modelSha256": "5cf95e91623f0410fb0d4bf7bb5094529c1ff8e3ffdcb95894afc03a83b7a450",
+  "modelBytes": 188732,
+  "parts": [
+    {
+      "scenePartId": "glass",
+      "ingredientId": "structure",
+      "role": "physical",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Named 2025 photo and cheese/olive reporting inform serving. Exact cheese variety, crisp shape and dimensions are illustrative; photographed splash is not modeled.",
+      "id": "glass",
+      "category": "structure",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 2210,
+      "triangles": 4416,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.7300000190734863,
+          -0.7300000190734863,
+          0.02500000037252903
+        ],
+        [
+          0.7300000190734863,
+          0.7300000190734863,
+          2.4040000438690186
+        ]
+      ]
+    },
+    {
+      "scenePartId": "liquid",
+      "ingredientId": "vermouth",
+      "role": "mixture",
+      "lift": 0.0,
+      "evidence": "visual-observation",
+      "presentationNote": "Named 2025 photo and cheese/olive reporting inform serving. Exact cheese variety, crisp shape and dimensions are illustrative; photographed splash is not modeled.",
+      "id": "liquid",
+      "category": "vermouth",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        1.9444999694824219
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        1.9444999694824219
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 482,
+      "triangles": 960,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.6927727460861206,
+          -0.6927727460861206,
+          1.6039999723434448
+        ],
+        [
+          0.6927727460861206,
+          0.6927727460861206,
+          2.2850000858306885
+        ]
+      ]
+    },
+    {
+      "scenePartId": "garnish_pick",
+      "ingredientId": "garnish",
+      "role": "physical",
+      "lift": 5.414999938011169,
+      "evidence": "visual-observation",
+      "presentationNote": "Named 2025 photo and cheese/olive reporting inform serving. Exact cheese variety, crisp shape and dimensions are illustrative; photographed splash is not modeled.",
+      "rigidExpansionGroup": "garnish",
+      "id": "garnish_pick",
+      "category": "garnish",
+      "assembledPosition": [
+        0.0,
+        -0.07999999821186066,
+        2.434999942779541
+      ],
+      "expandedPosition": [
+        0.0,
+        -0.07999999821186066,
+        7.84999988079071
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 24,
+      "triangles": 44,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.8899999856948853,
+          -0.09099999815225601,
+          2.4240000247955322
+        ],
+        [
+          0.8899999856948853,
+          -0.0689999982714653,
+          2.44599986076355
+        ]
+      ]
+    },
+    {
+      "scenePartId": "garnish_olive",
+      "ingredientId": "garnish",
+      "role": "physical",
+      "lift": 5.414999938011169,
+      "evidence": "visual-observation",
+      "presentationNote": "Named 2025 photo and cheese/olive reporting inform serving. Exact cheese variety, crisp shape and dimensions are illustrative; photographed splash is not modeled.",
+      "rigidExpansionGroup": "garnish",
+      "id": "garnish_olive",
+      "category": "garnish",
+      "assembledPosition": [
+        0.10000000149011612,
+        -0.07999999821186066,
+        2.434999942779541
+      ],
+      "expandedPosition": [
+        0.10000000149011612,
+        -0.07999999821186066,
+        7.84999988079071
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 266,
+      "triangles": 528,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.11000000685453415,
+          -0.2199999988079071,
+          2.2950000762939453
+        ],
+        [
+          0.3100000023841858,
+          0.06000000238418579,
+          2.575000047683716
+        ]
+      ]
+    },
+    {
+      "scenePartId": "garnish_cheese_crisp_0",
+      "ingredientId": "garnish",
+      "role": "physical",
+      "lift": 5.414999938011169,
+      "evidence": "visual-observation",
+      "presentationNote": "Named 2025 photo and cheese/olive reporting inform serving. Exact cheese variety, crisp shape and dimensions are illustrative; photographed splash is not modeled.",
+      "rigidExpansionGroup": "garnish",
+      "id": "garnish_cheese_crisp_0",
+      "category": "garnish",
+      "assembledPosition": [
+        -0.3100000023841858,
+        -0.07500000298023224,
+        2.434999942779541
+      ],
+      "expandedPosition": [
+        -0.3100000023841858,
+        -0.07500000298023224,
+        7.84999988079071
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 152,
+      "triangles": 300,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3688269853591919,
+          -0.18458370864391327,
+          2.387742042541504
+        ],
+        [
+          -0.2511730194091797,
+          0.03458370268344879,
+          2.482257843017578
+        ]
+      ]
+    },
+    {
+      "scenePartId": "garnish_cheese_crisp_1",
+      "ingredientId": "garnish",
+      "role": "physical",
+      "lift": 5.414999938011169,
+      "evidence": "visual-observation",
+      "presentationNote": "Named 2025 photo and cheese/olive reporting inform serving. Exact cheese variety, crisp shape and dimensions are illustrative; photographed splash is not modeled.",
+      "rigidExpansionGroup": "garnish",
+      "id": "garnish_cheese_crisp_1",
+      "category": "garnish",
+      "assembledPosition": [
+        -0.20000000298023224,
+        -0.07500000298023224,
+        2.434999942779541
+      ],
+      "expandedPosition": [
+        -0.20000000298023224,
+        -0.07500000298023224,
+        7.84999988079071
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 152,
+      "triangles": 300,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.26998376846313477,
+          -0.18315839767456055,
+          2.3921704292297363
+        ],
+        [
+          -0.13001622259616852,
+          0.03315839543938637,
+          2.4778294563293457
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_spirit",
+      "ingredientId": "spirit",
+      "role": "recipe",
+      "lift": 3.3349999994039536,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Named 2025 photo and cheese/olive reporting inform serving. Exact cheese variety, crisp shape and dimensions are illustrative; photographed splash is not modeled.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_spirit",
+      "category": "spirit",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.015000000596046448
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        3.35
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3400000035762787,
+          -0.3400000035762787,
+          -0.14000000059604645
+        ],
+        [
+          0.3400000035762787,
+          0.3400000035762787,
+          0.17000000178813934
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_vermouth",
+      "ingredientId": "vermouth",
+      "role": "recipe",
+      "lift": 4.784999999403953,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Named 2025 photo and cheese/olive reporting inform serving. Exact cheese variety, crisp shape and dimensions are illustrative; photographed splash is not modeled.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_vermouth",
+      "category": "vermouth",
+      "assembledPosition": [
+        0.0,
+        0.0,
+        0.015000000596046448
+      ],
+      "expandedPosition": [
+        0.0,
+        0.0,
+        4.8
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.3400000035762787,
+          -0.3400000035762787,
+          -0.14000000059604645
+        ],
+        [
+          0.3400000035762787,
+          0.3400000035762787,
+          0.17000000178813934
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_italicus",
+      "ingredientId": "modifiers",
+      "role": "recipe",
+      "lift": 6.1391999997198585,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Named 2025 photo and cheese/olive reporting inform serving. Exact cheese variety, crisp shape and dimensions are illustrative; photographed splash is not modeled.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_italicus",
+      "category": "modifiers",
+      "assembledPosition": [
+        -0.25999999046325684,
+        0.0,
+        0.01080000028014183
+      ],
+      "expandedPosition": [
+        -0.26,
+        0.0,
+        6.15
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          -0.5047999620437622,
+          -0.24480000138282776,
+          -0.10079999268054962
+        ],
+        [
+          -0.015199989080429077,
+          0.24480000138282776,
+          0.12240000069141388
+        ]
+      ]
+    },
+    {
+      "scenePartId": "recipe_olive_brine",
+      "ingredientId": "modifiers",
+      "role": "recipe",
+      "lift": 6.1391999997198585,
+      "evidence": "official-menu",
+      "representation": "illustrative-ingredient",
+      "presentationNote": "Named 2025 photo and cheese/olive reporting inform serving. Exact cheese variety, crisp shape and dimensions are illustrative; photographed splash is not modeled.",
+      "preserveIllustrationColor": true,
+      "id": "recipe_olive_brine",
+      "category": "modifiers",
+      "assembledPosition": [
+        0.25999999046325684,
+        0.0,
+        0.01080000028014183
+      ],
+      "expandedPosition": [
+        0.26,
+        0.0,
+        6.15
+      ],
+      "quantity": null,
+      "unit": null,
+      "vertices": 322,
+      "triangles": 640,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "worldBounds": [
+        [
+          0.015199989080429077,
+          -0.24480000138282776,
+          -0.10079999268054962
+        ],
+        [
+          0.5047999620437622,
+          0.24480000138282776,
+          0.12240000069141388
+        ]
+      ]
+    }
+  ],
+  "checks": {
+    "finiteGeometry": true,
+    "allPartsClosed": true,
+    "semanticCategoriesComplete": true,
+    "structureStationary": true,
+    "garnishRigid": true
+  },
+  "limitations": [
+    "Named 2025 photo and cheese/olive reporting inform serving. Exact cheese variety, crisp shape and dimensions are illustrative; photographed splash is not modeled.",
+    "Real editable geometry; serving dimensions, material appearance and all recipe-form scales are illustrative.",
+    "No offline photographic matching or physically measured optical claim.",
+    "Recipe quantities and units remain JSON null. The client supplies current content labels."
+  ]
+}
