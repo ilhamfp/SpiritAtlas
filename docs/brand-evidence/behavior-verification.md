@@ -39,4 +39,4 @@ Two existing tests needed maintenance for the current application: the collectio
 - All measured headline, supporting copy and primary-action text contrasts passed 4.5:1. All featured bar posters decoded. No uncaught page error, failed first-party HTTP response or non-abort asset failure occurred in the focused final local run.
 - Rendered-component snapshots demonstrate expansion and accurate reassembly, and actual camera snapshots demonstrate mouse/keyboard/touch orbit and comparison synchronization. This goes beyond checking button labels or URL changes.
 
-Production screenshots and the final public-browser run are pending the final deployment signal.
+The final public-browser run was paused at the user’s request after the favicon and bundle corrections were deployed. A passing final production suite is not claimed.

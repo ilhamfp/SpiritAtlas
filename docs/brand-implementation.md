@@ -45,4 +45,8 @@ Actual screenshots captured at 1440×1000, 768×1024, 390×844. Fonts loaded; no
 Public alias: https://spiritatlas-one.vercel.app
 Initial code deployment: https://spiritatlas-7w418snuo-ilham-firdausi-putras-projects.vercel.app
 Vercel deployment ID: dpl_9RW7C1VagL7hxj7gHuhsNcSfXK3S. Ready, production, 2026-09-13. Remote Vercel build (TypeScript + Vite) passed, alongside local production build. No separate lint script exists in the existing project.
-A fresh unauthenticated Chromium verification of this deployment is in progress; production screenshots/results will be under docs/brand-evidence/production/.
+The initial public-browser verification found the favicon issue recorded below.
+
+## Production review correction
+All public journey bodies succeeded, but strict console checks found a missing favicon request. Added the actual Instrument Sans S glyph as the static browser icon and ensured the explicit HTML icon link is deployed.
+Production HTML inspection also exposed eager loading of Three because shared React code had been placed in its vendor chunk. Separated React from Three: initial HTML now preloads only React and the tiny runtime; the Three chunk is loaded with the lazy Viewer. This makes the headline/action independent of all 3D code, in addition to the model/poster loading separation already tested. The corrected deployment is https://spiritatlas-55tq97p3u-ilham-firdausi-putras-projects.vercel.app (dpl_21xUQehXGf2bdo5Yn2AWW15qmWHa). The public alias remains https://spiritatlas-one.vercel.app. Final public-browser verification was paused at the user’s request; a passing final production suite is not claimed.

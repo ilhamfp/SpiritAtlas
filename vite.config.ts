@@ -5,6 +5,6 @@ export default defineConfig({
   server: { host: '127.0.0.1' },
   build: {
     chunkSizeWarningLimit: 1100,
-    rollupOptions: { output: { manualChunks: (id: string) => id.includes('maplibre-gl') ? 'map' : /node_modules\/(three|@react-three|three-stdlib)/.test(id) ? 'three' : undefined } },
+    rollupOptions: { output: { manualChunks: (id: string) => /node_modules\/(react|react-dom|scheduler)\//.test(id) ? 'react' : id.includes('maplibre-gl') ? 'map' : /node_modules\/(three|@react-three|three-stdlib)/.test(id) ? 'three' : undefined } },
   },
 });
