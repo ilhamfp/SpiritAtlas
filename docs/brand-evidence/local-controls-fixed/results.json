@@ -1,0 +1,244 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/brand.config.ts",
+      "-g",
+      "headline, CTA|landing composition and links at 1440|landing composition and links at 390"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/local-controls-fixed/test-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "brand-journeys.spec.ts"
+        ],
+        "timeout": 100000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/brand-evidence/local-controls-fixed/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "brand-journeys.spec.ts",
+      "file": "brand-journeys.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "headline, CTA and faithful poster appear while 3D code and models are held; only the hero model is requested initially",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3281,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:19:26.998Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "blocked-3d-code",
+                      "contentType": "application/json",
+                      "body": "eyJjb2RlUmVxdWVzdHMiOlsiL2Fzc2V0cy90aHJlZS1Cb1dsYnY5My5qcyJdLCJtb2RlbHMiOltdLCJoZWFkbGluZVZpc2libGUiOnRydWUsImN0YVZpc2libGUiOnRydWUsInBvc3RlckRlY29kZWQiOnRydWV9"
+                    },
+                    {
+                      "name": "loading-status-contrast",
+                      "contentType": "application/json",
+                      "body": "eyJjb2RlTG9hZGluZ0NvbnRyYXN0Ijp7ImJhY2tncm91bmRBbHBoYSI6MSwibWluaW11bVJhdGlvIjo2Ljg2NzYzNTQxMzQzOTcyMTV9LCJtb2RlbExvYWRpbmdDb250cmFzdCI6eyJiYWNrZ3JvdW5kQWxwaGEiOjEsIm1pbmltdW1SYXRpbyI6MTEuMzU3NjYzNDIyMDAzNTYxfX0="
+                    },
+                    {
+                      "name": "initial-loading",
+                      "contentType": "application/json",
+                      "body": "ewogICJtb2RlbHMiOiBbCiAgICAiL21vZGVscy9iYmYtbmVncm9uaS5nbGIiCiAgXSwKICAicGFpbnQiOiBbCiAgICB7CiAgICAgICJuYW1lIjogImZpcnN0LXBhaW50IiwKICAgICAgIm1zIjogMTA0CiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJmaXJzdC1jb250ZW50ZnVsLXBhaW50IiwKICAgICAgIm1zIjogMTY0CiAgICB9CiAgXSwKICAiZm9udHMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo0MTg2L2Fzc2V0cy9pbnN0cnVtZW50LXNhbnMtbGF0aW4td2dodC1ub3JtYWwtQmJ6RkxaVGcud29mZjIiLAogICAgImh0dHA6Ly8xMjcuMC4wLjE6NDE4Ni9hc3NldHMvaWJtLXBsZXgtbW9uby1sYXRpbi00MDAtbm9ybWFsLURNSjhWRzh5LndvZmYyIgogIF0sCiAgImxvYWRlZEZvbnRzIjogWwogICAgIkluc3RydW1lbnQgU2FucyBWYXJpYWJsZSIsCiAgICAiSUJNIFBsZXggTW9ubyIKICBdCn0="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-0ac2864a8568953f6acb",
+          "file": "brand-journeys.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "landing composition and links at 1440x1000",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5285,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:19:31.106Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwLCJkb2N1bWVudFdpZHRoIjoxNDQwLCJmb250cyI6WyJJbnN0cnVtZW50IFNhbnMgVmFyaWFibGUiLCJJQk0gUGxleCBNb25vIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-24c0d5844e898f2d14ab",
+          "file": "brand-journeys.spec.ts",
+          "line": 111,
+          "column": 3
+        },
+        {
+          "title": "landing composition and links at 390x844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5951,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T05:19:36.400Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjg0NCwiZG9jdW1lbnRXaWR0aCI6MzkwLCJmb250cyI6WyJJbnN0cnVtZW50IFNhbnMgVmFyaWFibGUiLCJJQk0gUGxleCBNb25vIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-de4873abb30f62004d28",
+          "file": "brand-journeys.spec.ts",
+          "line": 111,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T05:19:26.446Z",
+    "duration": 16149.880000000001,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

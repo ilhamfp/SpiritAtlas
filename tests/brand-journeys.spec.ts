@@ -21,7 +21,7 @@ async function expectLoadingStatusContrast(page: Page, selector: string) {
       return linear <= .04045 ? linear / 12.92 : ((linear + .055) / 1.055) ** 2.4;
     }).reduce((sum, value, index) => sum + value * [.2126, .7152, .0722][index], 0);
     const background = rgba(getComputedStyle(element).backgroundColor);
-    const ratios = [element, ...element.querySelectorAll('span:not(.loading-orbit)')].map(label => {
+    const ratios = [element, ...element.querySelectorAll('span:not(.loading-orbit)')].filter(label => getComputedStyle(label).display !== 'none').map(label => {
       const foreground = rgba(getComputedStyle(label).color);
       const a = luminance(foreground), b = luminance(background);
       return (Math.max(a, b) + .05) / (Math.min(a, b) + .05);
@@ -157,6 +157,9 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 768, height: 102
     // the document image. Return to the actual top before recording the page.
     await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
     await page.screenshot({ path: `${evidenceDir}/homepage-full-${viewport.width}x${viewport.height}.png`, fullPage: true, animations: 'disabled' });
+    await page.getByRole('link', { name: 'Meet the three bars', exact: true }).click();
+    await expect(page).toHaveURL(/#the-bars$/);
+    await expect(page.getByRole('heading', { name: 'Three bars. Distinctly their own.' })).toBeInViewport();
     await testInfo.attach('viewport-layout', { body: JSON.stringify(await page.evaluate(() => ({ width: innerWidth, height: innerHeight, documentWidth: document.documentElement.scrollWidth, fonts: [...document.fonts].filter(font => font.status === 'loaded').map(font => font.family) }))), contentType: 'application/json' });
   });
 }
