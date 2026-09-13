@@ -89,3 +89,10 @@ Local verification is recorded in `../brand-evidence/hero-composition/`; public 
 # Hero refinement production acceptance
 
 The landing task published and verified main `36fb1649d3f8e6706f01203a67f0d00cbd69877f`, READY as `dpl_B39i9712QWwALxTBi1zPQBpPKH6N` at https://spiritatlas-one.vercel.app. Seven targeted public checks and four final Chrome/WebKit visual probes pass. The public entry is `/assets/index-Bnsw7AXQ.js`, with CSS `/assets/index-7pW0GoBv.css`. Exact hashes and actual public screenshots are recorded in `../brand-evidence/hero-composition-public/`. The earlier queued requests for the animation task to integrate `5683aa7` are superseded: that change is already deployed. No further production push is part of this evidence commit; physical-motion gates remain separate.
+
+
+## Native spoon stirring follow-up
+
+The owner physically confirmed the ebc0579 laptop connection, then asked for laptop motion to stir the drink instead of only tilting the glass. Behind the Bar task `01a09932-8b72-79f2-a6f9-2322aaaa28a5` assumes and acknowledges sole ownership of this bounded corrective release. The animation task completed its release at 14:58; the landing task completed the subsequent hero release at 15:04 Singapore time. App coordination is unavailable (`No Codex thread found`, `thread_list_unavailable`); their task completion records and actual remote refs were inspected. No concurrent publication is active. This follows the objective's authorization to assume release ownership when landing work is finished and no active owner remains.
+
+The isolated `codex/native-stir-release` worktree includes public hero revision `36fb164`, its completed acceptance record `7c0909a`, and native-stir source `daef85b` applied as `b17a4dc8eb74a9b51b4f5db9bd34ddc184998863`. Shared main and both completed release worktrees remain untouched. Only explicitly selected feature files are integrated. The correction is described and locally verified in `evidence/native-stir-local-checks.md`; new physical stirring, physical tilt-pour and onset timing remain separate acceptance evidence. Production verification will identify the exact new revision and deployment.
