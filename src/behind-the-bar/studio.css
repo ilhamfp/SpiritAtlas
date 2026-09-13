@@ -6,3 +6,8 @@
 .btb-gesture-hint{position:absolute;left:22px;bottom:112px;z-index:2;margin:0;padding:8px 10px;background:#242125e8;color:#ffffe3;font-size:12px;pointer-events:none;border-radius:3px}@media(max-width:700px){.btb-gesture-hint{left:14px;bottom:96px;font-size:11px}.btb-stage-top>span:first-child,.btb-render-status{font-size:11px}}
 
 .btb-live-motion{position:absolute;z-index:4;left:22px;right:22px;top:62px;display:flex;align-items:center;gap:9px;background:#242125ed;padding:8px 12px;font-size:12px}.btb-live-motion span{margin-right:auto}.btb-live-motion button{font-size:12px;min-height:40px;padding:7px 9px}.btb-live-motion:has(button:not(:disabled)) span{color:#ffbbb0}@media(max-width:700px){.btb-live-motion{left:10px;right:10px;top:76px;flex-wrap:wrap}.btb-live-motion span{width:100%}}
+
+/* The raised pouring vessel needs the full canvas, clear of setup overlays. */
+.btb-stage-strain .btb-stage-top{position:relative;inset:auto;padding:18px 22px 0;min-height:52px}
+.btb-stage-strain .btb-live-motion{position:relative;inset:auto;margin:10px 22px 0}
+@media(max-width:700px){.btb-stage-strain .btb-stage-top{padding:14px 15px 0}.btb-stage-strain .btb-live-motion{margin:10px 10px 0}}
