@@ -16,10 +16,10 @@ Bar Bon Funk recipe or linked to its detail page.
 - Cinematic uses the original Cycles movies without transcoding: 720 × 720,
   60 fps, 433 transition frames over 7.2 seconds, with a 144-frame, 2.4-second
   circulation loop. Reassembly uses the separately encoded reverse movie.
-- Explore 3D reuses the original glass, modeled ice, orange V2 textures, HDR
+- Rotating the drink reuses the original glass, modeled ice, orange V2 textures, HDR
   studio lighting, layered refraction and 128³ marching-cubes liquid surface.
-  Three.js and the 4,800-particle cache load only when this mode is selected.
-- The two views share progress, playback direction, pause state and speed.
+  Three.js and the 4,800-particle cache load only after a rotation request.
+- The film and rotatable scene share progress, playback direction, pause state and speed.
   During final circulation the liquid samples the original loop while the
   ingredient rig stays fully separated.
 - The homepage controls stay local to the component. Loading, visibility,
@@ -30,8 +30,8 @@ Bar Bon Funk recipe or linked to its detail page.
 - Vertical swipes scroll over the live scene while horizontal drags orbit it.
   Reduced motion also disables the live camera's easing and inertia, including
   when the preference changes after loading. Explicit playback stays available.
-- Returning to Cinematic during a pending 3D load cancels that request. A later
-  visit to Explore 3D starts a fresh load without leaving stale loading feedback.
+- Reset returns to the assembled film and cancels any pending rotation load.
+  A later rotation request starts a fresh load without stale loading feedback.
 
 The physical model and artistic limitations from the original study still
 apply: directed forces separate ingredients, and reassembly retraces their
@@ -122,3 +122,28 @@ foundation, removing the previous competing heading rules.
 
 Current screenshots, checks, and their verification scope are recorded in
 `docs/brand-evidence/autoplay-polish-final/README.md`.
+
+### One player, direct rotation
+
+The homepage no longer presents Cinematic and Explore 3D as separate choices.
+The original film starts automatically. Left/right rotation controls (or the
+arrow keys while the stage has focus) load the live scene at the same pose,
+preserving playback intent, direction and speed. The first requested rotation
+is applied once that scene is ready. Reset returns to the assembled film and
+cancels a pending scene load. The heavy renderer still loads only on demand.
+
+Loading feedback sits beneath the controls, leaving the drink unobscured.
+Playback is requested before initial decoding so mobile browsers can begin
+loading without waiting for a ready-data event. A failed clip offers Retry;
+a visible, unresolved load offers the same option after eight seconds while
+continuing to wait. This also covers reverse/circulation clips that failed
+during preload or remain delayed when selected. The preceding decoded frame
+stays visible until the selected clip is ready. Retry reloads the local film
+manifest and clips and resumes the default playback preference.
+
+The frame keeps its padded charcoal surface, sentence-case labels and 44px
+controls. A decorative fade softens its right and lower edges against desktop
+artwork; mobile keeps a flat charcoal background without that decoration.
+
+The unified-player checks and responsive captures are recorded in
+`docs/brand-evidence/unified-player/README.md`.

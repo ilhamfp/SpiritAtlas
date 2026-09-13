@@ -7,8 +7,9 @@ import type {NegroniRenderer} from './renderer';
 
 type Mode = 'cinematic' | '3d';
 type Manifest = {duration: number; forward: string; reverse: string; idle: string; poster: string; idleTimeline: IdleTimeline};
-type UIState = PlaybackState & {mode: Mode; suspended: boolean; ready: boolean; loading3D: boolean; status: string};
-type Commands = {action: () => void; toggle: () => void; seek: (value: number) => void; speed: () => void; reset: () => void; mode: (value: Mode) => void; rotate: (delta: number) => void};
+type MediaIssue = '' | 'slow' | 'failed';
+type UIState = PlaybackState & {mode: Mode; suspended: boolean; hasFrame: boolean; loading3D: boolean; mediaIssue: MediaIssue; status: string};
+type Commands = {action: () => void; toggle: () => void; seek: (value: number) => void; speed: () => void; reset: () => void; retry: () => void; rotate: (delta: number) => void};
 const ASSET_ROOT = '/classic-negroni/cinematic';
 const DEFAULT_MANIFEST: Manifest = {duration: 7.2, forward: `${ASSET_ROOT}/negroni-forward.mp4`, reverse: `${ASSET_ROOT}/negroni-reverse.mp4`, idle: `${ASSET_ROOT}/negroni-idle.mp4`, poster: `${ASSET_ROOT}/poster.png`, idleTimeline: DEFAULT_IDLE_TIMELINE};
 const noop = () => {};
@@ -21,8 +22,8 @@ export default function ClassicNegroni() {
   const forwardRef = useRef<HTMLVideoElement>(null);
   const reverseRef = useRef<HTMLVideoElement>(null);
   const idleRef = useRef<HTMLVideoElement>(null);
-  const commands = useRef<Commands>({action: noop, toggle: noop, seek: noop, speed: noop, reset: noop, mode: noop, rotate: noop});
-  const [ui, setUI] = useState<UIState>({...INITIAL_PLAYBACK, mode: 'cinematic', suspended: false, ready: false, loading3D: false, status: ''});
+  const commands = useRef<Commands>({action: noop, toggle: noop, seek: noop, speed: noop, reset: noop, retry: noop, rotate: noop});
+  const [ui, setUI] = useState<UIState>({...INITIAL_PLAYBACK, mode: 'cinematic', suspended: false, hasFrame: false, loading3D: false, mediaIssue: '', status: ''});
 
   useEffect(() => {
     const root = rootRef.current!;
@@ -30,7 +31,7 @@ export default function ClassicNegroni() {
     const container = liveRef.current!;
     const videos = [forwardRef.current!, reverseRef.current!, idleRef.current!];
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const controller = new AbortController();
+    let controller = new AbortController();
     let rendererController: AbortController | null = null;
     let disposed = false, reducedMotion = mediaQuery.matches, inView = true;
     let state: PlaybackState = initialPlayback(reducedMotion);
@@ -38,6 +39,7 @@ export default function ClassicNegroni() {
     let renderer: NegroniRenderer | null = null, loading3D = false, status = '', ready = false;
     let suspended = document.hidden, pendingSeek = true, playRequest = 0, lastUI = 0, previous = performance.now();
     let frame = 0, shownVideo: HTMLVideoElement | null = null, lastPublished = '';
+    let mediaIssue: MediaIssue = '', loadingTimer = 0, pendingRotation = 0;
     const unbind: (() => void)[] = [];
 
     function syncFrameLoop() {
@@ -55,8 +57,15 @@ export default function ClassicNegroni() {
     function publish() {
       if (disposed) return;
       syncFrameLoop();
-      const actuallyPlaying = state.playing && !suspended && (mode === 'cinematic' ? !current.paused : !!renderer);
-      const signature = JSON.stringify([state, mode, suspended, ready, loading3D, status, actuallyPlaying]);
+      const awaitingFilm = mode === 'cinematic' && !ready && !suspended && !mediaIssue;
+      if (awaitingFilm && !loadingTimer) loadingTimer = window.setTimeout(() => {
+        loadingTimer = 0;
+        mediaIssue = 'slow';
+        publish();
+      }, 8000);
+      else if (!awaitingFilm && loadingTimer) {clearTimeout(loadingTimer); loadingTimer = 0;}
+      const actuallyPlaying = state.playing && !suspended && (mode === 'cinematic' ? !current.paused && current.readyState >= 2 && !pendingSeek : !!renderer);
+      const signature = JSON.stringify([state, mode, suspended, ready, !!shownVideo, loading3D, mediaIssue, status, actuallyPlaying]);
       if (signature === lastPublished) return;
       lastPublished = signature;
       root.dataset.mode = mode;
@@ -68,7 +77,7 @@ export default function ClassicNegroni() {
       root.dataset.sampleProgress = (state.looping ? idleSampleProgress(state.idleTime, manifest.duration, manifest.idleTimeline) : state.progress).toFixed(5);
       root.dataset.direction = String(state.direction);
       root.dataset.suspended = String(suspended);
-      setUI({...state, mode, suspended, ready, loading3D, status});
+      setUI({...state, mode, suspended, hasFrame: !!shownVideo, loading3D, mediaIssue, status});
     }
 
     function readFilm() {
@@ -86,16 +95,19 @@ export default function ClassicNegroni() {
       videos.forEach(video => {video.dataset.active = String(video === current);});
       stage.dataset.filmReady = 'true';
       ready = true;
+      mediaIssue = '';
       publish();
     }
 
     function startFilm() {
-      if (mode !== 'cinematic' || !state.playing || suspended || pendingSeek || current.readyState < 2 || current.error) return;
+      // Request playback before decoding: mobile browsers can defer data until
+      // play() is called. Nonzero seeks still wait for their correct frame.
+      if (mode !== 'cinematic' || !state.playing || suspended || pendingSeek || !current.hasAttribute('src') || current.error) return;
       const request = ++playRequest;
       current.play().then(() => {
         if (!disposed && request === playRequest) publish();
       }).catch(error => {
-        if (disposed || request !== playRequest || error?.name === 'AbortError') return;
+        if (disposed || request !== playRequest || current.error || error?.name === 'AbortError') return;
         state.playing = false;
         status = 'Press play to continue the animation.';
         publish();
@@ -121,7 +133,11 @@ export default function ClassicNegroni() {
       const changed = next !== current;
       if (changed) current.pause();
       current = next;
+      if (changed) {ready = false; mediaIssue = '';}
       videos.forEach(video => {if (video !== current) video.pause();});
+      // A preloaded secondary sequence may have failed before it was selected.
+      // Selecting it must offer recovery even if no new error event is emitted.
+      if (current.error) {failFilm(current); return;}
       current.playbackRate = state.speed;
       const target = movieTime(state, manifest.duration);
       if (changed || forceSeek || Math.abs(current.currentTime - target) > .12) {
@@ -129,8 +145,9 @@ export default function ClassicNegroni() {
           const seekTo = Math.min(target, Number.isFinite(current.duration) ? Math.max(0, current.duration - .001) : target);
           pendingSeek = Math.abs(current.currentTime - seekTo) > .002;
           if (pendingSeek) current.currentTime = seekTo;
-        } else pendingSeek = true;
+        } else pendingSeek = target > .002;
       }
+      if (pendingSeek || current.readyState < 2) ready = false;
       if (!state.playing || suspended || pendingSeek) current.pause();
       revealFilm();
       startFilm();
@@ -143,16 +160,31 @@ export default function ClassicNegroni() {
       publish();
     }
 
+    function failFilm(video: HTMLVideoElement) {
+      if (disposed || video !== current || mode !== 'cinematic') return;
+      state.playing = false;
+      status = '';
+      mediaIssue = 'failed';
+      ready = false;
+      if (shownVideo === video || !shownVideo) {
+        videos.forEach(item => {item.dataset.active = 'false';});
+        stage.dataset.filmReady = 'false';
+        shownVideo = null;
+      }
+      publish();
+    }
+
     function restoreFilm() {
       if (disposed) return;
       rendererController?.abort();
       const failedRenderer = renderer;
       renderer = null;
       loading3D = false;
+      pendingRotation = 0;
       mode = 'cinematic';
       failedRenderer?.dispose();
       container.hidden = true;
-      status = '3D view is unavailable on this device. Cinematic view restored.';
+      status = 'Rotation is unavailable on this device. You can still play the animation.';
       syncMedia(true);
       publish();
     }
@@ -179,6 +211,8 @@ export default function ClassicNegroni() {
         renderer.setVisible(mode === '3d' && !suspended);
         previous = performance.now();
         pose();
+        if (pendingRotation) renderer.rotate(pendingRotation);
+        pendingRotation = 0;
         publish();
       } catch {
         if (!disposed && !signal.aborted) restoreFilm();
@@ -194,24 +228,46 @@ export default function ClassicNegroni() {
         update({...state, progress, direction: progress >= state.progress ? 1 : -1, playing: false, looping: false, idleTime: 0});
       },
       speed() {readFilm(); const speeds = [1, .5, .25]; update({...state, speed: speeds[(speeds.indexOf(state.speed) + 1) % speeds.length]}, false);},
-      reset() {update({...INITIAL_PLAYBACK, speed: state.speed}); renderer?.resetCamera();},
-      mode(next) {
-        if (next === mode) return;
-        readFilm();
-        mode = next;
-        status = '';
-        if (next === 'cinematic' && loading3D) {
+      reset() {
+        if (loading3D) {
           rendererController?.abort();
           rendererController = null;
           loading3D = false;
         }
-        container.hidden = next !== '3d' || !renderer;
-        previous = performance.now();
-        syncMedia(true);
-        publish();
-        if (next === '3d') void loadRenderer();
+        pendingRotation = 0;
+        mode = 'cinematic';
+        container.hidden = true;
+        update({...INITIAL_PLAYBACK, speed: state.speed});
+        renderer?.resetCamera();
       },
-      rotate(delta) {if (mode === '3d') renderer?.rotate(delta);},
+      retry() {
+        commands.current.reset();
+        controller.abort();
+        controller = new AbortController();
+        ++playRequest;
+        mediaIssue = '';
+        ready = false;
+        shownVideo = null;
+        pendingSeek = true;
+        stage.dataset.filmReady = 'false';
+        videos.forEach(video => {video.dataset.active = 'false'; video.pause(); video.removeAttribute('src'); video.load();});
+        state = {...initialPlayback(reducedMotion), speed: state.speed};
+        void loadFilms();
+        publish();
+      },
+      rotate(delta) {
+        if (mode !== '3d') {
+          readFilm();
+          mode = '3d';
+          status = '';
+          container.hidden = !renderer;
+          previous = performance.now();
+          syncMedia(true);
+        }
+        if (renderer) renderer.rotate(delta);
+        else {pendingRotation += delta; void loadRenderer();}
+        publish();
+      },
     };
 
     videos.forEach(video => {
@@ -227,18 +283,7 @@ export default function ClassicNegroni() {
         syncMedia(true);
         publish();
       };
-      const error = () => {
-        if (disposed || video !== current || mode !== 'cinematic') return;
-        state.playing = false;
-        status = 'The film could not load. Try Explore 3D to see the drink.';
-        if (shownVideo === video || !shownVideo) {
-          videos.forEach(item => {item.dataset.active = 'false';});
-          stage.dataset.filmReady = 'false';
-          shownVideo = null;
-          ready = false;
-        }
-        publish();
-      };
+      const error = () => failFilm(video);
       const handlers = {loadedmetadata: metadata, loadeddata: loaded, canplay: loaded, seeked, ended, error};
       for (const [event, handler] of Object.entries(handlers)) {
         video.addEventListener(event, handler);
@@ -281,17 +326,18 @@ export default function ClassicNegroni() {
     }
 
     async function loadFilms() {
+      const signal = controller.signal;
       try {
-        const response = await fetch(`${ASSET_ROOT}/manifest.json`, {signal: controller.signal});
+        const response = await fetch(`${ASSET_ROOT}/manifest.json`, {signal});
         if (!response.ok) throw new Error('Film manifest unavailable');
         const value = await response.json();
-        if (disposed) return;
+        if (disposed || signal.aborted) return;
         manifest = {...DEFAULT_MANIFEST, ...value, idleTimeline: value.idleTimeline ?? DEFAULT_IDLE_TIMELINE};
       } catch {
-        if (disposed || controller.signal.aborted) return;
+        if (disposed || signal.aborted) return;
         // The stable local filenames remain usable if only the manifest failed.
       }
-      if (disposed) return;
+      if (disposed || signal.aborted) return;
       [manifest.forward, manifest.reverse, manifest.idle].forEach((src, index) => {videos[index].src = src;});
       syncMedia(true);
     }
@@ -302,6 +348,7 @@ export default function ClassicNegroni() {
       disposed = true;
       ++playRequest;
       controller.abort();
+      clearTimeout(loadingTimer);
       rendererController?.abort();
       cancelAnimationFrame(frame);
       observer.disconnect();
@@ -317,26 +364,24 @@ export default function ClassicNegroni() {
   const percent = Math.round(ui.progress * 100);
   const comingTogether = nextDirection(ui) === -1;
   const sceneState = ui.looping ? 'Every ingredient, in motion' : ui.progress < .002 ? 'The perfect serve' : ui.progress > .998 ? 'Five beautiful parts' : ui.playing ? ui.direction === 1 ? 'Coming apart' : 'Coming together' : 'A moment, suspended';
+  const mediaIssue = ui.mode === 'cinematic' ? ui.mediaIssue : '';
+  const loadingText = ui.loading3D ? 'Preparing rotation…' : !ui.hasFrame && ui.mode === 'cinematic' && !ui.status && !mediaIssue ? 'Loading animation…' : '';
   const videoProps = {muted: true, playsInline: true, preload: 'auto', controls: false, 'aria-hidden': true as const, tabIndex: -1, className: 'cn-video'};
 
   return <section className={`cn-hero${ui.progress > .5 ? ' is-expanded' : ''}`} ref={rootRef} aria-label="Classic Negroni experience">
-    <div className="cn-mode-switch" role="group" aria-label="Negroni view">
-      <button type="button" aria-pressed={ui.mode === 'cinematic'} onClick={() => commands.current.mode('cinematic')}>Cinematic</button>
-      <button type="button" aria-pressed={ui.mode === '3d'} onClick={() => commands.current.mode('3d')}>Explore 3D</button>
-    </div>
     <div className="cn-experience">
-      <div className="cn-stage" ref={stageRef} data-film-ready="false" tabIndex={0} aria-label="Classic Negroni animation. Press Enter to look inside, Space to play or pause, R to reset." onKeyDown={event => {
+      <div className="cn-stage" ref={stageRef} data-film-ready="false" tabIndex={0} aria-label="Classic Negroni animation. Press Enter to look inside, Space to play or pause, left or right arrow to rotate, R to reset." onKeyDown={event => {
         if (event.target !== event.currentTarget) return;
         if (event.code === 'Space') {event.preventDefault(); commands.current.toggle();}
         else if (event.code === 'Enter') {event.preventDefault(); commands.current.action();}
         else if (event.code === 'KeyR') commands.current.reset();
+        else if (event.code === 'ArrowLeft' || event.code === 'ArrowRight') {event.preventDefault(); commands.current.rotate((event.code === 'ArrowLeft' ? -1 : 1) * Math.PI / 8);}
       }}>
         <img className="cn-poster" src={DEFAULT_MANIFEST.poster} alt="Classic Negroni with ruby red liquid, clear ice, and a fresh orange slice in a rocks glass" fetchPriority="high" />
         <video {...videoProps} ref={forwardRef} data-sequence="forward" data-active="false" />
         <video {...videoProps} ref={reverseRef} data-sequence="reverse" data-active="false" />
         <video {...videoProps} ref={idleRef} data-sequence="idle" data-active="false" loop />
         <div className="cn-renderer" ref={liveRef} hidden />
-        {((!ui.ready && ui.mode === 'cinematic' && !ui.status) || ui.loading3D) && <div className="cn-loading" role="status">{ui.loading3D ? 'Preparing your 3D view…' : 'Preparing your drink…'}</div>}
       </div>
     </div>
     <div className="cn-details">
@@ -353,10 +398,11 @@ export default function ClassicNegroni() {
         <button type="button" className="cn-speed" aria-label={`Playback speed: ${ui.speed} times. Change speed`} onClick={() => commands.current.speed()}>{ui.speed}×</button>
         <button type="button" className="cn-icon-button" aria-label="Reset Negroni" title="Reset Negroni" onClick={() => commands.current.reset()}><RotateCcw size={15} aria-hidden="true"/></button>
       </div>
-      <div className="cn-hint"><span>{ui.mode === '3d' ? 'Drag to explore another angle' : 'Unfold the ingredients. Take your time.'}</span>{ui.mode === '3d' && <div className="cn-orbit-controls"><button type="button" className="cn-icon-button" disabled={ui.loading3D} aria-label="Rotate Negroni left" onClick={() => commands.current.rotate(-Math.PI / 8)}><ChevronLeft size={16} aria-hidden="true"/></button><button type="button" className="cn-icon-button" disabled={ui.loading3D} aria-label="Rotate Negroni right" onClick={() => commands.current.rotate(Math.PI / 8)}><ChevronRight size={16} aria-hidden="true"/></button></div>}</div>
+      <div className="cn-hint"><span>{ui.mode === '3d' ? 'Drag to explore another angle' : 'Rotate to explore another angle'}</span><div className="cn-orbit-controls"><button type="button" className="cn-icon-button" disabled={ui.loading3D} aria-label="Rotate Negroni left" onClick={() => commands.current.rotate(-Math.PI / 8)}><ChevronLeft size={16} aria-hidden="true"/></button><button type="button" className="cn-icon-button" disabled={ui.loading3D} aria-label="Rotate Negroni right" onClick={() => commands.current.rotate(Math.PI / 8)}><ChevronRight size={16} aria-hidden="true"/></button></div></div>
     </div>
     <ul className="cn-ingredients" aria-label="Classic Negroni ingredients" aria-hidden={ui.progress <= .65}><li>Gin</li><li>Campari</li><li>Sweet vermouth</li><li>Ice</li><li>Orange</li></ul>
-    <p className="cn-status" role="status" aria-live="polite">{ui.status}</p>
+    <p className={`cn-status${loadingText ? ' cn-loading' : ''}`} role="status" aria-live="polite">{ui.status || (mediaIssue === 'failed' ? 'The animation could not load. Retry, or use the arrows to rotate the drink.' : mediaIssue === 'slow' ? 'The animation is taking longer to load. You can wait or retry.' : loadingText)}</p>
+    {mediaIssue && <button type="button" className="cn-retry" onClick={() => commands.current.retry()}>Retry animation</button>}
     </div>
   </section>;
 }

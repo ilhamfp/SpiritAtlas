@@ -334,7 +334,7 @@ test('expanded film circulates continuously, pauses its actual frame and reassem
   await testInfo.attach('idle-to-reverse-continuity', { body: JSON.stringify({ idleTime, visiblePose, reassembled: await progress(page) }), contentType: 'application/json' });
 });
 
-test('Explore 3D loads the original fluid scene on demand and preserves the selected pose when switching modes', async ({ page }, testInfo) => {
+test('one player loads rotation on demand, preserves the selected pose and resets to the original film', async ({ page }, testInfo) => {
   const heavyRequests: string[] = [];
   page.on('request', request => { if (heavyAsset(request.url())) heavyRequests.push(new URL(request.url()).pathname); });
   await page.goto('/');
@@ -343,8 +343,9 @@ test('Explore 3D loads the original fluid scene on demand and preserves the sele
   const selectedPose = await progress(page);
   expect(heavyRequests).toEqual([]);
   const hero = classic(page);
-  await hero.getByRole('button', { name: 'Explore 3D', exact: true }).click();
-  await expect(hero.getByRole('button', { name: 'Explore 3D', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  await expect(hero.getByRole('button', {name: /^(Cinematic|Explore 3D)$/})).toHaveCount(0);
+  await hero.getByRole('button', { name: 'Rotate Negroni right', exact: true }).click();
+  await expect(hero).toHaveAttribute('data-mode', '3d');
   const canvas = hero.getByRole('img', { name: 'Interactive classic Negroni', exact: true });
   await expect(canvas).toBeVisible();
   await expect.poll(async () => Number(await canvas.getAttribute('data-rendered-frames'))).toBeGreaterThan(0);
@@ -355,12 +356,14 @@ test('Explore 3D loads the original fluid scene on demand and preserves the sele
   const beforeOrbit = await canvas.screenshot();
   await hero.getByRole('button', { name: 'Rotate Negroni right', exact: true }).click();
   await expect.poll(async () => beforeOrbit.equals(await canvas.screenshot())).toBe(false);
-  await hero.getByRole('button', { name: 'Cinematic', exact: true }).click();
+  await hero.getByRole('button', { name: 'Reset Negroni', exact: true }).click();
   await waitFilm(page);
-  expect(await progress(page)).toBeCloseTo(selectedPose, 3);
-  expect(await filmTime(page)).toBeCloseTo(selectedPose * 7.2, 1);
+  expect(await progress(page)).toBe(0);
+  expect(await filmTime(page)).toBeCloseTo(0, 2);
   await expect(canvas).toBeHidden();
-  await hero.getByRole('button', { name: 'Explore 3D', exact: true }).click();
+  await seekMidpoint(page);
+  await hero.locator('.cn-stage').focus();
+  await hero.locator('.cn-stage').press('ArrowLeft');
   await expect(canvas).toBeVisible();
   expect(await progress(page)).toBeCloseTo(selectedPose, 3);
   await hero.getByRole('button', { name: 'Play animation', exact: true }).click();
@@ -439,10 +442,10 @@ test('WebGL unavailable restores the cinematic film without blocking the landing
   await seekMidpoint(page);
   const selectedPose = await progress(page);
   const hero = classic(page);
-  await hero.getByRole('button', { name: 'Explore 3D', exact: true }).click();
-  await expect(hero.getByText('3D view is unavailable on this device. Cinematic view restored.', { exact: true })).toBeVisible();
+  await hero.getByRole('button', { name: 'Rotate Negroni right', exact: true }).click();
+  await expect(hero.getByText('Rotation is unavailable on this device. You can still play the animation.', { exact: true })).toBeVisible();
   await waitFilm(page);
-  await expect(hero.getByRole('button', { name: 'Cinematic', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  await expect(hero).toHaveAttribute('data-mode', 'cinematic');
   expect(await progress(page)).toBeCloseTo(selectedPose, 3);
   await hero.getByRole('button', { name: 'Play animation', exact: true }).click();
   await expect.poll(() => filmTime(page)).toBeGreaterThan(selectedPose * 7.2 + .2);

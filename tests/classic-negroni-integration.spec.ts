@@ -63,6 +63,92 @@ test('blocked autoplay leaves a usable manual play control', async ({page}) => {
   await expect(hero.locator('.cn-status')).toBeEmpty();
 });
 
+test('slow media requests playback before decoding and offers retry without covering the drink', async ({page}) => {
+  let release!: () => void;
+  const held = new Promise<void>(resolve => {release = resolve;});
+  await page.addInitScript(() => {
+    const play = HTMLMediaElement.prototype.play;
+    const readiness: number[] = [];
+    Reflect.set(window, '__playReadiness', readiness);
+    HTMLMediaElement.prototype.play = function () {readiness.push(this.readyState); return play.call(this);};
+  });
+  await page.route('**/classic-negroni/cinematic/*.mp4*', async route => {await held; await route.continue();});
+  try {
+    await page.goto('/', {waitUntil: 'domcontentloaded'});
+    const hero = classic(page);
+    await expect.poll(() => page.evaluate(() => Reflect.get(window, '__playReadiness').includes(0))).toBe(true);
+    await expect(hero).toHaveAttribute('data-playing', 'false');
+    await expect(hero.locator('.cn-poster')).toHaveCSS('opacity', '1');
+    await expect(hero.getByText('The animation is taking longer to load. You can wait or retry.', {exact: true})).toBeVisible();
+    await expect(hero.getByRole('button', {name: 'Retry animation', exact: true})).toBeVisible();
+    await expect(hero.locator('.cn-stage [role="status"]')).toHaveCount(0);
+    // Waiting is also a valid recovery: an eventual frame clears the message.
+    release();
+    await expect(hero).toHaveAttribute('data-playing', 'true');
+    await expect(hero.getByRole('button', {name: 'Retry animation', exact: true})).toHaveCount(0);
+    await expect(hero.locator('.cn-status')).toBeEmpty();
+  } finally {release();}
+});
+
+test('failed media can retry and resume default playback', async ({page}) => {
+  let fail = true;
+  await page.route('**/classic-negroni/cinematic/negroni-forward.mp4*', async route => {
+    if (fail) await route.abort('failed');
+    else await route.continue();
+  });
+  await page.goto('/', {waitUntil: 'domcontentloaded'});
+  const hero = classic(page);
+  await expect(hero.getByText('The animation could not load. Retry, or use the arrows to rotate the drink.', {exact: true})).toBeVisible();
+  await expect(hero.locator('.cn-poster')).toHaveCSS('opacity', '1');
+  fail = false;
+  await hero.getByRole('button', {name: 'Retry animation', exact: true}).click();
+  await expect(hero).toHaveAttribute('data-playing', 'true');
+  await expect.poll(async () => Number(await hero.getAttribute('data-progress'))).toBeGreaterThan(.05);
+  await expect(hero.locator('.cn-status')).toBeEmpty();
+  await expect(hero.getByRole('button', {name: 'Retry animation', exact: true})).toHaveCount(0);
+});
+
+test('a failed reverse preload offers recovery when selected and keeps the preceding frame visible', async ({page}) => {
+  let fail = true;
+  await page.route('**/classic-negroni/cinematic/negroni-reverse.mp4*', async route => {
+    if (fail) await route.abort('failed');
+    else await route.continue();
+  });
+  await openClassic(page);
+  const hero = classic(page);
+  await expect.poll(() => hero.locator('video[data-sequence="reverse"]').evaluate((video: HTMLVideoElement) => !!video.error)).toBe(true);
+  const slider = hero.getByRole('slider', {name: 'Deconstruction progress'});
+  await slider.focus();
+  await slider.press('End');
+  await expect.poll(() => hero.locator('video[data-sequence="forward"]').evaluate((video: HTMLVideoElement) => video.seeking)).toBe(false);
+  await hero.getByRole('button', {name: 'Bring it together', exact: true}).click();
+  await expect(hero.getByRole('button', {name: 'Retry animation', exact: true})).toBeVisible();
+  await expect(hero.locator('video[data-sequence="forward"]')).toHaveCSS('opacity', '1');
+  await expect(hero.locator('.cn-poster')).toHaveCSS('opacity', '0');
+  fail = false;
+  await hero.getByRole('button', {name: 'Retry animation', exact: true}).click();
+  await expect(hero).toHaveAttribute('data-playing', 'true');
+  await expect(hero.locator('.cn-status')).toBeEmpty();
+});
+
+test('a delayed circulation clip keeps the last frame and offers retry until it arrives', async ({page}) => {
+  let release!: () => void;
+  const held = new Promise<void>(resolve => {release = resolve;});
+  await page.route('**/classic-negroni/cinematic/negroni-idle.mp4*', async route => {await held; await route.continue();});
+  try {
+    await page.goto('/', {waitUntil: 'domcontentloaded'});
+    const hero = classic(page);
+    await expect(hero).toHaveAttribute('data-looping', 'true');
+    await expect(hero.getByRole('button', {name: 'Retry animation', exact: true})).toBeVisible();
+    await expect(hero.locator('video[data-sequence="forward"]')).toHaveCSS('opacity', '1');
+    await expect(hero.locator('.cn-poster')).toHaveCSS('opacity', '0');
+    release();
+    await expect(hero.locator('video[data-sequence="idle"]')).toHaveAttribute('data-active', 'true');
+    await expect(hero).toHaveAttribute('data-playing', 'true');
+    await expect(hero.locator('.cn-status')).toBeEmpty();
+  } finally {release();}
+});
+
 test('desktop framing keeps playback controls in view and ingredient reveals preserve the layout', async ({page}) => {
   await page.emulateMedia({reducedMotion: 'reduce'});
   for (const viewport of [{width: 1440, height: 1000}, {width: 1280, height: 900}]) {
@@ -80,7 +166,7 @@ test('desktop framing keeps playback controls in view and ingredient reveals pre
   }
 });
 
-test('returning to cinematic cancels a pending 3D load and lets the visitor try again', async ({page}) => {
+test('reset cancels pending rotation and lets the visitor try again', async ({page}) => {
   let release!: () => void;
   const held = new Promise<void>(resolve => {release = resolve;});
   let requested = false;
@@ -92,14 +178,14 @@ test('returning to cinematic cancels a pending 3D load and lets the visitor try 
   try {
     await openClassic(page);
     const hero = classic(page);
-    await hero.getByRole('button', {name: 'Explore 3D', exact: true}).click();
+    await hero.getByRole('button', {name: 'Rotate Negroni right', exact: true}).click();
     await expect.poll(() => requested).toBe(true);
-    await expect(hero.getByText('Preparing your 3D view…', {exact: true})).toBeVisible();
-    await hero.getByRole('button', {name: 'Cinematic', exact: true}).click();
+    await expect(hero.getByText('Preparing rotation…', {exact: true})).toBeVisible();
+    await hero.getByRole('button', {name: 'Reset Negroni', exact: true}).click();
     await expect(hero.locator('.cn-loading')).toHaveCount(0);
     await expect(hero).toHaveAttribute('data-mode', 'cinematic');
     release();
-    await hero.getByRole('button', {name: 'Explore 3D', exact: true}).click();
+    await hero.getByRole('button', {name: 'Rotate Negroni right', exact: true}).click();
     await expect(liveScene(page)).toBeVisible();
     await expect(hero.locator('.cn-loading')).toHaveCount(0);
     await expect(hero.locator('.cn-status')).toBeEmpty();
@@ -127,7 +213,7 @@ test.describe('live scene on touch screens', () => {
   test('reduced motion settles the camera immediately and vertical swipes scroll over the 3D scene', async ({page}) => {
     await openClassic(page);
     const hero = classic(page);
-    await hero.getByRole('button', {name: 'Explore 3D', exact: true}).tap();
+    await hero.getByRole('button', {name: 'Rotate Negroni right', exact: true}).tap();
     const canvas = liveScene(page);
     await expect(canvas).toBeVisible();
     await hero.getByRole('button', {name: 'Look inside', exact: true}).tap();

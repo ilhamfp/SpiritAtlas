@@ -20,27 +20,24 @@
   align-self: center;
   justify-self: end;
   z-index: 1;
+  isolation: isolate;
   background: var(--sa-charcoal);
-  border: 1px solid var(--sa-divider);
+  border: 1px solid transparent;
   border-radius: var(--sa-radius-control);
 }
-.cn-mode-switch { display: flex; align-items: center; gap: 8px; padding: 8px 16px; }
-.sa-landing .cn-mode-switch button {
-  min-height: 44px;
-  padding: 10px 12px;
-  border-radius: 4px;
-  font-size: 13px;
-  color: var(--sa-muted);
-  border: 1px solid transparent;
+/* Protect the controls with a feathered backdrop, not a hard-edged panel.
+   Only this decorative layer fades; the drink, text and focus rings stay sharp. */
+.cn-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0 -32px -24px 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(to right, var(--sa-charcoal) calc(100% - 32px), rgb(44 42 45 / 0));
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 24px), transparent);
 }
-.sa-landing .cn-mode-switch button[aria-pressed="true"] {
-  color: var(--sa-cream);
-  background: var(--sa-ink);
-  border-color: var(--sa-control-border);
-}
-.sa-landing .cn-mode-switch button:hover { color: var(--sa-cream); background: var(--sa-ink); }
 .cn-experience { position: relative; min-width: 0; }
-.cn-stage { position: relative; aspect-ratio: 1; width: 100%; overflow: hidden; background: #1a1916; isolation: isolate; }
+.cn-stage { position: relative; aspect-ratio: 1; width: 100%; overflow: hidden; border-radius: var(--sa-radius-control) var(--sa-radius-control) 0 0; background: #1a1916; isolation: isolate; }
 .cn-stage .cn-video, .cn-stage .cn-poster, .cn-renderer { position: absolute; inset: 0; width: 100%; height: 100%; }
 .cn-stage .cn-video, .cn-stage .cn-poster { object-fit: contain; display: block; }
 /* Keep decoded films attached to the compositor for reliable WebKit playback. */
@@ -91,11 +88,14 @@
 .cn-progress-value { min-width: 4ch; text-align: right; color: var(--sa-muted); font: 11px/1 var(--sa-font-mono); }
 .sa-landing .cn-speed { min-height: 44px; min-width: 44px; padding: 0 4px; border-radius: 4px; font: 12px/1 var(--sa-font-mono); }
 .cn-hint { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; margin-top: 4px; color: var(--sa-muted); font-size: 13px; line-height: 1.5; }
-.cn-orbit-controls { display: flex; align-items: center; gap: 4px; }
+.cn-orbit-controls { display: flex; flex-shrink: 0; align-items: center; gap: 4px; }
+.sa-landing .cn-icon-button:disabled { cursor: wait; opacity: .45; }
 .cn-status { color: var(--sa-peach); font-size: 13px; line-height: 1.6; }
 .cn-status:empty { display: none; }
 .cn-status:not(:empty) { margin-top: 12px; }
-.cn-loading { position: absolute; left: 16px; right: 16px; bottom: 16px; z-index: 3; padding: 10px 14px; border-radius: 4px; background: var(--sa-ink); color: var(--sa-cream); font-size: 13px; line-height: 1.5; text-align: center; }
+.cn-loading { color: var(--sa-muted); }
+.sa-landing .cn-retry { min-height: 44px; margin-top: 8px; padding: 8px 12px; border: 1px solid var(--sa-control-border); border-radius: var(--sa-radius-control); font-size: 13px; }
+.sa-landing .cn-retry:hover { background: var(--sa-ink); }
 .cn-ingredients { display: flex; flex-wrap: wrap; gap: 4px 12px; list-style: none; margin: 8px 0 0; padding: 0; color: var(--sa-muted); font-size: 12px; line-height: 1.6; }
 .cn-ingredients[aria-hidden="true"] { visibility: hidden; }
 .cn-ingredients li { display: inline-flex; align-items: center; gap: 6px; }
@@ -114,7 +114,6 @@
 }
 @container negroni (max-width: 300px) {
   .cn-details { padding-inline: 16px; }
-  .cn-mode-switch { padding-inline: 12px; }
   .cn-progress-value { display: none; }
   .cn-scene-caption { flex-wrap: wrap; gap: 4px 12px; }
 }
@@ -129,6 +128,7 @@
   .sa-hero-classic h1 { font-size: clamp(44px, 13.8vw, 68px); line-height: 1.02; }
   .sa-hero-classic .sa-hero-copy p { max-width: 40ch; }
   .sa-hero-classic .cn-hero { max-width: 520px; align-self: center; }
+  .cn-hero::before { display: none; }
   .sa-hero-classic .sa-marble { display: none; }
   .sa-hero-classic .sa-hero-foot { position: static; width: 100%; padding: 20px 0 28px; }
 }
