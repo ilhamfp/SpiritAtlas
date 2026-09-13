@@ -1,0 +1,15 @@
+# Retina pouring freeze correction
+
+The owner reported a decreasing mixing quantity with a frozen Strain picture. Read-only inspection of their actual Chrome tab found repeated `Destroyed texture ... 1328x855 ... used in a submit` WebGPU errors. The tab used entry `index-n0w-GTmk.js` (13c1529), viewport 1512×806, devicePixelRatio 2, CSS canvas 885×570 and actual drawing buffer 1327×855. No owner preparation, arming or native subscription was changed during diagnosis.
+
+An isolated installed-Chrome reproduction of the then-current public a629de0 (same scene source) reproduced the identical error. Core fell from 0.65 to 0.431935 while the rest/pour canvas PNGs stayed byte-identical. See `reproduction.json`, `before-rest.png` and `before-pour.png`. This proves why state/frame counters alone were insufficient.
+
+The capture targets now use actual canvas pixel dimensions, matching Three's floor conversion at fractional rendering scale. All capture targets are resized and initialized before any optical pass. A resize regression then exposed stale framebuffer copies from the remaining built-in transmission materials. Bottle glass and ice inclusions now use the same explicit optical passes as the principal glass/ice/liquid; the thin jet uses alpha and highlights, and the colored bottle fill sits behind its optical glass. This removes the mixed framebuffer-copy path without patching Three or changing the canonical asset. The authored quantities, native input mapping and TypeGPU solver are unchanged.
+
+Renderer errors now enter diagnostics, disarm motion and stop accounting/render frames with a visible Retry action. Retry immediately switches to a loading status to prevent overlapping initializations; preparation is retained.
+
+Build passes. Two Retina regressions pass (21.6 seconds): actual screenshot pixels change during native-protocol stirring, pouring, continued flow, pause and resume; odd/even desktop and mobile resizing stays free of console/diagnostic GPU errors. A real deliberately invalid GPU buffer write separately proves error→pause→Retry recovery and conservation. Fixtures never connect to the real helper. See `local-retina-tests.json` and `local/visible-motion.json`. These are actual Apple/M4 render checks with synthetic motion packets, not a new owner-operated physical acceptance claim.
+
+Supporting renderer API: https://threejs.org/docs/pages/Renderer.html ; sizing/disposal: https://threejs.org/docs/pages/RenderTarget.html . Installed Three 0.186 source was inspected to trace CanvasTarget flooring and ViewportTextureNode framebuffer-copy lifetimes.
+
+Three final integrated checks also pass (46.6 seconds): full three-vessel preparation/result/bar return, equal-part native-protocol pours through stirring/partial strain, and full strain/pause/drain/reset. Source build is verified before publication.

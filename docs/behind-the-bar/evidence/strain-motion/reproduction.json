@@ -1,0 +1,378 @@
+{
+  "at": "2026-09-13T07:55:08.355Z",
+  "origin": "https://spiritatlas-one.vercel.app",
+  "entry": [
+    "https://spiritatlas-one.vercel.app/assets/index-CCytpPmt.js"
+  ],
+  "viewport": [
+    1512,
+    806
+  ],
+  "dpr": 2,
+  "start": {
+    "model": {
+      "stage": "strain",
+      "preset": "stir-demo",
+      "origin": "demo",
+      "equalParts": false,
+      "sources": {
+        "core": 0.35,
+        "ancho": 0.22000000000000003,
+        "rice": 0.19999999999999998
+      },
+      "mix": {
+        "core": 0.65,
+        "ancho": 0.18,
+        "rice": 0.1
+      },
+      "serving": {
+        "core": 0,
+        "ancho": 0,
+        "rice": 0
+      },
+      "transit": [],
+      "ice": 3,
+      "servingIce": true,
+      "garnish": {
+        "x": 0,
+        "z": 0,
+        "angle": 0,
+        "placed": false
+      },
+      "oil": false,
+      "result": null,
+      "effectiveStir": 0,
+      "armed": null,
+      "owner": "local",
+      "pourTilt": 0,
+      "conservation": {
+        "core": 0,
+        "ancho": 0,
+        "rice": 0
+      },
+      "resetId": 1
+    },
+    "scene": {
+      "mixingTilt": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ],
+      "mixingPosition": [
+        -1.25,
+        0,
+        0
+      ],
+      "strainerWorld": [
+        -1.25,
+        1.795,
+        0
+      ],
+      "stream": {
+        "visible": false,
+        "from": [
+          0,
+          0,
+          0
+        ],
+        "to": [
+          0,
+          0,
+          0
+        ]
+      },
+      "liquidPlane": {
+        "height": 1.1029600143432616,
+        "slopeX": 0,
+        "slopeZ": 0
+      },
+      "renderedPourAngle": 0,
+      "servingTilt": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ],
+      "camera": [
+        0,
+        4.292548890856128,
+        10.160838537911495
+      ],
+      "mixHeight": 1.1029565217391306,
+      "serveHeight": 0.15,
+      "liquid": [
+        {
+          "visible": true,
+          "min": 1.1029599905014038,
+          "max": 1.1029599905014038,
+          "worldSurfaceSpan": 0
+        },
+        {
+          "visible": false,
+          "min": 0.15000000596046448,
+          "max": 0.15000000596046448,
+          "worldSurfaceSpan": 0
+        }
+      ],
+      "sourceFill": 0.35,
+      "iceRetained": 3
+    }
+  },
+  "end": {
+    "model": {
+      "stage": "strain",
+      "preset": "stir-demo",
+      "origin": "demo",
+      "equalParts": false,
+      "sources": {
+        "core": 0.35,
+        "ancho": 0.22000000000000003,
+        "rice": 0.19999999999999998
+      },
+      "mix": {
+        "core": 0.4319354838709624,
+        "ancho": 0.11961290322580515,
+        "rice": 0.06645161290322457
+      },
+      "serving": {
+        "core": 0.20625268817204384,
+        "ancho": 0.05711612903225804,
+        "rice": 0.03173118279569878
+      },
+      "transit": [
+        {
+          "q": {
+            "core": 0.0009086021505376344,
+            "ancho": 0.0002516129032258071,
+            "rice": 0.0001397849462365583
+          },
+          "remaining": 2.42861286636753e-17,
+          "destination": "serve"
+        },
+        {
+          "q": {
+            "core": 0.0009086021505376344,
+            "ancho": 0.00025161290322580704,
+            "rice": 0.0001397849462365583
+          },
+          "remaining": 0.008333333333333358,
+          "destination": "serve"
+        },
+        {
+          "q": {
+            "core": 0.0009086021505376345,
+            "ancho": 0.00025161290322580704,
+            "rice": 0.00013978494623655824
+          },
+          "remaining": 0.01666666666666669,
+          "destination": "serve"
+        },
+        {
+          "q": {
+            "core": 0.0009086021505376343,
+            "ancho": 0.000251612903225807,
+            "rice": 0.00013978494623655827
+          },
+          "remaining": 0.025000000000000022,
+          "destination": "serve"
+        },
+        {
+          "q": {
+            "core": 0.0009086021505376345,
+            "ancho": 0.00025161290322580704,
+            "rice": 0.0001397849462365583
+          },
+          "remaining": 0.033333333333333354,
+          "destination": "serve"
+        },
+        {
+          "q": {
+            "core": 0.0009086021505376344,
+            "ancho": 0.000251612903225807,
+            "rice": 0.00013978494623655824
+          },
+          "remaining": 0.041666666666666685,
+          "destination": "serve"
+        },
+        {
+          "q": {
+            "core": 0.0009086021505376344,
+            "ancho": 0.00025161290322580693,
+            "rice": 0.00013978494623655824
+          },
+          "remaining": 0.05000000000000002,
+          "destination": "serve"
+        },
+        {
+          "q": {
+            "core": 0.0009086021505376347,
+            "ancho": 0.00025161290322580693,
+            "rice": 0.0001397849462365583
+          },
+          "remaining": 0.05833333333333335,
+          "destination": "serve"
+        },
+        {
+          "q": {
+            "core": 0.0009086021505376344,
+            "ancho": 0.00025161290322580693,
+            "rice": 0.00013978494623655827
+          },
+          "remaining": 0.06666666666666668,
+          "destination": "serve"
+        },
+        {
+          "q": {
+            "core": 0.0009086021505376344,
+            "ancho": 0.0002516129032258069,
+            "rice": 0.0001397849462365583
+          },
+          "remaining": 0.07500000000000001,
+          "destination": "serve"
+        },
+        {
+          "q": {
+            "core": 0.0009086021505376345,
+            "ancho": 0.0002516129032258069,
+            "rice": 0.00013978494623655827
+          },
+          "remaining": 0.08333333333333334,
+          "destination": "serve"
+        },
+        {
+          "q": {
+            "core": 0.0009086021505376345,
+            "ancho": 0.0002516129032258069,
+            "rice": 0.0001397849462365583
+          },
+          "remaining": 0.09166666666666667,
+          "destination": "serve"
+        },
+        {
+          "q": {
+            "core": 0.0009086021505376348,
+            "ancho": 0.0002516129032258069,
+            "rice": 0.00013978494623655832
+          },
+          "remaining": 0.1,
+          "destination": "serve"
+        }
+      ],
+      "ice": 3,
+      "servingIce": true,
+      "garnish": {
+        "x": 0,
+        "z": 0,
+        "angle": 0,
+        "placed": false
+      },
+      "oil": false,
+      "result": null,
+      "effectiveStir": 0,
+      "armed": null,
+      "owner": "local",
+      "pourTilt": 0.85,
+      "conservation": {
+        "core": -4.440892098500626e-15,
+        "ancho": -1.3322676295501878e-15,
+        "rice": -1.3877787807814457e-15
+      },
+      "resetId": 1
+    },
+    "scene": {
+      "mixingTilt": [
+        0,
+        0,
+        -0.8931535352062071,
+        "XYZ"
+      ],
+      "mixingPosition": [
+        -1.2360558738363776,
+        2.471702721326696,
+        0.09999999999973735
+      ],
+      "strainerWorld": [
+        0.16234381837253076,
+        3.597093009551199,
+        0.09999999999973735
+      ],
+      "stream": {
+        "visible": true,
+        "from": [
+          0.7699999999999634,
+          2.849999999993508,
+          0.09999999999973735
+        ],
+        "to": [
+          0.95,
+          1.8466723637963396,
+          0.1
+        ]
+      },
+      "liquidPlane": {
+        "height": 0.7860408385604418,
+        "slopeX": 1.2425908654455555,
+        "slopeZ": 0
+      },
+      "renderedPourAngle": 0.8931535352062071,
+      "servingTilt": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ],
+      "camera": [
+        0,
+        4.305238731915877,
+        10.199999513299883
+      ],
+      "mixHeight": 0.8235130434782538,
+      "serveHeight": 0.6739530000000007,
+      "liquid": [
+        {
+          "visible": true,
+          "min": 0.14000000059604645,
+          "max": 1.774999976158142,
+          "worldSurfaceSpan": 7.426307035984792e-8
+        },
+        {
+          "visible": true,
+          "min": 0.6674006581306458,
+          "max": 0.6804863810539246,
+          "worldSurfaceSpan": 0.013085722923278809
+        }
+      ],
+      "sourceFill": 0.35,
+      "iceRetained": 3
+    },
+    "canvas": {
+      "w": 1327,
+      "h": 855,
+      "cssW": 885
+    }
+  },
+  "errors": [
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1327x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_3\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1327x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_3\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1327x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_3\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1327x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_3\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1327x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_3\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1327x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_3\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n",
+    "THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Destroyed texture [Texture (unlabeled 1328x855 px, TextureFormat::RGBA16Float)] used in a submit.\n - While calling [Queue].Submit([[CommandBuffer from CommandEncoder \"renderContext_0\"]])\n"
+  ],
+  "identicalPixels": true
+}

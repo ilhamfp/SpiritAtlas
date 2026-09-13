@@ -58,14 +58,14 @@ export async function createStudioScene(canvas:HTMLCanvasElement,model:Preparati
  const strainerHandle=new T.Mesh(new T.BoxGeometry(.91,.032,.16),steel);strainerHandle.position.set(-1.05,.02,0);strainer.add(strainerHandle);
  const lipTab=new T.Mesh(new T.BoxGeometry(.22,.022,.22),steel);lipTab.position.set(.81,0,0);strainer.add(lipTab);
  const source=new T.Group();scene.add(source);
- const bottle=new T.Mesh(new T.CylinderGeometry(.21,.34,1.12,40),new T.MeshPhysicalMaterial({color:'#fff1dc',transmission:.8,thickness:.035,roughness:.08}));source.add(bottle);
- const bottleFill=new T.Mesh(new T.CylinderGeometry(.2,.32,.98,40),new T.MeshPhysicalMaterial({color:'#b93d1f',transmission:.25,roughness:.12}));source.add(bottleFill);
- const neck=new T.Mesh(new T.CylinderGeometry(.12,.2,.32,24),bottle.material);neck.position.y=.68;source.add(neck);
+ const bottle:T.Mesh=new T.Mesh(new T.CylinderGeometry(.21,.34,1.12,40),new T.MeshPhysicalMaterial({color:'#fff1dc',transmission:.8,thickness:.035,roughness:.08}));source.add(bottle);
+ const bottleFill=new T.Mesh(new T.CylinderGeometry(.2,.32,.98,40),new T.MeshPhysicalMaterial({color:'#b93d1f',roughness:.12}));source.add(bottleFill);
+ const neck:T.Mesh=new T.Mesh(new T.CylinderGeometry(.12,.2,.32,24),bottle.material);neck.position.y=.68;source.add(neck);
  const streamSegments=28,streamSides=8,streamGeometry=new T.BufferGeometry();
  const streamPositions=new Float32Array((streamSegments+1)*streamSides*3),streamNormals=new Float32Array(streamPositions.length),streamIndices=[];
  for(let i=0;i<streamSegments;i++)for(let j=0;j<streamSides;j++){const a=i*streamSides+j,b=i*streamSides+(j+1)%streamSides;streamIndices.push(a,b,a+streamSides,b,b+streamSides,a+streamSides);}
  streamGeometry.setAttribute('position',new T.BufferAttribute(streamPositions,3).setUsage(T.DynamicDrawUsage));streamGeometry.setAttribute('normal',new T.BufferAttribute(streamNormals,3).setUsage(T.DynamicDrawUsage));streamGeometry.setIndex(streamIndices);
- const stream=new T.Mesh(streamGeometry,new T.MeshPhysicalMaterial({color:'#e95725',transmission:.35,roughness:.08,thickness:.055,clearcoat:1}));stream.frustumCulled=false;scene.add(stream);
+ const stream=new T.Mesh(streamGeometry,new T.MeshPhysicalMaterial({color:'#e95725',transparent:true,opacity:.85,depthWrite:false,roughness:.08,clearcoat:1}));stream.frustumCulled=false;scene.add(stream);
  const mistGeo=new T.BufferGeometry(),mistPos=new Float32Array(60*3);mistGeo.setAttribute('position',new T.BufferAttribute(mistPos,3));const mist=new T.Points(mistGeo,new T.PointsMaterial({color:'#ffe6a8',size:.025,transparent:true,opacity:.6}));receiving.add(mist);
  // Separate optical captures prevent transparent nested volumes disappearing.
  const captures=Array.from({length:3},()=>new T.RenderTarget(1024,768,{type:T.HalfFloatType,depthBuffer:true}));
@@ -82,13 +82,23 @@ export async function createStudioScene(canvas:HTMLCanvasElement,model:Preparati
   mat.colorNode=mix(body,reflected.rgb.mul(1.7),fresnel.mul(.7).add(reflectivity));
   return mat;
  }
- const opticIce=optical(captures[0].texture,'ice');for(const b of iceBodies){(b.mesh.material as T.Material).dispose();b.mesh.material=opticIce;}servingIce.material=opticIce;
+ const opticIce=optical(captures[0].texture,'ice');for(const b of iceBodies){(b.mesh.material as T.Material).dispose();b.mesh.material=opticIce;}servingIce.material=opticIce;(inclusions.material as T.Material).dispose();inclusions.material=opticIce;
  const opticLiquid=optical(captures[1].texture,'liquid');mixLiquid.mesh.material=opticLiquid;serveLiquid.mesh.material=opticLiquid;
- const opticGlass=optical(captures[2].texture,'glass');glass.material=opticGlass;serveGlass.material=opticGlass;
+ // Use the same explicit optical passes for every glass/ice object. Mixing in
+ // viewport-transmission copies leaves stale shared framebuffer textures on resize.
+ const opticGlass=optical(captures[2].texture,'glass');glass.material=opticGlass;serveGlass.material=opticGlass;(bottle.material as T.Material).dispose();bottle.material=neck.material=opticGlass;
  const diagnostics:SceneDiagnostics={renderer:solver?'TypeGPU + Three WebGPU':'Simplified guided WebGL',adapter:adapter?.info?{vendor:adapter.info.vendor,architecture:adapter.info.architecture,device:adapter.info.device,description:adapter.info.description}:null,frames:0,frameTimes:[],width:0,height:0,gpuDispatches:0,gpuReads:0,gpuState:[],ice:[],responseAt:0,nativeLatency:[],resetId:model.resetId,errors};
  let lastNativeFrame=0;let last=0,accumulator=0,notifyTime=0,raf=0,resetId=-1,fallbackSwirl=0;let localValues=new Float32Array(16);const from=new T.Vector3(),to=new T.Vector3(),direction=new T.Vector3(),streamControl=new T.Vector3(),streamPoint=new T.Vector3(),streamNormal=new T.Vector3(),streamBinormal=new T.Vector3(),axisZ=new T.Vector3(0,0,1),localUp=new T.Vector3(),inverseRotation=new T.Quaternion(),lipOffset=new T.Vector3(),pourPosition=new T.Vector3(),iceBox=new T.Box3();let pourAngle=0,pourLift=0,cameraDistance=5.8,cameraTarget=1.08;let liquidPlane={height:0,slopeX:0,slopeZ:0};
  function level(q:Quantities,serving=false){return clamp(.15+total(q)/definition.capacity[serving?'serve':'mix']*1.03+(total(q)>.01?(serving?.22:.12):0),.15,1.52);}
- let nowTime=0;
+ let nowTime=0,renderFailed=false;
+ function failRender(info:unknown){
+  if(disposed||renderFailed)return;renderFailed=true;
+  const message=typeof info==='object'&&info!==null&&'message' in info?String(info.message):String(info);
+  errors.push(message);model.disarm();model.notify();cancelAnimationFrame(raf);
+  onStatus('Scene could not continue. Pouring is paused. Retry scene to recover.');
+ }
+ const reportRenderError=renderer.onError.bind(renderer);
+ renderer.onError=info=>{reportRenderError(info);failRender(info);};
  function liquid(data:ReturnType<typeof makeLiquid>,q:Quantities,serving:boolean,values:Float32Array){
   const volume=total(q);data.mesh.visible=volume>.00001;const h=level(q,serving),p=data.g.getAttribute('position');
   const strained=!serving&&model.stage==='strain';
@@ -103,7 +113,7 @@ export async function createStudioScene(canvas:HTMLCanvasElement,model:Preparati
    p.setY(i,clamp(intercept+slopeX*x+slopeZ*z+clamp(factor*(wave+vortex),-waveLimit,waveLimit),LIQUID_BOTTOM,LIQUID_RIM));}
   p.needsUpdate=true;data.g.computeVertexNormals();const fraction=volume>0?q.core/volume:1;data.mat.attenuationColor.setRGB(.95,.055+(1-fraction)*.20,.008+(1-fraction)*.055);data.mat.attenuationDistance=1.5;
  }
- function frame(now:number){if(disposed)return;nowTime=now;const rawElapsed=last?(now-last)/1000:0;const elapsed=Math.min(rawElapsed,.05);last=now;
+ function frame(now:number){if(disposed||renderFailed)return;nowTime=now;const rawElapsed=last?(now-last)/1000:0;const elapsed=Math.min(rawElapsed,.05);last=now;
   if(document.hidden){model.disarm();accumulator=0;raf=requestAnimationFrame(frame);return;}
   if(model.resetId!==resetId){resetId=model.resetId;solver?.reset();localValues.fill(0);fallbackSwirl=0;pourAngle=0;pourLift=0;cameraDistance=5.8;cameraTarget=1.08;azimuth=0;elevation=.33;zoom=1;iceBodies.forEach((b,i)=>{b.x=Math.cos(i*2.094)*.38;b.z=Math.sin(i*2.094)*.38;b.vx=b.vz=b.vy=0;b.y=model.preset==='stir-demo'?.7:2+i*.2;});diagnostics.resetId=resetId;}
   const straining=model.stage==='strain',follow=1-Math.exp(-elapsed/.075);pourAngle+=(strainAngle(straining?model.pourTilt:0,level(model.mix))-pourAngle)*follow;pourLift+=((straining?clamp(model.pourTilt/.2,0,1):0)-pourLift)*follow;
@@ -142,10 +152,13 @@ export async function createStudioScene(canvas:HTMLCanvasElement,model:Preparati
   cameraDistance+=((two?10.2:5.8)-cameraDistance)*(1-Math.exp(-elapsed/.18));cameraTarget+=((two?1.8:1.08)-cameraTarget)*(1-Math.exp(-elapsed/.18));const distance=cameraDistance/zoom;camera.position.set(Math.sin(azimuth)*distance,1+Math.sin(elevation)*distance,Math.cos(azimuth)*distance);camera.lookAt(0,cameraTarget,0);
   tint.value.copy(mixLiquid.mat.attenuationColor);if(isFinish||two)tint.value.copy(serveLiquid.mat.attenuationColor);
   audio?.update(model,localValues[4],contact);
-  const iceMeshes=[...iceBodies.map(b=>b.mesh),servingIce,inclusions];const fluidMeshes=[mixLiquid.mesh,serveLiquid.mesh];const glassMeshes=[glass,serveGlass];
+  const iceMeshes=[...iceBodies.map(b=>b.mesh),servingIce,inclusions];const fluidMeshes=[mixLiquid.mesh,serveLiquid.mesh];const glassMeshes=[glass,serveGlass,bottle,neck];
   const opticalMeshes=[...iceMeshes,...fluidMeshes,...glassMeshes];const visibility=opticalMeshes.map(m=>m.visible);opticalMeshes.forEach(m=>m.visible=false);
-  const targetWidth=Math.max(1,Math.round(width*renderer.getPixelRatio())),targetHeight=Math.max(1,Math.round(height*renderer.getPixelRatio()));
-  for(let layer=0;layer<3;layer++){if(captures[layer].width!==targetWidth||captures[layer].height!==targetHeight)captures[layer].setSize(targetWidth,targetHeight);renderer.setRenderTarget(captures[layer]);renderer.render(scene,camera);const group=layer===0?iceMeshes:layer===1?fluidMeshes:glassMeshes;group.forEach(m=>m.visible=visibility[opticalMeshes.indexOf(m)]);}
+  // Match Three's actual drawing buffer, which floors fractional device pixels.
+  // A one-pixel mismatch repeatedly resizes transmission textures between passes.
+  const targetWidth=Math.max(1,canvas.width),targetHeight=Math.max(1,canvas.height);
+  for(const capture of captures)if(capture.width!==targetWidth||capture.height!==targetHeight){capture.setSize(targetWidth,targetHeight);renderer.initRenderTarget(capture);}
+  for(let layer=0;layer<3;layer++){renderer.setRenderTarget(captures[layer]);renderer.render(scene,camera);const group=layer===0?iceMeshes:layer===1?fluidMeshes:glassMeshes;group.forEach(m=>m.visible=visibility[opticalMeshes.indexOf(m)]);}
   renderer.setRenderTarget(null);renderer.render(scene,camera);
   const mark=solver?.inputMark;if(mark&&mark.seq!==lastNativeFrame){lastNativeFrame=mark.seq;requestAnimationFrame(frameTime=>{if(disposed)return;diagnostics.nativeLatency.push({seq:mark.seq,sampleToFrame:performance.timeOrigin+frameTime-mark.sampleEpoch,receiptToFrame:frameTime-mark.receivedAt});if(diagnostics.nativeLatency.length>2000)diagnostics.nativeLatency.shift();});}
   diagnostics.frames++;diagnostics.width=canvas.width;diagnostics.height=canvas.height;if(elapsed>0){diagnostics.frameTimes.push(rawElapsed*1000);if(diagnostics.frameTimes.length>3600)diagnostics.frameTimes.shift();}diagnostics.gpuDispatches=solver?.dispatches??0;diagnostics.gpuReads=solver?.reads??0;diagnostics.gpuState=Array.from(localValues);diagnostics.ice=iceBodies.map(b=>[b.x,b.y,b.z]);diagnostics.responseAt=now;
@@ -155,7 +168,7 @@ export async function createStudioScene(canvas:HTMLCanvasElement,model:Preparati
  function remainingSource(){return model.sources[model.selected]/definition.ingredients[model.selected].initial;}
  raf=requestAnimationFrame(frame);
  const visibility=()=>{model.disarm();last=0;accumulator=0;};document.addEventListener('visibilitychange',visibility);window.addEventListener('blur',visibility);
- device?.lost.then(info=>{if(!disposed){errors.push(info.message);model.disarm();onStatus('Scene could not continue: graphics connection lost. Retry to recover.');}});
+ device?.lost.then(info=>failRender(info));
  return {diagnostics,orbit(dx:number,dy=0){azimuth+=dx;elevation=clamp(elevation+dy,.12,.9);},zoom(n:number){zoom=clamp(zoom+n,.7,1.4);},probe:()=>solver?.probe(),inspect(){return {mixingTilt:mixing.rotation.toArray(),mixingPosition:mixing.position.toArray(),strainerWorld:new T.Vector3().setFromMatrixPosition(strainer.matrixWorld).toArray(),stream:{visible:stream.visible,from:from.toArray(),to:to.toArray()},liquidPlane,renderedPourAngle:pourAngle,servingTilt:receiving.rotation.toArray(),camera:camera.position.toArray(),mixHeight:level(model.mix),serveHeight:level(model.serving,true),liquid:[mixLiquid,serveLiquid].map(d=>{const p=d.g.getAttribute('position');let low=Infinity,high=-Infinity,worldLow=Infinity,worldHigh=-Infinity;const point=new T.Vector3();for(let i=0;i<d.topCount;i++){const y=p.getY(i);low=Math.min(low,y);high=Math.max(high,y);if(y>LIQUID_BOTTOM+.002&&y<LIQUID_RIM-.002){point.fromBufferAttribute(p,i).applyMatrix4(d.mesh.matrixWorld);worldLow=Math.min(worldLow,point.y);worldHigh=Math.max(worldHigh,point.y);}}return {visible:d.mesh.visible,min:low,max:high,worldSurfaceSpan:Number.isFinite(worldLow)?worldHigh-worldLow:0};}),sourceFill:remainingSource(),iceRetained:iceBodies.filter(b=>b.mesh.visible).length};},
  dispose(){disposed=true;cancelAnimationFrame(raf);document.removeEventListener('visibilitychange',visibility);window.removeEventListener('blur',visibility);model.disarm();scene.traverse(o=>{if((o as T.Mesh).isMesh){const m=o as T.Mesh;m.geometry.dispose();for(const mat of Array.isArray(m.material)?m.material:[m.material])mat.dispose();}});captures.forEach(r=>r.dispose());env.dispose();stone.dispose();renderer.dispose();solver?.dispose();device?.destroy();}
  };
