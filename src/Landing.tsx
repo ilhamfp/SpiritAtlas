@@ -20,8 +20,10 @@ export default function Landing(){
   <main id="landing-content">
    <section className="sa-hero sa-hero-classic" aria-labelledby="hero-title">
     <Marble/>
+    <div className="sa-hero-content">
     <div className="sa-hero-copy"><h1 id="hero-title">Singapore’s<br/>cocktails.<br/><span>Inside out.</span></h1><a className="sa-action" href={atlasUrl}>Explore the atlas <ArrowUpRight size={20}/></a></div>
     <ClassicNegroni/>
+    </div>
     <div className="sa-hero-foot"><a href="#the-bars">Meet the three bars <ArrowRight size={15}/></a></div>
    </section>
    <section className="sa-bars sa-section" id="the-bars" aria-labelledby="bars-title">

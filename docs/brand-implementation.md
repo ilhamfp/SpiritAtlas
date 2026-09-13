@@ -35,3 +35,8 @@ The bar descriptions, drink identities and reference photographs use existing pr
 ## Limits
 
 The live renderer approximates the offline film's lighting. Ingredient motion is explanatory choreography, not a physical unmixing simulation. Timing and touch checks use desktop Chrome with mobile emulation; no physical low-end-phone GPU performance claim is made. Immutable Vercel metadata URLs remain protected; the public visitor alias above is verified without authentication.
+# Full-width hero composition refinement — 13 September 2026
+
+Applied frontend-skill to the user's follow-up about empty left background and cropped right-hand artwork. The smooth marble is now composed across the full hero, with a stable lower-contour dissolve and intentional portrait treatment. The glass's studio backdrop fades into the surrounding artwork; controls and text remain sharp. Strengthened the wordmark and tightened the phone layout while preserving the continuous player and concise copy.
+
+Build, seven focused existing checks, and eight final Chrome/WebKit visual checks pass. Desktop/tablet/390px phone controls fit in the first viewport; the short 320px phone scrolls naturally. Final local captures, findings and measurements: `docs/brand-evidence/hero-composition/`. Production integration/public verification follows through the current animation release owner. No studio or catalogue changes are included.
