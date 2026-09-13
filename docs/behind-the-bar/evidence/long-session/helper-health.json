@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-13T08:15:09.518Z",
+  "pairStatus": 200,
+  "pairExplainsEightHours": true,
+  "remainingHours": 7.99497,
+  "statusStatus": 200,
+  "expires": 1789316091411,
+  "samples": 3640,
+  "rejected": 0,
+  "readerAlive": true,
+  "age": 5.790415999999823,
+  "uid": 501,
+  "expiresSingapore": "14/09/2026, 12:14:51 am",
+  "processes": [
+    "18637 18627 /Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release/tools/mac-motion/.build/btb-motion-reader --seconds 28800"
+  ]
+}

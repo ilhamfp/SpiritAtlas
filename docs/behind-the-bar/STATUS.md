@@ -88,3 +88,7 @@ The owner subsequently observed continued quantity updates with frozen graphics.
 ## Retina rendering resolved
 
 The previously open destroyed-texture freeze is resolved in public 1b18a78. Actual screenshot pixels now change throughout native-protocol stirring/pour/pause/resume at the owner’s Retina dimensions, with zero ordinary GPU errors. A deliberately injected real GPU failure pauses quantities and offers working Retry while retaining the drink. Three focused public checks, all 32 routes/assets and independent in-app visible pour review pass. Evidence: evidence/strain-motion/. No new physical motion-onset measurement is claimed; the acceptance ledger remains 13/14.
+
+## Longer laptop pairing session
+
+The owner requested more time after the 20-minute local helper expired. Integrated public f059d18 now supports the helper’s 8-hour default and configurable 1–24-hour sessions across reader, transport, packet validation and tab persistence. Public pairing/reload/expiry and Retina animation/error-recovery checks pass, as do all 32 routes/assets. The real helper is alive with fresh samples and its matching 8-hour reader runtime. It remains explicitly armed per step and disarms on focus loss/stale samples. Original physical operation remains attributed to 9c0666c; no new physical-onset timing measurement is claimed.

@@ -1,0 +1,6 @@
+{
+  "at": "2026-09-13T08:16:00Z",
+  "outcome": "Not run: private Chrome CDP connection timed out before creating a tab or subscribing to native motion.",
+  "scope": "No user tab, arming, preparation or motion subscription changed. This is an automation connection failure, not evidence of an app pairing failure.",
+  "verifiedInstead": "Actual unprivileged reader health and eight-hour expiry; public app eight-hour protocol/persistence/expiry fixtures."
+}

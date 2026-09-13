@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-13T08:16:11.835Z",
+  "revision": "f059d180f2a21f256756788042d7eb6f090f0e38",
+  "deploymentId": "dpl_Ni1vDryZPWd2ch6pxzDY1LZyLV42",
+  "state": "READY",
+  "url": "https://spiritatlas-one.vercel.app",
+  "immutableUrl": "https://spiritatlas-44zv1gzq6-ilham-firdausi-putras-projects.vercel.app",
+  "entry": "/assets/index-B_DRQGY7.js",
+  "matchesBuiltEntry": true,
+  "publicChecks": 4,
+  "publicRoutesAssets": 32,
+  "defaultSessionHours": 8,
+  "configurableHours": [
+    1,
+    24
+  ],
+  "limits": "Public native-protocol motion pixel tests use synthetic input. Actual physical onset latency remains unmeasured."
+}
