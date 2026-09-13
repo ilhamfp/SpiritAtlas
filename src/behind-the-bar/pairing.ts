@@ -1,4 +1,6 @@
 // Keep an explicitly validated pairing in this tab, only until the helper's original expiry.
+// Match the local helper's configurable upper bound; sample freshness stays 250 ms.
+export const MAX_MOTION_SESSION_MS=24*60*60_000;
 const STORAGE_KEY = 'spiritatlas.motion-pairing.v1';
 type Pairing = {v:1;token:string;expires:number};
 
@@ -10,13 +12,13 @@ export function clearPairing(token?:string){
 export function readPairing():Pairing|null{
  try{
   const saved=JSON.parse(sessionStorage.getItem(STORAGE_KEY)||'null') as Pairing|null;
-  if(saved?.v===1&&/^[A-Za-z0-9_-]{43}$/.test(saved.token)&&Number.isFinite(saved.expires)&&saved.expires>Date.now()&&saved.expires<=Date.now()+21*60_000)return saved;
+  if(saved?.v===1&&/^[A-Za-z0-9_-]{43}$/.test(saved.token)&&Number.isFinite(saved.expires)&&saved.expires>Date.now()&&saved.expires<=Date.now()+MAX_MOTION_SESSION_MS)return saved;
  }catch{/* Missing or unavailable storage is an unpaired session. */}
  clearPairing();return null;
 }
 
 export function savePairing(token:string,expires:number){
- if(!/^[A-Za-z0-9_-]{43}$/.test(token)||!Number.isFinite(expires)||expires<=Date.now()||expires>Date.now()+21*60_000)return;
+ if(!/^[A-Za-z0-9_-]{43}$/.test(token)||!Number.isFinite(expires)||expires<=Date.now()||expires>Date.now()+MAX_MOTION_SESSION_MS)return;
  try{sessionStorage.setItem(STORAGE_KEY,JSON.stringify({v:1,token,expires}));}catch{/* Pairing still works for this page. */}
 }
 

@@ -1,0 +1,231 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/btb.config.ts",
+      "tests/btb-retina-render.spec.ts",
+      "tests/btb-strain.spec.ts",
+      "--grep",
+      "Retina native|real WebGPU validation|straining clears"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release/tests/btb.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release/docs/behind-the-bar/evidence/test-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/btb-*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release/docs/behind-the-bar/evidence/test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "btb-retina-render.spec.ts",
+      "file": "btb-retina-render.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Retina native stirring and straining change visible pixels through pause, resize and resume",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 23660,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.36912570973987663\u001b[39m\nReceived:   \u001b[31m0.3441257097398766\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.36912570973987663\u001b[39m\nReceived:   \u001b[31m0.3441257097398766\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release/tests/btb-retina-render.spec.ts:52:98",
+                    "location": {
+                      "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release/tests/btb-retina-render.spec.ts",
+                      "column": 98,
+                      "line": 52
+                    },
+                    "snippet": "  50 |  for(const width of [1513,1440,390,1512]){await page.setViewportSize({width,height:806});await page.waitForTimeout(300);expect(errors,`Rendering after viewport width ${width}`).toEqual([]);}\n  51 |  expect(await page.evaluate(()=>window.__btb!.model.serving)).toEqual(paused.serving);\n> 52 |  await tilt(page,.24);await expect.poll(()=>page.evaluate(()=>window.__btb!.model.serving.core)).toBeGreaterThan(paused.serving.core+.025);\n     |                                                                                                  ^\n  53 |  expect(await page.evaluate(()=>window.__btb!.scene!.inspect().stream.visible)).toBe(true);await capture(page,'strain-resumed');\n  54 |  await page.locator('.btb-live-motion').getByRole('button',{name:'Disarm',exact:true}).click();\n  55 |  expect(errors).toEqual([]);expect(await page.evaluate(()=>window.__btb!.scene!.diagnostics.errors)).toEqual([]);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release/tests/btb-retina-render.spec.ts",
+                        "column": 98,
+                        "line": 52
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.36912570973987663\u001b[39m\nReceived:   \u001b[31m0.3441257097398766\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  50 |  for(const width of [1513,1440,390,1512]){await page.setViewportSize({width,height:806});await page.waitForTimeout(300);expect(errors,`Rendering after viewport width ${width}`).toEqual([]);}\n  51 |  expect(await page.evaluate(()=>window.__btb!.model.serving)).toEqual(paused.serving);\n> 52 |  await tilt(page,.24);await expect.poll(()=>page.evaluate(()=>window.__btb!.model.serving.core)).toBeGreaterThan(paused.serving.core+.025);\n     |                                                                                                  ^\n  53 |  expect(await page.evaluate(()=>window.__btb!.scene!.inspect().stream.visible)).toBe(true);await capture(page,'strain-resumed');\n  54 |  await page.locator('.btb-live-motion').getByRole('button',{name:'Disarm',exact:true}).click();\n  55 |  expect(errors).toEqual([]);expect(await page.evaluate(()=>window.__btb!.scene!.diagnostics.errors)).toEqual([]);\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release/tests/btb-retina-render.spec.ts:52:98"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T08:07:20.176Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release/docs/behind-the-bar/evidence/test-artifacts/btb-retina-render-Retina-n-2915d-ugh-pause-resize-and-resume/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release/tests/btb-retina-render.spec.ts",
+                    "column": 98,
+                    "line": 52
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b65c42de66716d9d4e74-a66e0ca0760f22491489",
+          "file": "btb-retina-render.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "a real WebGPU validation error pauses accounting and retry preserves the drink",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10173,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T08:07:45.869Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b65c42de66716d9d4e74-73bb5d1df4cc2b999811",
+          "file": "btb-retina-render.spec.ts",
+          "line": 59,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "btb-strain.spec.ts",
+      "file": "btb-strain.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "straining clears the receiving ice, keeps liquid level, and pauses without losing the partial serving",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13041,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T08:07:56.935Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4a54cf6ae3ebe0c2ae7b-cdc65325604f60f50b99",
+          "file": "btb-strain.spec.ts",
+          "line": 14,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T08:07:19.731Z",
+    "duration": 50791.852999999996,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

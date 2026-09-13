@@ -1,0 +1,23 @@
+{
+  "revision": "1b18a78c5b6605dce5133a87b82fe5fb1fb591f6",
+  "deploymentId": "dpl_HwAn1sia5YrAmgV6sVdgLKLcFPoK",
+  "url": "https://spiritatlas-one.vercel.app",
+  "immutableUrl": "https://spiritatlas-iqmue7tew-ilham-firdausi-putras-projects.vercel.app",
+  "state": "READY",
+  "entry": "/assets/index-C6lCyDjS.js",
+  "publicChecks": {
+    "retinaVisibleNativeProtocolMotion": "passed after explicit rearming following viewport resize",
+    "gpuValidationErrorRecovery": "passed",
+    "strainPauseDrainReset": "passed",
+    "routesAssets": 32
+  },
+  "independentReview": {
+    "task": "01a098ee-7e22-79e2-b78c-772904e83ecb",
+    "browser": "fresh in-app browser",
+    "cssCanvas": "745x570",
+    "drawingBuffer": "1117x855",
+    "observed": "visible vessel tilt and continuous stream, full transfer to0%mix/93%serving",
+    "consoleErrors": 0
+  },
+  "limits": "Motion fixtures are synthetic; physical owner-operated acceptance remains attributed to9c0666c. Independent physical-onset timing remains unmeasured."
+}

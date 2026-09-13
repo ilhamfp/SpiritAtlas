@@ -45,11 +45,14 @@ test('Retina native stirring and straining change visible pixels through pause, 
  await page.waitForTimeout(700);const flowChange=await changedPixels(page,flow,await capture(page,'strain-flow-later'));expect(flowChange).toBeGreaterThan(.001);
  await tilt(page,0);await expect.poll(()=>page.evaluate(()=>({tilt:window.__btb!.model.pourTilt,transit:window.__btb!.model.transit.length})),{timeout:10000}).toEqual({tilt:0,transit:0});
  await page.waitForTimeout(750);const pauseChange=await changedPixels(page,flow,await capture(page,'strain-paused'));expect(pauseChange).toBeGreaterThan(.02);
- const paused=await page.evaluate(()=>window.__btb!.model.snapshot());expect(await page.evaluate(()=>window.__btb!.scene!.inspect().stream.visible)).toBe(false);
- // Cross odd/even pixel widths and the mobile breakpoint without recreating the scene.
- for(const width of [1513,1440,390,1512]){await page.setViewportSize({width,height:806});await page.waitForTimeout(300);expect(errors,`Rendering after viewport width ${width}`).toEqual([]);}
- expect(await page.evaluate(()=>window.__btb!.model.serving)).toEqual(paused.serving);
- await tilt(page,.24);await expect.poll(()=>page.evaluate(()=>window.__btb!.model.serving.core)).toBeGreaterThan(paused.serving.core+.025);
+  const paused=await page.evaluate(()=>window.__btb!.model.snapshot());expect(await page.evaluate(()=>window.__btb!.scene!.inspect().stream.visible)).toBe(false);
+  // Cross odd/even pixel widths and the mobile breakpoint without recreating the scene.
+  const disarm=page.locator('.btb-live-motion').getByRole('button',{name:'Disarm',exact:true});if(await disarm.count())await disarm.click();
+  for(const width of [1513,1440,390,1512]){await page.setViewportSize({width,height:806});await page.waitForTimeout(300);expect(errors,`Rendering after viewport width ${width}`).toEqual([]);}
+  expect(await page.evaluate(()=>window.__btb!.model.serving)).toEqual(paused.serving);
+  // Resizing can stall delivery and must never imply that stale motion silently rearms.
+  await page.locator('.btb-live-motion').getByRole('button',{name:'Arm pour',exact:true}).click();
+  await tilt(page,.24);await expect.poll(()=>page.evaluate(()=>window.__btb!.model.serving.core)).toBeGreaterThan(paused.serving.core+.025);
  expect(await page.evaluate(()=>window.__btb!.scene!.inspect().stream.visible)).toBe(true);await capture(page,'strain-resumed');
  await page.locator('.btb-live-motion').getByRole('button',{name:'Disarm',exact:true}).click();
  expect(errors).toEqual([]);expect(await page.evaluate(()=>window.__btb!.scene!.diagnostics.errors)).toEqual([]);

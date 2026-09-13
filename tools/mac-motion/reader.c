@@ -5,6 +5,7 @@
 #include <IOKit/IOKitLib.h>
 #include <IOKit/hid/IOHIDDevice.h>
 #include <mach/mach_time.h>
+#include <math.h>
 #include <signal.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -30,7 +31,7 @@ static void report(void *ctx, IOReturn result, void *sender, IOHIDReportType typ
 int main(int argc,char **argv){
  int presence=argc==2&&!strcmp(argv[1],"--presence");
  double seconds=30;if(argc==3&&!strcmp(argv[1],"--seconds"))seconds=strtod(argv[2],NULL);
- if(seconds<1||seconds>7200)return 2;
+ if(!isfinite(seconds)||seconds<1||seconds>86400)return 2;
  signal(SIGINT,stop);signal(SIGTERM,stop);signal(SIGPIPE,stop);
  mach_timebase_info_data_t tb;mach_timebase_info(&tb);time_scale=(double)tb.numer/tb.denom*1e-9;
  io_iterator_t it;io_service_t svc;int found=0,opened=0;IOHIDDeviceRef devices[2]={0};static uint8_t buffers[2][4096];

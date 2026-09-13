@@ -138,3 +138,12 @@ test('a late unauthorized response from an old request cannot invalidate the cur
  expect(invalidated).toBe(0);expect(transport.aborted).toBe(false);expect(motion.fresh).toBe(true);expect(motion.session).toBe('b'.repeat(32));expect(motion.status).toBe('Live native samples · recenter to calibrate');
  transport.close();await pending;
 });
+
+
+test('long-session reports accept eight hours and reject expired or more than twenty-four hours',()=>{
+ const valid={...packet(1),expires:Date.now()+8*60*60_000};
+ expect(motion.accept({...valid,expires:Date.now()+25*60*60_000})).toBe(false);
+ expect(motion.accept({...valid,expires:Date.now()-1})).toBe(false);
+ expect(motion.accept(valid)).toBe(true);expect(motion.fresh).toBe(true);
+ expect(motion.expires).toBe(valid.expires);expect(motion.model.armed).toBeNull();
+});

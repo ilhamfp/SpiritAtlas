@@ -84,3 +84,7 @@ The owner separately reported that motion did not work when opening the bare stu
 Application a629de01a4d8baa2161ec793b0617f1ffacbac0c is public as READY dpl_5vfTyjcwzMdu8AgWQB936KovEeSA. Same-tab pairing restoration, explicit stage-specific laptop actions, and guided initial 1:1:1 pours pass 53 local checks, 13 public browser checks, and 32 public route/asset checks. Evidence and exact scope: `evidence/motion-recovery/README.md`.
 
 The owner subsequently observed continued quantity updates with frozen graphics. The actual Chrome console shows destroyed WebGPU render-target textures at fractional dimensions. This is an open renderer issue, distinct from the verified pairing/quantity changes. The Behind the Bar task takes sole next production ownership to fix it, preserving this release.
+
+## Retina rendering resolved
+
+The previously open destroyed-texture freeze is resolved in public 1b18a78. Actual screenshot pixels now change throughout native-protocol stirring/pour/pause/resume at the owner’s Retina dimensions, with zero ordinary GPU errors. A deliberately injected real GPU failure pauses quantities and offers working Retry while retaining the drink. Three focused public checks, all 32 routes/assets and independent in-app visible pour review pass. Evidence: evidence/strain-motion/. No new physical motion-onset measurement is claimed; the acceptance ledger remains 13/14.

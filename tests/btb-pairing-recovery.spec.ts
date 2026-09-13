@@ -60,8 +60,8 @@ async function expectUnpairedReload(page:Page){
  expect(await page.evaluate(()=>({native:!!window.__btbNative,requests:(window as any).__pairingFixture.requests}))).toEqual({native:false,requests:[]});
 }
 
-test('reload restores explicitly validated pairing with its original expiry, disarmed and uncalibrated',async({page})=>{
- const expires=await mockMotion(page);
+test('reload restores an eight-hour pairing with its original expiry, disarmed and uncalibrated',async({page})=>{
+ const expires=await mockMotion(page,{expires:Date.now()+8*60*60_000});
  await page.goto(`/behind-the-bar?preset=stir-demo#motion=${FIRST_KEY}`);await connected(page);
  expect(new URL(page.url()).hash).toBe('');
  expect(await storedPairing(page)).toEqual({v:1,token:FIRST_KEY,expires});
@@ -73,8 +73,8 @@ test('reload restores explicitly validated pairing with its original expiry, dis
  await expect(page.getByRole('button',{name:'Arm spoon stirring',exact:true})).toBeDisabled();
 });
 
-test('expired validated pairing is not restored after a tab reload',async({page})=>{
- const expires=await mockMotion(page);
+test('expired eight-hour pairing is not restored after a tab reload',async({page})=>{
+ const expires=await mockMotion(page,{expires:Date.now()+8*60*60_000});
  await page.goto(`/behind-the-bar?preset=stir-demo#motion=${FIRST_KEY}`);await connected(page);await armStirring(page);
  // Advance only this test page's wall clock; no native process or system clock is touched.
  await page.clock.setSystemTime(expires+1);
