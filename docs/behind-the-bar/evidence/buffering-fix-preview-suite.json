@@ -1,0 +1,811 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb-release/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/btb.config.ts"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb-release/tests/btb.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb-release/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb-release/docs/behind-the-bar/evidence/test-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb-release/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/btb-*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb-release/docs/behind-the-bar/evidence/test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "btb-browser.spec.ts",
+      "file": "btb-browser.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "GPU responds to held input, reversal, release and reset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8031,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:33:49.444Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2226983cbb9351b531c4-aa24d6617216627bb9cd",
+          "file": "btb-browser.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "complete three-vessel preparation, personal garnish and comparison preserve the result",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9221,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:33:57.890Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2226983cbb9351b531c4-a75214d5f34783c1f18c",
+          "file": "btb-browser.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "mobile and tablet layouts retain readable controls, direct preview and no overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3700,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:07.120Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2226983cbb9351b531c4-0f46f13931157e1bea98",
+          "file": "btb-browser.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "native boundary rejects wrong session/order/invalid values and disarms on stale/reset/takeover",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1389,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:10.828Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2226983cbb9351b531c4-191ecb369e0d1c959e85",
+          "file": "btb-browser.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "a stationary held pointer stops adding energy and readiness",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4191,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:12.225Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2226983cbb9351b531c4-d10b5c277e350d28747a",
+          "file": "btb-browser.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "keyboard focus leaving a held stir control releases applied force",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1187,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:16.424Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2226983cbb9351b531c4-338f6a1c71317b3b1286",
+          "file": "btb-browser.spec.ts",
+          "line": 11,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "btb-choices.spec.ts",
+      "file": "btb-choices.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "two keyboard preparations retain distinct quantities and garnish through service",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9503,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:17.626Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9744c59cb2565c0a3e3a-8525146c2824512e7d9c",
+          "file": "btb-choices.spec.ts",
+          "line": 2,
+          "column": 1
+        },
+        {
+          "title": "touch-compatible journey and reduced motion remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4796,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:27.138Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9744c59cb2565c0a3e3a-54013cfa28ea764bdaba",
+          "file": "btb-choices.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "unsupported WebGPU uses the complete guided state and an honest label",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2126,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:31.947Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9744c59cb2565c0a3e3a-45aab4437a2ba1a4e109",
+          "file": "btb-choices.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "btb-model.spec.ts",
+      "file": "btb-model.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "three sources, pause/resume, partial strain, omitted modifier and saved result",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:34.088Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c9d7f7a8868831ec5659-9cde09d3c7921745ed77",
+          "file": "btb-model.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "exhaustion, capacity and transit never lose or create components",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:34.100Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c9d7f7a8868831ec5659-54f486e8dd48fe1922c9",
+          "file": "btb-model.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "demo uses legal accounting, reset clears input without normalizing user results",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:34.116Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c9d7f7a8868831ec5659-c62755b8288853800c93",
+          "file": "btb-model.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "idle or impulse does not earn readiness; early straining is legal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:34.124Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c9d7f7a8868831ec5659-87d308b39cfd7b634f16",
+          "file": "btb-model.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "invalid values and invalid stage intents do not contaminate state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:34.130Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c9d7f7a8868831ec5659-d61731f3e5edd4a49734",
+          "file": "btb-model.spec.ts",
+          "line": 10,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "btb-native-stream.spec.ts",
+      "file": "btb-native-stream.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "coalesced native reports larger than 16 KB and a split final line remain connected",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:34.143Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0b837ca2dce653dd017f-8a5ad6e6ee1523f94231",
+          "file": "btb-native-stream.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "buffered stale reports cannot rearm when fresh reports resume in a large chunk",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 354,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:34.153Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0b837ca2dce653dd017f-6fc2ef76c10c4d27176b",
+          "file": "btb-native-stream.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "an oversized unterminated record closes the transport and disarms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:34.514Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0b837ca2dce653dd017f-5cd61518bbac9ef50db9",
+          "file": "btb-native-stream.spec.ts",
+          "line": 42,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "btb-reliability.spec.ts",
+      "file": "btb-reliability.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "sustained tilt, impulse release and reset remain bounded and settle",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8294,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:34.524Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "bounded-tilt-reset",
+                      "contentType": "application/json",
+                      "body": "ewogICJ0aWx0IjogewogICAgImdwdSI6IFsKICAgICAgLTAuMjE2NTQ3MTkxMTQzMDM1OSwKICAgICAgLTAuMTQxNzIxOTA0Mjc3ODAxNSwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMi4yNTgzMzUxMTM1MjUzOTA2LAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAyNzEsCiAgICAgIDAuOTAxMzU0MjUzMjkyMDgzNywKICAgICAgMCwKICAgICAgMCwKICAgICAgMAogICAgXSwKICAgICJzY2VuZSI6IHsKICAgICAgIm1peGluZ1RpbHQiOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAuMiwKICAgICAgICAiWFlaIgogICAgICBdLAogICAgICAic2VydmluZ1RpbHQiOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgIlhZWiIKICAgICAgXSwKICAgICAgImNhbWVyYSI6IFsKICAgICAgICAwLAogICAgICAgIDIuODc5NDQ5NTY0NjkwMjM2NSwKICAgICAgICA1LjgKICAgICAgXSwKICAgICAgIm1peEhlaWdodCI6IDEuMTAyOTU2NTIxNzM5MTMwNiwKICAgICAgInNlcnZlSGVpZ2h0IjogMC4xNSwKICAgICAgImxpcXVpZCI6IFsKICAgICAgICB7CiAgICAgICAgICAidmlzaWJsZSI6IHRydWUsCiAgICAgICAgICAibWluIjogMC45MjI5NTY1MjYyNzk0NDk1LAogICAgICAgICAgIm1heCI6IDEuMjgyOTU2NDgwOTc5OTE5NAogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInZpc2libGUiOiBmYWxzZSwKICAgICAgICAgICJtaW4iOiAwLjE0Nzc1MDAwNTEyNTk5OTQ1LAogICAgICAgICAgIm1heCI6IDAuMTUyMjUwMDA2Nzk0OTI5NQogICAgICAgIH0KICAgICAgXSwKICAgICAgInNvdXJjZUZpbGwiOiAwLjM1LAogICAgICAiaWNlUmV0YWluZWQiOiAzCiAgICB9LAogICAgImljZSI6IFsKICAgICAgWwogICAgICAgIDAuMDc1MDMyNjkzNDE4NjI4MjUsCiAgICAgICAgMC45MjMwNDUwNTk0MTYzNzY5LAogICAgICAgIDAKICAgICAgXSwKICAgICAgWwogICAgICAgIC0wLjQ2NjIyNTgwMjY2OTU3MzI1LAogICAgICAgIDAuOTIzMDQ1MDU5NDE2Mzc2OSwKICAgICAgICAwLjMwODQ5NjM4MDk3NzAzNDYKICAgICAgXSwKICAgICAgWwogICAgICAgIC0wLjQ2NjQzNjk4MDg4NzMxNzA1LAogICAgICAgIDAuOTIzMDQ1MDU5NDE2Mzc2OSwKICAgICAgICAtMC4zMDgxNzM5MDY3NDUyNzM3MwogICAgICBdCiAgICBdCiAgfSwKICAicmVzZXQiOiB7CiAgICAiZ3B1IjogWwogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLjE4MzMzMzM4MjAxMDQ1OTksCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDIyLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwCiAgICBdLAogICAgInNjZW5lIjogewogICAgICAibWl4aW5nVGlsdCI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAiWFlaIgogICAgICBdLAogICAgICAic2VydmluZ1RpbHQiOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgIlhZWiIKICAgICAgXSwKICAgICAgImNhbWVyYSI6IFsKICAgICAgICAwLAogICAgICAgIDIuODc5NDQ5NTY0NjkwMjM2NSwKICAgICAgICA1LjgKICAgICAgXSwKICAgICAgIm1peEhlaWdodCI6IDEuMTAyOTU2NTIxNzM5MTMwNiwKICAgICAgInNlcnZlSGVpZ2h0IjogMC4xNSwKICAgICAgImxpcXVpZCI6IFsKICAgICAgICB7CiAgICAgICAgICAidmlzaWJsZSI6IHRydWUsCiAgICAgICAgICAibWluIjogMS4xMDI5NTY1MzM0MzIwMDY4LAogICAgICAgICAgIm1heCI6IDEuMTAyOTU2NTMzNDMyMDA2OAogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInZpc2libGUiOiBmYWxzZSwKICAgICAgICAgICJtaW4iOiAwLjE1MDAwMDAwNTk2MDQ2NDQ4LAogICAgICAgICAgIm1heCI6IDAuMTUwMDAwMDA1OTYwNDY0NDgKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJzb3VyY2VGaWxsIjogMC4zNSwKICAgICAgImljZVJldGFpbmVkIjogMwogICAgfSwKICAgICJzdGF0ZSI6IHsKICAgICAgInN0YWdlIjogInN0aXIiLAogICAgICAicHJlc2V0IjogInN0aXItZGVtbyIsCiAgICAgICJvcmlnaW4iOiAiZGVtbyIsCiAgICAgICJzb3VyY2VzIjogewogICAgICAgICJjb3JlIjogMC4zNSwKICAgICAgICAiYW5jaG8iOiAwLjIyMDAwMDAwMDAwMDAwMDAzLAogICAgICAgICJyaWNlIjogMC4xOTk5OTk5OTk5OTk5OTk5OAogICAgICB9LAogICAgICAibWl4IjogewogICAgICAgICJjb3JlIjogMC42NSwKICAgICAgICAiYW5jaG8iOiAwLjE4LAogICAgICAgICJyaWNlIjogMC4xCiAgICAgIH0sCiAgICAgICJzZXJ2aW5nIjogewogICAgICAgICJjb3JlIjogMCwKICAgICAgICAiYW5jaG8iOiAwLAogICAgICAgICJyaWNlIjogMAogICAgICB9LAogICAgICAidHJhbnNpdCI6IFtdLAogICAgICAiaWNlIjogMywKICAgICAgInNlcnZpbmdJY2UiOiBmYWxzZSwKICAgICAgImdhcm5pc2giOiB7CiAgICAgICAgIngiOiAwLAogICAgICAgICJ6IjogMCwKICAgICAgICAiYW5nbGUiOiAwLAogICAgICAgICJwbGFjZWQiOiBmYWxzZQogICAgICB9LAogICAgICAib2lsIjogZmFsc2UsCiAgICAgICJyZXN1bHQiOiBudWxsLAogICAgICAiZWZmZWN0aXZlU3RpciI6IDAsCiAgICAgICJhcm1lZCI6IG51bGwsCiAgICAgICJvd25lciI6ICJsb2NhbCIsCiAgICAgICJwb3VyVGlsdCI6IDAsCiAgICAgICJjb25zZXJ2YXRpb24iOiB7CiAgICAgICAgImNvcmUiOiAwLAogICAgICAgICJhbmNobyI6IDAsCiAgICAgICAgInJpY2UiOiAwCiAgICAgIH0sCiAgICAgICJyZXNldElkIjogMgogICAgfQogIH0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f02bb2f7cd984c843052-bf827c27f984f368baa7",
+          "file": "btb-reliability.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "asset failure supports retry without replacing the preparation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1435,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:42.825Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f02bb2f7cd984c843052-fd9ec94c440cc2a2491b",
+          "file": "btb-reliability.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "baseline transfer uses the live serving geometry and preserves demo origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10225,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:34:44.267Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "baseline-state",
+                      "contentType": "application/json",
+                      "body": "ewogICJtb2RlbCI6IHsKICAgICJzdGFnZSI6ICJzZXJ2ZSIsCiAgICAicHJlc2V0IjogInN0aXItZGVtbyIsCiAgICAib3JpZ2luIjogImRlbW8iLAogICAgInNvdXJjZXMiOiB7CiAgICAgICJjb3JlIjogMC4zNSwKICAgICAgImFuY2hvIjogMC4yMjAwMDAwMDAwMDAwMDAwMywKICAgICAgInJpY2UiOiAwLjE5OTk5OTk5OTk5OTk5OTk4CiAgICB9LAogICAgIm1peCI6IHsKICAgICAgImNvcmUiOiAwLAogICAgICAiYW5jaG8iOiAwLAogICAgICAicmljZSI6IDAKICAgIH0sCiAgICAic2VydmluZyI6IHsKICAgICAgImNvcmUiOiAwLjY0OTk5OTk5OTk5OTk5OTcsCiAgICAgICJhbmNobyI6IDAuMTgwMDAwMDAwMDAwMDAwMTMsCiAgICAgICJyaWNlIjogMC4wOTk5OTk5OTk5OTk5OTcKICAgIH0sCiAgICAidHJhbnNpdCI6IFtdLAogICAgImljZSI6IDMsCiAgICAic2VydmluZ0ljZSI6IHRydWUsCiAgICAiZ2FybmlzaCI6IHsKICAgICAgIngiOiAwLAogICAgICAieiI6IDAsCiAgICAgICJhbmdsZSI6IDAsCiAgICAgICJwbGFjZWQiOiB0cnVlCiAgICB9LAogICAgIm9pbCI6IHRydWUsCiAgICAicmVzdWx0IjogewogICAgICAiY29tcG9uZW50cyI6IHsKICAgICAgICAiY29yZSI6IDAuNjQ5OTk5OTk5OTk5OTk5NywKICAgICAgICAiYW5jaG8iOiAwLjE4MDAwMDAwMDAwMDAwMDEzLAogICAgICAgICJyaWNlIjogMC4wOTk5OTk5OTk5OTk5OTcKICAgICAgfSwKICAgICAgInZvbHVtZSI6IDAuOTI5OTk5OTk5OTk5OTk2OCwKICAgICAgImdhcm5pc2giOiB7CiAgICAgICAgIngiOiAwLAogICAgICAgICJ6IjogMCwKICAgICAgICAiYW5nbGUiOiAwLAogICAgICAgICJwbGFjZWQiOiB0cnVlCiAgICAgIH0sCiAgICAgICJvaWwiOiB0cnVlLAogICAgICAib3JpZ2luIjogImRlbW8iLAogICAgICAic3RpclNlY29uZHMiOiAwCiAgICB9LAogICAgImVmZmVjdGl2ZVN0aXIiOiAwLAogICAgImFybWVkIjogbnVsbCwKICAgICJvd25lciI6ICJsb2NhbCIsCiAgICAicG91clRpbHQiOiAwLAogICAgImNvbnNlcnZhdGlvbiI6IHsKICAgICAgImNvcmUiOiAtMy4zMzA2NjkwNzM4NzU0Njk2ZS0xNiwKICAgICAgImFuY2hvIjogMS4xMTAyMjMwMjQ2MjUxNTY1ZS0xNiwKICAgICAgInJpY2UiOiAtMi45OTc2MDIxNjY0ODc5MjI3ZS0xNQogICAgfSwKICAgICJyZXNldElkIjogMQogIH0sCiAgImdlb21ldHJ5IjogewogICAgIm1peGluZ1RpbHQiOiBbCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgICJYWVoiCiAgICBdLAogICAgInNlcnZpbmdUaWx0IjogWwogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAiWFlaIgogICAgXSwKICAgICJjYW1lcmEiOiBbCiAgICAgIDAsCiAgICAgIDIuODc5NDQ5NTY0NjkwMjM2NSwKICAgICAgNS44CiAgICBdLAogICAgIm1peEhlaWdodCI6IDAuMTUsCiAgICAic2VydmVIZWlnaHQiOiAxLjMyNzg5OTk5OTk5OTk5NjcsCiAgICAibGlxdWlkIjogWwogICAgICB7CiAgICAgICAgInZpc2libGUiOiBmYWxzZSwKICAgICAgICAibWluIjogMC4xNDc3NTAwMDUxMjU5OTk0NSwKICAgICAgICAibWF4IjogMC4xNTIyNTAwMDY3OTQ5Mjk1CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidmlzaWJsZSI6IHRydWUsCiAgICAgICAgIm1pbiI6IDEuMzE5NzgzMjEwNzU0Mzk0NSwKICAgICAgICAibWF4IjogMS4zMzYwMTY3NzQxNzc1NTEzCiAgICAgIH0KICAgIF0sCiAgICAic291cmNlRmlsbCI6IDAuMzUsCiAgICAiaWNlUmV0YWluZWQiOiAzCiAgfQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f02bb2f7cd984c843052-b394e9e1584f3bc9a3ff",
+          "file": "btb-reliability.spec.ts",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T06:33:48.970Z",
+    "duration": 65881.758,
+    "expected": 20,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "publicUrl": "https://spiritatlas-one.vercel.app",
+  "applicationCommit": "058149b684dd22d404cd0665c52196fd438c3648",
+  "featureCommit": "f9cef66bae8c0efd66ce12bb87ba71d563d3bf6e",
+  "deploymentId": "dpl_4uKgScSzwN8PVnwb92GWZWqPufND",
+  "deploymentUrl": "https://spiritatlas-jwwss6is2-ilham-firdausi-putras-projects.vercel.app",
+  "verifiedAt": "2026-09-13T06:40:05.772906+00:00",
+  "stats": {
+    "startTime": "2026-09-13T06:38:37.811Z",
+    "duration": 63851.347,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

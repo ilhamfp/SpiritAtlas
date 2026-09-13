@@ -1,0 +1,60 @@
+{
+  "at": "2026-09-13T06:27:21.019Z",
+  "origin": "https://spiritatlas-one.vercel.app",
+  "actualNativeStream": true,
+  "checks": [
+    {
+      "check": "actual reader paused; stale disarm",
+      "pass": true,
+      "state": {
+        "status": "Sensor stream stale. Motion disarmed.",
+        "connected": true,
+        "calibrated": true,
+        "received": 87,
+        "rejected": 0,
+        "age": 593.2000000011176,
+        "pitch": 0.0134230279966276,
+        "roll": -0.010111629853288116,
+        "neutral": [
+          0.013234731585870718,
+          -0.01024250617929093
+        ],
+        "linear": [
+          0,
+          0,
+          0
+        ],
+        "gravity": [
+          0.010021721666666665,
+          0.01294861666666667,
+          -0.9783243850000001
+        ],
+        "gyroBias": [
+          -0.04170735833333332,
+          0.025431316666666665,
+          0.10884603833333333
+        ],
+        "armed": null,
+        "receiptToApply": [
+          0.09999999962747097
+        ]
+      }
+    },
+    {
+      "check": "actual stream resumes without rearming",
+      "pass": true
+    },
+    {
+      "check": "actual browser focus loss disarms",
+      "pass": true
+    },
+    {
+      "check": "neutral actual sensor does not pour; source selection disarms",
+      "pass": true
+    },
+    {
+      "check": "helper restart; new real session requires calibration and never rearms",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "at": "2026-09-13T06:38:23.848Z",
+  "origin": "https://spiritatlas-one.vercel.app",
+  "actualNativeStream": true,
+  "checks": [
+    {
+      "check": "actual reader paused; stale disarm",
+      "pass": true,
+      "state": {
+        "status": "Sensor stream stale. Motion disarmed.",
+        "connected": true,
+        "calibrated": true,
+        "received": 170,
+        "rejected": 0,
+        "age": 598.8999999985099,
+        "pitch": 0.014352398119972132,
+        "roll": -0.008866313269756853,
+        "neutral": [
+          0.014760432460353513,
+          -0.008996203076168196
+        ],
+        "linear": [
+          0,
+          0,
+          0.02398717105711726
+        ],
+        "gravity": [
+          0.00881551,
+          0.014463046666666673,
+          -0.9797813400000003
+        ],
+        "gyroBias": [
+          0.033569335,
+          -0.008138020000000008,
+          0.10070801499999996
+        ],
+        "armed": null,
+        "receiptToApply": [
+          0.19999999925494194
+        ]
+      }
+    },
+    {
+      "check": "actual stream resumes without rearming",
+      "pass": true
+    },
+    {
+      "check": "actual browser focus loss disarms",
+      "pass": true
+    },
+    {
+      "check": "2500 ms page stall coalesces real reports; fresh stream recovers without rearming",
+      "pass": true,
+      "state": {
+        "status": "Live native samples · calibrated",
+        "connected": true,
+        "calibrated": true,
+        "received": 222,
+        "rejected": 137,
+        "age": 5.099999999627471,
+        "pitch": 0.015420921038313924,
+        "roll": -0.004924403087938765,
+        "neutral": [
+          0.014760432460353513,
+          -0.008996203076168196
+        ],
+        "linear": [
+          0.018079648475947556,
+          0.000002689607864687582,
+          0.00999423983371394
+        ],
+        "gravity": [
+          0.0027466,
+          0.0158386,
+          -0.9827728
+        ],
+        "gyroBias": [
+          0.033569335,
+          -0.008138020000000008,
+          0.10070801499999996
+        ],
+        "armed": null,
+        "receiptToApply": [
+          0.19999999925494194,
+          0.09999999962747097,
+          0
+        ]
+      }
+    },
+    {
+      "check": "neutral actual sensor does not pour; source selection disarms",
+      "pass": true
+    },
+    {
+      "check": "helper restart; new real session requires calibration and never rearms",
+      "pass": true
+    }
+  ]
+}

@@ -1,23 +1,31 @@
 # Behind the Bar v2.1 acceptance ledger
 
-In progress, 13 September 2026. Isolated branch `codex/behind-the-bar-v21`. This task is the acknowledged sole production release owner after explicit transfer from the landing task. Main landing revision `5c9bcbe` is integrated in the feature branch. No physical-motion gate is claimed from synthetic fixtures.
+13 September 2026. Verified public application revision `058149b684dd22d404cd0665c52196fd438c3648`, deployment `dpl_4uKgScSzwN8PVnwb92GWZWqPufND`: https://spiritatlas-one.vercel.app/behind-the-bar. This includes the native framing correction and separately requested unified landing player. This task is the acknowledged sole owner of this release. Clean release worktree: `/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb-release`, branch `codex/behind-the-bar-release`.
+
+Twelve gates have public evidence; BTB-06 and the physical-onset portion of BTB-10 remain open. The working browser game is deployed. A complete physical-laptop demonstration is **not verified**. No synthetic trace, automated arming or screen recording is represented as owner-performed physical movement.
 
 | Gate | State | Evidence / remaining verification |
 |---|---|---|
-| BTB-01 identity | Preview verified | Separate authored definition and provenance; canonical data unchanged; content contract passed |
-| BTB-02 flexible preparation | Preview verified | Three-vessel full journey, two keyboard omission/amount variants, partial strain, empty serving guard |
-| BTB-03 TypeGPU | Preview verified | Real M4 Pro GPU buffers, reversal/release/settle video and probes; repeat on production |
-| BTB-04 conservation | Preview verified | Per-component cap/exhaustion/transit tests and retained mixture/ice; final containment capture pending |
-| BTB-05 controls | Preview verified | Complete pointer, keyboard and emulated-touch journeys; unsupported WebGPU fallback passed |
-| BTB-06 actual M4 Pro | In progress | Actual unprivileged sensor stream and HTTPS transport established; labelled physical deployed movement/rehearsal still required |
-| BTB-07 fidelity/result | Preview verified | Baseline full-serving/reference inspected; improved red-orange tint, canonical glass/ice/pepper retained; distinct player results preserved |
-| BTB-08 reliability | Preview verified | Reset, stale data, source/stage takeover, reconnect disarming, asset retry and bounded tilt passed; final public native recovery remains |
-| BTB-09 responsive/a11y | Preview verified | Desktop/tablet/phone captures, keyboard completion, reduced-motion touch and mute controls |
-| BTB-10 performance | Pending | Final headful 30-second scene and native latency measurements |
-| BTB-11 preservation | Preview verified | All 39 existing tests pass; Classic 5c9bcbe integrated, affected checks to repeat |
-| BTB-12 production | Pending | Acknowledged owner; landing fix deployed separately, integrated feature not yet public |
-| BTB-13 cause/effect | Preview verified | Pointer first gesture/reversal; stationary pointer fix; two amount/garnish variants. Agent inspection, not a human study |
-| BTB-14 live preset | Preview verified | Valid same-solver demo, actual response/reset, demo-origin service, start-empty conversion |
+| BTB-01 identity | Passed | Separate authored Core/Ancho/Rice quantities and provenance; canonical `negroni-express` unchanged; content contract |
+| BTB-02 flexible preparation | Passed | Complete three-vessel recording; two keyboard omission/amount variants; partial strain; empty serving guard |
+| BTB-03 TypeGPU | Passed | Actual Apple/metal-3 compute/readback, reversal/release/settle probes and video; public GPU interaction check |
+| BTB-04 conservation | Passed | Per-component source/transit/destination conservation and capacity tests; retained mixing liquid/ice and visual preparation recording |
+| BTB-05 controls | Passed | Complete pointer, keyboard and emulated-touch journeys; unsupported WebGPU fallback |
+| BTB-06 actual M4 Pro | Blocked on owner action | Real uid 501 HID stream reaches deployed scene; calibration, arming and recovery pass. Physical axes, deliberate tilt/slosh/tilt-pour and opening stop/settle rehearsal still need the owner to move the MacBook |
+| BTB-07 fidelity/result | Passed | Baseline/reference captures inspected; canonical glass/ice/pepper retained; distinct authored quantities/garnish preserved. Approximate screen-space optics documented |
+| BTB-08 reliability | Passed | Reset, expiry, takeover, hidden-tab and resource-retry checks; six final public actual-native recovery checks, including a 2.5-second page stall and helper restart, passed after correcting coalesced delivery |
+| BTB-09 responsive/a11y | Passed | Desktop/tablet/phone captures, visible focus and keyboard completion, reduced-motion touch and mute controls |
+| BTB-10 performance | Partial | Production 30-second mean 119.63 FPS / p95 9.30 ms passes 30 FPS floor and 60 FPS target. Final 601 native observations: receipt→frame p95 23.80 ms; sample timestamp→frame estimate p95 34.25 ms. Physical movement onset→visible response is unverified |
+| BTB-11 preservation | Passed | 39 catalogue checks, all 12 cocktails, expansion/comparison, 20 integrated landing checks on 772c3e2. Final unified-player revision has six public landing checks plus 24 local checks and multi-viewport WebKit evidence |
+| BTB-12 production | Passed | Acknowledged owner; exact corrected revision/deployment; 32 public route/asset checks; full preparation; real authenticated HTTPS-origin native stream and recovery |
+| BTB-13 cause/effect | Passed | Fresh-session pointer reversal/release inspection, stationary-pointer fix, two amount/garnish variants. Agent usability inspection, not a human study |
+| BTB-14 live preset | Passed | Same-solver valid demo, fresh input/settling/reset, explicit demo-origin service and start-empty conversion |
+
+## Smallest remaining physical action
+
+Responsible actor: the owner physically holding this MacBook Pro. With the helper connected and laptop flat, recenter, click **Arm movement last**, gently tilt left/right and forward/back, then set flat and let the waves settle. Click **Strain**, deliberately **Arm pour**, tilt briefly, then set flat and disarm. Keep Chrome focused: returning to Codex intentionally disarms. Confirm physical directions; capture synchronized movement-onset evidence before claiming the <150 ms physical target. Exact commands and diagnostic URL are in MACBOOK-PREFLIGHT.md.
+
+The 120-second production sensor capture was armed for 6.3 seconds with applied tilt below 0.002 rad; the later pour was local and disarmed. The next manual attempt waited 120 seconds for arming and timed out. Neither clears BTB-06. Authentication, device presence, reader privileges and browser security are not the remaining blocker.
 
 ## Iteration record
 
@@ -40,3 +48,15 @@ Release ownership transferred explicitly from landing task and acknowledged, aga
 10. Actual native stream connected and calibrated in the final local preview for an eight-second diagnostic: 485 timestamped native → GPU → frame samples, p95 sample-to-frame estimate 33.20 ms, receiver-to-frame 23.70 ms, no rejected reports or GPU errors. This was mostly at rest, not a substitute for physical axis/tilt-pour rehearsal. Raw real sensor values and sanitized state are `preview-native-session.json`.
 
 11. Corrected verification harness: Playwright's defaults emulate tab focus and apply browser startup flags. Replaced final native/performance launch with a private installed-Chrome session using normal browser defaults and CDP `noDefaults: true`. Real reader pause/resume, actual hidden-tab disarm, neutral no-pour, source disarm and real helper restart all passed. The corrected normal-browser production HTTPS status probe returned 200. Earlier automated results remain labelled; no security/permission bypass was used to obtain the corrected result.
+
+12. Published the integrated clean-history release 772c3e2. All 76 public checks passed (17 studio, 20 landing, 39 catalogue), as did 32 route/asset checks and five actual native recovery checks. Production 30-second normal-Chrome scene measured 119.66 FPS / p95 9.30 ms. Saved the full three-vessel preparation recording. Real native timing at rest is an explicitly limited frame estimate.
+13. The longer production native recording exposed a receiver framing failure after 69.7 seconds: Chrome coalesced complete NDJSON reports into a chunk larger than the pre-parse 16 KB bound. Moved the bound to the unfinished 2048-byte record and abort malformed streams cleanly. Three deterministic regression cases pass. A real 2.5 second browser-main-thread stall now recovers fresh native reports without rearming; all six actual native recovery checks pass on the corrected preview. No freshness threshold or browser protection was weakened.
+14. Manual physical rehearsal was not armed during its 120 second prompt. Improved the diagnostic to save an incomplete-attempt record, redact credentials from errors and close its owned browser even on timeout. Integrated the independently tested unified landing player as 058149b, preserving the requested edge fade and loading recovery.
+
+15. Corrected integrated release `058149b684dd22d404cd0665c52196fd438c3648` is READY as `dpl_4uKgScSzwN8PVnwb92GWZWqPufND`. All 32 public route/asset checks pass. Six actual native recovery checks pass on that exact production origin, including coalesced-report recovery. Final normal-Chrome performance is 119.63 FPS mean / 9.30 ms p95 with no GPU errors. Owner-performed physical tilt-pour remains unverified.
+
+16. Final corrected public studio suite passed all 20 checks with no skips/flakes; saved current preparation and GPU reversal/release/settle recordings. The landing task passed six targeted public UI checks and reviewed desktop/mobile captures. A final 10-second real native capture stayed connected and calibrated with zero rejected reports/GPU errors; 601 timestamped observations measured sample→frame estimate p95 34.25 ms and receipt→frame p95 23.80 ms. Applied tilt stayed below 0.0013 rad, so this remains an at-rest transport/timing check, not physical tilt-pour acceptance.
+
+## Future release ownership
+
+The landing task explicitly acknowledged resuming sole future production ownership after this acceptance evidence commit is saved and supplied. This task owns the verified 058149b snapshot; it will make no subsequent production push after that handoff. New landing requests continue separately and must preserve this evidence. Any later physical rehearsal must record the application revision actually exercised.

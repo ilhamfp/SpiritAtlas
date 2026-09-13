@@ -1,0 +1,17 @@
+{
+  "id": "dpl_4uKgScSzwN8PVnwb92GWZWqPufND",
+  "url": "spiritatlas-jwwss6is2-ilham-firdausi-putras-projects.vercel.app",
+  "target": "production",
+  "readyState": "READY",
+  "createdAt": 1789281345636,
+  "aliases": [
+    "spiritatlas-one.vercel.app",
+    "spiritatlas-ilham-firdausi-putras-projects.vercel.app",
+    "spiritatlas-git-main-ilham-firdausi-putras-projects.vercel.app"
+  ],
+  "revision": "058149b684dd22d404cd0665c52196fd438c3648",
+  "entryAsset": "/assets/index-B-BVzpQx.js",
+  "entryAssetObserved": "/assets/index-B-BVzpQx.js",
+  "entryAssetSha256": "9c77921bd5d62d93ce1fdcb216d7614b103002c3d03cddead940db6339e957cd",
+  "entryMatchesBuiltRevision": true
+}

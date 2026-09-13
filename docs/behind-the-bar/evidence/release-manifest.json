@@ -1,0 +1,57 @@
+{
+  "applicationRevision": "058149b684dd22d404cd0665c52196fd438c3648",
+  "deployment": "dpl_4uKgScSzwN8PVnwb92GWZWqPufND",
+  "publicUrl": "https://spiritatlas-one.vercel.app",
+  "gatesPassed": 12,
+  "gatesOpen": [
+    "BTB-06 physical tilt/slosh/tilt-pour and opening rehearsal",
+    "BTB-10 physical movement-onset latency"
+  ],
+  "studio": {
+    "startTime": "2026-09-13T06:38:09.263Z",
+    "duration": 167532.79,
+    "expected": 20,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "landing": {
+    "startTime": "2026-09-13T06:38:37.811Z",
+    "duration": 63851.347,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "catalogue": {
+    "verifiedRevision": "772c3e240e15dbb7c10150122f1f562ef77dc72c",
+    "unchangedCatalogueSinceVerification": true,
+    "stats": {
+      "startTime": "2026-09-13T06:22:45.211Z",
+      "duration": 159457.932,
+      "expected": 39,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "publicAssetRoutes": 32,
+  "actualNativeRecoveryChecks": 6,
+  "performance": {
+    "seconds": 30,
+    "meanFps": 119.63147083815628,
+    "p95FrameMs": 9.299999999999272,
+    "releaseFloorPassed": true,
+    "target60Passed": true
+  },
+  "nativeTiming": {
+    "sampleToFrameEstimateP95Ms": 34.253662109375,
+    "receiptToFrameP95Ms": 23.80000000111795,
+    "count": 601,
+    "physicalOnsetMeasured": false
+  },
+  "preparationVideo": "preparation-production.webm",
+  "gpuResponseVideo": "gpu-production-response.webm",
+  "nativeVideo": "native-video/corrected-production-native.webm",
+  "physicalAttempt": "production-manual-attempt.json"
+}

@@ -1,0 +1,50 @@
+{
+  "deployment": "dpl_G74SVqTbbjcKzRbZNg6EG7KNU9Ly",
+  "revision": "772c3e2",
+  "source": "Real M4 Pro HID stream in normal Chrome",
+  "sampleToFrameEstimate": {
+    "count": 364,
+    "p50": 26.560302734375,
+    "p95": 32.3603515625,
+    "max": 218.064208984375
+  },
+  "receiptToFrame": {
+    "count": 364,
+    "p50": 20.599999999254578,
+    "p95": 23.69999999888205,
+    "max": 211.79999999999927
+  },
+  "receiverProcessingP95": 0.09999999962747097,
+  "lastNative": {
+    "status": "Invalid motion stream.",
+    "connected": false,
+    "calibrated": false,
+    "received": 4595,
+    "rejected": 46,
+    "age": 52229.40000000037,
+    "pitch": 0.011860187413720625,
+    "roll": -0.010591297189538369,
+    "neutral": [
+      0.0023817452500171626,
+      -0.01522748993285485
+    ],
+    "linear": [
+      -1.90971962082481e-46,
+      -1.0626929510433873e-22,
+      -3.050068781036989e-13
+    ],
+    "gravity": [
+      0.0104218,
+      0.0119019,
+      -0.9785004
+    ],
+    "gyroBias": [
+      -0.061035156666666694,
+      0.013224283333333333,
+      0.12410482499999995
+    ],
+    "armed": null
+  },
+  "physicalTiltPourVerified": false,
+  "reason": "Native motion disarmed at 6.3 seconds; subsequent pouring used local controls. No labelled physical tilt-pour was captured."
+}

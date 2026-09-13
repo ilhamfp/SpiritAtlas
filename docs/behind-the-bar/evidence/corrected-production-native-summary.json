@@ -1,0 +1,58 @@
+{
+  "revision": "058149b684dd22d404cd0665c52196fd438c3648",
+  "deployment": "dpl_4uKgScSzwN8PVnwb92GWZWqPufND",
+  "origin": "https://spiritatlas-one.vercel.app",
+  "source": "Actual M4 Pro HID; normal Chrome; automated arm at rest; 10-second screen recording",
+  "sampleToFrameEstimate": {
+    "count": 601,
+    "p50": 27.730224609375,
+    "p95": 34.253662109375,
+    "max": 40.87158203125
+  },
+  "receiptToFrame": {
+    "count": 601,
+    "p50": 21.2000000003718,
+    "p95": 23.80000000111795,
+    "max": 30.20000000037271
+  },
+  "receiverProcessing": {
+    "count": 603,
+    "p50": 0,
+    "p95": 0.09999999962747097,
+    "max": 0.2000000011175871
+  },
+  "lastNative": {
+    "status": "Live native samples · calibrated",
+    "connected": true,
+    "calibrated": true,
+    "received": 709,
+    "rejected": 0,
+    "age": 13.099999999627471,
+    "pitch": 0.014014729464023466,
+    "roll": -0.009650113508430244,
+    "neutral": [
+      0.014150690090455012,
+      -0.009649643841678969
+    ],
+    "linear": [
+      0.0003133167950297818,
+      0.0008661197161250388,
+      -0.000007296875381135261
+    ],
+    "gravity": [
+      0.00944773333333334,
+      0.013853706666666667,
+      -0.9789474483333331
+    ],
+    "gyroBias": [
+      -0.022379561666666662,
+      0.014241538333333336,
+      0.10477703499999996
+    ],
+    "armed": "move"
+  },
+  "maxAppliedTiltRad": 0.0012524048759189072,
+  "physicalTiltPourVerified": false,
+  "physicalOnsetLatencyVerified": false,
+  "errors": []
+}

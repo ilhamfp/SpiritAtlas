@@ -1,30 +1,40 @@
-# SpiritAtlas production release ownership
+# Behind the Bar production release
 
 ## Acknowledged owner
 
-**Behind the Bar task `01a09932-8b72-79f2-a6f9-2322aaaa28a5` is the single production release owner.** Landing task `01a098ee-7e22-79e2-b78c-772904e83ecb` explicitly transferred ownership after pushing `bc4f0173d494a8b2a97c01664ad69576aa524dc0`; this task acknowledged the transfer. Landing task performs read-only production checks and sends any fixes for integration. No independent competing production deployment is planned.
+Behind the Bar task `01a09932-8b72-79f2-a6f9-2322aaaa28a5` is the sole production release owner. Landing task `01a098ee-7e22-79e2-b78c-772904e83ecb` explicitly transferred ownership and this task acknowledged it. Animation task `01a09941-8825-7fd1-8d44-58f92994d715` supplied tested changes and held independent publication. The landing task performs the final public UI check after the owner's performance window.
 
-## Revisions
+## Integrated revisions
 
-- Initial landing / Classic integration baseline: `bc4f0173d494a8b2a97c01664ad69576aa524dc0`, preserving Classic source `6e6effd` plus final landing fixes.
-- Initial reviewable feature revision: `05901c1` on `codex/behind-the-bar-v21`.
-- First combined merge: `0bd20d2` (feature + identified landing baseline), in `/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb`.
-- Latest colleague fix: `2807652c4a82f93851a280ab9191ce1c68ef85a7`, cinematic frame visibility, preserved.
-- Combined feature code revision: `ba857f10e68e334e076faa57ee8d419c2d027868` (merge of feature `33abbcd` with `2807652`).
-- Landing-only release applied by owner: `5c9bcbe`, `dpl_4b6vTZvnn2JMtSN37yrnxvdSqyAE`. A later colleague push of `2807652` produced current baseline `dpl_9fenqtE46JZBHSUm3pCTxz47haEp` at https://spiritatlas-one.vercel.app. The owner is preserving that fix and holding further changes until its fresh public audit finishes.
-- Reviewable feature preview: `33abbcd`, `dpl_He24REpzpE1TjRr6CcdBH3ZgT8v3`, https://spiritatlas-hp6k7tzlr-ilham-firdausi-putras-projects.vercel.app. Vercel login protection is active; this is not public-production proof.
-- Combined production deployment: pending current landing audit completion and final release.
+- Clean-history base: `e13da8e8b3c91fa257a2f25f68356668a2bb28ff`. The independently authorized history rewrite was preserved; no old ancestor was merged back.
+- Reviewable feature content port: `74882a6cb11640ab7e941526f0e39b748194917f`.
+- Landing autoplay refinement: `84a6f9387980cced10413f2d6edae8bee310c825`; accepted landing evidence: `37a17596fda966d318b16eadc96f743430624370`.
+- First integrated public feature: `772c3e240e15dbb7c10150122f1f562ef77dc72c`, deployment `dpl_G74SVqTbbjcKzRbZNg6EG7KNU9Ly`.
+- Native coalesced-delivery correction: `237a09880ccb1da20ddf02bfd91b2c50ad6210f1`.
+- Independently requested unified-player follow-up: source `f9cef66bae8c0efd66ce12bb87ba71d563d3bf6e`, cherry-picked as the corrected integrated application revision **`058149b684dd22d404cd0665c52196fd438c3648`**.
+
+The owner fast-forwarded remote main from 772c3e2 to 058149b without changing the shared main checkout or staging another task's work. The release worktree is `/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb-release`, branch `codex/behind-the-bar-release`. Publication uses the existing SpiritAtlas Vercel project. No service purchase or unrelated project replacement.
+
+## Production
+
+Public application: https://spiritatlas-one.vercel.app . Studio: https://spiritatlas-one.vercel.app/behind-the-bar . Live preset: https://spiritatlas-one.vercel.app/behind-the-bar?preset=stir-demo . Native diagnostic: https://spiritatlas-one.vercel.app/behind-the-bar/diagnostics?preset=stir-demo .
+
+Corrected application revision 058149b is **READY** as **`dpl_4uKgScSzwN8PVnwb92GWZWqPufND`**, created 13 September 2026 at 14:35:45 Singapore time. Its immutable deployment URL is https://spiritatlas-jwwss6is2-ilham-firdausi-putras-projects.vercel.app . The public entry asset is `/assets/index-B-BVzpQx.js`; sanitized deployment metadata is in `evidence/production-deployment.json`. The prior 772c3e2 snapshot and its evidence are retained under `evidence/releases/772c3e2/`. Its immutable URL is https://spiritatlas-74p1ef6kv-ilham-firdausi-putras-projects.vercel.app . Earlier preview deployment `dpl_He24REpzpE1TjRr6CcdBH3ZgT8v3` is login protected and is not public acceptance evidence.
 
 ## Verification
 
-Sixteen studio checks passed against built preview. Thirty-nine existing catalogue checks passed. The final colleague change built successfully and all four current Classic integration regressions plus eleven asset/playback unit checks passed. The 30-second headful M4 Pro preview measured 119.4 FPS average and 9.2 ms p95, passing the 30 FPS floor and 60 FPS target separately. Actual native sensor access, initial production HTTPS-origin status and bridge authorization rejection were verified. Final public journey and deployed native movement remain outstanding; STATUS.md retains that distinction.
+The initial integrated public snapshot passed 76 checks:17 studio, 20 landing and 39 catalogue. All 32 public route/asset checks returned200 with matching asset hashes and content types. A full three-vessel preparation, retained partial result, comparison and return to the bar were recorded. Normal installed Chrome on the actual M4 Pro passed the 30-second runtime floor and 60 FPS target:119.66 FPS mean,9.30 ms p95. Five actual native pause/focus/neutral/source/restart checks passed. The real120-second native session yielded p95 32.36 ms sample-timestamp→frame estimate and 23.70 ms browser-receipt→frame, with maxima above 200 ms; physical movement onset was not measured.
 
-The release owner will fast-forward shared main without staging or altering the landing task's documentation edits. Changes to the public alias are paused until that task acknowledges the current baseline audit is complete. The mandatory final physical M4 Pro rehearsal remains separate from browser fixture and model checks.
+That longer native recording exposed a coalesced-chunk framing error. The correction passed 20 studio checks, including 3 new transport regression cases, and 6 actual-reader recovery checks in preview, including a deliberate 2.5-second browser stall. The unified landing player independently passed 24 Chromium checks, 11 asset/playback checks and WebKit at 1440/768/390/320 px. The owner rebuilt the combined 058149b application and repeated 4 affected landing integration checks plus the full three-vessel studio journey; all passed. The corrected public deployment passes 32 route/asset checks and all six actual native recovery checks, including coalesced reports and helper restart. The final 30-second performance repeat measured 119.63 FPS / 9.30 ms p95 with no GPU errors. The landing task passed six targeted public checks in 63.9 seconds and visually inspected actual desktop/mobile captures: the single player and edge fade are present. Evidence: `../brand-evidence/unified-player-public/`. All 20 final public studio checks passed with no skipped or flaky cases; the current preparation and GPU response recordings are saved. A final 10-second native capture remained connected/calibrated with zero rejected reports and GPU errors: 601 observations, sample-timestamp→frame estimate p95 34.25 ms (max 40.87 ms), receipt→frame p95 23.80 ms (max 30.20 ms). This was at rest with automated arming, not a physical tilt-pour rehearsal.
 
-## Clean-history integration
+## Material limits
 
-Main history was recreated by the separately authorized cleanup task and force-pushed as `e13da8e8b3c91fa257a2f25f68356668a2bb28ff`. The feature was ported as a content-only binary diff into a new worktree `/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb-release`, branch `codex/behind-the-bar-release`, based on that exact clean main. No old ancestor was merged. Historical hashes above describe earlier evidence/deployments, not release ancestry. The source port matched the tested studio code; the final held-key blur fix and incoming landing refinement will receive focused checks before release.
+The browser game is working. BTB-06 remains blocked on owner-performed deliberate physical tilt/slosh/tilt-pour and the opening stop/settle rehearsal. The latest manual prompt timed out without arming. The recorded native session is real sensor data but was almost neutral while armed and later used local pouring; it cannot clear this gate. The physical-onset portion of BTB-10 remains unverified, despite passing render performance and separately measured sample/receiver frame estimates. See STATUS.md and MACBOOK-PREFLIGHT.md for exact evidence, attempts, responsible actor and the smallest action.
 
-## Ready to publish
+Rendering is the documented TypeGPU hybrid simulation with screen-space optical approximations. Studio portions are authored normalized values, not the bar's unpublished formula or calibrated dilution. Touch tests emulate pointer input; optional phone motion control is not shipped.
 
-The clean integration includes feature `74882a6`, the authorized PRD, autoplay refinement `84a6f93`, and final landing evidence `37a1759`. The landing task explicitly released its final audit hold; this task again owns the production window. A later unified-player request is being developed separately in shared main; its uncommitted edits are preserved and are not overwritten by this release. Production will be pushed from `codex/behind-the-bar-release` to remote main without mutating that shared working tree. The final feature test glob is scoped to filenames, avoiding accidental discovery caused by the worktree name.
+## Evidence and handoff
+
+`evidence/release-manifest.json` maps each verification to its application revision. The 39 catalogue checks belong to 772c3e2; canonical data, models, references and App.tsx are unchanged in 058149b. The corrected release repeats public studio/native/asset/performance checks and the six affected landing checks. Historical snapshots remain explicitly labelled.
+
+The landing task explicitly acknowledged resuming sole future production release ownership after receiving this acceptance evidence commit. This task will make no subsequent production push after the handoff. The separately requested full-loop/caption follow-up is outside this verified snapshot and must preserve the studio and acceptance record. Evidence is committed on `codex/behind-the-bar-release`; production main remains the tested 058149b application revision while this evidence is handed back, avoiding a docs-only deployment that would obscure the verified snapshot.

@@ -1,0 +1,9 @@
+{
+  "at": "2026-09-13",
+  "origin": "https://spiritatlas-one.vercel.app",
+  "revision": "772c3e2",
+  "manualArm": true,
+  "outcome": "incomplete",
+  "reason": "User did not arm movement during the 120-second on-screen prompt. No manual physical session was recorded.",
+  "physicalTiltPourVerified": false
+}

@@ -1,0 +1,254 @@
+{
+  "at": "2026-09-13T06:22:17.052Z",
+  "origin": "https://spiritatlas-one.vercel.app",
+  "revision": "772c3e2",
+  "deployment": "dpl_G74SVqTbbjcKzRbZNg6EG7KNU9Ly",
+  "rows": [
+    {
+      "asset": "/references/jigger-espresso-martini.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 59304,
+      "sha256": "af3014ac20f381843c03167b2d8e996c8e693572737a0f178d2b47b6e7648c8c",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/references/atlas-espresso-martini.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 55995,
+      "sha256": "1418c2ca5994c0bdf75a8fdeac0836df3e6dc32e2b5fce0e6747177b28304314",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/references/bbf-negroni.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 77940,
+      "sha256": "f4aac93b7c6b425f8312b9b6fc885ff45659c2259306a078fc8a60b9c907a580",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/references/nighthawks.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 42574,
+      "sha256": "411cef48b81e86e864b95a578dee9cfdb4d11dd4cd61cd2569bd4918a7377d0d",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/references/moga-dirty-sake-tini.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 94848,
+      "sha256": "7add9c2e7794402fbb787e13df6f78cbe3a728d50f442739cf2f5e94bdadeb68",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/somma-mirkos-martini.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 188732,
+      "sha256": "5cf95e91623f0410fb0d4bf7bb5094529c1ff8e3ffdcb95894afc03a83b7a450",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/atlas-martini.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 161820,
+      "sha256": "35473b54528142a3e366d519c89ca9df882d7909a3e06ff0abd3e0bc68a4b3ca",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/moga-dirty-sake-tini.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 192280,
+      "sha256": "5561d21da707e103fc160704ede1068b640f48617b1ad28415ffacfc81fcdf6f",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/jigger-wasabi-highball.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 253152,
+      "sha256": "6e5845ecacc5ac01c56faecf5ff6e20f2fd3fcd2e628b0690980eac48bff0f86",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/references/ichigo-negroni.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 128573,
+      "sha256": "b38e7ebe7d54bafd822e7a73bbbf0e20344efd7c94fe7dfb440d62f3466e4b12",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/moga-salted-yuzu-highball.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 263528,
+      "sha256": "28983f46fe4b4d58e8cae37ddade0d634a1831bba82086444125ccd0ec38c7b7",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/references/negroni-express.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 204734,
+      "sha256": "bc3e5155d8d5bc1bda2b4edbff12ea216b3d6e3402098a552a882d6c6624a5ec",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/somma-pine-highball.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 259872,
+      "sha256": "6a6b6bbf4881a6365e6c237a0c48c21970c658dad0a7926cbc3595b4e210a381",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/references/jigger-wasabi-highball.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 224730,
+      "sha256": "d1c351e139ed63d3d875919e4f7e97aca2b642d9a43154151f8cca4ecd28aaf1",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/references/moga-salted-yuzu-highball.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 285721,
+      "sha256": "a7e649bc41bd2567f6a043aee1f6cae54886a5a95051aeb4884c163dfdafc9b0",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/nighthawks.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 783716,
+      "sha256": "14e2edfc2f2222f47b946e45d36b7aaac0d91359cbe758581124feb0ae18217a",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/atlas-espresso-martini.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 975280,
+      "sha256": "52585252fead054b888e8c4e79164f07f0c4834f1a5f5ca0036da0d62d36d112",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/references/somma-mirkos-martini.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 511603,
+      "sha256": "d95cd6d3d6c4e8a5705e189e3efab274446b99f8fee710b93d54748dbbd9f852",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/jigger-espresso-martini.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 810456,
+      "sha256": "6e78ef3d4ab79ba1bcf7326991928501aed45e978d80b95e59c6e83250ecf324",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/textures/somma-interior-panorama-v2.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 1635555,
+      "sha256": "e05fba1dce84c3ece111bd6afb8903673f9506f9ce7bad736f93fc69d08c5ad1",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/textures/somma-stone-tile-v1.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 3520483,
+      "sha256": "03ae32005c63799763c2f575682be7f32802c5a5c1ffef9a10db625d6f495266",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/references/atlas-martini.jpg",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 979648,
+      "sha256": "7bd8cbb34174ab24efe04681b4da77ececc6a218b6e4b55f825dd79874a51291",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/negroni-express-interfaces-air-gap.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 2985804,
+      "sha256": "228262ae9538494509cc8b2639c5604d14cbea5e7408e4edf09b7c357a6839d6",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/negroni-express-interfaces.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 2939000,
+      "sha256": "31eed1cb880e36cbb5fcf8462d3e7becb21ec53d3de65a86967e1e9a1c18add2",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/negroni-express.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 6297640,
+      "sha256": "91f6a960649bb58cc232527b99d795818a52229a127b769b15525013612f6812",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/ichigo-negroni.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 8235276,
+      "sha256": "d1ab49eb74bde33c2b6ccf8b31a5aad718c7b5f80b7fa13ffe1a3546b41c7a60",
+      "matchesLocal": true
+    },
+    {
+      "asset": "/models/bbf-negroni.glb",
+      "status": 200,
+      "type": "model/gltf-binary",
+      "bytes": 6388824,
+      "sha256": "cd4908bde9c58e6b84b01f580a70fee4baa591dc36f718dfc58be73bf81b1a39",
+      "matchesLocal": true
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "public": true
+    },
+    {
+      "route": "/atlas",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "public": true
+    },
+    {
+      "route": "/behind-the-bar",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "public": true
+    },
+    {
+      "route": "/behind-the-bar?preset=stir-demo",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "public": true
+    },
+    {
+      "route": "/behind-the-bar/diagnostics?preset=stir-demo",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "public": true
+    }
+  ]
+}
