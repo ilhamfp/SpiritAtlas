@@ -8,7 +8,7 @@ export default defineConfig({
   testDir: '.',
   testMatch: process.env.ATLAS_BRAND_EXISTING === '1'
     ? ['collection-routes.spec.ts', 'espresso-collection.spec.ts', 'ingredient-visibility.spec.ts', 'recipe-completion.spec.ts', 'atlas-expansion-routes.spec.ts', 'reference-photos.spec.ts', 'content-contract.spec.ts', 'new-collection-content.spec.ts']
-    : ['brand-journeys.spec.ts'],
+    : ['brand-journeys.spec.ts', 'classic-negroni-integration.spec.ts'],
   workers: 1,
   fullyParallel: false,
   timeout: 100_000,

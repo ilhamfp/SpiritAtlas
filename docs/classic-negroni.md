@@ -18,6 +18,14 @@ Bar Bon Funk recipe or linked to its detail page.
   ingredient rig stays fully separated.
 - The homepage controls stay local to the component. Loading, visibility,
   reduced-motion and unmount cleanup are handled independently of the atlas.
+- The stage scales with desktop viewport height to keep playback controls in
+  view. Ingredient labels reserve their space so separation does not move the
+  controls or the next section; transport and view controls use 44px targets.
+- Vertical swipes scroll over the live scene while horizontal drags orbit it.
+  Reduced motion also disables the live camera's easing and inertia, including
+  when the preference changes after loading. Explicit playback stays available.
+- Returning to Cinematic during a pending 3D load cancels that request. A later
+  visit to Explore 3D starts a fresh load without leaving stale loading feedback.
 
 The physical model and artistic limitations from the original study still
 apply: directed forces separate ingredients, and reassembly retraces their
@@ -46,7 +54,8 @@ Validated locally on 13 September 2026:
 
 - `npm run build` passes, including TypeScript. Vite retains its existing
   warning about the shared Three.js chunk size.
-- `node --test tests/classic-negroni*.test.mjs` passes all 11 checks for asset
+- `node --experimental-strip-types --test tests/classic-negroni*.test.mjs`
+  passes all 11 checks for asset
   integrity, video metadata, cache layout and reversible playback behavior.
 - Browser checks covered cinematic separation, circulation, pause, reassembly,
   timeline scrubbing, half speed and switching between cinematic and live 3D
@@ -57,6 +66,14 @@ Validated locally on 13 September 2026:
 - The homepage fits both 390-pixel and 872-pixel viewports without horizontal
   overflow; the longer reassembly button also fits the mobile header.
 
-The updated Playwright brand journeys were typechecked but the full suite was
-not run. Browser verification above was performed interactively against the
-local production preview.
+The focused Playwright suite now includes the 12 existing brand journeys and
+four integration regressions. All 16 passed against the local production build:
+desktop control visibility and stable ingredient layout, canceled-load recovery,
+offscreen playback suspension, and actual touch scrolling with an immediately
+settled reduced-motion camera. Responsive screenshots and the report are in
+`docs/brand-evidence/animation-integration/`. A final caption adjustment uses
+opaque Paper text at 11px; its responsive confirmation is recorded separately
+under `docs/brand-evidence/animation-integration-final/`.
+
+These checks cover the local integration. The Behind the Bar release owner
+coordinates the combined production deployment and its public verification.

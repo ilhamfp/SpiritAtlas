@@ -1,0 +1,62 @@
+[
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "contrast": [
+      {
+        "label": "The perfect serve",
+        "color": "rgb(255, 255, 227)",
+        "fontSize": "11px",
+        "minContrast": 7.065796023723228
+      },
+      {
+        "label": "01 / 02",
+        "color": "rgb(255, 255, 227)",
+        "fontSize": "11px",
+        "minContrast": 10.777542951349067
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "contrast": [
+      {
+        "label": "The perfect serve",
+        "color": "rgb(255, 255, 227)",
+        "fontSize": "11px",
+        "minContrast": 6.200681800966614
+      },
+      {
+        "label": "01 / 02",
+        "color": "rgb(255, 255, 227)",
+        "fontSize": "11px",
+        "minContrast": 9.820035431552663
+      }
+    ]
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "contrast": [
+      {
+        "label": "The perfect serve",
+        "color": "rgb(255, 255, 227)",
+        "fontSize": "11px",
+        "minContrast": 5.992874069374055
+      },
+      {
+        "label": "01 / 02",
+        "color": "rgb(255, 255, 227)",
+        "fontSize": "11px",
+        "minContrast": 9.667760284575245
+      }
+    ]
+  }
+]

@@ -3,10 +3,10 @@ import type {CSSProperties} from 'react';
 import {ArrowUpRight, ChevronLeft, ChevronRight, Pause, Play, RotateCcw} from 'lucide-react';
 import {advancePlayback, clampProgress, deconstruct, DEFAULT_IDLE_TIMELINE, idleSampleProgress, INITIAL_PLAYBACK, movieTime, nextDirection, togglePlayback} from './playback';
 import type {IdleTimeline, PlaybackState} from './playback';
+import type {NegroniRenderer} from './renderer';
 
 type Mode = 'cinematic' | '3d';
 type Manifest = {duration: number; forward: string; reverse: string; idle: string; poster: string; idleTimeline: IdleTimeline};
-type Renderer = {setPose: (progress: number, rigProgress?: number) => void; rotate: (delta: number) => void; resetCamera: () => void; setVisible: (visible: boolean) => void; dispose: () => void};
 type UIState = PlaybackState & {mode: Mode; suspended: boolean; ready: boolean; loading3D: boolean; status: string};
 type Commands = {action: () => void; toggle: () => void; seek: (value: number) => void; speed: () => void; reset: () => void; mode: (value: Mode) => void; rotate: (delta: number) => void};
 const ASSET_ROOT = '/classic-negroni/cinematic';
@@ -33,7 +33,7 @@ export default function ClassicNegroni() {
     let disposed = false, reducedMotion = mediaQuery.matches, inView = true;
     let state: PlaybackState = {...INITIAL_PLAYBACK};
     let manifest = DEFAULT_MANIFEST, mode: Mode = 'cinematic', current = videos[0];
-    let renderer: Renderer | null = null, loading3D = false, status = '', ready = false;
+    let renderer: NegroniRenderer | null = null, loading3D = false, status = '', ready = false;
     let suspended = document.hidden, pendingSeek = true, playRequest = 0, lastUI = 0, previous = performance.now();
     let frame = 0, shownVideo: HTMLVideoElement | null = null, lastPublished = '';
     const unbind: (() => void)[] = [];
@@ -145,9 +145,14 @@ export default function ClassicNegroni() {
       try {
         const {createNegroniRenderer} = await import('./renderer.js');
         if (disposed || signal.aborted) return;
-        const created = await createNegroniRenderer(container, {signal, onError: restoreFilm});
+        const created = await createNegroniRenderer(container, {
+          signal,
+          reducedMotion,
+          onError: () => {if (!signal.aborted) restoreFilm();},
+        });
         if (disposed || signal.aborted) {created.dispose(); return;}
         renderer = created;
+        renderer.setReducedMotion(reducedMotion);
         loading3D = false;
         container.hidden = mode !== '3d';
         renderer.setVisible(mode === '3d' && !suspended);
@@ -174,6 +179,11 @@ export default function ClassicNegroni() {
         readFilm();
         mode = next;
         status = '';
+        if (next === 'cinematic' && loading3D) {
+          rendererController?.abort();
+          rendererController = null;
+          loading3D = false;
+        }
         container.hidden = next !== '3d' || !renderer;
         previous = performance.now();
         syncMedia(true);
@@ -222,6 +232,7 @@ export default function ClassicNegroni() {
     document.addEventListener('visibilitychange', visibility);
     const motionChanged = () => {
       reducedMotion = mediaQuery.matches;
+      renderer?.setReducedMotion(reducedMotion);
       if (reducedMotion) {
         readFilm();
         if (state.looping) state.progress = idleSampleProgress(state.idleTime, manifest.duration, manifest.idleTimeline);
@@ -317,7 +328,7 @@ export default function ClassicNegroni() {
       </div>
       <div className="cn-hint"><span>{ui.mode === '3d' ? 'Drag to explore another angle' : 'Unfold the ingredients. Take your time.'}</span>{ui.mode === '3d' && <div className="cn-orbit-controls"><button type="button" className="cn-icon-button" disabled={ui.loading3D} aria-label="Rotate Negroni left" onClick={() => commands.current.rotate(-Math.PI / 8)}><ChevronLeft size={16} aria-hidden="true"/></button><button type="button" className="cn-icon-button" disabled={ui.loading3D} aria-label="Rotate Negroni right" onClick={() => commands.current.rotate(Math.PI / 8)}><ChevronRight size={16} aria-hidden="true"/></button></div>}</div>
     </div>
-    {ui.progress > .65 && <div className="cn-ingredients" aria-label="Classic Negroni ingredients"><span>Gin</span><span>Campari</span><span>Sweet vermouth</span><span>Ice</span><span>Orange</span></div>}
+    <ul className="cn-ingredients" aria-label="Classic Negroni ingredients" aria-hidden={ui.progress <= .65}><li>Gin</li><li>Campari</li><li>Sweet vermouth</li><li>Ice</li><li>Orange</li></ul>
     <p className="cn-status" role="status" aria-live="polite">{ui.status}</p>
   </section>;
 }

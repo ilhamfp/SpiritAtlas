@@ -21,6 +21,7 @@ export async function createNegroniRenderer(container, options = {}) {
   const disposedTextures = new Set();
   let disposed = false;
   let visible = true;
+  let reducedMotion = Boolean(options.reducedMotion);
   let frame = null;
   let renderer;
   let dirty = true;
@@ -154,7 +155,7 @@ export async function createNegroniRenderer(container, options = {}) {
       }
       const cameraMoving = Math.abs(cameraMix - desiredCameraMix) > .0001;
       if (cameraMoving) {
-        cameraMix = THREE.MathUtils.lerp(cameraMix, desiredCameraMix, 1 - Math.exp(-delta * 12));
+        cameraMix = reducedMotion ? desiredCameraMix : THREE.MathUtils.lerp(cameraMix, desiredCameraMix, 1 - Math.exp(-delta * 12));
         if (Math.abs(cameraMix - desiredCameraMix) <= .0001) cameraMix = desiredCameraMix;
         cameraPose();
         renderNeeded = true;
@@ -247,7 +248,9 @@ export async function createNegroniRenderer(container, options = {}) {
     camera = new THREE.PerspectiveCamera(34, 1, .05, 90);
     controls = new OrbitControls(camera, canvas);
     cleanup.push(() => controls.dispose());
-    controls.enableDamping = true;
+    // OrbitControls sets an inline `none`; let vertical swipes scroll the page.
+    canvas.style.touchAction = 'pan-y';
+    controls.enableDamping = !reducedMotion;
     controls.dampingFactor = .055;
     controls.enablePan = false;
     controls.minPolarAngle = .98;
@@ -384,6 +387,12 @@ export async function createNegroniRenderer(container, options = {}) {
         previousTime = 0;
         if (visible) invalidate();
         else if (frame !== null) { cancelAnimationFrame(frame); frame = null; }
+      },
+      setReducedMotion(nextReducedMotion) {
+        if (disposed || reducedMotion === Boolean(nextReducedMotion)) return;
+        reducedMotion = Boolean(nextReducedMotion);
+        controls.enableDamping = !reducedMotion;
+        invalidate();
       },
       dispose,
     };

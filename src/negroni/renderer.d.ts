@@ -1,4 +1,5 @@
 export interface NegroniRendererOptions {
+  reducedMotion?: boolean;
   onReady?: () => void;
   onError?: (error: unknown) => void;
   onOrbit?: () => void;
@@ -13,6 +14,7 @@ export interface NegroniRenderer {
   rotate(delta: number): void;
   resetCamera(): void;
   setVisible(visible: boolean): void;
+  setReducedMotion(reducedMotion: boolean): void;
   dispose(): void;
 }
 
