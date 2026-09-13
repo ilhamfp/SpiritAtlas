@@ -1,0 +1,8 @@
+import fs from 'node:fs/promises';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';
+const origin=process.env.BTB_URL||'https://spiritatlas-one.vercel.app';const rows=[];const hash=b=>createHash('sha256').update(b).digest('hex');
+const refs=[...(await fs.readFile('src/data/drinkReferences.ts','utf8')).matchAll(/src: '(\/references\/[^']+)'/g)].map(m=>m[1]);
+const models=(await fs.readdir('public/models')).filter(f=>f.endsWith('.glb')).map(f=>'/models/'+f);
+const paths=[...new Set([...refs,...models,'/textures/somma-interior-panorama-v2.png','/textures/somma-stone-tile-v1.png'])];
+await Promise.all(paths.map(async asset=>{const r=await fetch(origin+asset);const body=Buffer.from(await r.arrayBuffer());const local=await fs.readFile('public'+asset);rows.push({asset,status:r.status,type:r.headers.get('content-type'),bytes:body.length,sha256:hash(body),matchesLocal:hash(local)===hash(body)});}));
+for(const route of ['/','/atlas','/behind-the-bar','/behind-the-bar?preset=stir-demo','/behind-the-bar/diagnostics?preset=stir-demo']){const r=await fetch(origin+route);rows.push({route,status:r.status,type:r.headers.get('content-type'),public:r.url.startsWith(origin)});}
+const output={at:new Date().toISOString(),origin,revision:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),deployment:process.env.BTB_DEPLOYMENT||null,rows};await fs.writeFile('docs/behind-the-bar/evidence/production-assets.json',JSON.stringify(output,null,2));const failures=rows.filter(r=>r.status!==200||r.matchesLocal===false||r.public===false);console.log({checked:rows.length,failures});if(failures.length)process.exitCode=1;
