@@ -1,0 +1,898 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/brand.config.ts"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "brand-journeys.spec.ts"
+        ],
+        "timeout": 100000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/brand-evidence/production/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "brand-journeys.spec.ts",
+      "file": "brand-journeys.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "headline, CTA and faithful poster appear while models are held; only the hero model is requested initially",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9367,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:34:22.937Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "initial-loading",
+                      "contentType": "application/json",
+                      "body": "ewogICJtb2RlbHMiOiBbCiAgICAiL21vZGVscy9iYmYtbmVncm9uaS5nbGIiCiAgXSwKICAicGFpbnQiOiBbCiAgICB7CiAgICAgICJuYW1lIjogImZpcnN0LXBhaW50IiwKICAgICAgIm1zIjogMTc2CiAgICB9LAogICAgewogICAgICAibmFtZSI6ICJmaXJzdC1jb250ZW50ZnVsLXBhaW50IiwKICAgICAgIm1zIjogMzY0CiAgICB9CiAgXSwKICAiZm9udHMiOiBbCiAgICAiaHR0cHM6Ly9zcGlyaXRhdGxhcy1vbmUudmVyY2VsLmFwcC9hc3NldHMvaW5zdHJ1bWVudC1zYW5zLWxhdGluLXdnaHQtbm9ybWFsLUJiekZMWlRnLndvZmYyIiwKICAgICJodHRwczovL3NwaXJpdGF0bGFzLW9uZS52ZXJjZWwuYXBwL2Fzc2V0cy9pYm0tcGxleC1tb25vLWxhdGluLTQwMC1ub3JtYWwtRE1KOFZHOHkud29mZjIiCiAgXSwKICAibG9hZGVkRm9udHMiOiBbCiAgICAiSW5zdHJ1bWVudCBTYW5zIFZhcmlhYmxlIiwKICAgICJJQk0gUGxleCBNb25vIgogIF0KfQ=="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-852ad879cec2430bd7b8",
+          "file": "brand-journeys.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "landing composition and links at 1440x1000",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6413,
+                  "error": {
+                    "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97",
+                    "location": {
+                      "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                      "column": 97,
+                      "line": 34
+                    },
+                    "snippet": "  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                        "column": 97,
+                        "line": 34
+                      },
+                      "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:34:32.592Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MTQ0MCwiaGVpZ2h0IjoxMDAwLCJkb2N1bWVudFdpZHRoIjoxNDQwLCJmb250cyI6WyJJbnN0cnVtZW50IFNhbnMgVmFyaWFibGUiLCJJQk0gUGxleCBNb25vIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "WyJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA0MDQgKCkiXQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-landing-composition-and-links-at-1440x1000/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-landing-composition-and-links-at-1440x1000/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-landing-composition-and-links-at-1440x1000/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                    "column": 97,
+                    "line": 34
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-24c0d5844e898f2d14ab",
+          "file": "brand-journeys.spec.ts",
+          "line": 71,
+          "column": 3
+        },
+        {
+          "title": "landing composition and links at 768x1024",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6219,
+                  "error": {
+                    "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97",
+                    "location": {
+                      "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                      "column": 97,
+                      "line": 34
+                    },
+                    "snippet": "  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                        "column": 97,
+                        "line": 34
+                      },
+                      "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:34:40.279Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6NzY4LCJoZWlnaHQiOjEwMjQsImRvY3VtZW50V2lkdGgiOjc2OCwiZm9udHMiOlsiSW5zdHJ1bWVudCBTYW5zIFZhcmlhYmxlIiwiSUJNIFBsZXggTW9ubyJdfQ=="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "WyJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA0MDQgKCkiXQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-landing-composition-and-links-at-768x1024/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-landing-composition-and-links-at-768x1024/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-landing-composition-and-links-at-768x1024/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                    "column": 97,
+                    "line": 34
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-1d8d6c307d0b99e658cf",
+          "file": "brand-journeys.spec.ts",
+          "line": 71,
+          "column": 3
+        },
+        {
+          "title": "landing composition and links at 390x844",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7744,
+                  "error": {
+                    "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97",
+                    "location": {
+                      "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                      "column": 97,
+                      "line": 34
+                    },
+                    "snippet": "  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                        "column": 97,
+                        "line": 34
+                      },
+                      "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:34:48.062Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSBwIiwicmF0aW8iOjkuNTAzOTYzMTc0NjUyOTI2fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjg0NCwiZG9jdW1lbnRXaWR0aCI6MzkwLCJmb250cyI6WyJJbnN0cnVtZW50IFNhbnMgVmFyaWFibGUiLCJJQk0gUGxleCBNb25vIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "WyJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA0MDQgKCkiXQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-landing-composition-and-links-at-390x844/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-landing-composition-and-links-at-390x844/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-landing-composition-and-links-at-390x844/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                    "column": 97,
+                    "line": 34
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-de4873abb30f62004d28",
+          "file": "brand-journeys.spec.ts",
+          "line": 71,
+          "column": 3
+        },
+        {
+          "title": "keyboard CTA enters atlas and each featured bar opens the correct working experience with return home",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 16706,
+                  "error": {
+                    "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97",
+                    "location": {
+                      "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                      "column": 97,
+                      "line": 34
+                    },
+                    "snippet": "  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                        "column": 97,
+                        "line": 34
+                      },
+                      "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:34:57.334Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "WyJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA0MDQgKCkiXQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-keyboard-CT-a02c7-experience-with-return-home/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-keyboard-CT-a02c7-experience-with-return-home/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-keyboard-CT-a02c7-experience-with-return-home/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                    "column": 97,
+                    "line": 34
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-9b095981d1cdda698f77",
+          "file": "brand-journeys.spec.ts",
+          "line": 123,
+          "column": 1
+        },
+        {
+          "title": "featured live drink expands and collapses real parts and supports visible, keyboard and pointer orbit",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6339,
+                  "error": {
+                    "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97",
+                    "location": {
+                      "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                      "column": 97,
+                      "line": 34
+                    },
+                    "snippet": "  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                        "column": 97,
+                        "line": 34
+                      },
+                      "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:35:15.988Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-rendered-motion",
+                      "contentType": "application/json",
+                      "body": "eyJhc3NlbWJsZWQiOnsiZSI6MCwicGFydHMiOlt7ImlkIjoiZ2FybmlzaF9vcmFuZ2UiLCJwb3NpdGlvbiI6WzAsMCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImljZV9pbmNsdXNpb25zIiwicG9zaXRpb24iOlstMC4wNjU4OTY1OTMwMzQyNjc0MywwLjU3MDkzMzU4MDM5ODU1OTYsMC4zNjUzMTIwNjk2NTQ0NjQ3XSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX2JpdHRlciIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJiaXR0ZXIiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6InVzZXItY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX21vZGlmaWVycyIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJtb2RpZmllcnMiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6ImluZmVycmVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX3NwaXJpdCIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJzcGlyaXQiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6InZpZGVvLWNvbmZpcm1lZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV92ZXJtb3V0aCIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJ2ZXJtb3V0aCIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidmlkZW8tY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiaWNlIiwicG9zaXRpb24iOlswLDAuOTQ0OTk5OTkyODQ3NDQyNiwtMC4wMzUwMDAwMDAxNDkwMTE2MV0sInJvdGF0aW9uIjpbMC4wMDc3MzYzMTUyNzgzODI0MjQsMC4wNjAwNDUyMDMxODY2NjA3NSwwLjAxMjA1NzE2ODYwNTk5NTE3OCwwLjk5ODA5Mjg1NTI0MjI3MzRdLCJzY2FsZSI6WzEuMDAwMDAwMDAxNDA0NTE2NSwxLjAwMDAwMDAwMDA3Njg0ODMsMS4wMDAwMDAwMDEzNzI0OTFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImxpcXVpZCIsInBvc2l0aW9uIjpbMCwwLDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6Im1peHR1cmUiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImdsYXNzIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH1dLCJjYW1lcmEiOnsiYXppbXV0aCI6LTAuMDgsImVsZXZhdGlvbiI6MC4xNiwiem9vbSI6MS4wNCwidGFyZ2V0IjpbMCwxLjA3LDBdLCJwb3NpdGlvbiI6Wy0wLjUxOTYzODE0Mjk1MDQ5OTUsMi41NTM5NDUwMTE3ODIxMTksNi40ODE2MTM4NTM4MDI1NjldLCJmb3YiOjM1fSwiZnJhbWVUaW1lcyI6WzIwOC42MDAwMDAwMDA1NTg4LDI1LjM5OTk5OTk5OTQ0MTIwNl0sInJlbmRlcmVkRnJhbWVzIjozLCJyZW5kZXJlZEF0IjoyNTkwLjcwMDAwMDAwMDE4NjMsInJlYWR5Ijp0cnVlLCJzdGFnZSI6eyJiYWNrZ3JvdW5kQmx1cnJpbmVzcyI6MC4wNSwiYmFja2dyb3VuZEludGVuc2l0eSI6MC4xNCwiZW52aXJvbm1lbnRJbnRlbnNpdHkiOjAuNSwic3RvbmVTdHJlbmd0aCI6MC4wMzUsInN0b25lTWlwQmlhcyI6Mn19LCJmaW5hbCI6eyJlIjowLjAwMDE1OTI0MjI5Mzk1NDg3NDE3LCJwYXJ0cyI6W3siaWQiOiJnYXJuaXNoX29yYW5nZSIsInBvc2l0aW9uIjpbMCwwLDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJnYXJuaXNoIiwibm9ybWFsTWFwIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDh9LCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiaWNlX2luY2x1c2lvbnMiLCJwb3NpdGlvbiI6Wy0wLjA2NTg5NjU5MzAzNDI2NzQzLDAuNTcwOTMzNTgwMzk4NTU5NiwwLjM2NTMxMjA2OTY1NDQ2NDddLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJzdHJ1Y3R1cmUiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfYml0dGVyIiwicG9zaXRpb24iOlswLDEuMTAwMDAwMDIzODQxODU4LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzAuMDAxLDAuMDAxLDAuMDAxXSwidmlzaWJsZSI6ZmFsc2UsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6ImJpdHRlciIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidXNlci1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfbW9kaWZpZXJzIiwicG9zaXRpb24iOlswLDEuMTAwMDAwMDIzODQxODU4LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzAuMDAxLDAuMDAxLDAuMDAxXSwidmlzaWJsZSI6ZmFsc2UsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6Im1vZGlmaWVycyIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoiaW5mZXJyZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfc3Bpcml0IiwicG9zaXRpb24iOlswLDEuMTAwMDAwMDIzODQxODU4LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzAuMDAxLDAuMDAxLDAuMDAxXSwidmlzaWJsZSI6ZmFsc2UsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6InNwaXJpdCIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidmlkZW8tY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX3Zlcm1vdXRoIiwicG9zaXRpb24iOlswLDEuMTAwMDAwMDIzODQxODU4LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzAuMDAxLDAuMDAxLDAuMDAxXSwidmlzaWJsZSI6ZmFsc2UsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6InZlcm1vdXRoIiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJ2aWRlby1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJpY2UiLCJwb3NpdGlvbiI6WzAsMC45NDQ5OTk5OTI4NDc0NDI2LC0wLjAzNTAwMDAwMDE0OTAxMTYxXSwicm90YXRpb24iOlswLjAwNzczNjMxNTI3ODM4MjQyNCwwLjA2MDA0NTIwMzE4NjY2MDc1LDAuMDEyMDU3MTY4NjA1OTk1MTc4LDAuOTk4MDkyODU1MjQyMjczNF0sInNjYWxlIjpbMS4wMDAwMDAwMDE0MDQ1MTY1LDEuMDAwMDAwMDAwMDc2ODQ4MywxLjAwMDAwMDAwMTM3MjQ5MV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoibGlxdWlkIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoibWl4dHVyZSIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiZ2xhc3MiLCJwb3NpdGlvbiI6WzAsMCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfV0sImNhbWVyYSI6eyJhemltdXRoIjoxLjA5MDE5OTgxNDEyMDU5OSwiZWxldmF0aW9uIjowLjE4OTE2NjcxNzUyOTI5Njg3LCJ6b29tIjoxLjA0LCJ0YXJnZXQiOlswLDEuMDcwMDAwMjcyMzE3MTY5MywwXSwicG9zaXRpb24iOls1LjczNjIyNTk2ODMxNDU1MSwyLjc0MTczNzM0OTc2MDU5MjYsMi45OTA2OTE5MzgxMTc5OTA0XSwiZm92IjozNX0sImZyYW1lVGltZXMiOlsyMDguNjAwMDAwMDAwNTU4OCwyNS4zOTk5OTk5OTk0NDEyMDYsMjUxLjgwMDAwMDAwMDc0NTAzLDEuODk5OTk5OTk5NDQxMjA2NSw0My40MDAwMDAwMDAzNzI1Myw0NC4zOTk5OTk5OTk0NDEyMSwyLjgwMDAwMDAwMDc0NTA1OCwxNSwxNi4yOTk5OTk5OTk4MTM3MzUsMTYuNzk5OTk5OTk5ODEzNzM1LDE3LjIwMDAwMDAwMDE4NjI2NSwxNi41LDE3LDE2LjIwMDAwMDAwMDE4NjI2NSwxNy4wOTk5OTk5OTk2Mjc0NywxNi41LDE2LDE3LjQwMDAwMDAwMDM3MjUzLDE2Ljc5OTk5OTk5OTgxMzczNSwxNi43OTk5OTk5OTk4MTM3MzUsMTYsMTYuNzAwMDAwMDAwMTg2MjY1LDE3LjA5OTk5OTk5OTYyNzQ3LDE2LjQwMDAwMDAwMDM3MjUzLDE2LjA5OTk5OTk5OTYyNzQ3LDE3LDE3LjIwMDAwMDAwMDE4NjI2NSwxNi41OTk5OTk5OTk2Mjc0NywxNi43MDAwMDAwMDAxODYyNjUsMTYuNDAwMDAwMDAwMzcyNTMsMTcsMTYuMjk5OTk5OTk5ODEzNzM1LDE2LjIwMDAwMDAwMDE4NjI2NSwxNy4zOTk5OTk5OTk0NDEyMDYsMTUuOTAwMDAwMDAwMzcyNTI5LDE3LjU5OTk5OTk5OTYyNzQ3LDE1LjkwMDAwMDAwMDM3MjUyOSwxNywxNi4wOTk5OTk5OTk2Mjc0NywxNy4zMDAwMDAwMDA3NDUwNTgsMTYsMTcuNTk5OTk5OTk5NjI3NDcsMTYuNzAwMDAwMDAwMTg2MjY1LDE2LjIwMDAwMDAwMDE4NjI2NSwxNy4wOTk5OTk5OTk2Mjc0NywxNi4yOTk5OTk5OTk4MTM3MzUsMTcsMTYuNDAwMDAwMDAwMzcyNTMsMTYuMDk5OTk5OTk5NjI3NDcsMTcuNSwxNi43MDAwMDAwMDAxODYyNjUsMTYuNTk5OTk5OTk5NjI3NDcsMTYuNzAwMDAwMDAwMTg2MjY1LDE2LjI5OTk5OTk5OTgxMzczNSwxNy4xMDAwMDAwMDA1NTg3OTQsMTYuNSwxNi4wOTk5OTk5OTk2Mjc0NywxNi45MDAwMDAwMDAzNzI1MywxNi4yMDAwMDAwMDAxODYyNjUsMTcuMDk5OTk5OTk5NjI3NDcsMTYuNzk5OTk5OTk5ODEzNzM1LDE2LjQwMDAwMDAwMDM3MjUzLDE2LjU5OTk5OTk5OTYyNzQ3LDE3LjI5OTk5OTk5OTgxMzczNSwxNS45MDAwMDAwMDAzNzI1MjksMTcuNSwxNS45MDAwMDAwMDAzNzI1MjksMTYuNSwxNy42OTk5OTk5OTkyNTQ5NDIsMTYuMjAwMDAwMDAwMTg2MjY1LDE2LjYwMDAwMDAwMDU1ODc5NCwxNi44OTk5OTk5OTk0NDEyMDYsMTYsMTYuNSwxNi45MDAwMDAwMDAzNzI1MywxNy41LDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjUsMTYuNzAwMDAwMDAwMTg2MjY1LDE2LjU5OTk5OTk5OTYyNzQ3LDE1LjkwMDAwMDAwMDM3MjUyOSwxNy40MDAwMDAwMDAzNzI1MywxNS44OTk5OTk5OTk0NDEyMDUsMTcuNSwxNi42MDAwMDAwMDA1NTg3OTQsMTYuNjk5OTk5OTk5MjU0OTQyLDE2LjcwMDAwMDAwMDE4NjI2NSwxNi42MDAwMDAwMDA1NTg3OTQsMTYsMTcuNSwxNS42OTk5OTk5OTkyNTQ5NDIsMTYuNzAwMDAwMDAwMTg2MjY1LDE2LjcwMDAwMDAwMDE4NjI2NSwxNy43MDAwMDAwMDAxODYyNjUsMTUuNTk5OTk5OTk5NjI3NDcxLDE3LjUsMTYuMjAwMDAwMDAwMTg2MjY1LDE3LjI5OTk5OTk5OTgxMzczNSwxNS43MDAwMDAwMDAxODYyNjMsMTcuNzAwMDAwMDAwMTg2MjY1LDE2LjUsMTYuNzk5OTk5OTk5ODEzNzM1LDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjUsMTYuMTAwMDAwMDAwNTU4Nzk0LDE3LjM5OTk5OTk5OTQ0MTIwNiwxNS43MDAwMDAwMDAxODYyNjMsMTcuNzAwMDAwMDAwMTg2MjY1LDE2LjcwMDAwMDAwMDE4NjI2NSwxNi41OTk5OTk5OTk2Mjc0NywxNi42MDAwMDAwMDA1NTg3OTQsMTYuNSwxNS44OTk5OTk5OTk0NDEyMDUsMTcuNjAwMDAwMDAwNTU4Nzk0LDE1Ljc5OTk5OTk5OTgxMzczNCwxNi41OTk5OTk5OTk2Mjc0NywxNi43MDAwMDAwMDAxODYyNjUsMTcuNTk5OTk5OTk5NjI3NDcsMTUuNzAwMDAwMDAwMTg2MjYzLDE3LjI5OTk5OTk5OTgxMzczNSwxNiwxNy43MDAwMDAwMDAxODYyNjUsMTUuNjAwMDAwMDAwNTU4Nzk0LDE3Ljc5OTk5OTk5OTgxMzczNSwxNi41LDE2LDE3LDE2Ljg5OTk5OTk5OTQ0MTIwNiwxNi4yMDAwMDAwMDAxODYyNjUsMTcuMjk5OTk5OTk5ODEzNzM1LDE2LjYwMDAwMDAwMDU1ODc5NCwxNy4wOTk5OTk5OTk2Mjc0NywxNi41LDE2LjYwMDAwMDAwMDU1ODc5NCwxNi4xOTk5OTk5OTkyNTQ5NDIsMTYuOTAwMDAwMDAwMzcyNTMsMTYuMjAwMDAwMDAwMTg2MjY1LDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjUsMTcuNjAwMDAwMDAwNTU4Nzk0LDE2LjY5OTk5OTk5OTI1NDk0MiwxNi41LDE2LjQwMDAwMDAwMDM3MjUzXSwicmVuZGVyZWRGcmFtZXMiOjE0NCwicmVuZGVyZWRBdCI6NTE5OS41OTk5OTk5OTk2Mjc1LCJyZWFkeSI6dHJ1ZSwic3RhZ2UiOnsiYmFja2dyb3VuZEJsdXJyaW5lc3MiOjAuMDUsImJhY2tncm91bmRJbnRlbnNpdHkiOjAuMTQsImVudmlyb25tZW50SW50ZW5zaXR5IjowLjUsInN0b25lU3RyZW5ndGgiOjAuMDM1LCJzdG9uZU1pcEJpYXMiOjJ9fX0="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "WyJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA0MDQgKCkiXQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-featured-li-fc8a2--keyboard-and-pointer-orbit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-featured-li-fc8a2--keyboard-and-pointer-orbit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-featured-li-fc8a2--keyboard-and-pointer-orbit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                    "column": 97,
+                    "line": 34
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-05b1baa11a3f4a5d5863",
+          "file": "brand-journeys.spec.ts",
+          "line": 148,
+          "column": 1
+        },
+        {
+          "title": "ingredient entry restores expansion and the comparison entry preserves synchronized and independent rotation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 14277,
+                  "error": {
+                    "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97",
+                    "location": {
+                      "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                      "column": 97,
+                      "line": 34
+                    },
+                    "snippet": "  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                        "column": 97,
+                        "line": 34
+                      },
+                      "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:35:24.051Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "comparison-rendered-cameras",
+                      "contentType": "application/json",
+                      "body": "W3siZSI6MC45OTk2ODA0NTEwMjE5NjMyLCJwYXJ0cyI6W3siaWQiOiJnYXJuaXNoX29yYW5nZSIsInBvc2l0aW9uIjpbMCw3LjA0LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJnYXJuaXNoIiwibm9ybWFsTWFwIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDh9LCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiaWNlX2luY2x1c2lvbnMiLCJwb3NpdGlvbiI6Wy0wLjA2NTg5NjU5MzAzNDI2NzQzLDIuNzI1OTMzNTgwMzk4NTYsMC4zNjUzMTIwNjk2NTQ0NjQ3XSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX2JpdHRlciIsInBvc2l0aW9uIjpbMCw1LjUwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6ImJpdHRlciIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidXNlci1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfbW9kaWZpZXJzIiwicG9zaXRpb24iOlswLDcuNjAwMDAwMDIzODQxODU4LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5IjoibW9kaWZpZXJzIiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJpbmZlcnJlZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV9zcGlyaXQiLCJwb3NpdGlvbiI6WzAsNC40NTAwMDAwMjM4NDE4NTc2LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5Ijoic3Bpcml0IiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJ2aWRlby1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfdmVybW91dGgiLCJwb3NpdGlvbiI6WzAsNi41NTAwMDAwMjM4NDE4NTcsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJ2ZXJtb3V0aCIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidmlkZW8tY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiaWNlIiwicG9zaXRpb24iOlswLDMuMDk5OTk5OTkyODQ3NDQzLC0wLjAzNTAwMDAwMDE0OTAxMTYxXSwicm90YXRpb24iOlswLjAwNzczNjMxNTI3ODM4MjQyNCwwLjA2MDA0NTIwMzE4NjY2MDc1LDAuMDEyMDU3MTY4NjA1OTk1MTc4LDAuOTk4MDkyODU1MjQyMjczNF0sInNjYWxlIjpbMS4wMDAwMDAwMDE0MDQ1MTY1LDEuMDAwMDAwMDAwMDc2ODQ4MywxLjAwMDAwMDAwMTM3MjQ5MV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoibGlxdWlkIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjpmYWxzZSwicm9sZSI6Im1peHR1cmUiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImdsYXNzIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH1dLCJjYW1lcmEiOnsiYXppbXV0aCI6MCwiZWxldmF0aW9uIjowLjE2LCJ6b29tIjoxLCJ0YXJnZXQiOlswLDQuNjQ5OTk4OTY3ODcyMTYsMF0sInBvc2l0aW9uIjpbMCw3LjQyMjEzNDYyOTg4NDA2LDE3LjE3Nzc1MTU0MDg2NDMxOF0sImZvdiI6MzV9LCJmcmFtZVRpbWVzIjpbMzYzLjA5OTk5OTk5OTYyNzQ3LDIwOS41LDE5LjgwMDAwMDAwMDc0NTA1OCwxNy4xMDAwMDAwMDA1NTg3OTQsMTY2Ljc5OTk5OTk5OTgxMzc0LDMzLjcwMDAwMDAwMDE4NjI2NSwxNi44OTk5OTk5OTk0NDEyMDYsMTYuNDAwMDAwMDAwMzcyNTMsMTYuNTk5OTk5OTk5NjI3NDcsMTkuNzAwMDAwMDAwMTg2MjY1LDEzLjYwMDAwMDAwMDU1ODc5NCwxNi41LDE2LDE3LDE3LjA5OTk5OTk5OTYyNzQ3LDE2LjI5OTk5OTk5OTgxMzczNSwxNi41LDE2LjkwMDAwMDAwMDM3MjUzLDE3LDE2LjUsMTUuODk5OTk5OTk5NDQxMjA1LDE3LjUsMTYuODAwMDAwMDAwNzQ1MDU4LDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjA5OTk5OTk5OTYyNzQ3LDE3LjIwMDAwMDAwMDE4NjI2NSwxNi43OTk5OTk5OTk4MTM3MzUsMTYuNSwxNS44MDAwMDAwMDA3NDUwNTgsMTcuNjk5OTk5OTk5MjU0OTQyLDE2LjYwMDAwMDAwMDU1ODc5NCwxNi43MDAwMDAwMDAxODYyNjUsMTYuNjk5OTk5OTk5MjU0OTQyLDE2LjEwMDAwMDAwMDU1ODc5NCwxNy4yMDAwMDAwMDAxODYyNjUsMTYuMzk5OTk5OTk5NDQxMjA2LDE2LjEwMDAwMDAwMDU1ODc5NCwxNy4zOTk5OTk5OTk0NDEyMDYsMTYuNzAwMDAwMDAwMTg2MjY1LDE2LjA5OTk5OTk5OTYyNzQ3LDE3LjMwMDAwMDAwMDc0NTA1OCwxNi4xOTk5OTk5OTkyNTQ5NDIsMTcuMTAwMDAwMDAwNTU4Nzk0LDE2LjUsMTYsMTcuNSwxNi43OTk5OTk5OTk4MTM3MzUsMTYuNTk5OTk5OTk5NjI3NDcsMTYuMzAwMDAwMDAwNzQ1MDU4LDE2Ljc5OTk5OTk5OTgxMzczNSwxNi43OTk5OTk5OTk4MTM3MzUsMTYuNSwxNi4wOTk5OTk5OTk2Mjc0NywxNy4zMDAwMDAwMDA3NDUwNTgsMTYuNjk5OTk5OTk5MjU0OTQyLDE1LjgwMDAwMDAwMDc0NTA1OCwyMS4zOTk5OTk5OTk0NDEyMDYsMTIuNDAwMDAwMDAwMzcyNTI5LDE2Ljc5OTk5OTk5OTgxMzczNSwxNi45MDAwMDAwMDAzNzI1MywyMCwxMy43OTk5OTk5OTk4MTM3MzUsMTYuMjk5OTk5OTk5ODEzNzM1LDE2LDE3LjcwMDAwMDAwMDE4NjI2NSwxNS4zOTk5OTk5OTk0NDEyMDYsMTcuNjAwMDAwMDAwNTU4Nzk0LDE2LjM5OTk5OTk5OTQ0MTIwNiwxNi4xMDAwMDAwMDA1NTg3OTQsMTcsMTYuNTk5OTk5OTk5NjI3NDcsMTguMTAwMDAwMDAwNTU4Nzk0XSwicmVuZGVyZWRGcmFtZXMiOjczLCJyZW5kZXJlZEF0IjozMTUwLjg5OTk5OTk5OTQ0MSwicmVhZHkiOnRydWUsInN0YWdlIjp7ImJhY2tncm91bmRCbHVycmluZXNzIjowLjA5OTk4NDAyMjU1MTA5ODE2LCJiYWNrZ3JvdW5kSW50ZW5zaXR5IjowLjM0MDA4MzA4MjczNDI4OTU1LCJlbnZpcm9ubWVudEludGVuc2l0eSI6MSwic3RvbmVTdHJlbmd0aCI6MC4xMjAwMTI3ODE5NTkxMjE0Niwic3RvbmVNaXBCaWFzIjoyfX0seyJlIjowLjk5OTY5NzY0MjM1OTE0MjgsInBhcnRzIjpbeyJpZCI6Imdhcm5pc2hfZmxvd2VyX2Jhc2UiLCJwb3NpdGlvbiI6WzAuMjUsOC41NjU3ODE2NDEwMDY0NywtMC4wNTk5OTk5OTg2NTg4OTU0OV0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6Imdhcm5pc2giLCJyZXByZXNlbnRhdGlvbiI6InBsYXVzaWJsZS1oaWRkZW4tZmxvd2VyLWF0dGFjaG1lbnQiLCJldmlkZW5jZSI6InVudmVyaWZpZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJnYXJuaXNoX3BldGFsXzAwXzAwIiwicG9zaXRpb24iOlswLDYuNTUzNzgxNTkyNDczMzg3NSwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6Imdhcm5pc2hfcGV0YWxfMDBfMDEiLCJwb3NpdGlvbiI6WzAsNi41NTM3ODE1OTI0NzMzODc1LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJnYXJuaXNoIiwibm9ybWFsTWFwIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDh9LCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiZ2FybmlzaF9wZXRhbF8wMF8wMiIsInBvc2l0aW9uIjpbMCw2LjU1Mzc4MTU5MjQ3MzM4NzUsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6Imdhcm5pc2giLCJub3JtYWxNYXAiOnsid2lkdGgiOjIwNDgsImhlaWdodCI6MjA0OH0sImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJnYXJuaXNoX3BldGFsXzAwXzA0IiwicG9zaXRpb24iOlswLDYuNTUzNzgxNTkyNDczMzg3NSwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6Imdhcm5pc2hfcGV0YWxfMDBfMDUiLCJwb3NpdGlvbiI6WzAsNi41NTM3ODE1OTI0NzMzODc1LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJnYXJuaXNoIiwibm9ybWFsTWFwIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDh9LCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiZ2FybmlzaF9wZXRhbF8wMF8wNiIsInBvc2l0aW9uIjpbMCw2LjU1Mzc4MTU5MjQ3MzM4NzUsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6Imdhcm5pc2giLCJub3JtYWxNYXAiOnsid2lkdGgiOjIwNDgsImhlaWdodCI6MjA0OH0sImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJnYXJuaXNoX3BldGFsXzAwXzA3IiwicG9zaXRpb24iOlswLDYuNTUzNzgxNTkyNDczMzg3NSwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6Imdhcm5pc2hfcmVkX3JvdW5kIiwicG9zaXRpb24iOlswLjI1LDguNDgxNzgxNTMwMzgwMjUsLTAuMDU5OTk5OTk4NjU4ODk1NDldLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJnYXJuaXNoIiwibm9ybWFsTWFwIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDh9LCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiaWNlX2luY2x1c2lvbnMiLCJwb3NpdGlvbiI6Wy0wLjA2NTg5NjU5MzAzNDI2NzQzLDIuNzI1OTMzNTk0NzAzNjc0MiwwLjM2NTMxMjA2OTY1NDQ2NDddLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJzdHJ1Y3R1cmUiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfYml0dGVyIiwicG9zaXRpb24iOlswLDUuNTAwMDAwMDIzODQxODU4LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5IjoiYml0dGVyIiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJ1c2VyLWNvbmZpcm1lZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV9tb2RpZmllcnMiLCJwb3NpdGlvbiI6WzAsNy42MDAwMDAwMjM4NDE4NTgsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJtb2RpZmllcnMiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6InZpZGVvLWNvbmZpcm1lZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV9zcGlyaXQiLCJwb3NpdGlvbiI6WzAsNC40NTAwMDAwMjM4NDE4NTc2LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5Ijoic3Bpcml0IiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJpbmZlcnJlZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV92ZXJtb3V0aCIsInBvc2l0aW9uIjpbMCw2LjU1MDAwMDAyMzg0MTg1NywwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6InZlcm1vdXRoIiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJpbmZlcnJlZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImljZSIsInBvc2l0aW9uIjpbMCwzLjA5OTk5OTk0NzU0NzkxMjUsLTAuMDM1MDAwMDAwMTQ5MDExNjFdLCJyb3RhdGlvbiI6WzAuMDA3NzM2MzE1Mjc4MzgyNDI0LDAuMDYwMDQ1MjAzMTg2NjYwNzUsMC4wMTIwNTcxNjg2MDU5OTUxNzgsMC45OTgwOTI4NTUyNDIyNzM0XSwic2NhbGUiOlsxLjAwMDAwMDAwMTQwNDUxNjUsMS4wMDAwMDAwMDAwNzY4NDgzLDEuMDAwMDAwMDAxMzcyNDkxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InBoeXNpY2FsIiwiY2F0ZWdvcnkiOiJzdHJ1Y3R1cmUiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJsaXF1aWQiLCJwb3NpdGlvbiI6WzAsMCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoibWl4dHVyZSIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiZ2xhc3MiLCJwb3NpdGlvbiI6WzAsMCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfV0sImNhbWVyYSI6eyJhemltdXRoIjowLCJlbGV2YXRpb24iOjAuMTYsInpvb20iOjEsInRhcmdldCI6WzAsNC42NDk5OTkwNzU5Mjg2NTksMF0sInBvc2l0aW9uIjpbMCw3LjQyMjEzNDg1NjU2NTU4OCwxNy4xNzc3NTE4NzQ4MjEzNTRdLCJmb3YiOjM1fSwiZnJhbWVUaW1lcyI6WzI4My4yMDAwMDAwMDAxODYyNiwyMTcuMjk5OTk5OTk5ODEzNzQsMTQ0LjQwMDAwMDAwMDM3MjUzLDU3LjUsMTUxLjA5OTk5OTk5OTYyNzQ3LDguOTAwMDAwMDAwMzcyNTI5LDE2LjcwMDAwMDAwMDE4NjI2NSwxNi41OTk5OTk5OTk2Mjc0NywxNi40MDAwMDAwMDAzNzI1MywxOS41LDEzLjc5OTk5OTk5OTgxMzczNSwxNi40MDAwMDAwMDAzNzI1MywxNi4wOTk5OTk5OTk2Mjc0NywxNywxNi45MDAwMDAwMDAzNzI1MywxNi4xOTk5OTk5OTkyNTQ5NDIsMTYuODAwMDAwMDAwNzQ1MDU4LDE2Ljc5OTk5OTk5OTgxMzczNSwxNywxNi41LDE1Ljc5OTk5OTk5OTgxMzczNCwxNy43MDAwMDAwMDAxODYyNjUsMTYuNzAwMDAwMDAwMTg2MjY1LDE2LjU5OTk5OTk5OTYyNzQ3LDE2LjA5OTk5OTk5OTYyNzQ3LDE3LjQwMDAwMDAwMDM3MjUzLDE2LjcwMDAwMDAwMDE4NjI2NSwxNi4yOTk5OTk5OTk4MTM3MzUsMTYsMTcuNSwxNi43MDAwMDAwMDAxODYyNjUsMTYuNzAwMDAwMDAwMTg2MjY1LDE2LjY5OTk5OTk5OTI1NDk0MiwxNi4xMDAwMDAwMDA1NTg3OTQsMTcuMDk5OTk5OTk5NjI3NDcsMTYuMjk5OTk5OTk5ODEzNzM1LDE2LjEwMDAwMDAwMDU1ODc5NCwxNy43MDAwMDAwMDAxODYyNjUsMTYuNSwxNi4xOTk5OTk5OTkyNTQ5NDIsMTcuNDAwMDAwMDAwMzcyNTMsMTYsMTcuMjk5OTk5OTk5ODEzNzM1LDE2LjI5OTk5OTk5OTgxMzczNSwxNiwxNy41LDE3LDE2LjMwMDAwMDAwMDc0NTA1OCwxNi41OTk5OTk5OTk2Mjc0NywxNi41OTk5OTk5OTk2Mjc0NywxNi44MDAwMDAwMDA3NDUwNTgsMTYuNSwxNi4xOTk5OTk5OTkyNTQ5NDIsMTcuMjAwMDAwMDAwMTg2MjY1LDE2Ljc5OTk5OTk5OTgxMzczNSwxNS43MDAwMDAwMDAxODYyNjMsMjEuMjk5OTk5OTk5ODEzNzM1LDEyLjgwMDAwMDAwMDc0NTA1OCwxNi41OTk5OTk5OTk2Mjc0NywxNi45MDAwMDAwMDAzNzI1MywxOS44OTk5OTk5OTk0NDEyMDYsMTMuOTAwMDAwMDAwMzcyNTI5LDE2LjIwMDAwMDAwMDE4NjI2NSwxNi4wOTk5OTk5OTk2Mjc0NywxNy43MDAwMDAwMDAxODYyNjUsMTUuMzk5OTk5OTk5NDQxMjA2LDE3LjgwMDAwMDAwMDc0NTA1OCwxNi4xOTk5OTk5OTkyNTQ5NDIsMTYuMjAwMDAwMDAwMTg2MjY1LDE2LjkwMDAwMDAwMDM3MjUzLDE2LjcwMDAwMDAwMDE4NjI2NSwxOF0sInJlbmRlcmVkRnJhbWVzIjo3MywicmVuZGVyZWRBdCI6MzE1Mi4wOTk5OTk5OTk2Mjc1LCJyZWFkeSI6dHJ1ZSwic3RhZ2UiOnsiYmFja2dyb3VuZEJsdXJyaW5lc3MiOjAuMDk5OTg0ODgyMTE3OTU3MTcsImJhY2tncm91bmRJbnRlbnNpdHkiOjAuMzQwMDc4NjEyOTg2NjIyOTUsImVudmlyb25tZW50SW50ZW5zaXR5IjoxLCJzdG9uZVN0cmVuZ3RoIjowLjEyMDAxMjA5NDMwNTYzNDI4LCJzdG9uZU1pcEJpYXMiOjJ9fSx7ImUiOjAuOTk5NjU5NjcxNzYxOTM5NiwicGFydHMiOlt7ImlkIjoiZ2FybmlzaF9zaGlzaGl0byIsInBvc2l0aW9uIjpbMCw2LjU4NDc5NjUyNDA0Nzg1MSwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6Imdhcm5pc2hfc3RlbSIsInBvc2l0aW9uIjpbMCw2LjU4NDc5NjUyNDA0Nzg1MSwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImljZV9pbmNsdXNpb25zIiwicG9zaXRpb24iOlstMC4wNjU4OTY1OTMwMzQyNjc0MywyLjcyNTkzMzU5NDcwMzY3NDIsMC4zNjUzMTIwNjk2NTQ0NjQ3XSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX2JpdHRlciIsInBvc2l0aW9uIjpbMCw1LjUwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6ImJpdHRlciIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidXNlci1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfbW9kaWZpZXJzIiwicG9zaXRpb24iOlswLDcuNjAwMDAwMDIzODQxODU4LDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6InJlY2lwZSIsImNhdGVnb3J5IjoibW9kaWZpZXJzIiwicmVwcmVzZW50YXRpb24iOiJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwiZXZpZGVuY2UiOiJ2aWRlby1jb25maXJtZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfc3Bpcml0IiwicG9zaXRpb24iOlswLDQuNDUwMDAwMDIzODQxODU3NiwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJyZWNpcGUiLCJjYXRlZ29yeSI6InNwaXJpdCIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoiaW5mZXJyZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJyZWNpcGVfdmVybW91dGgiLCJwb3NpdGlvbiI6WzAsNi41NTAwMDAwMjM4NDE4NTcsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJ2ZXJtb3V0aCIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoiaW5mZXJyZWQiLCJub3JtYWxNYXAiOm51bGwsImVtaXNzaXZlIjoiMDAwMDAwIiwiZW1pc3NpdmVJbnRlbnNpdHkiOjB9LHsiaWQiOiJpY2UiLCJwb3NpdGlvbiI6WzAsMy4wOTk5OTk5NDc1NDc5MTI1LC0wLjAzNTAwMDAwMDE0OTAxMTYxXSwicm90YXRpb24iOlswLjAwNzczNjMxNTI3ODM4MjQyNCwwLjA2MDA0NTIwMzE4NjY2MDc1LDAuMDEyMDU3MTY4NjA1OTk1MTc4LDAuOTk4MDkyODU1MjQyMjczNF0sInNjYWxlIjpbMS4wMDAwMDAwMDE0MDQ1MTY1LDEuMDAwMDAwMDAwMDc2ODQ4MywxLjAwMDAwMDAwMTM3MjQ5MV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoibGlxdWlkIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjpmYWxzZSwicm9sZSI6Im1peHR1cmUiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImdsYXNzIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH1dLCJjYW1lcmEiOnsiYXppbXV0aCI6MCwiZWxldmF0aW9uIjowLjE2LCJ6b29tIjoxLCJ0YXJnZXQiOlswLDQuNjQ5OTk4ODI5MjkyMDE2NSwwXSwicG9zaXRpb24iOlswLDcuNDIyMTM0MzM5MTY5ODcsMTcuMTc3NzUxMTEyNTcxNTc4XSwiZm92IjozNX0sImZyYW1lVGltZXMiOlsxOTQuNSwxOC41LDYuNSwxMTkuMzk5OTk5OTk5NDQxMiwxMTAuNSw5OC40MDAwMDAwMDAzNzI1Myw4LjI5OTk5OTk5OTgxMzczNSwxNi43MDAwMDAwMDAxODYyNjUsMTYuNTk5OTk5OTk5NjI3NDcsMTYuMzAwMDAwMDAwNzQ1MDU4LDE5LjUsMTMuODk5OTk5OTk5NDQxMjA2LDE2LjI5OTk5OTk5OTgxMzczNSwxNi40MDAwMDAwMDAzNzI1MywxNi43OTk5OTk5OTk4MTM3MzUsMTYuNzk5OTk5OTk5ODEzNzM1LDE2LjEwMDAwMDAwMDU1ODc5NCwxNy4wOTk5OTk5OTk2Mjc0NywxNi43OTk5OTk5OTk4MTM3MzUsMTYuOTAwMDAwMDAwMzcyNTMsMTYuNSwxNS41OTk5OTk5OTk2Mjc0NzEsMTcuOTAwMDAwMDAwMzcyNTMsMTYuNzk5OTk5OTk5ODEzNzM1LDE2LjQwMDAwMDAwMDM3MjUzLDE2LjA5OTk5OTk5OTYyNzQ3LDE3LjcwMDAwMDAwMDE4NjI2NSwxNi41LDE2LjIwMDAwMDAwMDE4NjI2NSwxNi4wOTk5OTk5OTk2Mjc0NywxNy4yOTk5OTk5OTk4MTM3MzUsMTYuNzAwMDAwMDAwMTg2MjY1LDE2Ljc5OTk5OTk5OTgxMzczNSwxNi45MDAwMDAwMDAzNzI1MywxNS43OTk5OTk5OTk4MTM3MzQsMTcuMjk5OTk5OTk5ODEzNzM1LDE2LjIwMDAwMDAwMDE4NjI2NSwxNS45MDAwMDAwMDAzNzI1MjksMTcuODk5OTk5OTk5NDQxMjA2LDE2LjQwMDAwMDAwMDM3MjUzLDE2LjI5OTk5OTk5OTgxMzczNSwxNy4yOTk5OTk5OTk4MTM3MzUsMTYuMjAwMDAwMDAwMTg2MjY1LDE3LjI5OTk5OTk5OTgxMzczNSwxNi4yMDAwMDAwMDAxODYyNjUsMTYsMTcuNDAwMDAwMDAwMzcyNTMsMTcuMDk5OTk5OTk5NjI3NDcsMTYuNSwxNi41LDE2LjUsMTYuNzk5OTk5OTk5ODEzNzM1LDE2LjUsMTYuNDAwMDAwMDAwMzcyNTMsMTcuMDk5OTk5OTk5NjI3NDcsMTYuNzAwMDAwMDAwMTg2MjY1LDE1LjYwMDAwMDAwMDU1ODc5NCwyMS41OTk5OTk5OTk2Mjc0NywxMi43MDAwMDAwMDAxODYyNjUsMTYuNTk5OTk5OTk5NjI3NDcsMTYuNzk5OTk5OTk5ODEzNzM1LDIwLDEzLjkwMDAwMDAwMDM3MjUyOSwxNi4yMDAwMDAwMDAxODYyNjUsMTYsMTcuNTk5OTk5OTk5NjI3NDcsMTUuNSwxNy43MDAwMDAwMDAxODYyNjUsMTYuMjk5OTk5OTk5ODEzNzM1LDE2LjIwMDAwMDAwMDE4NjI2NSwxNi45MDAwMDAwMDAzNzI1MywxNi43OTk5OTk5OTk4MTM3MzUsMTcuNzk5OTk5OTk5ODEzNzM1XSwicmVuZGVyZWRGcmFtZXMiOjc0LCJyZW5kZXJlZEF0IjozMTUyLjY5OTk5OTk5OTI1NSwicmVhZHkiOnRydWUsInN0YWdlIjp7ImJhY2tncm91bmRCbHVycmluZXNzIjowLjA5OTk4Mjk4MzU4ODA5Njk5LCJiYWNrZ3JvdW5kSW50ZW5zaXR5IjowLjM0MDA4ODQ4NTM0MTg5NTg0LCJlbnZpcm9ubWVudEludGVuc2l0eSI6MSwic3RvbmVTdHJlbmd0aCI6MC4xMjAwMTM2MTMxMjk1MjI0Mywic3RvbmVNaXBCaWFzIjoyfX1d"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "WyJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA0MDQgKCkiXQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-ingredient--4e736-ed-and-independent-rotation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-ingredient--4e736-ed-and-independent-rotation/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-ingredient--4e736-ed-and-independent-rotation/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                    "column": 97,
+                    "line": 34
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-d2ece6791ae757a4df68",
+          "file": "brand-journeys.spec.ts",
+          "line": 177,
+          "column": 1
+        },
+        {
+          "title": "direct atlas and all Negroni routes resolve and survive refresh",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11043,
+                  "error": {
+                    "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97",
+                    "location": {
+                      "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                      "column": 97,
+                      "line": 34
+                    },
+                    "snippet": "  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                        "column": 97,
+                        "line": 34
+                      },
+                      "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:35:41.051Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "WyJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA0MDQgKCkiXQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-direct-atla-eab08-resolve-and-survive-refresh/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-direct-atla-eab08-resolve-and-survive-refresh/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-direct-atla-eab08-resolve-and-survive-refresh/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                    "column": 97,
+                    "line": 34
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-c18e56a6ff78564382ea",
+          "file": "brand-journeys.spec.ts",
+          "line": 219,
+          "column": 1
+        },
+        {
+          "title": "WebGL unavailable offers informative fallback without blocking landing and ingredient entry",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2285,
+                  "error": {
+                    "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97",
+                    "location": {
+                      "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                      "column": 97,
+                      "line": 34
+                    },
+                    "snippet": "  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                        "column": 97,
+                        "line": 34
+                      },
+                      "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:35:53.627Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "WyJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA0MDQgKCkiXQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-WebGL-unava-ad808-anding-and-ingredient-entry/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-WebGL-unava-ad808-anding-and-ingredient-entry/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-WebGL-unava-ad808-anding-and-ingredient-entry/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                    "column": 97,
+                    "line": 34
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-c7a97ced688ff2f2eee2",
+          "file": "brand-journeys.spec.ts",
+          "line": 229,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "phone touch and reduced motion",
+          "file": "brand-journeys.spec.ts",
+          "line": 245,
+          "column": 6,
+          "specs": [
+            {
+              "title": "touch orbit, visible ingredient controls and stable reduced-motion presentation",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 100000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6309,
+                      "error": {
+                        "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                        "stack": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97",
+                        "location": {
+                          "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                          "column": 97,
+                          "line": 34
+                        },
+                        "snippet": "  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                            "column": 97,
+                            "line": 34
+                          },
+                          "message": "Error: No first-party runtime errors or failed required asset requests\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Failed to load resource: the server responded with a status of 404 ()\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  32 | test.afterEach(async ({ page }, testInfo) => {\n  33 |   await testInfo.attach('runtime-errors', { body: JSON.stringify(failures.get(page)), contentType: 'application/json' });\n> 34 |   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);\n     |                                                                                                 ^\n  35 | });\n  36 |\n  37 | test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {\n    at /Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts:34:97"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-13T04:35:57.115Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "touch-reduced-motion",
+                          "contentType": "application/json",
+                          "body": "eyJiZWZvcmUiOnsiZSI6MCwicGFydHMiOlt7ImlkIjoiZ2FybmlzaF9vcmFuZ2UiLCJwb3NpdGlvbiI6WzAsMCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImljZV9pbmNsdXNpb25zIiwicG9zaXRpb24iOlstMC4wNjU4OTY1OTMwMzQyNjc0MywwLjU3MDkzMzU4MDM5ODU1OTYsMC4zNjUzMTIwNjk2NTQ0NjQ3XSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX2JpdHRlciIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJiaXR0ZXIiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6InVzZXItY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX21vZGlmaWVycyIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJtb2RpZmllcnMiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6ImluZmVycmVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX3NwaXJpdCIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJzcGlyaXQiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6InZpZGVvLWNvbmZpcm1lZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV92ZXJtb3V0aCIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJ2ZXJtb3V0aCIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidmlkZW8tY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiaWNlIiwicG9zaXRpb24iOlswLDAuOTQ0OTk5OTkyODQ3NDQyNiwtMC4wMzUwMDAwMDAxNDkwMTE2MV0sInJvdGF0aW9uIjpbMC4wMDc3MzYzMTUyNzgzODI0MjQsMC4wNjAwNDUyMDMxODY2NjA3NSwwLjAxMjA1NzE2ODYwNTk5NTE3OCwwLjk5ODA5Mjg1NTI0MjI3MzRdLCJzY2FsZSI6WzEuMDAwMDAwMDAxNDA0NTE2NSwxLjAwMDAwMDAwMDA3Njg0ODMsMS4wMDAwMDAwMDEzNzI0OTFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImxpcXVpZCIsInBvc2l0aW9uIjpbMCwwLDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6Im1peHR1cmUiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImdsYXNzIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH1dLCJjYW1lcmEiOnsiYXppbXV0aCI6LTAuMDgsImVsZXZhdGlvbiI6MC4xNiwiem9vbSI6MS4wNCwidGFyZ2V0IjpbMCwxLjA3LDBdLCJwb3NpdGlvbiI6Wy0wLjUxOTYzODE0Mjk1MDQ5OTUsMi41NTM5NDUwMTE3ODIxMTksNi40ODE2MTM4NTM4MDI1NjldLCJmb3YiOjM1fSwiZnJhbWVUaW1lcyI6WzI0OC4xOTk5OTk5OTkyNTQ5NCwxNi41XSwicmVuZGVyZWRGcmFtZXMiOjMsInJlbmRlcmVkQXQiOjM0NzkuNjAwMDAwMDAwNTU5LCJyZWFkeSI6dHJ1ZSwic3RhZ2UiOnsiYmFja2dyb3VuZEJsdXJyaW5lc3MiOjAuMDUsImJhY2tncm91bmRJbnRlbnNpdHkiOjAuMTQsImVudmlyb25tZW50SW50ZW5zaXR5IjowLjUsInN0b25lU3RyZW5ndGgiOjAuMDM1LCJzdG9uZU1pcEJpYXMiOjJ9fSwiYWZ0ZXIiOnsiZSI6MCwicGFydHMiOlt7ImlkIjoiZ2FybmlzaF9vcmFuZ2UiLCJwb3NpdGlvbiI6WzAsMCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5IjoiZ2FybmlzaCIsIm5vcm1hbE1hcCI6eyJ3aWR0aCI6MjA0OCwiaGVpZ2h0IjoyMDQ4fSwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImljZV9pbmNsdXNpb25zIiwicG9zaXRpb24iOlstMC4wNjU4OTY1OTMwMzQyNjc0MywwLjU3MDkzMzU4MDM5ODU1OTYsMC4zNjUzMTIwNjk2NTQ0NjQ3XSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlsxLDEsMV0sInZpc2libGUiOnRydWUsInJvbGUiOiJwaHlzaWNhbCIsImNhdGVnb3J5Ijoic3RydWN0dXJlIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX2JpdHRlciIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJiaXR0ZXIiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6InVzZXItY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX21vZGlmaWVycyIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJtb2RpZmllcnMiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6ImluZmVycmVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoicmVjaXBlX3NwaXJpdCIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJzcGlyaXQiLCJyZXByZXNlbnRhdGlvbiI6InJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLCJldmlkZW5jZSI6InZpZGVvLWNvbmZpcm1lZCIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6InJlY2lwZV92ZXJtb3V0aCIsInBvc2l0aW9uIjpbMCwxLjEwMDAwMDAyMzg0MTg1OCwwXSwicm90YXRpb24iOlswLDAsMCwxXSwic2NhbGUiOlswLjAwMSwwLjAwMSwwLjAwMV0sInZpc2libGUiOmZhbHNlLCJyb2xlIjoicmVjaXBlIiwiY2F0ZWdvcnkiOiJ2ZXJtb3V0aCIsInJlcHJlc2VudGF0aW9uIjoicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsImV2aWRlbmNlIjoidmlkZW8tY29uZmlybWVkIiwibm9ybWFsTWFwIjpudWxsLCJlbWlzc2l2ZSI6IjAwMDAwMCIsImVtaXNzaXZlSW50ZW5zaXR5IjowfSx7ImlkIjoiaWNlIiwicG9zaXRpb24iOlswLDAuOTQ0OTk5OTkyODQ3NDQyNiwtMC4wMzUwMDAwMDAxNDkwMTE2MV0sInJvdGF0aW9uIjpbMC4wMDc3MzYzMTUyNzgzODI0MjQsMC4wNjAwNDUyMDMxODY2NjA3NSwwLjAxMjA1NzE2ODYwNTk5NTE3OCwwLjk5ODA5Mjg1NTI0MjI3MzRdLCJzY2FsZSI6WzEuMDAwMDAwMDAxNDA0NTE2NSwxLjAwMDAwMDAwMDA3Njg0ODMsMS4wMDAwMDAwMDEzNzI0OTFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImxpcXVpZCIsInBvc2l0aW9uIjpbMCwwLDBdLCJyb3RhdGlvbiI6WzAsMCwwLDFdLCJzY2FsZSI6WzEsMSwxXSwidmlzaWJsZSI6dHJ1ZSwicm9sZSI6Im1peHR1cmUiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH0seyJpZCI6ImdsYXNzIiwicG9zaXRpb24iOlswLDAsMF0sInJvdGF0aW9uIjpbMCwwLDAsMV0sInNjYWxlIjpbMSwxLDFdLCJ2aXNpYmxlIjp0cnVlLCJyb2xlIjoicGh5c2ljYWwiLCJjYXRlZ29yeSI6InN0cnVjdHVyZSIsIm5vcm1hbE1hcCI6bnVsbCwiZW1pc3NpdmUiOiIwMDAwMDAiLCJlbWlzc2l2ZUludGVuc2l0eSI6MH1dLCJjYW1lcmEiOnsiYXppbXV0aCI6MC43ODM5OTk5OTk5OTk5OTk5LCJlbGV2YXRpb24iOjAuMTYsInpvb20iOjEuMDQsInRhcmdldCI6WzAsMS4wNywwXSwicG9zaXRpb24iOls0LjU5MTQ2NTQzMzUwMTcyNSwyLjU1Mzk0NTAxMTc4MjExOSw0LjYwNDMyMjY1NjE5NzQ2Ml0sImZvdiI6MzV9LCJmcmFtZVRpbWVzIjpbMjQ4LjE5OTk5OTk5OTI1NDk0LDE2LjUsMTQxLDMyLjkwMDAwMDAwMDM3MjUzLDMzLjI5OTk5OTk5OTgxMzczNSwxNy4yOTk5OTk5OTk4MTM3MzUsMTUuODAwMDAwMDAwNzQ1MDU4LDE2Ljg5OTk5OTk5OTQ0MTIwNiwxNi43MDAwMDAwMDAxODYyNjUsMTcuNDAwMDAwMDAwMzcyNTMsMTYuMDk5OTk5OTk5NjI3NDcsMTYuMjAwMDAwMDAwMTg2MjY1LDE3LjUsMTUuNTk5OTk5OTk5NjI3NDcxLDE3LDUwLjEwMDAwMDAwMDU1ODc5LDE0OS42OTk5OTk5OTkyNTQ5NF0sInJlbmRlcmVkRnJhbWVzIjoxOCwicmVuZGVyZWRBdCI6NDA1My4xMDAwMDAwMDA1NTksInJlYWR5Ijp0cnVlLCJzdGFnZSI6eyJiYWNrZ3JvdW5kQmx1cnJpbmVzcyI6MC4wNSwiYmFja2dyb3VuZEludGVuc2l0eSI6MC4xNCwiZW52aXJvbm1lbnRJbnRlbnNpdHkiOjAuNSwic3RvbmVTdHJlbmd0aCI6MC4wMzUsInN0b25lTWlwQmlhcyI6Mn19fQ=="
+                        },
+                        {
+                          "name": "runtime-errors",
+                          "contentType": "application/json",
+                          "body": "WyJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA0MDQgKCkiXQ=="
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-phone-touch-62316-reduced-motion-presentation/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-phone-touch-62316-reduced-motion-presentation/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/production/test-output/brand-journeys-phone-touch-62316-reduced-motion-presentation/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand-journeys.spec.ts",
+                        "column": 97,
+                        "line": 34
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "835d211cf8ffd964d224-6c2cb53cfaffa09dd8e1",
+              "file": "brand-journeys.spec.ts",
+              "line": 247,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T04:34:22.439Z",
+    "duration": 102184.674,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 9,
+    "flaky": 0
+  }
+}

@@ -4,6 +4,8 @@ dist/
 *.blend1
 test-results/
 playwright-report/
+.playwright-artifacts-*/
+.last-run.json
 
 .DS_Store
 .playwright-mcp/
@@ -17,3 +19,4 @@ __pycache__/
 qa/interaction-artifacts/
 public/models/candidates/
 tmp/
+.vercel

@@ -87,10 +87,10 @@ test('espresso loading and failed download retain the recipe and recover on retr
   await expect(page.getByTestId('viewer-atlas-espresso-martini')).toHaveAttribute('data-live','true',{timeout:45000});
 });
 
-test('phone espresso viewer responds to touch orbit and exposes accessible recipe controls',async({browser},info)=>{
-  const context=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,reducedMotion:'reduce'});
+test('phone espresso viewer responds to touch orbit and exposes accessible recipe controls',async({browser,baseURL},info)=>{
+  const context=await browser.newContext({baseURL,viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,reducedMotion:'reduce'});
   try{
-    const page=await context.newPage();await page.goto('http://127.0.0.1:4173/?drink=nighthawks');
+    const page=await context.newPage();await page.goto('/?drink=nighthawks');
     const viewer=page.getByTestId('viewer-nighthawks');await viewer.scrollIntoViewIfNeeded();
     await expect(viewer).toHaveAttribute('data-live','true',{timeout:45000});
     await viewer.evaluate(el=>{

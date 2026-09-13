@@ -1,0 +1,156 @@
+/* SpiritAtlas v0.1 — visual foundation.
+ * Load Instrument Sans 400/500/600 and IBM Plex Mono 400/500 separately.
+ * These tokens do not implement the marbled artwork or ordered-dither effect.
+ * See VISUAL_REFERENCE.md for the effect construction and acceptance criteria.
+ */
+
+:root {
+  color-scheme: dark;
+
+  --sa-charcoal: #2c2a2d;
+  --sa-orange: #ff682f;
+  --sa-peach: #ffbbb0;
+  --sa-cream: #ffffe3;
+  --sa-ink: #171518;
+  --sa-muted: #b9b3b0;
+
+  --sa-background: var(--sa-charcoal);
+  --sa-stage: var(--sa-ink);
+  --sa-text: var(--sa-cream);
+  --sa-text-secondary: var(--sa-muted);
+  --sa-accent: var(--sa-orange);
+  --sa-action-background: var(--sa-orange);
+  --sa-action-text: var(--sa-charcoal);
+  --sa-divider: rgb(255 255 227 / 18%); /* Decorative, not a control boundary. */
+  --sa-control-border: var(--sa-muted);
+
+  --sa-font-sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --sa-font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  --sa-text-hero: clamp(3rem, 7.78vw, 7rem);
+  --sa-text-h2: clamp(2rem, 4.45vw, 4rem);
+  --sa-text-title: clamp(1.5rem, 2.5vw, 2.25rem);
+  --sa-text-body: clamp(1rem, 0.9rem + 0.35vw, 1.125rem);
+  --sa-text-label: 0.75rem;
+
+  --sa-space-1: 0.25rem;
+  --sa-space-2: 0.5rem;
+  --sa-space-3: 0.75rem;
+  --sa-space-4: 1rem;
+  --sa-space-6: 1.5rem;
+  --sa-space-8: 2rem;
+  --sa-space-12: 3rem;
+  --sa-space-16: 4rem;
+  --sa-space-24: 6rem;
+  --sa-space-32: 8rem;
+  --sa-page-gutter: clamp(1.25rem, 5vw, 5rem);
+  --sa-content-max: 90rem;
+
+  --sa-radius-control: 0.375rem;
+  --sa-radius-panel: 0.5rem;
+  --sa-duration-control: 180ms;
+  --sa-duration-scene: 650ms;
+  --sa-duration-expand: 1000ms;
+  --sa-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Read these in the decorative renderer if useful; CSS alone does not dither. */
+  --sa-dither-pitch: 5px;
+  --sa-grain-amplitude: 0.02;
+}
+
+.sa-page {
+  background: var(--sa-background);
+  color: var(--sa-text);
+  font-family: var(--sa-font-sans);
+  font-size: var(--sa-text-body);
+  line-height: 1.55;
+}
+
+.sa-container {
+  width: min(calc(100% - 2 * var(--sa-page-gutter)), var(--sa-content-max));
+  margin-inline: auto;
+}
+
+.sa-wordmark {
+  font-family: var(--sa-font-sans);
+  font-size: clamp(1.375rem, 2vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.sa-hero-title {
+  margin: 0;
+  font-family: var(--sa-font-sans);
+  font-size: var(--sa-text-hero);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.sa-section-title {
+  font-size: var(--sa-text-h2);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+.sa-label {
+  font-family: var(--sa-font-mono);
+  font-size: var(--sa-text-label);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.sa-button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sa-space-2);
+  min-height: 3rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: var(--sa-radius-control);
+  background: var(--sa-action-background);
+  color: var(--sa-action-text);
+  font-family: var(--sa-font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--sa-duration-control) ease,
+    transform var(--sa-duration-control) var(--sa-ease-out);
+}
+
+.sa-button-primary:hover {
+  background: var(--sa-peach);
+}
+
+.sa-button-primary:active {
+  transform: translateY(1px);
+}
+
+/* Two-color focus ring remains visible on both dark and pale surfaces. */
+.sa-page :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--sa-cream);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--sa-ink), 0 0 0 7px var(--sa-ink);
+}
+
+/* Hook for optional decorative animation; JS camera motion must also honor this preference. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --sa-duration-control: 0ms;
+    --sa-duration-scene: 0ms;
+    --sa-duration-expand: 0ms;
+  }
+
+  .sa-ambient-decoration {
+    animation: none !important;
+  }
+}

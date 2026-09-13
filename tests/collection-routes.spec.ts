@@ -16,7 +16,7 @@ test('routes infer collection, filter mixed comparisons and preserve legacy Negr
 });
 
 test('switching collection clears selection and browser history restores the collection',async({page})=>{
- await page.goto('/');await page.getByRole('button',{name:'Add BBF Negroni to comparison',exact:true}).click();
+ await page.goto('/?bar=bar-bon-funk');await page.getByRole('button',{name:'Add BBF Negroni to comparison',exact:true}).click();
  await expect(page.getByRole('complementary',{name:'Comparison selection'})).toBeVisible();
  const espresso=collectionNav(page).getByRole('button',{name:'Espresso Martinis',exact:true});await espresso.focus();await page.keyboard.press('Enter');
  await expect(espresso).toHaveAttribute('aria-pressed','true');await expect(page).toHaveURL(/collection=espresso-martini/);
@@ -84,14 +84,14 @@ test('unsupported WebGL has compact phone layout and comparison keeps its source
  await page.setViewportSize({width:390,height:844});await page.goto('/?drink=nighthawks&webgl=off');
  await expect(page.getByText('Interactive 3D is unavailable in this browser.',{exact:true})).toBeVisible();
  const viewer=await page.locator('.drink-viewer').boundingBox(),host=await page.locator('.cocktail-viewer').boundingBox();
- expect(viewer!.height).toBeCloseTo(210,1);expect(host!.height).toBeCloseTo(210,1);
+ expect(viewer!.height).toBeCloseTo(266,1);expect(host!.height).toBeCloseTo(210,1);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(391);
  await expect(page.getByRole('button',{name:'Explore ingredients',exact:true})).toBeVisible();
  await page.screenshot({path:'qa/evidence/ui/collections-independent/unsupported-mobile-390-fixed.png',fullPage:false});
  await page.goto('/?compare=atlas-espresso-martini,jigger-espresso-martini,nighthawks&webgl=off');
  await expect(page.locator('.comparison-heading .appearance-reference')).toHaveText('Current menu ingredients · Appearance reference April 2024.');
  await expect(page.locator('.viewer-fallback[role="status"]')).toHaveCount(3);
- for(const viewer of await page.locator('.comparison-viewer').all())expect((await viewer.boundingBox())!.height).toBeCloseTo(210,1);
+ for(const viewer of await page.locator('.comparison-viewer').all())expect((await viewer.boundingBox())!.height).toBeCloseTo(266,1);
  await expect(page.locator('.site-footer')).toContainText('Three interpretations.');
 });
 

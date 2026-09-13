@@ -1,0 +1,241 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "scripts/scene-qa.config.ts"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/scripts/scene-qa.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/scene-qa",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "fallbacks.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/brand-evidence/scene-qa-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/scene-qa-server.mjs",
+      "cwd": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/",
+      "url": "http://127.0.0.1:5176",
+      "reuseExistingServer": false,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "fallbacks.spec.ts",
+      "file": "fallbacks.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "loading state stays explicit until the runtime asset is available",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2786,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:25:45.924Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "versioned-model-loading",
+                      "contentType": "application/json",
+                      "body": "ewogICJleHBlY3RlZFJldmlzaW9uIjogIjAuMTUuMS1iYWtlZCIsCiAgInJlcXVlc3RzIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NTE3Ni9tb2RlbHMvYmJmLW5lZ3JvbmkuZ2xiP3JldmlzaW9uPTAuMTUuMS1iYWtlZCIKICBdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "823e5510e2ed762314f8-e15eabd0e83e03017483",
+          "file": "fallbacks.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "model error reports failure and Retry 3D can recover to a live model",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3220,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:25:48.999Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "versioned-model-retry",
+                      "contentType": "application/json",
+                      "body": "ewogICJleHBlY3RlZFJldmlzaW9uIjogIjAuMTUuMS1iYWtlZCIsCiAgInJlcXVlc3RzIjogWwogICAgewogICAgICAidXJsIjogImh0dHA6Ly8xMjcuMC4wLjE6NTE3Ni9tb2RlbHMvYmJmLW5lZ3JvbmkuZ2xiP3JldmlzaW9uPTAuMTUuMS1iYWtlZCIsCiAgICAgICJkZWxpYmVyYXRlbHlGYWlsZWQiOiB0cnVlCiAgICB9LAogICAgewogICAgICAidXJsIjogImh0dHA6Ly8xMjcuMC4wLjE6NTE3Ni9tb2RlbHMvYmJmLW5lZ3JvbmkuZ2xiP3JldmlzaW9uPTAuMTUuMS1iYWtlZCIsCiAgICAgICJkZWxpYmVyYXRlbHlGYWlsZWQiOiBmYWxzZQogICAgfQogIF0sCiAgInNvdXJjZXMiOiBbCiAgICB7CiAgICAgICJwYXRoIjogInNyYy9zY2VuZXMvVmlld2VyLnRzeCIsCiAgICAgICJzaGEyNTYiOiAiNGY4NGI1YTA1YTdmNzkwYTZjOTI2MzIzYjliN2U5NGQ5MGFmMDMxNDA4NmRkYmRjMDcyZDQ5M2I4OTMzYmUxMCIKICAgIH0sCiAgICB7CiAgICAgICJwYXRoIjogImFzc2V0cy9ibGVuZGVyL2JiZi1uZWdyb25pLmpzb24iLAogICAgICAic2hhMjU2IjogIjM5NGEyZjVkYjEzYTU4YzUwZGQ1ZTEzZWJiMDEwZWFhZWU2MjYyMTczYzRlZDU4NmI0MDY0ZDU1NDJmMGNjYjIiCiAgICB9LAogICAgewogICAgICAicGF0aCI6ICJwdWJsaWMvbW9kZWxzL2JiZi1uZWdyb25pLmdsYiIsCiAgICAgICJzaGEyNTYiOiAiY2Q0OTA4YmRlOWM1OGU2Yjg0YjAxZjU4MGE3MGZlZTRiYWE1OTFkYzM2ZjcxOGRmYzU4YmU3M2JmODFiMWEzOSIKICAgIH0KICBdLAogICJmaW5hbFN0YXRlIjogewogICAgImUiOiAwLAogICAgInBhcnRzIjogWwogICAgICB7CiAgICAgICAgImlkIjogImdhcm5pc2hfb3JhbmdlIiwKICAgICAgICAicG9zaXRpb24iOiBbCiAgICAgICAgICAwLAogICAgICAgICAgMCwKICAgICAgICAgIDAKICAgICAgICBdLAogICAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAgIDAsCiAgICAgICAgICAwLAogICAgICAgICAgMCwKICAgICAgICAgIDEKICAgICAgICBdLAogICAgICAgICJzY2FsZSI6IFsKICAgICAgICAgIDEsCiAgICAgICAgICAxLAogICAgICAgICAgMQogICAgICAgIF0sCiAgICAgICAgInZpc2libGUiOiB0cnVlLAogICAgICAgICJyb2xlIjogInBoeXNpY2FsIiwKICAgICAgICAiY2F0ZWdvcnkiOiAiZ2FybmlzaCIsCiAgICAgICAgIm5vcm1hbE1hcCI6IHsKICAgICAgICAgICJ3aWR0aCI6IDIwNDgsCiAgICAgICAgICAiaGVpZ2h0IjogMjA0OAogICAgICAgIH0sCiAgICAgICAgImVtaXNzaXZlIjogIjAwMDAwMCIsCiAgICAgICAgImVtaXNzaXZlSW50ZW5zaXR5IjogMAogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogImljZV9pbmNsdXNpb25zIiwKICAgICAgICAicG9zaXRpb24iOiBbCiAgICAgICAgICAtMC4wNjU4OTY1OTMwMzQyNjc0MywKICAgICAgICAgIDAuNTcwOTMzNTgwMzk4NTU5NiwKICAgICAgICAgIDAuMzY1MzEyMDY5NjU0NDY0NwogICAgICAgIF0sCiAgICAgICAgInJvdGF0aW9uIjogWwogICAgICAgICAgMCwKICAgICAgICAgIDAsCiAgICAgICAgICAwLAogICAgICAgICAgMQogICAgICAgIF0sCiAgICAgICAgInNjYWxlIjogWwogICAgICAgICAgMSwKICAgICAgICAgIDEsCiAgICAgICAgICAxCiAgICAgICAgXSwKICAgICAgICAidmlzaWJsZSI6IHRydWUsCiAgICAgICAgInJvbGUiOiAicGh5c2ljYWwiLAogICAgICAgICJjYXRlZ29yeSI6ICJzdHJ1Y3R1cmUiLAogICAgICAgICJub3JtYWxNYXAiOiBudWxsLAogICAgICAgICJlbWlzc2l2ZSI6ICIwMDAwMDAiLAogICAgICAgICJlbWlzc2l2ZUludGVuc2l0eSI6IDAKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICJyZWNpcGVfYml0dGVyIiwKICAgICAgICAicG9zaXRpb24iOiBbCiAgICAgICAgICAwLAogICAgICAgICAgMS4xMDAwMDAwMjM4NDE4NTgsCiAgICAgICAgICAwCiAgICAgICAgXSwKICAgICAgICAicm90YXRpb24iOiBbCiAgICAgICAgICAwLAogICAgICAgICAgMCwKICAgICAgICAgIDAsCiAgICAgICAgICAxCiAgICAgICAgXSwKICAgICAgICAic2NhbGUiOiBbCiAgICAgICAgICAwLjAwMSwKICAgICAgICAgIDAuMDAxLAogICAgICAgICAgMC4wMDEKICAgICAgICBdLAogICAgICAgICJ2aXNpYmxlIjogZmFsc2UsCiAgICAgICAgInJvbGUiOiAicmVjaXBlIiwKICAgICAgICAiY2F0ZWdvcnkiOiAiYml0dGVyIiwKICAgICAgICAicmVwcmVzZW50YXRpb24iOiAicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsCiAgICAgICAgImV2aWRlbmNlIjogInVzZXItY29uZmlybWVkIiwKICAgICAgICAibm9ybWFsTWFwIjogbnVsbCwKICAgICAgICAiZW1pc3NpdmUiOiAiMDAwMDAwIiwKICAgICAgICAiZW1pc3NpdmVJbnRlbnNpdHkiOiAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAicmVjaXBlX21vZGlmaWVycyIsCiAgICAgICAgInBvc2l0aW9uIjogWwogICAgICAgICAgMCwKICAgICAgICAgIDEuMTAwMDAwMDIzODQxODU4LAogICAgICAgICAgMAogICAgICAgIF0sCiAgICAgICAgInJvdGF0aW9uIjogWwogICAgICAgICAgMCwKICAgICAgICAgIDAsCiAgICAgICAgICAwLAogICAgICAgICAgMQogICAgICAgIF0sCiAgICAgICAgInNjYWxlIjogWwogICAgICAgICAgMC4wMDEsCiAgICAgICAgICAwLjAwMSwKICAgICAgICAgIDAuMDAxCiAgICAgICAgXSwKICAgICAgICAidmlzaWJsZSI6IGZhbHNlLAogICAgICAgICJyb2xlIjogInJlY2lwZSIsCiAgICAgICAgImNhdGVnb3J5IjogIm1vZGlmaWVycyIsCiAgICAgICAgInJlcHJlc2VudGF0aW9uIjogInJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLAogICAgICAgICJldmlkZW5jZSI6ICJpbmZlcnJlZCIsCiAgICAgICAgIm5vcm1hbE1hcCI6IG51bGwsCiAgICAgICAgImVtaXNzaXZlIjogIjAwMDAwMCIsCiAgICAgICAgImVtaXNzaXZlSW50ZW5zaXR5IjogMAogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogInJlY2lwZV9zcGlyaXQiLAogICAgICAgICJwb3NpdGlvbiI6IFsKICAgICAgICAgIDAsCiAgICAgICAgICAxLjEwMDAwMDAyMzg0MTg1OCwKICAgICAgICAgIDAKICAgICAgICBdLAogICAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAgIDAsCiAgICAgICAgICAwLAogICAgICAgICAgMCwKICAgICAgICAgIDEKICAgICAgICBdLAogICAgICAgICJzY2FsZSI6IFsKICAgICAgICAgIDAuMDAxLAogICAgICAgICAgMC4wMDEsCiAgICAgICAgICAwLjAwMQogICAgICAgIF0sCiAgICAgICAgInZpc2libGUiOiBmYWxzZSwKICAgICAgICAicm9sZSI6ICJyZWNpcGUiLAogICAgICAgICJjYXRlZ29yeSI6ICJzcGlyaXQiLAogICAgICAgICJyZXByZXNlbnRhdGlvbiI6ICJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwKICAgICAgICAiZXZpZGVuY2UiOiAidmlkZW8tY29uZmlybWVkIiwKICAgICAgICAibm9ybWFsTWFwIjogbnVsbCwKICAgICAgICAiZW1pc3NpdmUiOiAiMDAwMDAwIiwKICAgICAgICAiZW1pc3NpdmVJbnRlbnNpdHkiOiAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAicmVjaXBlX3Zlcm1vdXRoIiwKICAgICAgICAicG9zaXRpb24iOiBbCiAgICAgICAgICAwLAogICAgICAgICAgMS4xMDAwMDAwMjM4NDE4NTgsCiAgICAgICAgICAwCiAgICAgICAgXSwKICAgICAgICAicm90YXRpb24iOiBbCiAgICAgICAgICAwLAogICAgICAgICAgMCwKICAgICAgICAgIDAsCiAgICAgICAgICAxCiAgICAgICAgXSwKICAgICAgICAic2NhbGUiOiBbCiAgICAgICAgICAwLjAwMSwKICAgICAgICAgIDAuMDAxLAogICAgICAgICAgMC4wMDEKICAgICAgICBdLAogICAgICAgICJ2aXNpYmxlIjogZmFsc2UsCiAgICAgICAgInJvbGUiOiAicmVjaXBlIiwKICAgICAgICAiY2F0ZWdvcnkiOiAidmVybW91dGgiLAogICAgICAgICJyZXByZXNlbnRhdGlvbiI6ICJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwKICAgICAgICAiZXZpZGVuY2UiOiAidmlkZW8tY29uZmlybWVkIiwKICAgICAgICAibm9ybWFsTWFwIjogbnVsbCwKICAgICAgICAiZW1pc3NpdmUiOiAiMDAwMDAwIiwKICAgICAgICAiZW1pc3NpdmVJbnRlbnNpdHkiOiAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiaWNlIiwKICAgICAgICAicG9zaXRpb24iOiBbCiAgICAgICAgICAwLAogICAgICAgICAgMC45NDQ5OTk5OTI4NDc0NDI2LAogICAgICAgICAgLTAuMDM1MDAwMDAwMTQ5MDExNjEKICAgICAgICBdLAogICAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAgIDAuMDA3NzM2MzE1Mjc4MzgyNDI0LAogICAgICAgICAgMC4wNjAwNDUyMDMxODY2NjA3NSwKICAgICAgICAgIDAuMDEyMDU3MTY4NjA1OTk1MTc4LAogICAgICAgICAgMC45OTgwOTI4NTUyNDIyNzM0CiAgICAgICAgXSwKICAgICAgICAic2NhbGUiOiBbCiAgICAgICAgICAxLjAwMDAwMDAwMTQwNDUxNjUsCiAgICAgICAgICAxLjAwMDAwMDAwMDA3Njg0ODMsCiAgICAgICAgICAxLjAwMDAwMDAwMTM3MjQ5MQogICAgICAgIF0sCiAgICAgICAgInZpc2libGUiOiB0cnVlLAogICAgICAgICJyb2xlIjogInBoeXNpY2FsIiwKICAgICAgICAiY2F0ZWdvcnkiOiAic3RydWN0dXJlIiwKICAgICAgICAibm9ybWFsTWFwIjogbnVsbCwKICAgICAgICAiZW1pc3NpdmUiOiAiMDAwMDAwIiwKICAgICAgICAiZW1pc3NpdmVJbnRlbnNpdHkiOiAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAibGlxdWlkIiwKICAgICAgICAicG9zaXRpb24iOiBbCiAgICAgICAgICAwLAogICAgICAgICAgMCwKICAgICAgICAgIDAKICAgICAgICBdLAogICAgICAgICJyb3RhdGlvbiI6IFsKICAgICAgICAgIDAsCiAgICAgICAgICAwLAogICAgICAgICAgMCwKICAgICAgICAgIDEKICAgICAgICBdLAogICAgICAgICJzY2FsZSI6IFsKICAgICAgICAgIDEsCiAgICAgICAgICAxLAogICAgICAgICAgMQogICAgICAgIF0sCiAgICAgICAgInZpc2libGUiOiB0cnVlLAogICAgICAgICJyb2xlIjogIm1peHR1cmUiLAogICAgICAgICJjYXRlZ29yeSI6ICJzdHJ1Y3R1cmUiLAogICAgICAgICJub3JtYWxNYXAiOiBudWxsLAogICAgICAgICJlbWlzc2l2ZSI6ICIwMDAwMDAiLAogICAgICAgICJlbWlzc2l2ZUludGVuc2l0eSI6IDAKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICJnbGFzcyIsCiAgICAgICAgInBvc2l0aW9uIjogWwogICAgICAgICAgMCwKICAgICAgICAgIDAsCiAgICAgICAgICAwCiAgICAgICAgXSwKICAgICAgICAicm90YXRpb24iOiBbCiAgICAgICAgICAwLAogICAgICAgICAgMCwKICAgICAgICAgIDAsCiAgICAgICAgICAxCiAgICAgICAgXSwKICAgICAgICAic2NhbGUiOiBbCiAgICAgICAgICAxLAogICAgICAgICAgMSwKICAgICAgICAgIDEKICAgICAgICBdLAogICAgICAgICJ2aXNpYmxlIjogdHJ1ZSwKICAgICAgICAicm9sZSI6ICJwaHlzaWNhbCIsCiAgICAgICAgImNhdGVnb3J5IjogInN0cnVjdHVyZSIsCiAgICAgICAgIm5vcm1hbE1hcCI6IG51bGwsCiAgICAgICAgImVtaXNzaXZlIjogIjAwMDAwMCIsCiAgICAgICAgImVtaXNzaXZlSW50ZW5zaXR5IjogMAogICAgICB9CiAgICBdLAogICAgImNhbWVyYSI6IHsKICAgICAgImF6aW11dGgiOiAwLAogICAgICAiZWxldmF0aW9uIjogMC4xNiwKICAgICAgInpvb20iOiAxLAogICAgICAidGFyZ2V0IjogWwogICAgICAgIDAsCiAgICAgICAgMS4yOCwKICAgICAgICAwCiAgICAgIF0sCiAgICAgICJwb3NpdGlvbiI6IFsKICAgICAgICAwLAogICAgICAgIDIuNTc4NTAyODEyMjUzNDA0LAogICAgICAgIDYuNzYyNTA2ODkxMTIzMDQ0CiAgICAgIF0sCiAgICAgICJmb3YiOiAzNQogICAgfSwKICAgICJmcmFtZVRpbWVzIjogWwogICAgICAzMzUuNTk5OTk5OTk5NjI3NDcsCiAgICAgIDE5NS4yOTk5OTk5OTk4MTM3NCwKICAgICAgMjQuNDAwMDAwMDAwMzcyNTMKICAgIF0sCiAgICAicmVuZGVyZWRGcmFtZXMiOiAzLAogICAgInJlbmRlcmVkQXQiOiAyNzY1LAogICAgInJlYWR5IjogdHJ1ZSwKICAgICJzdGFnZSI6IHsKICAgICAgImJhY2tncm91bmRCbHVycmluZXNzIjogMC4wNSwKICAgICAgImJhY2tncm91bmRJbnRlbnNpdHkiOiAwLjYsCiAgICAgICJlbnZpcm9ubWVudEludGVuc2l0eSI6IDEsCiAgICAgICJzdG9uZVN0cmVuZ3RoIjogMC4xNiwKICAgICAgInN0b25lTWlwQmlhcyI6IDIKICAgIH0KICB9Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "823e5510e2ed762314f8-9179d708a2e189c78778",
+          "file": "fallbacks.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "unavailable WebGL keeps drink facts, ingredients, directions and comparison reachable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2374,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:25:52.230Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "823e5510e2ed762314f8-d88ed6a2c9d3b46a1088",
+          "file": "fallbacks.spec.ts",
+          "line": 64,
+          "column": 1
+        },
+        {
+          "title": "reduced motion renders the selected expansion promptly and still supports keyboard inspection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2508,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:25:54.610Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "823e5510e2ed762314f8-8e8fed7171e108721f04",
+          "file": "fallbacks.spec.ts",
+          "line": 76,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T04:25:45.108Z",
+    "duration": 12228.539,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

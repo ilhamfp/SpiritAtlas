@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-13",
+  "method": "Actual browser WebGL rendering from preserved source GLB assets; no generated or substituted cocktail imagery",
+  "sources": [
+    {
+      "id": "bbf-negroni",
+      "model": "public/models/bbf-negroni.glb",
+      "sha256": "cd4908bde9c58e6b84b01f580a70fee4baa591dc36f718dfc58be73bf81b1a39",
+      "version": "0.15.1-baked",
+      "reference": "public/references/bbf-negroni.png"
+    },
+    {
+      "id": "ichigo-negroni",
+      "model": "public/models/ichigo-negroni.glb",
+      "sha256": "d1ab49eb74bde33c2b6ccf8b31a5aad718c7b5f80b7fa13ffe1a3546b41c7a60",
+      "version": "0.15.1-baked",
+      "reference": "public/references/ichigo-negroni.png"
+    },
+    {
+      "id": "negroni-express",
+      "model": "public/models/negroni-express.glb",
+      "sha256": "91f6a960649bb58cc232527b99d795818a52229a127b769b15525013612f6812",
+      "version": "0.15.1-baked",
+      "reference": "public/references/negroni-express.png"
+    }
+  ]
+}

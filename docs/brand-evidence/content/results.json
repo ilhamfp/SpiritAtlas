@@ -1,0 +1,382 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/brand.config.ts",
+      "content-contract.spec.ts",
+      "new-collection-content.spec.ts"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/content/test-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "collection-routes.spec.ts",
+          "espresso-collection.spec.ts",
+          "ingredient-visibility.spec.ts",
+          "recipe-completion.spec.ts",
+          "atlas-expansion-routes.spec.ts",
+          "reference-photos.spec.ts",
+          "content-contract.spec.ts",
+          "new-collection-content.spec.ts"
+        ],
+        "timeout": 100000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/brand-evidence/content/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "content-contract.spec.ts",
+      "file": "content-contract.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "filmed drinks preserve unpublished measures and distinguish researched estimates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 27,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:26:52.171Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ff8d9c7abf60fb1bf9da-acdadc8efc88e610e53a",
+          "file": "content-contract.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "exported geometry preserves component IDs and poses while current recipe data resolves editorial labels",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 82,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:26:52.218Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ff8d9c7abf60fb1bf9da-12477af864721402b440",
+          "file": "content-contract.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "geography retains both New Bahru venues at the exact verified building point",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:26:52.306Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ff8d9c7abf60fb1bf9da-d317d118d01092182e93",
+          "file": "content-contract.spec.ts",
+          "line": 114,
+          "column": 1
+        },
+        {
+          "title": "expanded recipe forms stay separated from physical ice and glass using authored transforms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 34,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:26:52.313Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "expanded-recipe-structure-world-bounds",
+                      "contentType": "application/json",
+                      "body": "ewogICJiYmYtbmVncm9uaSI6IFsKICAgIHsKICAgICAgImlkIjogInJlY2lwZV9iaXR0ZXIiLAogICAgICAicmVwcmVzZW50YXRpb24iOiAicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsCiAgICAgICJtaW4iOiBbCiAgICAgICAgLTAuMzgwMDAwNDEyNDY0MTQxODUsCiAgICAgICAgNS4yNTAwMDAwMjM4NDE4NTgsCiAgICAgICAgLTAuMzgwMDAwNTAxODcxMTA5CiAgICAgIF0sCiAgICAgICJtYXgiOiBbCiAgICAgICAgMC4zODAwMDAxNDQyNDMyNDAzNiwKICAgICAgICA1Ljc1MDAwMDAyMzg0MTg1OCwKICAgICAgICAwLjM4MDAwMDMyMzA1NzE3NDcKICAgICAgXQogICAgfSwKICAgIHsKICAgICAgImlkIjogInJlY2lwZV9tb2RpZmllcnMiLAogICAgICAicmVwcmVzZW50YXRpb24iOiAicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsCiAgICAgICJtaW4iOiBbCiAgICAgICAgLTAuMzQ5OTk5OTk0MDM5NTM1NSwKICAgICAgICA3LjM4MDAwMDAyNTAzMzk1MSwKICAgICAgICAtMC4zNDk5OTk5OTQwMzk1MzU1CiAgICAgIF0sCiAgICAgICJtYXgiOiBbCiAgICAgICAgMC4zNDk5OTk5OTQwMzk1MzU1LAogICAgICAgIDcuODIwMDAwMDIyNjQ5NzY1LAogICAgICAgIDAuMzQ5OTk5OTk0MDM5NTM1NQogICAgICBdCiAgICB9LAogICAgewogICAgICAiaWQiOiAicmVjaXBlX3NwaXJpdCIsCiAgICAgICJyZXByZXNlbnRhdGlvbiI6ICJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwKICAgICAgIm1pbiI6IFsKICAgICAgICAtMC4zODAwMDA0MTI0NjQxNDE4NSwKICAgICAgICA0LjIwMDAwMDAyMzg0MTg1NzYsCiAgICAgICAgLTAuMzgwMDAwNTAxODcxMTA5CiAgICAgIF0sCiAgICAgICJtYXgiOiBbCiAgICAgICAgMC4zODAwMDAxNDQyNDMyNDAzNiwKICAgICAgICA0LjcwMDAwMDAyMzg0MTg1NzYsCiAgICAgICAgMC4zODAwMDAzMjMwNTcxNzQ3CiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICJyZWNpcGVfdmVybW91dGgiLAogICAgICAicmVwcmVzZW50YXRpb24iOiAicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsCiAgICAgICJtaW4iOiBbCiAgICAgICAgLTAuMzgwMDAwNDEyNDY0MTQxODUsCiAgICAgICAgNi4zMDAwMDAwMjM4NDE4NTcsCiAgICAgICAgLTAuMzgwMDAwNTAxODcxMTA5CiAgICAgIF0sCiAgICAgICJtYXgiOiBbCiAgICAgICAgMC4zODAwMDAxNDQyNDMyNDAzNiwKICAgICAgICA2LjgwMDAwMDAyMzg0MTg1NywKICAgICAgICAwLjM4MDAwMDMyMzA1NzE3NDcKICAgICAgXQogICAgfSwKICAgIHsKICAgICAgImlkIjogImdsYXNzIiwKICAgICAgIm1pbiI6IFsKICAgICAgICAtMSwKICAgICAgICAwLjAzNTAwMDAwMDE0OTAxMTYxLAogICAgICAgIC0xCiAgICAgIF0sCiAgICAgICJtYXgiOiBbCiAgICAgICAgMSwKICAgICAgICAxLjk0MDAwMDA1NzIyMDQ1OSwKICAgICAgICAxCiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICJpY2UiLAogICAgICAibWluIjogWwogICAgICAgIC0wLjcwODY3NTE5Mjk2NTc0NzQsCiAgICAgICAgMi40NTA4NTM1ODg5NzkzMywKICAgICAgICAtMC43NDA3NzIxNTM5ODg1MDQyCiAgICAgIF0sCiAgICAgICJtYXgiOiBbCiAgICAgICAgMC43MDk4Nzk1ODQ0ODE2OTg1LAogICAgICAgIDMuNjU5Njk3NTU3NTI4Mjk0NiwKICAgICAgICAwLjY3MDAwMzIwMDgyNTUyMjEKICAgICAgXQogICAgfQogIF0sCiAgImljaGlnby1uZWdyb25pIjogWwogICAgewogICAgICAiaWQiOiAicmVjaXBlX2JpdHRlciIsCiAgICAgICJyZXByZXNlbnRhdGlvbiI6ICJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwKICAgICAgIm1pbiI6IFsKICAgICAgICAtMC4zNDk5OTk5OTQwMzk1MzU1LAogICAgICAgIDUuMjgwMDAwMDI1MDMzOTUxLAogICAgICAgIC0wLjM0OTk5OTk5NDAzOTUzNTUKICAgICAgXSwKICAgICAgIm1heCI6IFsKICAgICAgICAwLjM0OTk5OTk5NDAzOTUzNTUsCiAgICAgICAgNS43MjAwMDAwMjI2NDk3NjUsCiAgICAgICAgMC4zNDk5OTk5OTQwMzk1MzU1CiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICJyZWNpcGVfbW9kaWZpZXJzIiwKICAgICAgInJlcHJlc2VudGF0aW9uIjogInJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLAogICAgICAibWluIjogWwogICAgICAgIC0wLjM4MDAwMDQxMjQ2NDE0MTg1LAogICAgICAgIDcuMzUwMDAwMDIzODQxODU4LAogICAgICAgIC0wLjM4MDAwMDUwMTg3MTEwOQogICAgICBdLAogICAgICAibWF4IjogWwogICAgICAgIDAuMzgwMDAwMTQ0MjQzMjQwMzYsCiAgICAgICAgNy44NTAwMDAwMjM4NDE4NTgsCiAgICAgICAgMC4zODAwMDAzMjMwNTcxNzQ3CiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICJyZWNpcGVfc3Bpcml0IiwKICAgICAgInJlcHJlc2VudGF0aW9uIjogInJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLAogICAgICAibWluIjogWwogICAgICAgIC0wLjM0OTk5OTk5NDAzOTUzNTUsCiAgICAgICAgNC4yMzAwMDAwMjUwMzM5NTA1LAogICAgICAgIC0wLjM0OTk5OTk5NDAzOTUzNTUKICAgICAgXSwKICAgICAgIm1heCI6IFsKICAgICAgICAwLjM0OTk5OTk5NDAzOTUzNTUsCiAgICAgICAgNC42NzAwMDAwMjI2NDk3NjUsCiAgICAgICAgMC4zNDk5OTk5OTQwMzk1MzU1CiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICJyZWNpcGVfdmVybW91dGgiLAogICAgICAicmVwcmVzZW50YXRpb24iOiAicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsCiAgICAgICJtaW4iOiBbCiAgICAgICAgLTAuMzQ5OTk5OTk0MDM5NTM1NSwKICAgICAgICA2LjMzMDAwMDAyNTAzMzk1LAogICAgICAgIC0wLjM0OTk5OTk5NDAzOTUzNTUKICAgICAgXSwKICAgICAgIm1heCI6IFsKICAgICAgICAwLjM0OTk5OTk5NDAzOTUzNTUsCiAgICAgICAgNi43NzAwMDAwMjI2NDk3NjQsCiAgICAgICAgMC4zNDk5OTk5OTQwMzk1MzU1CiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICJnbGFzcyIsCiAgICAgICJtaW4iOiBbCiAgICAgICAgLTEsCiAgICAgICAgMC4wMzUwMDAwMDAxNDkwMTE2MSwKICAgICAgICAtMQogICAgICBdLAogICAgICAibWF4IjogWwogICAgICAgIDEsCiAgICAgICAgMi4yNTk5OTk5OTA0NjMyNTcsCiAgICAgICAgMQogICAgICBdCiAgICB9LAogICAgewogICAgICAiaWQiOiAiaWNlIiwKICAgICAgIm1pbiI6IFsKICAgICAgICAtMC43NjkyNjQwNDMzMTA5OTIxLAogICAgICAgIDIuMjg5MDAyMTk4MDI4MDk4LAogICAgICAgIC0wLjc5OTA5MTgxOTAwOTMxNTEKICAgICAgXSwKICAgICAgIm1heCI6IFsKICAgICAgICAwLjc2OTEzMzA2MjU3MTg2MzEsCiAgICAgICAgMy45MTY2NTU5MDc1OTY5ODczLAogICAgICAgIDAuNzI5MTg3NDMxMTk3MjAwNQogICAgICBdCiAgICB9CiAgXSwKICAibmVncm9uaS1leHByZXNzIjogWwogICAgewogICAgICAiaWQiOiAicmVjaXBlX2JpdHRlciIsCiAgICAgICJyZXByZXNlbnRhdGlvbiI6ICJyZXByZXNlbnRhdGl2ZS1pbmdyZWRpZW50IiwKICAgICAgIm1pbiI6IFsKICAgICAgICAtMC4zNDk5OTk5OTQwMzk1MzU1LAogICAgICAgIDUuMjgwMDAwMDI1MDMzOTUxLAogICAgICAgIC0wLjM0OTk5OTk5NDAzOTUzNTUKICAgICAgXSwKICAgICAgIm1heCI6IFsKICAgICAgICAwLjM0OTk5OTk5NDAzOTUzNTUsCiAgICAgICAgNS43MjAwMDAwMjI2NDk3NjUsCiAgICAgICAgMC4zNDk5OTk5OTQwMzk1MzU1CiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICJyZWNpcGVfbW9kaWZpZXJzIiwKICAgICAgInJlcHJlc2VudGF0aW9uIjogInJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLAogICAgICAibWluIjogWwogICAgICAgIC0wLjM4MDAwMDQxMjQ2NDE0MTg1LAogICAgICAgIDcuMzUwMDAwMDIzODQxODU4LAogICAgICAgIC0wLjM4MDAwMDUwMTg3MTEwOQogICAgICBdLAogICAgICAibWF4IjogWwogICAgICAgIDAuMzgwMDAwMTQ0MjQzMjQwMzYsCiAgICAgICAgNy44NTAwMDAwMjM4NDE4NTgsCiAgICAgICAgMC4zODAwMDAzMjMwNTcxNzQ3CiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICJyZWNpcGVfc3Bpcml0IiwKICAgICAgInJlcHJlc2VudGF0aW9uIjogInJlcHJlc2VudGF0aXZlLWluZ3JlZGllbnQiLAogICAgICAibWluIjogWwogICAgICAgIC0wLjM0OTk5OTk5NDAzOTUzNTUsCiAgICAgICAgNC4yMzAwMDAwMjUwMzM5NTA1LAogICAgICAgIC0wLjM0OTk5OTk5NDAzOTUzNTUKICAgICAgXSwKICAgICAgIm1heCI6IFsKICAgICAgICAwLjM0OTk5OTk5NDAzOTUzNTUsCiAgICAgICAgNC42NzAwMDAwMjI2NDk3NjUsCiAgICAgICAgMC4zNDk5OTk5OTQwMzk1MzU1CiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICJyZWNpcGVfdmVybW91dGgiLAogICAgICAicmVwcmVzZW50YXRpb24iOiAicmVwcmVzZW50YXRpdmUtaW5ncmVkaWVudCIsCiAgICAgICJtaW4iOiBbCiAgICAgICAgLTAuMzQ5OTk5OTk0MDM5NTM1NSwKICAgICAgICA2LjMzMDAwMDAyNTAzMzk1LAogICAgICAgIC0wLjM0OTk5OTk5NDAzOTUzNTUKICAgICAgXSwKICAgICAgIm1heCI6IFsKICAgICAgICAwLjM0OTk5OTk5NDAzOTUzNTUsCiAgICAgICAgNi43NzAwMDAwMjI2NDk3NjQsCiAgICAgICAgMC4zNDk5OTk5OTQwMzk1MzU1CiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICJnbGFzcyIsCiAgICAgICJtaW4iOiBbCiAgICAgICAgLTEsCiAgICAgICAgMC4wMzUwMDAwMDAxNDkwMTE2MSwKICAgICAgICAtMQogICAgICBdLAogICAgICAibWF4IjogWwogICAgICAgIDEsCiAgICAgICAgMS43OTk5OTk5NTIzMTYyODQyLAogICAgICAgIDEKICAgICAgXQogICAgfSwKICAgIHsKICAgICAgImlkIjogImljZSIsCiAgICAgICJtaW4iOiBbCiAgICAgICAgLTAuNzY4MzM4NDcyNTY4NjMwNSwKICAgICAgICAyLjMyODk4NTc0MTgyODc0NTQsCiAgICAgICAgLTAuNzk4NDE2MTc2NzcyNTI1NAogICAgICBdLAogICAgICAibWF4IjogWwogICAgICAgIDAuNzY4MjA3NDkxODI5NTAxNSwKICAgICAgICAzLjg3NjY3MjM2Mzc5NjM0LAogICAgICAgIDAuNzI4NTExNzg4OTYwNDEwOAogICAgICBdCiAgICB9CiAgXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ff8d9c7abf60fb1bf9da-2f752ad64c54f58363e9",
+          "file": "content-contract.spec.ts",
+          "line": 130,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "new-collection-content.spec.ts",
+      "file": "new-collection-content.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "twelve drinks form four three-venue collections with exact catalog membership",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:26:52.361Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f8a3094a322a7614f4a3-6c3d544caf16e77e5d7e",
+          "file": "new-collection-content.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "every new recipe retains all named menu components, source links and five/four rows",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 28,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:26:52.368Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f8a3094a322a7614f4a3-3247f590edcf0bc511b0",
+          "file": "new-collection-content.spec.ts",
+          "line": 49,
+          "column": 1
+        },
+        {
+          "title": "physical estimates and historical appearances remain disclosed without invented ingredients",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:26:52.401Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f8a3094a322a7614f4a3-9fcafe36c97589dea4a4",
+          "file": "new-collection-content.spec.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "six new editable assets contain finite real geometry matching source parts and bounds",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 204,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T04:26:52.409Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f8a3094a322a7614f4a3-51edde9128628598fe0a",
+          "file": "new-collection-content.spec.ts",
+          "line": 101,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T04:26:51.706Z",
+    "duration": 922.6579999999999,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

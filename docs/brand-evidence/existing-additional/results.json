@@ -1,0 +1,292 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "tests/brand.config.ts",
+      "content-contract.spec.ts",
+      "new-collection-content.spec.ts",
+      "espresso-collection.spec.ts",
+      "--grep",
+      "contract|genuine editable|sourced|all cocktail|source|runtime|martini|highball",
+      "--list"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests/brand.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/docs/brand-evidence/existing-additional/test-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "collection-routes.spec.ts",
+          "espresso-collection.spec.ts",
+          "ingredient-visibility.spec.ts",
+          "recipe-completion.spec.ts",
+          "atlas-expansion-routes.spec.ts",
+          "reference-photos.spec.ts",
+          "content-contract.spec.ts",
+          "new-collection-content.spec.ts"
+        ],
+        "timeout": 100000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/brand-evidence/existing-additional/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "content-contract.spec.ts",
+      "file": "content-contract.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "filmed drinks preserve unpublished measures and distinguish researched estimates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ff8d9c7abf60fb1bf9da-acdadc8efc88e610e53a",
+          "file": "content-contract.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "exported geometry preserves component IDs and poses while current recipe data resolves editorial labels",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ff8d9c7abf60fb1bf9da-12477af864721402b440",
+          "file": "content-contract.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "geography retains both New Bahru venues at the exact verified building point",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ff8d9c7abf60fb1bf9da-d317d118d01092182e93",
+          "file": "content-contract.spec.ts",
+          "line": 114,
+          "column": 1
+        },
+        {
+          "title": "expanded recipe forms stay separated from physical ice and glass using authored transforms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ff8d9c7abf60fb1bf9da-2f752ad64c54f58363e9",
+          "file": "content-contract.spec.ts",
+          "line": 130,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "espresso-collection.spec.ts",
+      "file": "espresso-collection.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "espresso collection has independently sourced venues and genuine editable six-row assets",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "94e0adb2f9e182c54310-0fef1be72dbb4b786c3d",
+          "file": "espresso-collection.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "atlas-espresso-martini loads live, explores six actual component rows and reverses without residue",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "94e0adb2f9e182c54310-873ff84bddb9617600c1",
+          "file": "espresso-collection.spec.ts",
+          "line": 34,
+          "column": 21
+        },
+        {
+          "title": "jigger-espresso-martini loads live, explores six actual component rows and reverses without residue",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "94e0adb2f9e182c54310-4b8150cfcd2252915723",
+          "file": "espresso-collection.spec.ts",
+          "line": 34,
+          "column": 21
+        }
+      ]
+    },
+    {
+      "title": "new-collection-content.spec.ts",
+      "file": "new-collection-content.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "every new recipe retains all named menu components, source links and five/four rows",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f8a3094a322a7614f4a3-3247f590edcf0bc511b0",
+          "file": "new-collection-content.spec.ts",
+          "line": 49,
+          "column": 1
+        },
+        {
+          "title": "six new editable assets contain finite real geometry matching source parts and bounds",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f8a3094a322a7614f4a3-51edde9128628598fe0a",
+          "file": "new-collection-content.spec.ts",
+          "line": 101,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T04:26:34.651Z",
+    "duration": 70.06400000000002,
+    "expected": 0,
+    "skipped": 9,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

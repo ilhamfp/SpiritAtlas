@@ -1,7 +1,7 @@
 import { Component, Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { ReactNode, RefObject } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { MeshTransmissionMaterial, useFBO, useGLTF } from '@react-three/drei';
+import { MeshTransmissionMaterial, useEnvironment, useFBO, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import { Plus, Minus, RotateCcw } from 'lucide-react';
 import { drinkById, categoriesForFamily } from '../data/drinks';
@@ -17,7 +17,7 @@ import sommaAsset from '../../assets/blender/negroni-express.json';
 import './viewer.css';
 
 export type Orbit = { azimuth: number; elevation: number; zoom: number };
-export type ViewerProps = { drinkId:string; expansion:number; onExpansionChange:(n:number)=>void; orbit:Orbit; onOrbitChange:(o:Orbit)=>void; selectedCategory?:string|null; onSelectCategory?:(s:CategoryId)=>void; comparison?:boolean; active?:boolean; hero?:boolean };
+export type ViewerProps = { drinkId:string; expansion:number; onExpansionChange:(n:number)=>void; orbit:Orbit; onOrbitChange:(o:Orbit)=>void; selectedCategory?:string|null; onSelectCategory?:(s:CategoryId)=>void; comparison?:boolean; active?:boolean; hero?:boolean; onSupportChange?:(supported:boolean)=>void };
 type Part = {mesh:THREE.Mesh; base:THREE.Vector3; baseRotation:THREE.Quaternion; baseScale:THREE.Vector3; lift:number; role:string; category:string; center:THREE.Vector3;optic:string|null;ior:number};
 type Snapshot={e:number;parts:{id:string;position:number[];rotation:number[];scale:number[];visible:boolean;role:string;category:string;representation?:string;evidence?:string;normalMap:{width:number;height:number}|null;emissive:string|null;emissiveIntensity:number|null}[];camera:Orbit & {target:number[];position:number[];fov:number};frameTimes:number[];renderedFrames:number;renderedAt:number;ready:boolean;stage:{backgroundBlurriness:number;backgroundIntensity:number;environmentIntensity:number;stoneStrength:number|null;stoneMipBias:number|null}};
 declare global {interface Window {__atlasViewers:Record<string,Snapshot>}}
@@ -125,6 +125,9 @@ function Model({props,labelRail,lines,onReady,reduced,buffers,environment,render
     // Drei's custom buffer uses _transmission; keep native transmission disabled.
     if(material._transmission!==undefined)material._transmission=THREE.MathUtils.lerp(1,.84,smooth(e));
     material.roughness=THREE.MathUtils.lerp(.018,.085,smooth(e));
+    // A transparent hero canvas needs coverage alpha on its outer clear shell;
+    // otherwise the offscreen countertop reads as an opaque band over the art.
+    if(p.hero){material.transparent=true;material.opacity=.58;material.depthWrite=false;}
    }
    const m=mesh.material as THREE.MeshStandardMaterial;
    if(m.emissive){m.emissive.set(category===p.selectedCategory?'#7b401b':'#000000');m.emissiveIntensity=category===p.selectedCategory?.28:0}
@@ -176,7 +179,7 @@ function Model({props,labelRail,lines,onReady,reduced,buffers,environment,render
  return <group>{parts.map(({mesh,role,optic,ior,category})=>{
   const name=optic||mesh.name;const optics=!!optic;
   return <primitive key={mesh.uuid} object={mesh} onClick={(ev:{stopPropagation:()=>void;delta:number})=>{if(ev.delta<4){ev.stopPropagation();latest.current.onSelectCategory?.(mesh.userData.ingredientId)}}}>
-   {optics?<MeshTransmissionMaterial envMap={environment} envMapRotation={BAR_ROTATION} envMapIntensity={1} samples={4} resolution={Math.min(1400,Math.ceil(Math.max(size.width,size.height)*gl.getPixelRatio()))} buffer={buffers[name==='ice'?0:name==='liquid'?1:2].texture} thickness={name==='glass'?.055:name==='ice'?1.35:1.65} roughness={name==='glass'?.018:.035} ior={ior} color="#ffffff" attenuationColor={name==='liquid'?(profile?.liquidColor??COLORS[props.drinkId]??drink.color):'#ffffff'} attenuationDistance={name==='liquid'?1.7:Infinity} transmission={1} chromaticAberration={.001} distortion={0} temporalDistortion={0} anisotropicBlur={0} side={THREE.FrontSide}/>:null}
+   {optics?<MeshTransmissionMaterial envMap={environment} envMapRotation={BAR_ROTATION} envMapIntensity={props.hero?.3:1} samples={4} resolution={Math.min(1400,Math.ceil(Math.max(size.width,size.height)*gl.getPixelRatio()))} buffer={buffers[name==='ice'?0:name==='liquid'?1:2].texture} thickness={name==='glass'?.055:name==='ice'?1.35:1.65} roughness={name==='glass'?.018:.035} ior={ior} color="#ffffff" attenuationColor={name==='liquid'?(profile?.liquidColor??COLORS[props.drinkId]??drink.color):'#ffffff'} attenuationDistance={name==='liquid'?1.7:Infinity} transmission={1} chromaticAberration={.001} distortion={0} temporalDistortion={0} anisotropicBlur={0} side={THREE.FrontSide}/>:null}
    {role==='recipe'&&!mesh.userData.recipeSolid?<meshPhysicalMaterial color={(mesh.material as THREE.MeshStandardMaterial).color} roughness={mesh.userData.representation==='unknown-placeholder'?.38:.22} transmission={mesh.userData.representation==='unknown-placeholder'?.12:category==='spirit'?.38:category==='coffee'?.02:.22} thickness={.6} ior={1.36}/>:null}
   </primitive>
  })}</group>
@@ -251,15 +254,24 @@ function OpticalPipeline({buffers,hero=false}:{buffers:THREE.WebGLRenderTarget[]
  },1);
  return null;
 }
-function Scene(props:{viewer:ViewerProps;rail:RefObject<HTMLDivElement|null>;lines:RefObject<SVGSVGElement|null>;onReady:()=>void;reduced:boolean;renderedFrames:RefObject<number>}){
+type SceneProps={viewer:ViewerProps;rail:RefObject<HTMLDivElement|null>;lines:RefObject<SVGSVGElement|null>;onReady:()=>void;reduced:boolean;renderedFrames:RefObject<number>};
+function Scene(props:SceneProps){
  const environment=useBarEnvironment();
+ return <SceneContents {...props} environment={environment}/>;
+}
+function HeroScene(props:SceneProps){
+ const environment=useEnvironment({files:'/textures/studio_small_09_2k.hdr'});
+ return <SceneContents {...props} environment={environment}/>;
+}
+function SceneContents(props:SceneProps & {environment:THREE.Texture}){
+ const {environment}=props;
  const {size,gl}=useThree();const width=Math.ceil(size.width*gl.getPixelRatio()),height=Math.ceil(size.height*gl.getPixelRatio());
  const drink=drinkById[props.viewer.drinkId];const glassOnly=(drink.renderProfile?.optics??(drink.family==='espresso-martini'?'glass':'layered'))==='glass';
  const iceBuffer=useFBO(glassOnly?1:width,glassOnly?1:height,{type:THREE.HalfFloatType,depthBuffer:true});const liquidBuffer=useFBO(glassOnly?1:width,glassOnly?1:height,{type:THREE.HalfFloatType,depthBuffer:true});const glassBuffer=useFBO(width,height,{type:THREE.HalfFloatType,depthBuffer:true});const buffers=[iceBuffer,liquidBuffer,glassBuffer];
  return <>
   <BarLighting/>
-  <BarEnvironment map={environment} expansion={props.viewer.expansion} reduced={props.reduced}/>
-  <BarCountertop expansion={props.viewer.expansion} reduced={props.reduced}/>
+  <BarEnvironment map={environment} expansion={props.viewer.expansion} reduced={props.reduced} backgroundIntensity={props.viewer.hero?.14:undefined} environmentIntensity={props.viewer.hero?.5:1}/>
+  <BarCountertop expansion={props.viewer.expansion} reduced={props.reduced} color={props.viewer.hero?'#6d686e':undefined} textureStrength={props.viewer.hero?.035:undefined}/>
   
   <Model props={props.viewer} labelRail={props.rail} lines={props.lines} onReady={props.onReady} reduced={props.reduced} buffers={buffers} environment={environment} renderedFrames={props.renderedFrames}/>
   <OpticalPipeline buffers={buffers} hero={props.viewer.hero}/>
@@ -271,25 +283,26 @@ export function Viewer(props:ViewerProps){
  // Retain a monotonic count across model retries within this mounted viewer.
  const renderedFrames=useRef(0);
  const [supported]=useState(()=>{if(new URLSearchParams(location.search).get('webgl')==='off')return false;try{const c=document.createElement('canvas');const g=c.getContext('webgl2');if(!g)return false;g.getExtension('WEBGL_lose_context')?.loseContext();return true}catch{return false}});
+ useEffect(()=>{props.onSupportChange?.(supported)},[props.onSupportChange,supported]);
  const [reduced,setReduced]=useState(()=>matchMedia('(prefers-reduced-motion: reduce)').matches);useEffect(()=>{const mq=matchMedia('(prefers-reduced-motion: reduce)');const change=()=>setReduced(mq.matches);mq.addEventListener('change',change);return()=>mq.removeEventListener('change',change)},[]);
  const latest=useRef(props);latest.current=props;const down=useRef<{x:number;y:number;orbit:Orbit;travel:number;id:number}|null>(null);const lastTravel=useRef(0);
  const onReady=useMemo(()=>()=>setReady(true),[]);
  const labels=drink.ingredients;const categories=categoriesForFamily(drink.family);
  function orbitBy(az=0,el=0,zoom=0){const p=latest.current;p.onOrbitChange({...p.orbit,azimuth:p.orbit.azimuth+az,elevation:clamp(p.orbit.elevation+el,-.03,1.15),zoom:clamp(p.orbit.zoom+zoom,.65,1.8)})}
- return <div ref={host} className={`cocktail-viewer ${props.comparison?'is-comparison':''} ${props.hero?'is-hero':''} ${ready?'is-live':''}`} data-testid={`viewer-${drinkId}`} data-live={ready?'true':'false'} tabIndex={0} role="group" aria-label={`${drink.name} interactive 3D viewer`}
+ return <div ref={host} className={`cocktail-viewer ${props.comparison?'is-comparison':''} ${props.hero?'is-hero':''} ${ready?'is-live':''}`} data-testid={`viewer-${drinkId}`} data-live={ready?'true':'false'} data-render-active={visible&&props.active!==false?'true':'false'} tabIndex={0} role="group" aria-label={`${drink.name} interactive 3D viewer`}
   onPointerDown={ev=>{if((ev.target as HTMLElement).closest('button'))return;down.current={x:ev.clientX,y:ev.clientY,orbit:{...props.orbit},travel:0,id:ev.pointerId};}}
   onPointerMove={ev=>{const d=down.current;if(!d)return;const dx=ev.clientX-d.x,dy=ev.clientY-d.y;d.travel=Math.hypot(dx,dy);if(d.travel>5){ev.currentTarget.setPointerCapture(ev.pointerId);props.onOrbitChange({...d.orbit,azimuth:d.orbit.azimuth-dx*.009,elevation:clamp(d.orbit.elevation+(ev.pointerType==='touch'?0:dy*.005),-.03,1.15)})}}}
   onPointerUp={()=>{lastTravel.current=down.current?.travel||0;down.current=null}}
   onPointerCancel={()=>{down.current=null}}
   onDoubleClick={ev=>{if(!(ev.target as HTMLElement).closest('button')&&lastTravel.current<5)props.onExpansionChange(props.expansion>.5?0:1)}}
   onKeyDown={ev=>{if(ev.target!==ev.currentTarget)return;const f:Record<string,()=>void>={ArrowLeft:()=>orbitBy(-.2),ArrowRight:()=>orbitBy(.2),ArrowUp:()=>orbitBy(0,.1),ArrowDown:()=>orbitBy(0,-.1),'+':()=>orbitBy(0,0,.1),'-':()=>orbitBy(0,0,-.1),' ':()=>props.onExpansionChange(props.expansion>.5?0:1)};if(f[ev.key]){ev.preventDefault();f[ev.key]()}}}>
-  {!ready&&drink.family==='negroni'?<img className="viewer-poster" src={props.hero?`/posters/${drinkId}-hero.png`:drink.assets.poster} alt="" aria-hidden="true"/>:null}
+  {!ready&&drink.family==='negroni'?<img className="viewer-poster" src={props.hero?`/posters/${drinkId}${drinkId==='bbf-negroni'?'-loading':'-hero'}.png`:drink.assets.poster} alt="" aria-hidden="true"/>:null}
   {supported&&!ready?<Loading/>:null}
-  {supported?<ModelBoundary key={`${drinkId}-${attempt}`} onRetry={()=>{useGLTF.clear(modelPath(drinkId));setReady(false);setAttempt(n=>n+1)}}><Suspense fallback={null}>
+  {supported?<ModelBoundary key={`${drinkId}-${attempt}`} onRetry={()=>{useGLTF.clear(modelPath(drinkId));setReady(false);setAttempt(n=>n+1)}}>
    <Canvas frameloop={visible && props.active !== false?'demand':'never'} camera={{fov:35,near:.08,far:250}} dpr={[1,props.comparison?1:1.5]} gl={{antialias:true,alpha:!!props.hero,preserveDrawingBuffer:modelQuery.get('posterCapture')==='1',powerPreference:'high-performance',toneMapping:THREE.ACESFilmicToneMapping}} onCreated={({gl})=>{gl.toneMappingExposure=1.1;gl.setClearColor('#2C2A2D',props.hero?0:1);gl.domElement.setAttribute('aria-hidden','true')}}>
-    <Scene viewer={props} rail={rail} lines={lines} onReady={onReady} reduced={reduced} renderedFrames={renderedFrames}/>
+    <Suspense fallback={null}>{props.hero?<HeroScene viewer={props} rail={rail} lines={lines} onReady={onReady} reduced={reduced} renderedFrames={renderedFrames}/>:<Scene viewer={props} rail={rail} lines={lines} onReady={onReady} reduced={reduced} renderedFrames={renderedFrames}/>}</Suspense>
    </Canvas>
-  </Suspense></ModelBoundary>:<div className="viewer-fallback" role="status"><p>Interactive 3D is unavailable in this browser.</p><span>You can still explore every ingredient, compare the recipes, and find the bars.</span></div>}
+  </ModelBoundary>:<div className="viewer-fallback" role="status"><p>Interactive 3D is unavailable in this browser.</p><span>You can still explore every ingredient, compare the recipes, and find the bars.</span></div>}
   <svg ref={lines} className="ingredient-leaders" aria-hidden="true">{labels.map(i=><path key={i.category} data-category={i.category} fill="none" stroke="currentColor" strokeWidth=".75" opacity="0"/>)}</svg>
   <div ref={rail} className="ingredient-labels" aria-hidden={props.expansion<=.65}>{labels.map((i)=><button key={i.category} data-category={i.category} data-evidence={i.evidence} style={{opacity:0}} aria-pressed={props.selectedCategory===i.category} tabIndex={props.expansion>.65?0:-1} onClick={()=>props.onSelectCategory?.(i.category)} onFocus={()=>props.onSelectCategory?.(i.category)} onMouseEnter={()=>props.onSelectCategory?.(i.category)}><span>{categories.findIndex(c=>c.id===i.category)+1}</span>{ingredientDisplayName(i)}</button>)}</div>
   {supported?<><div className="viewer-zoom"><button aria-label="Zoom in" onClick={()=>orbitBy(0,0,.15)}><Plus size={17}/></button><button aria-label="Zoom out" onClick={()=>orbitBy(0,0,-.15)}><Minus size={17}/></button></div><span className="viewer-input-hint">Drag to rotate · <span className="desktop-hint">double-click to {props.expansion>.5?'reassemble':'expand'}</span><span className="touch-hint">swipe horizontally</span></span></>:null}

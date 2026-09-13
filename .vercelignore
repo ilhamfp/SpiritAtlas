@@ -8,3 +8,13 @@ references
 negroni-bar-crawl.mp4
 bar-somma-negroni-reference.jpg
 public/models/candidates
+dist
+.impeccable
+bvh-optics-prototype.html
+bvh-wavefront-prototype.html
+optical-prototype.html
+pathtrace-prototype.html
+assets/blender/*.blend
+docs
+scripts
+tests

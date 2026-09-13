@@ -1,0 +1,35 @@
+[
+  {
+    "drinkId": "bbf-negroni",
+    "errors": [],
+    "hero": "/posters/bbf-negroni-hero.png",
+    "standard": "/posters/bbf-negroni.jpg",
+    "verified": [
+      "keyboard orbit",
+      "expansion",
+      "reassembly"
+    ]
+  },
+  {
+    "drinkId": "ichigo-negroni",
+    "errors": [],
+    "hero": "/posters/ichigo-negroni-hero.png",
+    "standard": "/posters/ichigo-negroni.jpg",
+    "verified": [
+      "keyboard orbit",
+      "expansion",
+      "reassembly"
+    ]
+  },
+  {
+    "drinkId": "negroni-express",
+    "errors": [],
+    "hero": "/posters/negroni-express-hero.png",
+    "standard": "/posters/negroni-express.jpg",
+    "verified": [
+      "keyboard orbit",
+      "expansion",
+      "reassembly"
+    ]
+  }
+]

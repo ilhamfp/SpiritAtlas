@@ -1,0 +1,31 @@
+{
+  "generation_date": "2026-09-13",
+  "requested_model": "gpt-image-2.5-sunburst",
+  "verified_access_id": "gpt-image-2.5-sunburst",
+  "endpoint": "/v1/images/edits",
+  "quality": "high",
+  "output_format": "webp",
+  "output_compression": 92,
+  "assets": [
+    {
+      "path": "public/textures/spiritatlas-marble-base-desktop-v1.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 98316,
+      "sha256": "1fca22436a120af5280efe8f81b4c40caabd0b50eba88302a474d31c112d4da9"
+    },
+    {
+      "path": "public/textures/spiritatlas-marble-base-mobile-v1.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "bytes": 99782,
+      "sha256": "4e03de371f6bb609ab81de287cf268a638bd1ec8ac3f0c243f92ebe9640c7b0d"
+    }
+  ]
+}

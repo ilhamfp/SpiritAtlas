@@ -1,0 +1,48 @@
+import {chromium} from '@playwright/test';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {createServer} from 'vite';
+
+const server=process.env.SPIRITATLAS_CAPTURE_URL?null:await createServer({server:{host:'127.0.0.1',port:5175,strictPort:true,hmr:false,watch:null}});
+if(server)await server.listen();
+const base=process.env.SPIRITATLAS_CAPTURE_URL||'http://127.0.0.1:5175';
+const browser=await chromium.launch({channel:'chrome',headless:true});
+await mkdir('public/posters',{recursive:true});
+await mkdir('docs/brand-evidence/scene-study',{recursive:true});
+const results=[];
+const outputs=[];
+for(const drinkId of ['bbf-negroni','ichigo-negroni','negroni-express']){
+  console.log(`Capturing ${drinkId}`);
+  const page=await browser.newPage({viewport:{width:600,height:650},deviceScaleFactor:2});
+  const errors=[];page.on('pageerror',error=>errors.push(error.message));
+  await page.goto(`${base}/scripts/hero-poster.html?drink=${drinkId}&posterCapture=1`,{waitUntil:'networkidle'});
+  await page.waitForFunction(id=>window.__atlasViewers?.[id]?.ready,drinkId);
+  outputs.push({path:`docs/brand-evidence/scene-study/${drinkId}-hero.png`,data:await page.locator('canvas').screenshot()});
+  const png=await page.locator('canvas').evaluate(canvas=>canvas.toDataURL('image/png'));
+  outputs.push({path:`public/posters/${drinkId}-hero.png`,data:Buffer.from(png.split(',')[1],'base64')});
+  const before=await page.evaluate(id=>window.__atlasViewers[id].camera.azimuth,drinkId);
+  await page.getByRole('group').press('ArrowRight');
+  await page.waitForFunction(({id,before})=>window.__atlasViewers?.[id]?.camera.azimuth>before,{id:drinkId,before});
+  await page.getByRole('group').press('Space');
+  await page.waitForFunction(id=>window.__atlasViewers?.[id]?.e>.99,drinkId);
+  await page.getByRole('group').press('Space');
+  await page.waitForFunction(id=>window.__atlasViewers?.[id]?.e===0,drinkId);
+  await page.goto(`${base}/scripts/hero-poster.html?drink=${drinkId}&mode=standard&zoom=1&posterCapture=1`,{waitUntil:'networkidle'});
+  await page.waitForFunction(id=>window.__atlasViewers?.[id]?.ready,drinkId);
+  outputs.push({path:`public/posters/${drinkId}.jpg`,data:await page.locator('canvas').screenshot({type:'jpeg',quality:88})});
+  results.push({drinkId,errors,hero:`/posters/${drinkId}-hero.png`,standard:`/posters/${drinkId}.jpg`,verified:['keyboard orbit','expansion','reassembly']});
+  await page.close();
+}
+const loadingPage=await browser.newPage({viewport:{width:650,height:600},deviceScaleFactor:2});
+await loadingPage.goto(`${base}/scripts/hero-poster.html?drink=bbf-negroni&posterCapture=1&azimuth=-.08&elevation=.16&zoom=1.04`,{waitUntil:'networkidle'});
+await loadingPage.waitForFunction(()=>window.__atlasViewers?.['bbf-negroni']?.ready);
+const loading=await loadingPage.locator('canvas').evaluate(canvas=>canvas.toDataURL('image/png'));
+outputs.push({path:'public/posters/bbf-negroni-loading.png',data:Buffer.from(loading.split(',')[1],'base64')});
+await loadingPage.setViewportSize({width:382,height:310});
+await loadingPage.waitForFunction(()=>document.querySelector('canvas')?.clientHeight===310);
+outputs.push({path:'docs/brand-evidence/scene-study/bbf-negroni-mobile.png',data:await loadingPage.screenshot()});
+await loadingPage.close();
+await browser.close();
+await server?.close();
+for(const output of outputs)await writeFile(output.path,output.data);
+await writeFile('docs/brand-evidence/scene-study/poster-capture-results.json',JSON.stringify(results,null,2)+'\n');
+console.log(JSON.stringify(results,null,2));
