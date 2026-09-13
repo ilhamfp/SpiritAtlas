@@ -1,0 +1,306 @@
+{
+  "config": {
+    "argv": [
+      "/Users/ilhamfirdausiputra/.nvm/versions/node/v22.17.1/bin/node",
+      "/Users/ilhamfirdausiputra/dev/SpiritAtlas-continuous-release/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "tests/brand.config.ts",
+      "--grep",
+      "automatic playback completes|one player loads rotation|landing composition and links at 390|failed reverse preload|delayed reverse clip"
+    ],
+    "configFile": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-continuous-release/tests/brand.config.ts",
+    "rootDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-continuous-release/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-continuous-release/docs/brand-evidence/continuous-release-local/test-output",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/ilhamfirdausiputra/dev/SpiritAtlas-continuous-release/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "brand-journeys.spec.ts",
+          "classic-negroni-integration.spec.ts"
+        ],
+        "timeout": 100000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/brand-evidence/continuous-release-local/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "brand-journeys.spec.ts",
+      "file": "brand-journeys.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "landing composition and links at 390x844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5040,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:46:40.416Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "hero-text-contrast",
+                      "contentType": "application/json",
+                      "body": "W3sic2VsZWN0b3IiOiIuc2EtaGVybyBoMSIsInJhdGlvIjoxMy45OTkxODI5MTIzMDkxNDd9LHsic2VsZWN0b3IiOiIuc2EtaGVybyBoMSBzcGFuIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fSx7InNlbGVjdG9yIjoiLnNhLWhlcm8tY29weSAuc2EtYWN0aW9uIiwicmF0aW8iOjQuOTI3MDQ3ODM2OTIwMzI3fV0="
+                    },
+                    {
+                      "name": "viewport-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJoZWlnaHQiOjg0NCwiZG9jdW1lbnRXaWR0aCI6MzkwLCJmb250cyI6WyJJbnN0cnVtZW50IFNhbnMgVmFyaWFibGUiLCJJQk0gUGxleCBNb25vIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-de4873abb30f62004d28",
+          "file": "brand-journeys.spec.ts",
+          "line": 144,
+          "column": 3
+        },
+        {
+          "title": "automatic playback completes 0 to 100 to 0 to 100 using the full forward and reverse films",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22921,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:46:46.367Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-cycle-endpoints",
+                      "contentType": "application/json",
+                      "body": "W3sic2VxdWVuY2UiOiJmb3J3YXJkIiwidGltZSI6Ny4yMTY2Njd9LHsic2VxdWVuY2UiOiJyZXZlcnNlIiwidGltZSI6Ny4yMTY2Njd9LHsic2VxdWVuY2UiOiJmb3J3YXJkIiwidGltZSI6Ny4yMTY2Njd9XQ=="
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-8d85b8f803b2afb74dc1",
+          "file": "brand-journeys.spec.ts",
+          "line": 312,
+          "column": 1
+        },
+        {
+          "title": "one player loads rotation on demand, preserves the selected pose and resets to the original film",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13700,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:47:09.297Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "classic-live-scene",
+                      "contentType": "application/json",
+                      "body": "eyJzZWxlY3RlZFBvc2UiOjAuNSwiZmluYWxQb3NlIjowLjA4Mjc2LCJoZWF2eVJlcXVlc3RzIjpbIi9hc3NldHMvcmVuZGVyZXItWGJzOEd5MlMuanMiLCIvYXNzZXRzL3RocmVlLUJ5RGx0Q09qLmpzIiwiL2NsYXNzaWMtbmVncm9uaS9zaW11bGF0aW9uL25lZ3JvbmkuanNvbiIsIi9jbGFzc2ljLW5lZ3Jvbmkvc2ltdWxhdGlvbi9uZWdyb25pLmJpbiIsIi9jbGFzc2ljLW5lZ3Jvbmkvc3R1ZGlvX3NtYWxsXzA5XzFrLmhkciIsIi9jbGFzc2ljLW5lZ3JvbmkvdGV4dHVyZXMvb3JhbmdlLWNyb3NzLXNlY3Rpb24tdjIucG5nIiwiL2NsYXNzaWMtbmVncm9uaS90ZXh0dXJlcy9vcmFuZ2UtbWljcm9oZWlnaHQtdjIucG5nIl19"
+                    },
+                    {
+                      "name": "runtime-errors",
+                      "contentType": "application/json",
+                      "body": "W10="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "835d211cf8ffd964d224-69c83a323ed0a14f742f",
+          "file": "brand-journeys.spec.ts",
+          "line": 335,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "classic-negroni-integration.spec.ts",
+      "file": "classic-negroni-integration.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a failed reverse preload offers recovery when selected and keeps the preceding frame visible",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3472,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:47:23.038Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b0e4b813b9da7a2fb0-8d59d3494a1055b9351e",
+          "file": "classic-negroni-integration.spec.ts",
+          "line": 111,
+          "column": 1
+        },
+        {
+          "title": "a delayed reverse clip keeps the last frame and offers retry at the automatic turnaround",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 100000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15925,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-13T06:47:26.523Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b0e4b813b9da7a2fb0-3565ae5672ab8c80acba",
+          "file": "classic-negroni-integration.spec.ts",
+          "line": 134,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-13T06:46:39.786Z",
+    "duration": 62959.614,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

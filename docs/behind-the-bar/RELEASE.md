@@ -2,7 +2,7 @@
 
 ## Acknowledged owner
 
-Behind the Bar task `01a09932-8b72-79f2-a6f9-2322aaaa28a5` is the sole production release owner. Landing task `01a098ee-7e22-79e2-b78c-772904e83ecb` explicitly transferred ownership and this task acknowledged it. Animation task `01a09941-8825-7fd1-8d44-58f92994d715` supplied tested changes and held independent publication. The landing task performs the final public UI check after the owner's performance window.
+For the accepted 058149b snapshot, Behind the Bar task `01a09932-8b72-79f2-a6f9-2322aaaa28a5` was the sole production release owner. Landing task `01a098ee-7e22-79e2-b78c-772904e83ecb` explicitly transferred ownership and this task acknowledged it. Animation task `01a09941-8825-7fd1-8d44-58f92994d715` supplied tested changes and held independent publication. The landing task performs the final public UI check after the owner's performance window.
 
 ## Integrated revisions
 
@@ -15,7 +15,7 @@ Behind the Bar task `01a09932-8b72-79f2-a6f9-2322aaaa28a5` is the sole productio
 
 The owner fast-forwarded remote main from 772c3e2 to 058149b without changing the shared main checkout or staging another task's work. The release worktree is `/Users/ilhamfirdausiputra/dev/SpiritAtlas-btb-release`, branch `codex/behind-the-bar-release`. Publication uses the existing SpiritAtlas Vercel project. No service purchase or unrelated project replacement.
 
-## Production
+## Accepted 058149b production snapshot
 
 Public application: https://spiritatlas-one.vercel.app . Studio: https://spiritatlas-one.vercel.app/behind-the-bar . Live preset: https://spiritatlas-one.vercel.app/behind-the-bar?preset=stir-demo . Native diagnostic: https://spiritatlas-one.vercel.app/behind-the-bar/diagnostics?preset=stir-demo .
 
@@ -38,3 +38,31 @@ Rendering is the documented TypeGPU hybrid simulation with screen-space optical 
 `evidence/release-manifest.json` maps each verification to its application revision. The 39 catalogue checks belong to 772c3e2; canonical data, models, references and App.tsx are unchanged in 058149b. The corrected release repeats public studio/native/asset/performance checks and the six affected landing checks. Historical snapshots remain explicitly labelled.
 
 The landing task explicitly acknowledged resuming sole future production release ownership after receiving this acceptance evidence commit. This task will make no subsequent production push after the handoff. The separately requested full-loop/caption follow-up is outside this verified snapshot and must preserve the studio and acceptance record. Evidence is committed on `codex/behind-the-bar-release`; production main remains the tested 058149b application revision while this evidence is handed back, avoiding a docs-only deployment that would obscure the verified snapshot.
+
+## Onward ownership for continuous playback
+
+On 13 September 2026, the Behind the Bar task returned release ownership to
+the landing task, which explicitly transferred sole future production ownership
+to animation task `01a09941-8825-7fd1-8d44-58f92994d715`. The animation task
+acknowledged the handoff. Both prior owners confirmed they will not perform a
+competing production push.
+
+The full-cycle/minimal-copy release is prepared in the isolated
+`codex/continuous-negroni-release` worktree. Its ancestry preserves the accepted
+application `058149b` and acceptance-evidence commit `72ad1bb`; tested source
+commit `e8eed19` is applied as `59e46a8`. Shared main and its untracked PRD remain
+untouched. The refinement continuously plays both full Negroni directions and
+removes redundant landing/player copy. Its local build, 12 playback/asset checks,
+24 Chromium checks and four WebKit viewport checks pass.
+
+The existing physical-laptop acceptance limits above remain attributed to the
+058149b snapshot. New production revision and verification results are recorded
+under `../brand-evidence/continuous-release/`; they do not retroactively clear
+those physical rehearsal gates. The native-motion task is notified before the
+production update so ongoing physical observations retain their actual revision.
+
+The companion native-motion setup correction `e8bee8f` is integrated as
+`5fa5544`. Opening setup is idempotent, Escape disarms without discarding the
+pairing, and unpaired guidance remains usable on desktop and phone. Its source
+and tests are supplied by the native-motion task; actual physical tilt remains
+a separately recorded acceptance activity. The combined build passes.
