@@ -15,7 +15,10 @@
   padding: 16px var(--sa-gutter) 100px;
 }
 .sa-hero-classic .sa-hero-copy { padding-bottom: 24px; }
-.sa-hero-classic .sa-hero-copy .sa-action { margin-top: 32px; }
+.sa-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 32px; }
+.sa-hero-actions .sa-action { white-space: nowrap; }
+.sa-hero-actions .sa-action-secondary { color: var(--sa-cream) !important; background: var(--sa-charcoal); box-shadow: inset 0 0 0 1px var(--sa-control-border); }
+.sa-hero-actions .sa-action-secondary:hover { color: var(--sa-charcoal) !important; background: var(--sa-cream); }
 .sa-hero-classic .sa-hero-foot { justify-content: flex-end; }
 .sa-hero-classic h1 { font-size: clamp(60px, 6.2vw, 92px); }
 .sa-hero-classic .sa-marble {
@@ -122,7 +125,8 @@
   .sa-header .sa-wordmark { font-size: clamp(32px, 9.6vw, 52px); }
   .sa-hero-classic .sa-hero-copy { padding: 0; }
   .sa-hero-classic h1 { font-size: clamp(40px, 10vw, 56px); line-height: 1.02; }
-  .sa-hero-classic .sa-hero-copy .sa-action { margin-top: 24px; }
+  .sa-hero-actions { margin-top: 24px; }
+  .sa-hero-actions .sa-action { gap: 12px; }
   .sa-hero-classic .sa-hero-copy p { max-width: 40ch; }
   .sa-hero-classic .cn-hero { max-width: clamp(280px, calc(100svh - 530px), 440px); align-self: center; }
   .sa-hero-classic .sa-marble { opacity: .5; mask-image: linear-gradient(to bottom, transparent, #000 25%, #000 75%, transparent); }
