@@ -8,7 +8,7 @@ export async function realBrowser(){
  for(let i=0;i<100;i++){try{endpoint=await(await fetch(`http://127.0.0.1:${port}/json/version`)).json();break;}catch{await new Promise(r=>setTimeout(r,100));}}
  if(!endpoint){chromeProcess.kill();throw new Error('Normal Chrome debugging endpoint did not start');}
  const browser=await chromium.connectOverCDP(`http://127.0.0.1:${port}`,{noDefaults:true});const context=browser.contexts()[0],page=context.pages()[0]||await context.newPage();await page.bringToFront();
- return {browser,context,page,args:args.map(v=>v.startsWith('--user-data-dir=')?'--user-data-dir=<private-task-profile>':v),async close(){await browser.close();chromeProcess.kill();}};
+ return {browser,context,page,args:args.map(v=>v.startsWith('--user-data-dir=')?'--user-data-dir=<private-task-profile>':v),async detach(){await browser.close();chromeProcess.unref();},async close(){await browser.close();chromeProcess.kill();}};
 }
 export async function recordRealPage(page,output){
  const folder=await fs.mkdtemp(path.join(os.tmpdir(),'btb-recording-')),cdp=await page.context().newCDPSession(page);const frames=[],writes=[];

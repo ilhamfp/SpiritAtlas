@@ -9,7 +9,7 @@ try{
 await page.goto(`${origin}/behind-the-bar/diagnostics?preset=stir-demo#motion=${pair.token}`);await page.waitForFunction(()=>window.__btbNative?.received>100&&window.__btb?.scene?.diagnostics.gpuReads>10,{},{timeout:30000});
 await page.getByRole('button',{name:'Recenter at rest',exact:true}).click();await page.locator('.btb-stage').scrollIntoViewIfNeeded();
 if(process.env.BTB_MANUAL_ARM==='1'){
- await page.evaluate(()=>{const note=document.createElement('div');note.id='btb-rehearsal-note';note.style.cssText='position:fixed;bottom:16px;left:20px;right:20px;z-index:100;background:#ffffe3;color:#242125;padding:14px 20px;font:15px system-ui;border:1px solid #ff6425;box-shadow:0 8px 28px #0008';note.textContent='Device rehearsal: click Arm movement, then gently tilt left/right and forward/back. Keep this window focused. Set flat and watch it settle. Next click Strain → Arm pour; tilt briefly, then set flat again.';document.body.append(note);});
+ await page.evaluate(()=>{const note=document.createElement('div');note.id='btb-rehearsal-note';note.style.cssText='position:fixed;bottom:16px;left:20px;right:20px;z-index:100;pointer-events:none;background:#ffffe3;color:#242125;padding:14px 20px;font:15px system-ui;border:1px solid #ff6425;box-shadow:0 8px 28px #0008';note.textContent='Device rehearsal: click Arm movement, then gently tilt left/right and forward/back. Keep this window focused. Set flat and watch it settle. Next click Strain → Arm pour; tilt briefly, then set flat again.';document.body.append(note);});
  console.log('Ready for manual arming. On-screen rehearsal steps are visible; keep Chrome focused after arming.');
  await page.waitForFunction(()=>window.__btb?.model.armed==='move',{},{timeout:Math.max(5,Math.min(600,Number(process.env.BTB_ARM_WAIT_SECONDS)||120))*1000});
 }else await page.getByRole('button',{name:'Arm movement',exact:true}).click();
@@ -24,4 +24,4 @@ await fs.writeFile(`docs/behind-the-bar/evidence/${evidence}-session.json`,JSON.
  const attempt={at:new Date().toISOString(),origin,manualArm:process.env.BTB_MANUAL_ARM==='1',outcome:'incomplete',reason:message,physicalTiltPourVerified:false};
  await fs.writeFile(`docs/behind-the-bar/evidence/${evidence}-attempt.json`,JSON.stringify(attempt,null,2));
  console.error('Native rehearsal incomplete:',message);process.exitCode=1;
-}finally{if(stopVideo)await stopVideo().catch(()=>{});await real.close();}
+}finally{if(stopVideo)await stopVideo().catch(()=>{});if(process.env.BTB_KEEP_BROWSER==='1')await real.detach();else await real.close();}
