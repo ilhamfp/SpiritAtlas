@@ -1,0 +1,48 @@
+{
+  "baseURL": "https://spiritatlas-one.vercel.app",
+  "results": [
+    {
+      "browser": "webkit",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "deviceScaleFactor": 2,
+      "stableCanvas": true,
+      "keyboardFocus": true,
+      "expanded": true,
+      "errors": [],
+      "hero": {
+        "x": 0,
+        "y": 80,
+        "width": 390,
+        "height": 845.578125,
+        "bottom": 925.578125
+      },
+      "stage": {
+        "x": 38,
+        "y": 310.390625,
+        "width": 314,
+        "height": 314,
+        "bottom": 624.390625
+      },
+      "controls": {
+        "x": 58,
+        "y": 711.578125,
+        "width": 274,
+        "height": 101,
+        "bottom": 812.578125
+      },
+      "headline": {
+        "x": 24,
+        "y": 100,
+        "width": 342,
+        "height": 122.390625,
+        "bottom": 222.390625
+      },
+      "documentWidth": 390,
+      "heroPadding": "0px",
+      "mask": "radial-gradient(65% 64% at 50% 45%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 12%, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0)), linear-gradient(90deg, rgba(0, 0, 0, 0), rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0))"
+    }
+  ]
+}

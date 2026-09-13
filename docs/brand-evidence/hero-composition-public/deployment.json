@@ -1,0 +1,59 @@
+{
+  "sourceRevision": "36fb164",
+  "publicUrl": "https://spiritatlas-one.vercel.app",
+  "deployment": {
+    "id": "dpl_B39i9712QWwALxTBi1zPQBpPKH6N",
+    "url": "spiritatlas-n8kwtmpyn-ilham-firdausi-putras-projects.vercel.app",
+    "readyState": "READY",
+    "target": "production",
+    "aliases": [
+      "spiritatlas-one.vercel.app",
+      "spiritatlas-ilham-firdausi-putras-projects.vercel.app"
+    ],
+    "createdAt": 1789282838416
+  },
+  "assets": [
+    {
+      "path": "/assets/index-Bnsw7AXQ.js",
+      "status": 200,
+      "sha256": "e1a36f437a39f1ac064c24ca34597c9435dc1f896a2e7bba238d4848c3d1afdc",
+      "matchesLocal": true
+    },
+    {
+      "path": "/assets/rolldown-runtime-hePW80VL.js",
+      "status": 200,
+      "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021",
+      "matchesLocal": true
+    },
+    {
+      "path": "/assets/react-CtYP0wlk.js",
+      "status": 200,
+      "sha256": "242d1dd4bcb0a094d3bdf21b7f66c22774c9d66ff781893a4287be7f83c82347",
+      "matchesLocal": true
+    },
+    {
+      "path": "/assets/index-7pW0GoBv.css",
+      "status": 200,
+      "sha256": "c5c5e27d2a068bae9b1787da2000d02bc499c0d789781c775d29bc7af4a91200",
+      "matchesLocal": true
+    },
+    {
+      "path": "/assets/Studio-D0SXyBXq.js",
+      "status": 200,
+      "sha256": "ffd31a7dd484249724bcc02c14f338390a0cd8d9a88284a68041108f0897925f",
+      "matchesLocal": true
+    },
+    {
+      "path": "/textures/spiritatlas-marble-base-desktop-v1.webp",
+      "status": 200,
+      "sha256": "1fca22436a120af5280efe8f81b4c40caabd0b50eba88302a474d31c112d4da9",
+      "matchesLocal": true
+    },
+    {
+      "path": "/textures/spiritatlas-marble-base-mobile-v1.webp",
+      "status": 200,
+      "sha256": "4e03de371f6bb609ab81de287cf268a638bd1ec8ac3f0c243f92ebe9640c7b0d",
+      "matchesLocal": true
+    }
+  ]
+}

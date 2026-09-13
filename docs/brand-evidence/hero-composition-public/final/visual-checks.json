@@ -1,0 +1,134 @@
+{
+  "baseURL": "https://spiritatlas-one.vercel.app",
+  "results": [
+    {
+      "browser": "chrome",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "stableCanvas": true,
+      "keyboardFocus": true,
+      "expanded": true,
+      "errors": [],
+      "hero": {
+        "x": 0,
+        "y": 104,
+        "width": 1440,
+        "height": 896,
+        "bottom": 1000
+      },
+      "stage": {
+        "x": 788,
+        "y": 149.5,
+        "width": 580,
+        "height": 580,
+        "bottom": 729.5
+      },
+      "controls": {
+        "x": 808,
+        "y": 805.5,
+        "width": 540,
+        "height": 53,
+        "bottom": 858.5
+      },
+      "headline": {
+        "x": 72,
+        "y": 321.4375,
+        "width": 595.078125,
+        "height": 265.125,
+        "bottom": 586.5625
+      },
+      "documentWidth": 1440,
+      "heroPadding": "0px",
+      "mask": "radial-gradient(65% 64% at 50% 45%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 12%, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0)), linear-gradient(90deg, rgba(0, 0, 0, 0), rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0))"
+    },
+    {
+      "browser": "chrome",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "deviceScaleFactor": 1,
+      "stableCanvas": true,
+      "keyboardFocus": true,
+      "expanded": true,
+      "errors": [],
+      "hero": {
+        "x": 0,
+        "y": 88,
+        "width": 768,
+        "height": 936,
+        "bottom": 1024
+      },
+      "stage": {
+        "x": 379.3125,
+        "y": 232.765625,
+        "width": 350.28125,
+        "height": 350.28125,
+        "bottom": 583.046875
+      },
+      "controls": {
+        "x": 399.3125,
+        "y": 670.234375,
+        "width": 310.28125,
+        "height": 101,
+        "bottom": 771.234375
+      },
+      "headline": {
+        "x": 38.390625,
+        "y": 385.3125,
+        "width": 316.921875,
+        "height": 141.375,
+        "bottom": 526.6875
+      },
+      "documentWidth": 768,
+      "heroPadding": "0px",
+      "mask": "radial-gradient(65% 64% at 50% 45%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 12%, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0)), linear-gradient(90deg, rgba(0, 0, 0, 0), rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0))"
+    },
+    {
+      "browser": "chrome",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "deviceScaleFactor": 2,
+      "stableCanvas": true,
+      "keyboardFocus": true,
+      "expanded": true,
+      "errors": [],
+      "hero": {
+        "x": 0,
+        "y": 80,
+        "width": 390,
+        "height": 845.578125,
+        "bottom": 925.578125
+      },
+      "stage": {
+        "x": 38,
+        "y": 310.390625,
+        "width": 314,
+        "height": 314,
+        "bottom": 624.390625
+      },
+      "controls": {
+        "x": 58,
+        "y": 711.578125,
+        "width": 274,
+        "height": 101,
+        "bottom": 812.578125
+      },
+      "headline": {
+        "x": 24,
+        "y": 100,
+        "width": 342,
+        "height": 122.390625,
+        "bottom": 222.390625
+      },
+      "documentWidth": 390,
+      "heroPadding": "0px",
+      "mask": "radial-gradient(65% 64% at 50% 45%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 12%, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0)), linear-gradient(90deg, rgba(0, 0, 0, 0), rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0))"
+    }
+  ]
+}
