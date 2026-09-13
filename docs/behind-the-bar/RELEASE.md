@@ -104,3 +104,10 @@ The owner's ordinary Chrome was refreshed to the new build and paired with the r
 
 
 The landing task's explicit ownership return subsequently arrived through the delayed app connector, confirming this bounded release and preserving 7c0909a in its ancestry. That acknowledgment and the READY/current-revision notice have been exchanged. Final owner-operated native evidence now proves stirring, reversal, release and physical pouring on 9c0666c. The current runtime check passes at 119.07 FPS / 9.30 ms p95. The acceptance ledger is 13/14, with only independent physical-onset timing still partial; subjective feel feedback is pending.
+
+
+## Strain presentation correction
+
+The owner accepted native stirring and requested a correction to the 3D Strain presentation. Source `b7c02ed` fixes the strainer assembly, vessel clearance, gravity-level liquid surface, stream/ice contact and diagnostic toolbar occlusion. It preserves ingredient accounting and the native controller. The build and five focused tests pass; final 1440/390 rest/pour/pause captures were inspected. The local headless Chrome 30-second pouring regression measured 60.00 FPS / 16.70 ms p95 with no GPU errors; this is a render regression, not a new physical-native timing claim.
+
+While this correction was checked, ownership was explicitly handed to the animation task for the independently requested homepage entry. That task published `8b57198` plus trailing-slash routing correction `e0b3560`, verified them publicly, and explicitly returned sole production ownership to the Behind the Bar task. Merge `48e3c09` includes that freshly fetched main without replacing its landing/player/specialty changes. The combined build and focused Strain pause/drain/reset check pass. This task owns the bounded integrated publication; both other tasks have confirmed no competing push. Public READY metadata and final checks follow in evidence/strain-public-*.
