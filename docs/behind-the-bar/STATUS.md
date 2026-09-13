@@ -1,6 +1,6 @@
 # Behind the Bar v2.1 acceptance ledger
 
-13 September 2026. Current verified native-stir application: `9c0666cd19730bcdec0b3e40a46af6fe8f0f4998`, READY deployment `dpl_7hZdxewXrX9aVWpZH9NWEGsKygKw`, https://spiritatlas-one.vercel.app/behind-the-bar. This preserves the accepted studio, current hero/player and subsequent specialty-animation work. Native-stir source daef85b is integrated as b17a4dc. Release ownership was explicitly returned by the landing task for this bounded follow-up; see RELEASE.md. Evidence worktree: `/Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release`. Historical reports retain their actual revisions.
+13 September 2026. Historical physically verified native-stir application: `9c0666cd19730bcdec0b3e40a46af6fe8f0f4998`, READY deployment `dpl_7hZdxewXrX9aVWpZH9NWEGsKygKw`, https://spiritatlas-one.vercel.app/behind-the-bar. This preserves the accepted studio, current hero/player and subsequent specialty-animation work. Native-stir source daef85b is integrated as b17a4dc. Release ownership was explicitly returned by the landing task for this bounded follow-up; see RELEASE.md. Evidence worktree: `/Users/ilhamfirdausiputra/dev/SpiritAtlas-native-stir-release`. Historical reports retain their actual revisions.
 
 Thirteen gates now have evidence. The owner physically operated the deployed native stirring and pouring controls, following the earlier confirmed glass movement. The remaining part of BTB-10 is an independently measured physical movement-onset → visible-display latency; sample/receiver → frame estimates are not that measurement.
 
@@ -25,7 +25,7 @@ Thirteen gates now have evidence. The owner physically operated the deployed nat
 
 BTB-10 physical-onset timing: the owner or an operator must capture synchronized device movement and display output (for example, a sufficiently fast camera showing both), or provide equivalent calibrated instrumentation. The real sensor timestamps and screen-only video already supplied cannot establish when external physical movement began. This is a measurement limitation; native stirring and pouring now work. No new software change or elevated privilege is needed.
 
-Earlier at-rest and unarmed attempts remain historical evidence. The successful owner-operated recording is `evidence/native-stir-owner.json` and `evidence/native-video/native-stir-owner.webm`. The subjective stirring-feel question is still pending; observed operation is recorded independently of that answer.
+Earlier at-rest and unarmed attempts remain historical evidence. The successful owner-operated recording is `evidence/native-stir-owner.json` and `evidence/native-video/native-stir-owner.webm`. The owner subsequently accepted the stirring feel. Observed operation remains attributed to that exact historical deployment.
 
 ## Iteration record
 
@@ -70,3 +70,10 @@ Source daef85b adds a separately armed spoon-stirring mode; the glass remains up
 
 
 Final observed correction: the owner deliberately armed stirring for 17.093 seconds; input reached both signs, GPU circulation ranged −7.163 to +3.511, and glass tilt stayed exactly zero. When physical movement stopped, spoon input reached zero and circulation decayed from −0.888 to −0.147 in 1.4 seconds. The owner advanced to Strain and armed pour for 9.601 seconds, including neutral pauses. All authored 0.65 Core / 0.18 Ancho / 0.10 Rice transferred without component loss. This was passive observation, with no synthetic packets or automated arming. The recording contained ten rejected native reports and no GPU errors; the observer did not log an individual rejection reason. Public source checks (6), assets/routes (32), and the final 30-second runtime check pass. Historical statements above describing unverified physical pouring are superseded by this exact deployed record.
+
+
+## Current Strain publication and session follow-up
+
+The rendered Strain correction is now public in `13c152928da0496b08ce24f2f50c3bfa1ae43728`, READY deployment `dpl_6oJGAv9jpd5QdirzkrhfC46eSuJE`. It preserves the homepage entry and trailing-slash fix `e0b3560`. Five focused public behavioral checks and all 32 route/asset checks pass. Desktop/mobile pouring, pause and rest captures are recorded under `evidence/strain-public-*`; the exact revision/deployment and test scope are in `strain-public-deployment.json`.
+
+The owner separately reported that motion did not work when opening the bare studio route. Root is investigating the current end-to-end connection and holds sole next release ownership. The earlier actual hardware success does not prove this new browser session is paired. The helper was alive with fresh samples when handed over; its current session expires at 15:46:12 Singapore time and requires a fresh local pairing after restart. No new physical acceptance is claimed for the Strain-only deployment.

@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-13T07:32:29.657127+00:00",
+  "revision": "13c152928da0496b08ce24f2f50c3bfa1ae43728",
+  "deployment": "dpl_6oJGAv9jpd5QdirzkrhfC46eSuJE",
+  "state": "READY",
+  "origin": "https://spiritatlas-one.vercel.app",
+  "immutable": "https://spiritatlas-corc8aq7y-ilham-firdausi-putras-projects.vercel.app",
+  "entry": "/assets/index-n0w-GTmk.js",
+  "checks": {
+    "focusedPublicTests": 5,
+    "testDurationSeconds": 44.1,
+    "publicRoutesAssets": 32,
+    "failures": 0
+  },
+  "physicalScope": "These public checks use isolated headless Chrome and a native-input fixture. They do not substitute for a new owner-operated physical test; historical real-native evidence remains attributed to 9c0666c.",
+  "nextReleaseOwner": "01a098ee-7e22-79e2-b78c-772904e83ecb"
+}
