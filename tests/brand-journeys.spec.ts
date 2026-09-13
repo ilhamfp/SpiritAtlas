@@ -34,10 +34,18 @@ test.afterEach(async ({ page }, testInfo) => {
   expect(failures.get(page), 'No first-party runtime errors or failed required asset requests').toEqual([]);
 });
 
-test('headline, CTA and faithful poster appear while models are held; only the hero model is requested initially', async ({ page }, testInfo) => {
+test('headline, CTA and faithful poster appear while 3D code and models are held; only the hero model is requested initially', async ({ page }, testInfo) => {
+  const codeRequests: string[] = [];
   const models: string[] = [];
+  let releaseCode!: () => void;
+  const heldCode = new Promise<void>(resolve => { releaseCode = resolve; });
   let release!: () => void;
   const held = new Promise<void>(resolve => { release = resolve; });
+  await page.route(/\/(?:assets\/three-[^/]+\.js|src\/scenes\/Viewer\.tsx)(?:\?.*)?$/, async route => {
+    codeRequests.push(new URL(route.request().url()).pathname);
+    await heldCode;
+    await route.continue();
+  });
   await page.route('**/*.glb*', async route => {
     models.push(new URL(route.request().url()).pathname);
     await held;
@@ -47,6 +55,13 @@ test('headline, CTA and faithful poster appear while models are held; only the h
     await page.goto('/', { waitUntil: 'domcontentloaded' });
     await expect(headline(page)).toBeVisible();
     await expect(page.getByRole('link', { name: 'Explore the atlas', exact: true })).toBeVisible();
+    await expect.poll(() => codeRequests.length).toBeGreaterThan(0);
+    await expect(page.locator('.hero-poster img')).toBeVisible();
+    expect(await page.locator('.hero-poster img').evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
+    expect(models).toEqual([]);
+    await page.screenshot({ path: `${evidenceDir}/loading-before-3d-code-1440x1000.png` });
+    await testInfo.attach('blocked-3d-code', { body: JSON.stringify({ codeRequests, models, headlineVisible: true, ctaVisible: true, posterDecoded: true }), contentType: 'application/json' });
+    releaseCode();
     await expect.poll(() => models.length).toBeGreaterThan(0);
     const poster = page.locator('.sa-hero-viewer img').first();
     await expect(poster).toBeVisible();
@@ -63,7 +78,7 @@ test('headline, CTA and faithful poster appear while models are held; only the h
     await testInfo.attach('initial-loading', { body: JSON.stringify({ models, ...timings }, null, 2), contentType: 'application/json' });
     expect(timings.fonts.some(url => url.includes('instrument-sans'))).toBe(true);
     expect(timings.loadedFonts.some(font => font.includes('Instrument Sans'))).toBe(true);
-  } finally { release(); }
+  } finally { releaseCode(); release(); }
   await waitLive(page, ['bbf-negroni']);
 });
 
